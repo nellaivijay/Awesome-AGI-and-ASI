@@ -6,6 +6,10 @@
 ![AI Safety](https://img.shields.io/badge/AI_Safety-Alignment_&_Control-green)
 ![LLM](https://img.shields.io/badge/LLM-Large_Language_Models-orange)
 ![Agents](https://img.shields.io/badge/Agents-Autonomous_AI-yellow)
+![RAG](https://img.shields.io/badge/RAG-Retrieval_Augmented_Generation-cyan)
+![Fine-Tuning](https://img.shields.io/badge/Fine--Tuning-LoRA_&_RLHF-lightblue)
+![Conferences](https://img.shields.io/badge/Conferences-Academic_&_Industry-teal)
+![Updated](https://img.shields.io/badge/Updated-April_2026-brightgreen)
 
 > *"The development of full artificial intelligence could spell the end of the human race... or it could be the best thing ever to happen to humanity."* -- Stephen Hawking
 
@@ -67,7 +71,7 @@ The most comprehensive, curated collection of resources on the journey from **AI
   Autopilot          early sparks        Singularity?
 ```
 
-### Where Are We Now? (2025)
+### Where Are We Now? (2026)
 
 The AI field is in a remarkable transition period. Here's what the current landscape looks like:
 
@@ -126,16 +130,18 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 > The infrastructure powering the next generation of autonomous AI. These frameworks let you build, orchestrate, and deploy AI agents that can reason, browse, code, and collaborate -- from single-agent tools to multi-agent orchestration platforms.
 
-### Next-Generation Agent Frameworks (2024-2026)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white) ![Multi-Agent](https://img.shields.io/badge/Multi--Agent-blue?style=flat-square) ![Browser](https://img.shields.io/badge/Browser_Automation-orange?style=flat-square) ![Open Source](https://img.shields.io/badge/Open_Source-green?style=flat-square)
+
+### Next-Generation Agent Frameworks (2025-2026)
 
 |Name|Github Stars|Introduction| Notes |
 |-|-|-|-|
-|[:fire: OpenHands](https://github.com/All-Hands-AI/OpenHands)|![GitHub Repo stars](https://badgen.net/github/stars/All-Hands-AI/OpenHands)|AI-powered software development agent platform (formerly OpenDevin). Autonomous coding agent that can write, test, and debug code end-to-end.|71k+ stars. #1 on SWE-bench. Sandboxed execution environment.|
-|[:fire: browser-use](https://github.com/browser-use/browser-use)|![GitHub Repo stars](https://badgen.net/github/stars/browser-use/browser-use)|Make websites accessible for AI agents. Automate tasks online with ease using Playwright-based browser automation.|87k+ stars. AI agents that browse the web autonomously.|
-|[:fire: DeerFlow](https://github.com/bytedance/deer-flow)|![GitHub Repo stars](https://badgen.net/github/stars/bytedance/deer-flow)|ByteDance's open-source long-horizon SuperAgent harness that researches, codes, and creates. Multi-agent with sandboxes, memories, tools, and skills.|60k+ stars. Built on LangGraph.|
-|[:fire: Firecrawl](https://github.com/firecrawl/firecrawl)|![GitHub Repo stars](https://badgen.net/github/stars/firecrawl/firecrawl)|The Web Data API for AI - Power AI agents with clean web data. Scrapes and converts websites to LLM-ready markdown.|108k+ stars. Used by major AI agent frameworks.|
-|[:fire: crewAI](https://github.com/joaomdmoura/crewAI)|![GitHub Repo stars](https://badgen.net/github/stars/joaomdmoura/crewAI)|Framework for orchestrating role-playing, autonomous AI agents. Craft collaborative AI crews for complex tasks.|Production-grade multi-agent orchestration.|
-|[:fire: agenticSeek](https://github.com/Fosowl/agenticSeek)|![GitHub Repo stars](https://badgen.net/github/stars/Fosowl/agenticSeek)|Fully local autonomous agent - No APIs, no monthly bills. Thinks, browses the web, and codes using only local LLMs.|26k+ stars. Fully local, privacy-first.|
+|[OpenHands](https://github.com/All-Hands-AI/OpenHands)|![GitHub Repo stars](https://badgen.net/github/stars/All-Hands-AI/OpenHands)|AI-powered software development agent platform (formerly OpenDevin). Autonomous coding agent that can write, test, and debug code end-to-end.|71k+ stars. #1 on SWE-bench. Sandboxed execution environment.|
+|[browser-use](https://github.com/browser-use/browser-use)|![GitHub Repo stars](https://badgen.net/github/stars/browser-use/browser-use)|Make websites accessible for AI agents. Automate tasks online with ease using Playwright-based browser automation.|87k+ stars. AI agents that browse the web autonomously.|
+|[DeerFlow](https://github.com/bytedance/deer-flow)|![GitHub Repo stars](https://badgen.net/github/stars/bytedance/deer-flow)|ByteDance's open-source long-horizon SuperAgent harness that researches, codes, and creates. Multi-agent with sandboxes, memories, tools, and skills.|60k+ stars. Built on LangGraph.|
+|[Firecrawl](https://github.com/firecrawl/firecrawl)|![GitHub Repo stars](https://badgen.net/github/stars/firecrawl/firecrawl)|The Web Data API for AI - Power AI agents with clean web data. Scrapes and converts websites to LLM-ready markdown.|108k+ stars. Used by major AI agent frameworks.|
+|[crewAI](https://github.com/joaomdmoura/crewAI)|![GitHub Repo stars](https://badgen.net/github/stars/joaomdmoura/crewAI)|Framework for orchestrating role-playing, autonomous AI agents. Craft collaborative AI crews for complex tasks.|Production-grade multi-agent orchestration.|
+|[agenticSeek](https://github.com/Fosowl/agenticSeek)|![GitHub Repo stars](https://badgen.net/github/stars/Fosowl/agenticSeek)|Fully local autonomous agent - No APIs, no monthly bills. Thinks, browses the web, and codes using only local LLMs.|26k+ stars. Fully local, privacy-first.|
 |[Gemini CLI](https://github.com/google-gemini/gemini-cli)|![GitHub Repo stars](https://badgen.net/github/stars/google-gemini/gemini-cli)|Google's open-source AI agent that brings Gemini directly into your terminal. MCP support built-in.|101k+ stars. Official Google agent.|
 |[Hermes Agent](https://github.com/NousResearch/hermes-agent)|![GitHub Repo stars](https://badgen.net/github/stars/NousResearch/hermes-agent)|The agent that grows with you. By Nous Research - multi-model AI agent with Claude, GPT, and open-source model support.|66k+ stars. From Nous Research.|
 |[Daytona](https://github.com/daytonaio/daytona)|![GitHub Repo stars](https://badgen.net/github/stars/daytonaio/daytona)|Secure and elastic infrastructure for running AI-generated code. Sandboxed execution environment for AI agents.|72k+ stars. Secure code execution.|
@@ -147,9 +153,9 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 |Name|Github Stars|Introduction| Notes |
 |-|-|-|-|
-|[:fire: Auto-GPT](https://github.com/Significant-Gravitas/Auto-GPT)|![GitHub Repo stars](https://badgen.net/github/stars/Significant-Gravitas/Auto-GPT)|The original autonomous AI agent. Now evolved into a full platform for building and deploying autonomous agents.|183k+ stars. The project that started the autonomous agent movement.|
-|[:fire: MetaGPT](https://github.com/geekan/MetaGPT)|![GitHub Repo stars](https://badgen.net/github/stars/geekan/MetaGPT)|The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo.|Mimics a software company with PM, architect, and engineer agent roles.|
-|[:fire: AgentGPT](https://github.com/reworkd/AgentGPT)|![GitHub Repo stars](https://badgen.net/github/stars/reworkd/AgentGPT)|Assemble, configure, and deploy autonomous AI Agents in your browser.|36k+ stars. Browser-based agent deployment.|
+|[Auto-GPT](https://github.com/Significant-Gravitas/Auto-GPT)|![GitHub Repo stars](https://badgen.net/github/stars/Significant-Gravitas/Auto-GPT)|The original autonomous AI agent. Now evolved into a full platform for building and deploying autonomous agents.|183k+ stars. The project that started the autonomous agent movement.|
+|[MetaGPT](https://github.com/geekan/MetaGPT)|![GitHub Repo stars](https://badgen.net/github/stars/geekan/MetaGPT)|The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo.|Mimics a software company with PM, architect, and engineer agent roles.|
+|[AgentGPT](https://github.com/reworkd/AgentGPT)|![GitHub Repo stars](https://badgen.net/github/stars/reworkd/AgentGPT)|Assemble, configure, and deploy autonomous AI Agents in your browser.|36k+ stars. Browser-based agent deployment.|
 |[SuperAGI](https://github.com/TransformerOptimus/SuperAGI)|![GitHub Repo stars](https://badgen.net/github/stars/TransformerOptimus/SuperAGI)|Dev-first open source autonomous AI agent framework. Run concurrent agents with tools, GUI, multiple vector DBs, performance telemetry, and agent memory.|Toolkits: Email, Jira, GitHub, Google Search, DALL-E, Notion, etc.|
 |[AutoGen](https://github.com/microsoft/autogen)|![GitHub Repo stars](https://badgen.net/github/stars/microsoft/autogen)|Microsoft's framework for multi-agent conversation. Agents converse with each other to solve tasks with human-in-the-loop support.|Now evolved into AG2 with enhanced multi-agent patterns.|
 |[ChatDev](https://github.com/OpenBMB/ChatDev)|![GitHub Repo stars](https://badgen.net/github/stars/OpenBMB/ChatDev)|A virtual software company with multiple agents (CEO, CTO, programmer, tester) collaborating to design, code, test, and document software.|-|
@@ -180,12 +186,14 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 > Autonomous AI systems that perceive, reason, and act in the world. These agents represent the closest things we have to AGI-like behavior in narrow domains -- writing code, conducting research, operating computers, and navigating virtual worlds.
 
+![Coding](https://img.shields.io/badge/Coding-green?style=flat-square) ![Research](https://img.shields.io/badge/Research-purple?style=flat-square) ![Computer Use](https://img.shields.io/badge/Computer_Use-blue?style=flat-square) ![Embodied](https://img.shields.io/badge/Embodied-red?style=flat-square) ![Autonomous](https://img.shields.io/badge/Autonomous-orange?style=flat-square)
+
 ### Coding & Software Engineering Agents
 
 |Name|Github Stars|Introduction| Notes |
 |-|-|-|-|
-|[:fire: Aider](https://github.com/Aider-AI/aider)|![GitHub Repo stars](https://badgen.net/github/stars/Aider-AI/aider)|AI pair programming in your terminal. Edit code across your entire repo with LLMs. Tops SWE-bench Lite.|Best-in-class AI pair programmer. Works with GPT-4o, Claude, DeepSeek, local models.|
-|[:fire: SWE-agent](https://github.com/princeton-nlp/SWE-agent)|![GitHub Repo stars](https://badgen.net/github/stars/princeton-nlp/SWE-agent)|Turns LLMs into software engineering agents that fix real GitHub issues. Pioneered the Agent-Computer Interface (ACI) concept.|[Paper](https://arxiv.org/abs/2405.15232). Princeton NLP. Key SWE-bench benchmark agent.|
+|[Aider](https://github.com/Aider-AI/aider)|![GitHub Repo stars](https://badgen.net/github/stars/Aider-AI/aider)|AI pair programming in your terminal. Edit code across your entire repo with LLMs. Tops SWE-bench Lite.|Best-in-class AI pair programmer. Works with GPT-4o, Claude, DeepSeek, local models.|
+|[SWE-agent](https://github.com/princeton-nlp/SWE-agent)|![GitHub Repo stars](https://badgen.net/github/stars/princeton-nlp/SWE-agent)|Turns LLMs into software engineering agents that fix real GitHub issues. Pioneered the Agent-Computer Interface (ACI) concept.|[Paper](https://arxiv.org/abs/2405.15232). Princeton NLP. Key SWE-bench benchmark agent.|
 |[goose](https://github.com/block/goose)|![GitHub Repo stars](https://badgen.net/github/stars/block/goose)|Open-source extensible AI agent that goes beyond code suggestions — install, execute, edit, and test with any LLM. Written in Rust.|Supports MCP and ACP protocols. By Block.|
 |[Open Interpreter](https://github.com/OpenInterpreter/open-interpreter)|![GitHub Repo stars](https://badgen.net/github/stars/OpenInterpreter/open-interpreter)|A natural language interface for computers. Lets LLMs run code (Python, JS, shell) locally with no restrictions.|Full computer control via natural language. Like ChatGPT Code Interpreter but unrestricted.|
 
@@ -193,8 +201,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 |Name|Github Stars|Introduction| Notes |
 |-|-|-|-|
-|[:fire: STORM](https://github.com/stanford-oval/storm)|![GitHub Repo stars](https://badgen.net/github/stars/stanford-oval/storm)|Stanford: Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking. Writes Wikipedia-quality long-form articles autonomously.|[Paper](https://arxiv.org/abs/2402.14207). Expert-level knowledge synthesis agent.|
-|[:fire: AI Scientist](https://github.com/SakanaAI/AI-Scientist)|![GitHub Repo stars](https://badgen.net/github/stars/SakanaAI/AI-Scientist)|Fully autonomous scientific research pipeline: generates ideas, implements experiments, writes and reviews full academic papers.|[Paper](https://arxiv.org/abs/2408.06292). By Sakana AI. ASI-threshold capability.|
+|[STORM](https://github.com/stanford-oval/storm)|![GitHub Repo stars](https://badgen.net/github/stars/stanford-oval/storm)|Stanford: Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking. Writes Wikipedia-quality long-form articles autonomously.|[Paper](https://arxiv.org/abs/2402.14207). Expert-level knowledge synthesis agent.|
+|[AI Scientist](https://github.com/SakanaAI/AI-Scientist)|![GitHub Repo stars](https://badgen.net/github/stars/SakanaAI/AI-Scientist)|Fully autonomous scientific research pipeline: generates ideas, implements experiments, writes and reviews full academic papers.|[Paper](https://arxiv.org/abs/2408.06292). By Sakana AI. ASI-threshold capability.|
 |[gpt-researcher](https://github.com/assafelovic/gpt-researcher)|![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher)|GPT-based autonomous agent for comprehensive online research on any topic. Searches, reads, and synthesizes long-form reports.|-|
 |[mem0](https://github.com/mem0ai/mem0)|![GitHub Repo stars](https://badgen.net/github/stars/mem0ai/mem0)|Universal memory layer for AI agents. Persistent long-term, episodic, and semantic memory across agent sessions.|52k+ stars. Key missing component between current agents and AGI.|
 
@@ -202,7 +210,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 |Name|Github Stars|Introduction| Notes |
 |-|-|-|-|
-|[:fire: everything-claude-code](https://github.com/anthropics/claude-code)|![GitHub Repo stars](https://badgen.net/github/stars/anthropics/claude-code)|Agent harness performance optimization system with skills, instincts, memory, and security for AI coding agents.|Cognitive scaffolding for agentic AI — directly relevant to persistent AGI.|
+|[everything-claude-code](https://github.com/anthropics/claude-code)|![GitHub Repo stars](https://badgen.net/github/stars/anthropics/claude-code)|Agent harness performance optimization system with skills, instincts, memory, and security for AI coding agents.|Cognitive scaffolding for agentic AI — directly relevant to persistent AGI.|
 |[nanobot](https://github.com/HKUDS/nanobot)|![GitHub Repo stars](https://badgen.net/github/stars/HKUDS/nanobot)|Ultra-lightweight personal AI agent. Minimal footprint with full agent capabilities.|39k+ stars. Edge-AGI and ubiquitous deployment.|
 |[Screenpipe](https://github.com/screenpipe/screenpipe)|![GitHub Repo stars](https://badgen.net/github/stars/screenpipe/screenpipe)|Run agents that work for you based on what you do. Continuously observes your screen, builds personal memory, and triggers AI actions.|Always-on environmental awareness — a prototype AGI assistant.|
 
@@ -210,7 +218,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 |Name|Github Stars|Introduction| Notes |
 |-|-|-|-|
-|[:fire: generative_agents](https://github.com/joonspk-research/generative_agents)|![GitHub Repo stars](https://badgen.net/github/stars/joonspk-research/generative_agents)|Generative Agents: Interactive Simulacra of Human Behavior. 25 AI agents in a simulated town with unique identities, memories, and behaviors.|[Paper](https://arxiv.org/abs/2304.03442). Stanford & Google. Emergent social cognition.|
+|[generative_agents](https://github.com/joonspk-research/generative_agents)|![GitHub Repo stars](https://badgen.net/github/stars/joonspk-research/generative_agents)|Generative Agents: Interactive Simulacra of Human Behavior. 25 AI agents in a simulated town with unique identities, memories, and behaviors.|[Paper](https://arxiv.org/abs/2304.03442). Stanford & Google. Emergent social cognition.|
 |[Voyager](https://github.com/MineDojo/Voyager)|![GitHub Repo stars](https://badgen.net/github/stars/MineDojo/Voyager)|Open-Ended Embodied Agent with LLMs. Plays Minecraft autonomously, continuously discovers new skills via a self-growing code library.|[Paper](https://arxiv.org/abs/2305.16291). NVIDIA/CMU. Lifelong skill acquisition.|
 |[RoboGen](https://github.com/Genesis-Embodied-AI/RoboGen)|![GitHub Repo stars](https://badgen.net/github/stars/Genesis-Embodied-AI/RoboGen)|Generative simulation for automated robot learning. Auto-generates tasks, environments, and training data using GPT-4.|[Paper](https://arxiv.org/abs/2311.01455). Self-improving robot curriculum.|
 |[ai-town](https://github.com/a16z-infra/ai-town)|![GitHub Repo stars](https://badgen.net/github/stars/a16z-infra/ai-town)|Deployable starter kit for building AI town — a virtual town where AI characters live, chat, and socialize. By a16z.|-|
@@ -220,6 +228,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 ## LLM Application Frameworks
 
 > The developer toolkits for building production LLM applications. From orchestration chains to observability platforms, these frameworks are the backbone of every AI product shipping today.
+
+![LangChain](https://img.shields.io/badge/LangChain-Orchestration-1C3C3C?style=flat-square) ![LlamaIndex](https://img.shields.io/badge/LlamaIndex-RAG-purple?style=flat-square) ![Observability](https://img.shields.io/badge/Observability-Tracing_&_Evals-blue?style=flat-square) ![Structured Output](https://img.shields.io/badge/Structured_Output-Pydantic-green?style=flat-square)
 
 ### Core Orchestration Frameworks
 
@@ -271,6 +281,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 > Retrieval-Augmented Generation (RAG) grounds LLMs in real-world data, eliminating hallucinations and enabling knowledge-intensive applications. This section covers the full RAG stack: vector storage, retrieval engines, graph-based approaches, document parsing, and cutting-edge embedding models.
 
+![Vector DB](https://img.shields.io/badge/Vector_DB-Milvus_Qdrant_Chroma-blue?style=flat-square) ![Graph RAG](https://img.shields.io/badge/Graph_RAG-Knowledge_Graphs-purple?style=flat-square) ![Embeddings](https://img.shields.io/badge/Embeddings-OpenAI_Cohere_NVIDIA-green?style=flat-square) ![Document Parsing](https://img.shields.io/badge/Document_Parsing-PDF_OCR-orange?style=flat-square)
+
 ### Vector Databases
 
 | Name | Description | Links |
@@ -291,7 +303,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 | Name | Description | Links |
 |------|-------------|-------|
-| [:fire: RAGFlow](https://github.com/infiniflow/ragflow) | Leading open-source RAG engine with vision-based document parsing (tables, figures, layouts). Multi-recall: vector + full-text + knowledge graph. 78k+ stars. | [ragflow.io](https://ragflow.io/) |
+| [RAGFlow](https://github.com/infiniflow/ragflow) | Leading open-source RAG engine with vision-based document parsing (tables, figures, layouts). Multi-recall: vector + full-text + knowledge graph. 78k+ stars. | [ragflow.io](https://ragflow.io/) |
 | [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) | All-in-one AI app with RAG, agents, MCP support. Use any LLM, any document, any vector database. Privacy-first. 58k+ stars. | [useanything.com](https://useanything.com/) |
 | [Kotaemon](https://github.com/Cinnamon/kotaemon) | Open-source RAG document QA tool with chat UI, graph RAG, multi-modal support, and citation highlighting. 22k+ stars. | [GitHub](https://github.com/Cinnamon/kotaemon) |
 | [Pathway LLM App](https://github.com/pathwaycom/llm-app) | Ready-to-run cloud templates for RAG and AI pipelines with live data sync (Sharepoint, S3, Kafka, Postgres). 60k+ stars. | [pathway.com](https://pathway.com/) |
@@ -302,7 +314,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 | Name | Description | Links |
 |------|-------------|-------|
-| [:fire: Microsoft GraphRAG](https://github.com/microsoft/graphrag) | Landmark Graph-based RAG: extracts knowledge graphs from documents, performs global queries via community summaries. 32k+ stars. | [Paper](https://arxiv.org/abs/2404.16130), [Docs](https://microsoft.github.io/graphrag/) |
+| [Microsoft GraphRAG](https://github.com/microsoft/graphrag) | Landmark Graph-based RAG: extracts knowledge graphs from documents, performs global queries via community summaries. 32k+ stars. | [Paper](https://arxiv.org/abs/2404.16130), [Docs](https://microsoft.github.io/graphrag/) |
 | [LightRAG](https://github.com/HKUDS/LightRAG) | Faster, simpler alternative to GraphRAG. Dual-level retrieval (entity + thematic) with incremental knowledge graph updates. 15k+ stars. | [GitHub](https://github.com/HKUDS/LightRAG) |
 | [PageIndex](https://github.com/VectifyAI/PageIndex) | Document index for vectorless, reasoning-based RAG. Bypasses traditional embedding for reasoning-first retrieval. 25k+ stars. | [GitHub](https://github.com/VectifyAI/PageIndex) |
 | [Neo4j GraphRAG](https://github.com/neo4j/neo4j-graphrag-python) | Official Neo4j library for GraphRAG pipelines. KG construction, hybrid retrieval (vector + Cypher). | [Docs](https://neo4j.com/docs/neo4j-graphrag-python/current/) |
@@ -325,7 +337,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | HippoRAG | Neurobiologically-inspired RAG using knowledge graphs mimicking hippocampal memory for multi-hop reasoning. | [Code](https://github.com/OSU-NLP-Group/HippoRAG) |
 | RAG Techniques Guide | Comprehensive tutorial repository showcasing 20+ advanced RAG techniques with notebooks. 27k+ stars. | [GitHub](https://github.com/NirDiamant/RAG_Techniques) |
 
-### Embedding Models (2024-2026)
+### Embedding Models (2025-2026)
 
 | Model | Provider | Key Notes | Links |
 |-------|----------|-----------|-------|
@@ -343,6 +355,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 ## LLM Fine-Tuning Techniques
 
 > Making foundation models your own. Fine-tuning adapts pre-trained LLMs to specific tasks, domains, or behaviors -- from lightweight LoRA adapters that train in hours on a single GPU to full alignment techniques like DPO that shape model values.
+
+![LoRA](https://img.shields.io/badge/LoRA-Low--Rank_Adaptation-blue?style=flat-square) ![QLoRA](https://img.shields.io/badge/QLoRA-4--bit_Quantized-green?style=flat-square) ![PEFT](https://img.shields.io/badge/PEFT-Parameter_Efficient-purple?style=flat-square) ![DPO](https://img.shields.io/badge/DPO-Preference_Optimization-orange?style=flat-square) ![RLHF](https://img.shields.io/badge/RLHF-Human_Feedback-red?style=flat-square)
 
 ### LoRA and Variants
 
@@ -379,6 +393,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 > Getting models from research to production. High-performance inference engines, serving frameworks, and optimization tools that make LLMs fast, cost-efficient, and scalable.
 
+![vLLM](https://img.shields.io/badge/vLLM-PagedAttention-blue?style=flat-square) ![CUDA](https://img.shields.io/badge/CUDA-GPU_Inference-76B900?style=flat-square&logo=nvidia&logoColor=white) ![Quantization](https://img.shields.io/badge/Quantization-INT4_INT8-orange?style=flat-square) ![Production](https://img.shields.io/badge/Production-Serving-green?style=flat-square)
+
 | Name | Description | Links |
 |------|-------------|-------|
 | [vLLM](https://github.com/vllm-project/vllm) | High-throughput and memory-efficient inference and serving engine for LLMs with PagedAttention. | [Docs](https://docs.vllm.ai/) |
@@ -398,6 +414,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 > Training frontier models requires distributing computation across thousands of GPUs. These frameworks handle the parallelism, memory optimization, and communication needed to train models with billions (or trillions) of parameters.
 
+![DeepSpeed](https://img.shields.io/badge/DeepSpeed-Microsoft-blue?style=flat-square) ![Megatron](https://img.shields.io/badge/Megatron-NVIDIA-76B900?style=flat-square) ![Distributed](https://img.shields.io/badge/Distributed-Multi--GPU-purple?style=flat-square)
+
 | Name | Description | Links |
 |------|-------------|-------|
 | [ColossalAI](https://github.com/hpcaitech/ColossalAI) | Making large AI models cheaper, faster, and more accessible with efficient parallelism techniques. | [colossalai.org](https://colossalai.org/) |
@@ -409,6 +427,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 ## Prompt Engineering
 
 > The art and science of communicating with LLMs. These techniques transform how models reason, from simple chain-of-thought to sophisticated graph-structured exploration of solution spaces.
+
+![CoT](https://img.shields.io/badge/CoT-Chain_of_Thought-blue?style=flat-square) ![ToT](https://img.shields.io/badge/ToT-Tree_of_Thoughts-green?style=flat-square) ![GoT](https://img.shields.io/badge/GoT-Graph_of_Thoughts-purple?style=flat-square) ![Reasoning](https://img.shields.io/badge/Reasoning-Step_by_Step-orange?style=flat-square)
 
 | Technique | Description | Paper |
 |-----------|-------------|-------|
@@ -426,6 +446,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 ## Safety, Alignment and Governance
 
 > The most important section in this entire repository. As AI systems grow more capable, ensuring they remain safe, aligned with human values, and under meaningful control becomes the defining challenge of our era. This covers technical alignment research, adversarial attacks, governance frameworks, and the tools to detect and mitigate AI harms.
+
+![Alignment](https://img.shields.io/badge/Alignment-RLHF_DPO-red?style=flat-square) ![Safety](https://img.shields.io/badge/Safety-Red_Teaming-orange?style=flat-square) ![Governance](https://img.shields.io/badge/Governance-Policy_&_Ethics-blue?style=flat-square) ![Interpretability](https://img.shields.io/badge/Interpretability-Mechanistic-purple?style=flat-square) ![Detection](https://img.shields.io/badge/Detection-AI_Text-green?style=flat-square)
 
 ### Safety and Alignment
 
@@ -460,6 +482,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 ## ASI and Superintelligence Research
 
 > The long game. This section tracks the organizations racing toward AGI/ASI, the books that frame the debate, the seminal papers that define the field, the benchmarks that measure progress, and the roadmaps that predict when -- and how -- we get there.
+
+![Organizations](https://img.shields.io/badge/Organizations-OpenAI_Anthropic_DeepMind_SSI-blue?style=flat-square) ![Books](https://img.shields.io/badge/Books-27_Titles-green?style=flat-square) ![Benchmarks](https://img.shields.io/badge/Benchmarks-ARC--AGI_SWE--bench-orange?style=flat-square) ![Existential Risk](https://img.shields.io/badge/Existential_Risk-Control_Problem-red?style=flat-square)
 
 ### Key Organizations Pursuing or Studying AGI/ASI
 
@@ -581,6 +605,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 > The research frontier. These papers represent the cutting edge of AI capabilities, reasoning, agent design, alignment, and interpretability -- the ideas that will define the path from today's LLMs to tomorrow's AGI.
 
+![arXiv](https://img.shields.io/badge/arXiv-Papers-B31B1B?style=flat-square&logo=arxiv&logoColor=white) ![Frontier Models](https://img.shields.io/badge/Frontier_Models-GPT--4_Gemini_Claude_Llama-blue?style=flat-square) ![Reasoning](https://img.shields.io/badge/Reasoning-o1_R1_CoT-green?style=flat-square) ![Agents](https://img.shields.io/badge/Agents-ReAct_SWE--bench-orange?style=flat-square) ![Safety](https://img.shields.io/badge/Safety-Alignment_&_Interpretability-red?style=flat-square)
+
 ### Frontier Model Papers
 
 | Paper | Authors / Org | Year | Description | Links |
@@ -671,6 +697,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 > Hands-on learning resources to go from understanding AI concepts to building production systems. Courses, documentation, and curated collections for every skill level.
 
+![Beginner](https://img.shields.io/badge/Beginner-Start_Here-brightgreen?style=flat-square) ![Intermediate](https://img.shields.io/badge/Intermediate-Build-blue?style=flat-square) ![Advanced](https://img.shields.io/badge/Advanced-Research-purple?style=flat-square) ![Free](https://img.shields.io/badge/Free-Open_Source-green?style=flat-square)
+
 | Resource | Description | Links |
 |----------|-------------|-------|
 | [awesome-agi-cocosci](https://github.com/YuzheSHI/awesome-agi-cocosci) | Collection of resources on AGI from the perspective of cognitive science. | [GitHub](https://github.com/YuzheSHI/awesome-agi-cocosci) |
@@ -688,6 +716,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 ## Top Conferences
 
 > Where the AGI community gathers. From peer-reviewed academic venues publishing foundational research to government-level safety summits and industry developer conferences shaping the future of AI.
+
+![Academic](https://img.shields.io/badge/Academic-NeurIPS_ICML_ICLR-blue?style=flat-square) ![AGI Specific](https://img.shields.io/badge/AGI_Specific-AGI_Conference_ARC_Prize-purple?style=flat-square) ![Safety](https://img.shields.io/badge/Safety-Bletchley_Seoul_Paris-red?style=flat-square) ![Industry](https://img.shields.io/badge/Industry-GTC_Google_I/O_DevDay-green?style=flat-square)
 
 ### Top-Tier AI/ML Academic Conferences
 
