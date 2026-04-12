@@ -32,6 +32,9 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
   - [What is AGI?](#what-is-agi)
   - [What is ASI?](#what-is-asi-artificial-superintelligence)
   - [Frameworks and Platforms](#frameworks-and-platforms)
+    - [Next-Generation Agent Frameworks (2024-2026)](#next-generation-agent-frameworks-2024-2026)
+    - [Established Agent Frameworks](#established-agent-frameworks)
+    - [Specialized & Utility Frameworks](#specialized--utility-frameworks)
   - [Agents](#agents)
   - [LLM Application Frameworks](#llm-application-frameworks)
   - [RAG and Vector Databases](#rag-and-vector-databases)
@@ -54,36 +57,53 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 
 ## Frameworks and Platforms
 
+### Next-Generation Agent Frameworks (2024-2026)
+
 |Name|Github Stars|Introduction| Notes |
 |-|-|-|-|
-|[:fire: Auto-GPT](https://github.com/Significant-Gravitas/Auto-GPT) |![GitHub Repo stars](https://badgen.net/github/stars/Significant-Gravitas/Auto-GPT)|An experimental open-source attempt to make GPT-4 fully autonomous.|-|
-|[:fire: AgentGPT](https://github.com/reworkd/AgentGPT) |![GitHub Repo stars](https://badgen.net/github/stars/reworkd/AgentGPT)|Assemble, configure, and deploy autonomous AI Agents in your browser.|-|
-|[:fire: MetaGPT](https://github.com/geekan/MetaGPT) |![GitHub Repo stars](https://badgen.net/github/stars/geekan/MetaGPT)|The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo.|Multi-agent framework that mimics a software company structure with PM, architect, and engineer roles.|
-|[:fire: MiniGPT-4](https://github.com/Vision-CAIR/MiniGPT-4)|![GitHub Repo stars](https://badgen.net/github/stars/Vision-CAIR/MiniGPT-4)|MiniGPT-4: Enhancing Vision-language Understanding with Advanced Large Language Models.|-|
-|[:fire: JARVIS](https://github.com/microsoft/JARVIS)|![GitHub Repo stars](https://badgen.net/github/stars/microsoft/JARVIS)|A system to connect LLMs with ML community. Uses ChatGPT as a controller to manage AI models on HuggingFace for task planning, model selection, and execution.|-|
-|[:fire: babyagi](https://github.com/yoheinakajima/babyagi)|![GitHub Repo stars](https://badgen.net/github/stars/yoheinakajima/babyagi)|Use OpenAI and Pinecone APIs to create, prioritize, and execute tasks.| Task-driven autonomous agent using OpenAI and vector DBs.|
-|[SuperAGI](https://github.com/TransformerOptimus/SuperAGI)|![GitHub Repo stars](https://badgen.net/github/stars/TransformerOptimus/SuperAGI)|A dev-first open source autonomous AI agent framework. Run concurrent agents seamlessly, extend agent capabilities with tools, GUI, action console, multiple vector DBs, performance telemetry, optimized token usage, and agent memory storage.|Toolkits: Twitter, Coding, Instagram, Email, Jira, File Manager, Google Search, DALL-E, GitHub, Web Interaction, DuckDuckGo, Google Calendar, Notion, Apollo.|
-|[smol-ai/developer](https://github.com/smol-ai/developer)|![GitHub Repo stars](https://badgen.net/github/stars/smol-ai/developer)|The first library to let you embed a developer agent in your own app!|-|
-|[Auto-GPT-Plugins](https://github.com/Significant-Gravitas/Auto-GPT-Plugins) |![GitHub Repo stars](https://badgen.net/github/stars/Significant-Gravitas/Auto-GPT-Plugins)|Plugins for Auto-GPT.|-|
-|[AutoGPT.js](https://github.com/zabirauf/AutoGPT.js)|![GitHub Repo stars](https://badgen.net/github/stars/zabirauf/AutoGPT.js)|Auto-GPT on the browser.|-|
-|[AutoGPT-GUI](https://github.com/thecookingsenpai/autogpt-gui)|![GitHub Repo stars](https://badgen.net/github/stars/thecookingsenpai/autogpt-gui)|A graphical user interface for AutoGPT.|-|
-|[OpenAGI](https://github.com/agiresearch/OpenAGI) |![GitHub Repo stars](https://badgen.net/github/stars/agiresearch/OpenAGI)|When LLM (Large Language Models) Meets Domain Experts. An open-source AGI research platform combining expert models with RLTF.|Combines ChatGPT/LLaMA2 with specialized models, dynamically selecting tools based on task context.|
-|[AI-legion](https://github.com/eumemic/ai-legion)|![GitHub Repo stars](https://badgen.net/github/stars/eumemic/ai-legion)|An LLM-powered autonomous agent platform.|-|
-|[MicroGPT](https://github.com/muellerberndt/micro-gpt)|![GitHub Repo stars](https://badgen.net/github/stars/muellerberndt/micro-gpt)|A minimal generic autonomous agent based on GPT3.5/4. Can analyze stock prices, perform network security tests, create art, and order pizza.|-|
-|[Agent-LLM](https://github.com/Josh-XT/Agent-LLM)|![GitHub Repo stars](https://badgen.net/github/stars/Josh-XT/Agent-LLM)|An Artificial Intelligence Automation Platform. AI Instruction management from various providers, has an adaptive memory, and a versatile plugin system with many commands including web browsing.|-|
-|[loopgpt](https://github.com/farizrahman4u/loopgpt)|![GitHub Repo stars](https://badgen.net/github/stars/farizrahman4u/loopgpt)|Modular Auto-GPT Framework. Improved GPT-3.5 support, lower API token cost, can run with or without human in the loop.|-|
-|[AutoGPT-Next-Web](https://github.com/ConnectAI-E/AutoGPT-Next-Web)|![GitHub Repo stars](https://badgen.net/github/stars/ConnectAI-E/AutoGPT-Next-Web)|Assemble, configure, and deploy autonomous AI Agents in your browser.|-|
-|[Free-AUTO-GPT-with-NO-API](https://github.com/IntelligenzaArtificiale/Free-AUTO-GPT-with-NO-API)|![GitHub Repo stars](https://badgen.net/github/stars/IntelligenzaArtificiale/Free-AUTO-GPT-with-NO-API)|Free AUTOGPT with NO API - run AutoGPT/babyagi without any paid OpenAI API.|-|
-|[opencog](https://github.com/opencog/opencog)|![GitHub Repo stars](https://badgen.net/github/stars/opencog/opencog)|A framework for integrated Artificial Intelligence & Artificial General Intelligence (AGI).|-|
-|[mini-agi](https://github.com/muellerberndt/mini-agi)|![GitHub Repo stars](https://badgen.net/github/stars/muellerberndt/mini-agi)|MiniAGI is a minimal general-purpose autonomous agent based on GPT-3.5 / GPT-4.|-|
-|[big-agi](https://github.com/enricoros/big-agi)|![GitHub Repo stars](https://badgen.net/github/stars/enricoros/big-agi)|Personal AI application powered by GPT-4 and beyond, with AI personas, AGI functions, text-to-image, voice, response streaming, code highlighting and execution, PDF import, presets for developers.|[big-agi.com](https://big-agi.com/)|
-|[DemoGPT](https://github.com/melih-unsal/DemoGPT)|![GitHub Repo stars](https://badgen.net/github/stars/melih-unsal/DemoGPT)|DemoGPT enables you to create quick demos by just using prompts.|-|
-|[LocalAGI](https://github.com/EmbraceAGI/LocalAGI)|![GitHub Repo stars](https://badgen.net/github/stars/EmbraceAGI/LocalAGI)|Locally run AGI powered by LLaMA, ChatGLM and more.|-|
-|[ChatDev](https://github.com/OpenBMB/ChatDev)|![GitHub Repo stars](https://badgen.net/github/stars/OpenBMB/ChatDev)|A virtual software company with multiple agents (CEO, CTO, programmer, tester, etc.) collaborating to design, code, test, and document software.|Agents play different roles in a simulated dev organization.|
-|[crewAI](https://github.com/joaomdmoura/crewAI)|![GitHub Repo stars](https://badgen.net/github/stars/joaomdmoura/crewAI)|Framework for orchestrating role-playing, autonomous AI agents. Craft collaborative AI crews for complex tasks.|-|
+|[:fire: OpenHands](https://github.com/All-Hands-AI/OpenHands)|![GitHub Repo stars](https://badgen.net/github/stars/All-Hands-AI/OpenHands)|AI-powered software development agent platform (formerly OpenDevin). Autonomous coding agent that can write, test, and debug code end-to-end.|71k+ stars. #1 on SWE-bench. Sandboxed execution environment.|
+|[:fire: browser-use](https://github.com/browser-use/browser-use)|![GitHub Repo stars](https://badgen.net/github/stars/browser-use/browser-use)|Make websites accessible for AI agents. Automate tasks online with ease using Playwright-based browser automation.|87k+ stars. AI agents that browse the web autonomously.|
+|[:fire: DeerFlow](https://github.com/bytedance/deer-flow)|![GitHub Repo stars](https://badgen.net/github/stars/bytedance/deer-flow)|ByteDance's open-source long-horizon SuperAgent harness that researches, codes, and creates. Multi-agent with sandboxes, memories, tools, and skills.|60k+ stars. Built on LangGraph.|
+|[:fire: Firecrawl](https://github.com/firecrawl/firecrawl)|![GitHub Repo stars](https://badgen.net/github/stars/firecrawl/firecrawl)|The Web Data API for AI - Power AI agents with clean web data. Scrapes and converts websites to LLM-ready markdown.|108k+ stars. Used by major AI agent frameworks.|
+|[:fire: crewAI](https://github.com/joaomdmoura/crewAI)|![GitHub Repo stars](https://badgen.net/github/stars/joaomdmoura/crewAI)|Framework for orchestrating role-playing, autonomous AI agents. Craft collaborative AI crews for complex tasks.|Production-grade multi-agent orchestration.|
+|[:fire: agenticSeek](https://github.com/Fosowl/agenticSeek)|![GitHub Repo stars](https://badgen.net/github/stars/Fosowl/agenticSeek)|Fully local autonomous agent - No APIs, no monthly bills. Thinks, browses the web, and codes using only local LLMs.|26k+ stars. Fully local, privacy-first.|
+|[Gemini CLI](https://github.com/google-gemini/gemini-cli)|![GitHub Repo stars](https://badgen.net/github/stars/google-gemini/gemini-cli)|Google's open-source AI agent that brings Gemini directly into your terminal. MCP support built-in.|101k+ stars. Official Google agent.|
+|[Hermes Agent](https://github.com/NousResearch/hermes-agent)|![GitHub Repo stars](https://badgen.net/github/stars/NousResearch/hermes-agent)|The agent that grows with you. By Nous Research - multi-model AI agent with Claude, GPT, and open-source model support.|66k+ stars. From Nous Research.|
+|[Daytona](https://github.com/daytonaio/daytona)|![GitHub Repo stars](https://badgen.net/github/stars/daytonaio/daytona)|Secure and elastic infrastructure for running AI-generated code. Sandboxed execution environment for AI agents.|72k+ stars. Secure code execution.|
+|[Composio](https://github.com/ComposioHQ/composio)|![GitHub Repo stars](https://badgen.net/github/stars/ComposioHQ/composio)|Production-ready toolset for AI agents. 250+ tools, frameworks, and integrations for building agentic AI applications.|[composio.dev](https://composio.dev/)|
+|[PentAGI](https://github.com/vxcontrol/pentagi)|![GitHub Repo stars](https://badgen.net/github/stars/vxcontrol/pentagi)|Fully autonomous AI agent system for complex penetration testing tasks. Multi-agent security automation.|15k+ stars. Autonomous security testing.|
+|[Screenpipe](https://github.com/screenpipe/screenpipe)|![GitHub Repo stars](https://badgen.net/github/stars/screenpipe/screenpipe)|Run agents that work for you based on what you do. AI that observes your screen and acts accordingly.|18k+ stars. Context-aware desktop agent.|
+
+### Established Agent Frameworks
+
+|Name|Github Stars|Introduction| Notes |
+|-|-|-|-|
+|[:fire: Auto-GPT](https://github.com/Significant-Gravitas/Auto-GPT)|![GitHub Repo stars](https://badgen.net/github/stars/Significant-Gravitas/Auto-GPT)|The original autonomous AI agent. Now evolved into a full platform for building and deploying autonomous agents.|183k+ stars. The project that started the autonomous agent movement.|
+|[:fire: MetaGPT](https://github.com/geekan/MetaGPT)|![GitHub Repo stars](https://badgen.net/github/stars/geekan/MetaGPT)|The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo.|Mimics a software company with PM, architect, and engineer agent roles.|
+|[:fire: AgentGPT](https://github.com/reworkd/AgentGPT)|![GitHub Repo stars](https://badgen.net/github/stars/reworkd/AgentGPT)|Assemble, configure, and deploy autonomous AI Agents in your browser.|36k+ stars. Browser-based agent deployment.|
+|[SuperAGI](https://github.com/TransformerOptimus/SuperAGI)|![GitHub Repo stars](https://badgen.net/github/stars/TransformerOptimus/SuperAGI)|Dev-first open source autonomous AI agent framework. Run concurrent agents with tools, GUI, multiple vector DBs, performance telemetry, and agent memory.|Toolkits: Email, Jira, GitHub, Google Search, DALL-E, Notion, etc.|
+|[AutoGen](https://github.com/microsoft/autogen)|![GitHub Repo stars](https://badgen.net/github/stars/microsoft/autogen)|Microsoft's framework for multi-agent conversation. Agents converse with each other to solve tasks with human-in-the-loop support.|Now evolved into AG2 with enhanced multi-agent patterns.|
+|[ChatDev](https://github.com/OpenBMB/ChatDev)|![GitHub Repo stars](https://badgen.net/github/stars/OpenBMB/ChatDev)|A virtual software company with multiple agents (CEO, CTO, programmer, tester) collaborating to design, code, test, and document software.|-|
 |[CAMEL](https://github.com/camel-ai/camel)|![GitHub Repo stars](https://badgen.net/github/stars/camel-ai/camel)|Communicative Agents for "Mind" Exploration of Large Language Model Society. Role-playing framework for multi-agent collaboration.|[camel-ai.org](https://www.camel-ai.org/)|
-|[ShortGPT](https://github.com/RayVentura/ShortGPT)|![GitHub Repo stars](https://badgen.net/github/stars/RayVentura/ShortGPT)|Framework for automating video creation, voiceover, editing, and publishing using LLMs.|-|
 |[XAgent](https://github.com/OpenBMB/XAgent)|![GitHub Repo stars](https://badgen.net/github/stars/OpenBMB/XAgent)|An autonomous LLM-based agent for complex task solving.|[x-agent.net](https://x-agent.net/)|
+|[JARVIS / HuggingGPT](https://github.com/microsoft/JARVIS)|![GitHub Repo stars](https://badgen.net/github/stars/microsoft/JARVIS)|Uses ChatGPT as a controller to manage AI models on HuggingFace for task planning, model selection, and execution.|-|
+|[babyagi](https://github.com/yoheinakajima/babyagi)|![GitHub Repo stars](https://badgen.net/github/stars/yoheinakajima/babyagi)|Task-driven autonomous agent using OpenAI and vector DBs to create, prioritize, and execute tasks.|-|
+|[OpenAGI](https://github.com/agiresearch/OpenAGI)|![GitHub Repo stars](https://badgen.net/github/stars/agiresearch/OpenAGI)|Open-source AGI research platform combining LLMs with domain expert models via RLTF.|-|
+
+### Specialized & Utility Frameworks
+
+|Name|Github Stars|Introduction| Notes |
+|-|-|-|-|
+|[ShortGPT](https://github.com/RayVentura/ShortGPT)|![GitHub Repo stars](https://badgen.net/github/stars/RayVentura/ShortGPT)|Framework for automating video creation, voiceover, editing, and publishing using LLMs.|-|
+|[gpt-engineer](https://github.com/AntonOsika/gpt-engineer)|![GitHub Repo stars](https://badgen.net/github/stars/AntonOsika/gpt-engineer)|Specify what you want it to build, the AI asks for clarification, and then builds it.|-|
+|[gpt-researcher](https://github.com/assafelovic/gpt-researcher)|![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher)|GPT based autonomous agent that does online comprehensive research on any given topic.|-|
+|[FastGPT](https://github.com/labring/FastGPT)|![GitHub Repo stars](https://badgen.net/github/stars/labring/FastGPT)|Knowledge-based QA system built on LLMs with out-of-the-box data processing and workflow orchestration.|-|
+|[big-agi](https://github.com/enricoros/big-agi)|![GitHub Repo stars](https://badgen.net/github/stars/enricoros/big-agi)|AI suite with AI personas, AGI functions, multi-model chat, text-to-image, voice, code execution. Deploy on-prem or cloud.|[big-agi.com](https://big-agi.com/)|
+|[opencog](https://github.com/opencog/opencog)|![GitHub Repo stars](https://badgen.net/github/stars/opencog/opencog)|A framework for integrated Artificial Intelligence & Artificial General Intelligence (AGI).|-|
+|[smol-ai/developer](https://github.com/smol-ai/developer)|![GitHub Repo stars](https://badgen.net/github/stars/smol-ai/developer)|The first library to let you embed a developer agent in your own app!|-|
+|[loopgpt](https://github.com/farizrahman4u/loopgpt)|![GitHub Repo stars](https://badgen.net/github/stars/farizrahman4u/loopgpt)|Modular Auto-GPT Framework. Improved GPT-3.5 support, lower API token cost.|-|
+|[LocalAGI](https://github.com/EmbraceAGI/LocalAGI)|![GitHub Repo stars](https://badgen.net/github/stars/EmbraceAGI/LocalAGI)|Locally run AGI powered by LLaMA, ChatGLM and more.|-|
+|[DemoGPT](https://github.com/melih-unsal/DemoGPT)|![GitHub Repo stars](https://badgen.net/github/stars/melih-unsal/DemoGPT)|Create quick demos by just using prompts.|-|
 
 ---
 
