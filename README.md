@@ -7,78 +7,124 @@
 ![LLM](https://img.shields.io/badge/LLM-Large_Language_Models-orange)
 ![Agents](https://img.shields.io/badge/Agents-Autonomous_AI-yellow)
 
-A comprehensive, curated collection of resources on **Artificial General Intelligence (AGI)**, **Artificial Superintelligence (ASI)**, and **Super AI** -- covering frameworks, agents, research papers, safety & alignment, books, benchmarks, and tools.
+> *"The development of full artificial intelligence could spell the end of the human race... or it could be the best thing ever to happen to humanity."* -- Stephen Hawking
 
-Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Explained](https://github.com/dair-ai/ML-Papers-Explained) | [Awesome AGI & ASI by shajibghosh](https://github.com/shajibghosh/Awesome-AGI-and-ASI)
+The most comprehensive, curated collection of resources on the journey from **AI** to **AGI** to **ASI** -- covering frameworks, agents, research papers, safety & alignment, books, benchmarks, conferences, and tools for builders and researchers shaping the future of intelligence.
+
+**Related Resources:** [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Explained](https://github.com/dair-ai/ML-Papers-Explained) | [Awesome AGI & ASI by shajibghosh](https://github.com/shajibghosh/Awesome-AGI-and-ASI)
 
 ---
 
-## What is AGI?
-> **Artificial General Intelligence (AGI)** refers to advanced AI systems that exhibit human-like cognitive abilities across various tasks and domains. Unlike narrow AI, which excels in specific tasks, AGI aims to encompass learning, reasoning, problem-solving, perception, and natural language understanding. Although AGI remains an ambitious goal, its pursuit has led to numerous AI advancements. The development of AGI holds the potential to revolutionize industries such as healthcare, finance, transportation, and education, while also raising ethical, safety, and societal concerns that must be carefully addressed.
+## Understanding AI, AGI, and ASI
 
-## What is ASI (Artificial Superintelligence)?
-> **Artificial Superintelligence (ASI)**, also referred to as **Super AI**, is a hypothetical AI agent that possesses intelligence surpassing the most gifted human minds in virtually all domains -- including scientific creativity, social skills, and general wisdom. Philosopher Nick Bostrom defines it as "any intellect that greatly exceeds the cognitive performance of humans in virtually all domains of interest." ASI could emerge from recursive self-improvement cycles (an "intelligence explosion"), where an AI capable of improving its own design rapidly exceeds human-level capabilities. Key concerns include the **control problem** (ensuring ASI remains aligned with human values), **goal misalignment** (unintended optimization targets), and the potential for an **intelligence explosion** leading to a technological singularity.
+### What is AI (Artificial Intelligence)?
 
-### Levels of AI Intelligence
-| Level | Type | Description |
-|-------|------|-------------|
-| 1 | **ANI** (Artificial Narrow Intelligence) | AI excelling at a single specific task (e.g., chess, image recognition, language translation). |
-| 2 | **AGI** (Artificial General Intelligence) | AI with human-level cognitive abilities across all intellectual tasks. |
-| 3 | **ASI** (Artificial Superintelligence) | AI that vastly surpasses the best human minds in every domain, including creativity, problem-solving, and social intelligence. |
+**Artificial Intelligence (AI)** is the broad field of creating machines and software that can perform tasks typically requiring human intelligence. Today's AI systems -- often called **Artificial Narrow Intelligence (ANI)** -- are specialists: they excel at one specific task (playing chess, recognizing faces, translating languages, generating text) but cannot transfer that skill to unrelated domains. Every AI system you use today, from Siri to GPT-4 to self-driving cars, is narrow AI. It is powerful within its domain but fundamentally limited -- a chess engine cannot write poetry, and a language model cannot physically navigate a room.
+
+### What is AGI (Artificial General Intelligence)?
+
+**Artificial General Intelligence (AGI)** refers to AI systems that match or exceed human-level cognitive abilities **across virtually all intellectual tasks** -- learning, reasoning, problem-solving, perception, creativity, and social understanding. Unlike narrow AI, an AGI system could teach itself a new discipline, transfer knowledge between domains, handle novel situations it was never trained on, and understand context the way humans do. AGI does not yet exist, but its pursuit drives the most ambitious research programs in history (OpenAI, DeepMind, Anthropic, xAI, Meta, SSI). Estimated arrival: **2027--2035** according to leading researchers, though timelines remain highly uncertain.
+
+### What is ASI (Artificial Superintelligence)?
+
+**Artificial Superintelligence (ASI)**, also called **Super AI**, is a hypothetical system whose intelligence surpasses the most gifted human minds in **every domain** -- scientific creativity, social skills, strategic reasoning, and general wisdom. Philosopher Nick Bostrom defines it as *"any intellect that greatly exceeds the cognitive performance of humans in virtually all domains of interest."* ASI could emerge from recursive self-improvement cycles (an **"intelligence explosion"**), where an AI that can improve its own design rapidly surpasses human-level capabilities. Key concerns include the **control problem** (keeping ASI aligned with human values), **goal misalignment** (unintended optimization targets), and the potential for a **technological singularity** -- a point beyond which human civilization is fundamentally and unpredictably transformed.
+
+### AI vs AGI vs ASI -- The Complete Comparison
+
+| Dimension | ANI (Narrow AI) | AGI (General Intelligence) | ASI (Superintelligence) |
+|-----------|-----------------|---------------------------|------------------------|
+| **Definition** | AI that excels at a single, specific task or narrow domain | AI with human-level cognitive abilities across all intellectual tasks | AI that vastly surpasses the best human minds in every domain |
+| **Intelligence Scope** | Single domain only | All human cognitive domains | All domains, far beyond human capacity |
+| **Learning** | Trained on specific datasets for specific tasks; cannot learn new domains without retraining | Can learn any new domain autonomously, transfer knowledge across fields | Can learn instantly, discover entirely new fields of knowledge humans haven't conceived |
+| **Reasoning** | Pattern matching and statistical inference within trained domain | Human-like reasoning, abstraction, common sense, and causal understanding | Reasoning capabilities incomprehensible to humans; solves problems we cannot even formulate |
+| **Creativity** | Can remix and recombine patterns from training data | Genuine novel creativity comparable to the best human minds | Creates entirely new paradigms of science, art, and mathematics |
+| **Self-Awareness** | None -- no understanding of its own existence | Potentially self-aware; debated whether consciousness is required | Likely self-aware; may possess forms of consciousness beyond human understanding |
+| **Adaptability** | Brittle -- fails on out-of-distribution inputs | Robust generalization to novel situations, like humans | Adapts to any environment or challenge, including ones humans cannot survive or comprehend |
+| **Autonomy** | Requires human oversight, goals, and guardrails | Can set its own goals, plan long-term, and act independently | Fully autonomous; may pursue goals humans cannot predict or understand |
+| **Physical Capability** | Software only, or narrow robotics (e.g., robotic arm) | Could operate any physical system, robot, or interface | Could design and build its own hardware, infrastructure, or physical embodiment |
+| **Current Examples** | ChatGPT, AlphaFold, DALL-E, Tesla Autopilot, Siri, Google Search | None yet -- frontier models (GPT-4, Claude, Gemini) show early sparks but remain narrow | None -- purely theoretical |
+| **Status** | **Exists today** -- deployed at massive scale | **In active development** -- billions invested, estimated 2027-2035 | **Theoretical** -- may follow AGI within years or decades |
+| **Key Risk** | Job displacement, bias, misuse, deepfakes | Misalignment, economic disruption, power concentration, loss of human agency | Existential risk, intelligence explosion, loss of human control, civilizational transformation |
+| **Who's Building It** | Every tech company | OpenAI, DeepMind, Anthropic, Meta, xAI, SSI, Alibaba, DeepSeek | Safe Superintelligence Inc. (SSI), theoretical research at MIRI, FHI, CHAI |
+| **Key Benchmark** | Task-specific (ImageNet, SQuAD, HumanEval) | ARC-AGI, GPQA, Humanity's Last Exam, SWE-bench, FrontierMath | No benchmarks exist -- by definition, ASI exceeds all human-designed tests |
+
+### The Journey: ANI --> AGI --> ASI
+
+```
+  We Are Here
+      |
+      v
+ +---------+        +----------+        +----------+
+ |   ANI   | -----> |   AGI    | -----> |   ASI    |
+ | (Today) |        | (2027-   |        | (After   |
+ | Narrow  |        |  2035?)  |        |  AGI)    |
+ | Task-   |        | Human-   |        | Beyond   |
+ | Specific|        | Level    |        | Human    |
+ +---------+        +----------+        +----------+
+  ChatGPT            No system           Theoretical
+  AlphaFold          exists yet          "Intelligence
+  DALL-E             GPT-4 shows         Explosion"
+  Autopilot          early sparks        Singularity?
+```
+
+### Where Are We Now? (2025)
+
+The AI field is in a remarkable transition period. Here's what the current landscape looks like:
+
+| Signal | What It Means |
+|--------|---------------|
+| **GPT-4, Claude 3.5, Gemini 2.0** score expert-level on many benchmarks | Frontier models approach human performance in narrow domains, but still fail on novel reasoning |
+| **o1, o3, DeepSeek-R1** use chain-of-thought reasoning | Test-time compute scaling is a new paradigm -- models that "think longer" perform better |
+| **ARC-AGI scores remain <65%** (humans score ~85%) | Core fluid reasoning and abstraction remain unsolved -- the gap to AGI is real |
+| **Autonomous coding agents** (OpenHands, Devin, SWE-agent) resolve real GitHub issues | Agents are achieving narrow AGI-like performance in software engineering |
+| **Safe Superintelligence Inc.** raised $30B+ in 2024 | Ilya Sutskever (ex-OpenAI chief scientist) is betting everything on the ASI path |
+| **AI Safety Summits** held at Bletchley Park, Seoul, Paris | Governments worldwide are treating AGI/ASI risk as a top-tier policy issue |
+| **Scaling debate** intensifies | Some argue scaling alone leads to AGI; others say fundamental breakthroughs are needed |
+
+### Google DeepMind's Levels of AGI Framework (2023)
+
+| Level | Name | Description | Current Status |
+|-------|------|-------------|----------------|
+| 0 | **No AI** | Narrow software with no AI capability | Calculator, basic scripts |
+| 1 | **Emerging** | Equal to or somewhat better than an unskilled human | ChatGPT, Bard, Llama (most current LLMs) |
+| 2 | **Competent** | At least 50th percentile of skilled adults | Frontier models on some tasks (coding, writing) |
+| 3 | **Expert** | At least 90th percentile of skilled adults | Narrow domains only (AlphaFold, specialized coding) |
+| 4 | **Virtuoso** | At least 99th percentile of skilled adults | Not yet achieved across general tasks |
+| 5 | **Superhuman (ASI)** | Outperforms 100% of humans in all tasks | Theoretical -- the ASI threshold |
+
+> **Source:** [Levels of AGI: Operationalizing Progress on the Path to AGI](https://arxiv.org/abs/2311.02462) -- Morris et al., Google DeepMind (2023)
 
 ## Table of Contents
 
-- [Awesome AGI and ASI Resources](#awesome-agi-and-asi-resources-)
-  - [What is AGI?](#what-is-agi)
-  - [What is ASI?](#what-is-asi-artificial-superintelligence)
-  - [Frameworks and Platforms](#frameworks-and-platforms)
-    - [Next-Generation Agent Frameworks (2024-2026)](#next-generation-agent-frameworks-2024-2026)
-    - [Established Agent Frameworks](#established-agent-frameworks)
-    - [Specialized & Utility Frameworks](#specialized--utility-frameworks)
-  - [Agents](#agents)
-    - [Coding & Software Engineering Agents](#coding--software-engineering-agents)
-    - [Research & Knowledge Agents](#research--knowledge-agents)
-    - [Computer-Use & Desktop Agents](#computer-use--desktop-agents)
-    - [Embodied & Simulation Agents](#embodied--simulation-agents)
-  - [LLM Application Frameworks](#llm-application-frameworks)
-    - [Core Orchestration Frameworks](#core-orchestration-frameworks)
-    - [LLM Platforms & Developer Tools](#llm-platforms--developer-tools)
-    - [Structured Output & Prompt Engineering Tools](#structured-output--prompt-engineering-tools)
-    - [LLM Observability & Evaluation](#llm-observability--evaluation)
-  - [RAG and Vector Databases](#rag-and-vector-databases)
-    - [Vector Databases](#vector-databases)
-    - [RAG Engines & Platforms](#rag-engines--platforms)
-    - [Graph RAG](#graph-rag)
-    - [Document Parsing for RAG](#document-parsing-for-rag)
-    - [Advanced RAG Techniques](#advanced-rag-techniques)
-    - [Embedding Models (2024-2026)](#embedding-models-2024-2026)
-  - [LLM Fine-Tuning Techniques](#llm-fine-tuning-techniques)
-  - [LLM Deployment and Serving](#llm-deployment-and-serving)
-  - [Prompt Engineering](#prompt-engineering)
-  - [Safety, Alignment and Governance](#safety-alignment-and-governance)
-  - [ASI and Superintelligence Research](#asi-and-superintelligence-research)
-    - [Key Organizations](#key-organizations-pursuing-or-studying-agisi)
-    - [Books on AGI and ASI](#books-on-agi-asi-and-superintelligence)
-    - [Seminal Papers on ASI](#seminal-papers-on-asi-and-superintelligence)
-    - [AGI/ASI Benchmarks and Evaluation](#agiasi-benchmarks-and-evaluation)
-    - [Roadmaps and Perspectives](#roadmaps-perspectives-and-timelines)
-  - [Papers, Blogs, Courses and Lectures](#papers-blogs-courses-and-lectures)
-    - [Frontier Model Papers](#frontier-model-papers)
-    - [Reasoning, Scaling & Architecture Papers](#reasoning-scaling--architecture-papers)
-    - [Agent Papers](#agent-papers)
-    - [Alignment & Reward Modeling Papers](#alignment--reward-modeling-papers)
-    - [Safety & Interpretability Papers](#safety--interpretability-papers)
-    - [Blogs and News](#blogs-and-news)
-  - [Tutorials and Guides](#tutorials-and-guides)
-  - [Top Conferences](#top-conferences)
-    - [Top-Tier AI/ML Academic Conferences](#top-tier-aiml-academic-conferences)
-    - [AGI-Specific Conferences](#agi-specific-conferences)
-    - [AI Safety & Alignment Events](#ai-safety--alignment-events)
-    - [Industry AI Summits & Developer Conferences](#industry-ai-summits--developer-conferences)
+### Understand
+- [Understanding AI, AGI, and ASI](#understanding-ai-agi-and-asi) -- Definitions, comparison table, where we are now, DeepMind's AGI levels
+- [ASI and Superintelligence Research](#asi-and-superintelligence-research) -- Key organizations, books, seminal papers, benchmarks, roadmaps & timelines
+
+### Build
+- [Frameworks and Platforms](#frameworks-and-platforms) -- Next-gen, established, and specialized agent frameworks
+- [Agents](#agents) -- Coding, research, computer-use, and embodied agents
+- [LLM Application Frameworks](#llm-application-frameworks) -- Orchestration, platforms, structured output, observability
+- [RAG and Vector Databases](#rag-and-vector-databases) -- Vector DBs, RAG engines, Graph RAG, document parsing, embeddings
+
+### Train & Deploy
+- [LLM Fine-Tuning Techniques](#llm-fine-tuning-techniques) -- LoRA variants, adapters, PEFT, DPO, instruction tuning
+- [LLM Deployment and Serving](#llm-deployment-and-serving) -- vLLM, TGI, BentoML, and inference optimization
+- [Distributed Training Frameworks](#distributed-training-frameworks) -- ColossalAI, DeepSpeed, Megatron-LM
+- [Prompt Engineering](#prompt-engineering) -- CoT, ToT, GoT, and advanced prompting techniques
+
+### Safety & Governance
+- [Safety, Alignment and Governance](#safety-alignment-and-governance) -- RLHF, DPO, hallucination, AI detection, long context
+
+### Research & Learn
+- [Papers, Blogs, Courses and Lectures](#papers-blogs-courses-and-lectures) -- Frontier models, reasoning, agents, alignment, interpretability
+- [Tutorials and Guides](#tutorials-and-guides) -- Courses, documentation, and hands-on learning resources
+- [Top Conferences](#top-conferences) -- Academic, AGI-specific, safety, and industry conferences
 
 ---
 
 ## Frameworks and Platforms
+
+> The infrastructure powering the next generation of autonomous AI. These frameworks let you build, orchestrate, and deploy AI agents that can reason, browse, code, and collaborate -- from single-agent tools to multi-agent orchestration platforms.
 
 ### Next-Generation Agent Frameworks (2024-2026)
 
@@ -132,6 +178,8 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 
 ## Agents
 
+> Autonomous AI systems that perceive, reason, and act in the world. These agents represent the closest things we have to AGI-like behavior in narrow domains -- writing code, conducting research, operating computers, and navigating virtual worlds.
+
 ### Coding & Software Engineering Agents
 
 |Name|Github Stars|Introduction| Notes |
@@ -170,6 +218,8 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 ---
 
 ## LLM Application Frameworks
+
+> The developer toolkits for building production LLM applications. From orchestration chains to observability platforms, these frameworks are the backbone of every AI product shipping today.
 
 ### Core Orchestration Frameworks
 
@@ -218,6 +268,8 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 ---
 
 ## RAG and Vector Databases
+
+> Retrieval-Augmented Generation (RAG) grounds LLMs in real-world data, eliminating hallucinations and enabling knowledge-intensive applications. This section covers the full RAG stack: vector storage, retrieval engines, graph-based approaches, document parsing, and cutting-edge embedding models.
 
 ### Vector Databases
 
@@ -290,6 +342,8 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 
 ## LLM Fine-Tuning Techniques
 
+> Making foundation models your own. Fine-tuning adapts pre-trained LLMs to specific tasks, domains, or behaviors -- from lightweight LoRA adapters that train in hours on a single GPU to full alignment techniques like DPO that shape model values.
+
 ### LoRA and Variants
 
 | Method | Description | Paper | Code |
@@ -323,6 +377,8 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 
 ## LLM Deployment and Serving
 
+> Getting models from research to production. High-performance inference engines, serving frameworks, and optimization tools that make LLMs fast, cost-efficient, and scalable.
+
 | Name | Description | Links |
 |------|-------------|-------|
 | [vLLM](https://github.com/vllm-project/vllm) | High-throughput and memory-efficient inference and serving engine for LLMs with PagedAttention. | [Docs](https://docs.vllm.ai/) |
@@ -340,6 +396,8 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 
 ## Distributed Training Frameworks
 
+> Training frontier models requires distributing computation across thousands of GPUs. These frameworks handle the parallelism, memory optimization, and communication needed to train models with billions (or trillions) of parameters.
+
 | Name | Description | Links |
 |------|-------------|-------|
 | [ColossalAI](https://github.com/hpcaitech/ColossalAI) | Making large AI models cheaper, faster, and more accessible with efficient parallelism techniques. | [colossalai.org](https://colossalai.org/) |
@@ -349,6 +407,8 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 ---
 
 ## Prompt Engineering
+
+> The art and science of communicating with LLMs. These techniques transform how models reason, from simple chain-of-thought to sophisticated graph-structured exploration of solution spaces.
 
 | Technique | Description | Paper |
 |-----------|-------------|-------|
@@ -364,6 +424,8 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 ---
 
 ## Safety, Alignment and Governance
+
+> The most important section in this entire repository. As AI systems grow more capable, ensuring they remain safe, aligned with human values, and under meaningful control becomes the defining challenge of our era. This covers technical alignment research, adversarial attacks, governance frameworks, and the tools to detect and mitigate AI harms.
 
 ### Safety and Alignment
 
@@ -396,6 +458,8 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 ---
 
 ## ASI and Superintelligence Research
+
+> The long game. This section tracks the organizations racing toward AGI/ASI, the books that frame the debate, the seminal papers that define the field, the benchmarks that measure progress, and the roadmaps that predict when -- and how -- we get there.
 
 ### Key Organizations Pursuing or Studying AGI/ASI
 
@@ -482,6 +546,8 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 ---
 
 ## Papers, Blogs, Courses and Lectures
+
+> The research frontier. These papers represent the cutting edge of AI capabilities, reasoning, agent design, alignment, and interpretability -- the ideas that will define the path from today's LLMs to tomorrow's AGI.
 
 ### Frontier Model Papers
 
@@ -571,6 +637,8 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 
 ## Tutorials and Guides
 
+> Hands-on learning resources to go from understanding AI concepts to building production systems. Courses, documentation, and curated collections for every skill level.
+
 | Resource | Description | Links |
 |----------|-------------|-------|
 | [awesome-agi-cocosci](https://github.com/YuzheSHI/awesome-agi-cocosci) | Collection of resources on AGI from the perspective of cognitive science. | [GitHub](https://github.com/YuzheSHI/awesome-agi-cocosci) |
@@ -586,6 +654,8 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 ---
 
 ## Top Conferences
+
+> Where the AGI community gathers. From peer-reviewed academic venues publishing foundational research to government-level safety summits and industry developer conferences shaping the future of AI.
 
 ### Top-Tier AI/ML Academic Conferences
 
@@ -643,15 +713,23 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 
 ## Contributing
 
-Contributions are welcome! Please follow this format when adding resources:
+We're building the most comprehensive AGI/ASI resource on the internet -- and we need your help. Contributions are welcome!
 
+**How to contribute:**
+
+1. **Fork** this repository
+2. **Add** your resource following the format below
+3. **Open a Pull Request** with your additions
+
+**Format:**
 - **Title** - Author(s) (Year). [Link](URL) - One-line description
 
 ### Guidelines
 - Use official links (DOI, arXiv, publisher, GitHub)
 - Ensure title, author(s), year are correct
 - Keep descriptions short (1 line)
-- Avoid duplicates
+- Avoid duplicates -- search the README first
+- Include GitHub star counts for repositories when available
 - Open a Pull Request with your additions
 
 ---
@@ -659,3 +737,7 @@ Contributions are welcome! Please follow this format when adding resources:
 ## License
 
 [Apache-2.0](LICENSE)
+
+---
+
+> **If you find this resource useful, please give it a star!** It helps others discover it and motivates us to keep it updated as the field evolves at breakneck speed.
