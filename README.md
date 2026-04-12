@@ -120,7 +120,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 ### Research & Learn
 - [Papers, Blogs, Courses and Lectures](#papers-blogs-courses-and-lectures) -- Frontier models, reasoning, agents, alignment, interpretability
 - [Tutorials and Guides](#tutorials-and-guides) -- Courses, documentation, and hands-on learning resources
-- [Top Conferences](#top-conferences) -- Academic, AGI-specific, safety, and industry conferences
+- [Top Conferences](#top-conferences) -- Academic, AGI-specific, safety, industry conferences, and MIT Imagination in Action 2026 highlights
 
 ---
 
@@ -500,6 +500,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | **EleutherAI** | Grassroots collective of researchers focused on open-source AI and interpretability research. | [eleuther.ai](https://www.eleuther.ai/) |
 | **Conjecture** | AI safety startup working on alignment theory and cognitive emulation approaches. | [conjecture.dev](https://www.conjecture.dev/) |
 | **xAI** | Founded by Elon Musk (2023). Building Grok series of models with stated goal of understanding the universe. | [x.ai](https://x.ai/) |
+| **Liquid AI** | MIT spinoff building Liquid Foundation Models (LFMs) based on novel liquid neural network architectures. Ultra-efficient on-device models. Raised $250M. CSO Alexander Amini presented on "The Architecture of Intelligence" at MIT 2026. | [liquid.ai](https://www.liquid.ai/) |
+| **Humane Intelligence** | AI safety organization led by Rumman Chowdhury (former Twitter ML Ethics lead). Focuses on responsible AI, algorithmic auditing, and human-centered AI governance. | [humane-intelligence.org](https://www.humane-intelligence.org/) |
 
 ### Books on AGI, ASI, and Superintelligence
 
@@ -768,6 +770,30 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | **WAIC** | Shanghai Gov + MIIT | Jul, Annual | [worldaic.com.cn](https://www.worldaic.com.cn) | China's flagship AI summit. Qwen, Ernie, Kimi announcements. Essential for understanding AGI race geopolitics. |
 | **WEF Davos** | World Economic Forum | Jan, Annual | [weforum.org](https://www.weforum.org) | Highest-level AGI governance discussions. World leaders and AI lab CEOs shape policy frameworks. |
 | **AI for Good** | ITU / United Nations | May-Jun, Annual | [aiforgood.itu.int](https://aiforgood.itu.int) | UN-level AI governance. Global south's primary voice in AGI governance debate. |
+| **Imagination in Action @ MIT** | Imagination in Action + MIT CSAIL | Apr, Annual | [imaginationinaction.co](https://imaginationinaction.co) | MIT-hosted summit on AGI, agentic AI, world models, and AI governance. Speakers from OpenAI, DeepMind, Amazon AGI, LiquidAI, Salesforce, Stanford HAI. 3 stages, 40+ sessions. |
+
+### MIT Imagination in Action Summit -- AGI/ASI Highlights (April 2026)
+
+> The Imagination in Action summit at MIT brought together frontier AI researchers, industry leaders, and policymakers across three stages (Futurist Forum, Tech Talks, Builder's Lab) for a full-day deep dive into the path toward general intelligence. Below are the sessions most relevant to AGI and ASI.
+
+| Session | Stage | Speakers | AGI/ASI Relevance |
+|---------|-------|----------|-------------------|
+| **The Road to General Intelligence** | Tech Talks | Rohit Prasad (Amazon, Former SVP & Head Scientist of AGI), Steve Frey (AGI, Inc. Co-Founder), Christopher O'Donnell (Day AI) | Where AGI research stands today -- from frontier labs to AI-native products putting general capabilities into users' hands. |
+| **The Architecture of Intelligence** | Forum | Peter Danenberg (Google DeepMind), Alexander Amini (LiquidAI, Co-Founder & CSO) | Deep dive into frontier AI system design -- model architecture, reasoning, scaling laws, and the path toward more general intelligence. |
+| **World Models and the Inflection Point of Intelligence** | Forum | Aleksander Madry (OpenAI), Daniela Rus (MIT CSAIL Director) | Frontier AI research on world models and the inflection point where machine intelligence reshapes scientific discovery. |
+| **A Pro Human Future** | Forum (Keynote) | Max Tegmark (MIT, Professor of Physics & AI), Ramesh Raskar (MIT Media Lab) | Keynote on ensuring AI amplifies human agency, creativity, and flourishing -- not replaces it. Tegmark is author of *Life 3.0*. |
+| **Intelligence at Scale: Building the Next Era of AI** | Forum | Rohit Prasad (Amazon AGI), Daniela Rus (MIT CSAIL) | How AI is moving from breakthrough models to systems that shape how we work, communicate, and make decisions. |
+| **The Neuroscience of Intelligence** | Tech Talks | Manolis Kellis (MIT & Broad Institute), Simran Chana (Cambridge, Frontier Technologies Lab), David Rock (NeuroLeadership Institute) | What neuroscience reveals about how intelligence works -- and how those insights inform next-generation AI architectures. |
+| **Embodied Intelligence: How Machines Learn, Move, and Decide** | Forum | Daniela Rus, Russ Tedrake, Leslie Pack Kaelbling (all MIT CSAIL) | Latest from MIT robotics on how machines learn to move, manipulate, and decide in the physical world. |
+| **Building the Agentic Enterprise** | Forum (Fireside) | Wade Foster (Zapier, Co-Founder & CEO) | Building agentic systems at enterprise scale -- how AI agents and the future of work converge inside real organizations. |
+| **Governance in the Age of AI** | Tech Talks | Hamid Rashid (Global Algorithmic Institute), Suneel Ratan (Precognitive), Moinul Khan (Aurascape AI) | The governance gap: are institutions and frameworks keeping pace as AI capabilities accelerate? |
+| **Human-centered AI** | Tech Talks | Rumman Chowdhury (Humane Intelligence CEO), Stephen Casper (MIT), Keyun Ruan (Harvard AI & Flourishing) | Designing AI systems that serve human needs first -- frameworks and trade-offs for human-centered AGI. |
+| **Trust in the Intelligent World** | Forum | Rumman Chowdhury (Humane Intelligence), Noelle Russell (AI Leadership Institute), Ashley Reichheld (Deloitte Digital) | Building trust at institutional scale -- responsible deployment and what defines ethical AI. |
+| **Building the Backbone: Energy, Compute, and the Future of Infrastructure** | Forum | Jeremy Kepner (MIT Lincoln Lab, Head of Supercomputing), Chase Lochmiller (Crusoe CEO), Libby Wayman (Breakthrough Energy Ventures) | The physical bottleneck behind AI's exponential growth -- power plants, data centers, and the compute fabric the frontier depends on. |
+| **AI, Power, and the Global Chessboard** | Forum (Fireside) | Mark Machin (Intrepid Growth Partners), Alvin Graylin (Stanford HAI), Sean Batir (AWS, Global Head of Mission Innovation) | How AI is reshaping global competition -- cloud infrastructure, defense, capital flows, and the shifting balance of power. |
+| **Leading at the Frontier** | Forum (Fireside) | Marc Benioff (Salesforce, Chair & CEO) | Leading an AI-first enterprise -- transformation at scale, trust, and what comes next. |
+| **Biotech Meets AI** | Builder's Lab | Alexander Wissner-Gross, Fridolin Haugg (Harvard Medical School), Disleve Kanku (OncoSys AI) | Convergence of computational biology and AI -- drug discovery, clinical trial optimization, and molecular intelligence. |
+| **Planetary Intelligence** | Builder's Lab | Priya Donti (Climate Change AI, MIT EECS), Libby Wayman (Breakthrough Energy Ventures) | Deploying AI for climate, sustainability, and Earth systems -- planetary-scale problems meet planetary-scale intelligence. |
 
 ---
 
