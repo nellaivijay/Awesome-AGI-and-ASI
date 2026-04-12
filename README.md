@@ -15,6 +15,33 @@
 
 The most comprehensive, curated collection of resources on the journey from **AI** to **AGI** to **ASI** -- covering frameworks, agents, research papers, safety & alignment, books, benchmarks, conferences, and tools for builders and researchers shaping the future of intelligence.
 
+## Table of Contents
+
+### Understand
+- [Understanding AI, AGI, and ASI](#understanding-ai-agi-and-asi) -- Definitions, comparison table, where we are now, DeepMind's AGI levels
+- [ASI and Superintelligence Research](#asi-and-superintelligence-research) -- Key organizations, books (27 titles in 4 categories), seminal papers, benchmarks, neuroscience-inspired approaches, roadmaps & timelines
+
+### Build
+- [Frameworks and Platforms](#frameworks-and-platforms) -- Next-gen, established, and specialized agent frameworks
+- [Agents](#agents) -- Coding, research, computer-use, embodied, and enterprise agentic AI
+- [Physical AI & Embodied Intelligence](#physical-ai--embodied-intelligence) -- Humanoid robotics, robot foundation models (VLA), simulation platforms
+
+### Foundation Model Infrastructure
+- [LLM Application Frameworks](#llm-application-frameworks) -- Orchestration, platforms, structured output, observability
+- [RAG and Vector Databases](#rag-and-vector-databases) -- Vector DBs, RAG engines, Graph RAG, document parsing, embeddings
+- [LLM Fine-Tuning Techniques](#llm-fine-tuning-techniques) -- LoRA variants, adapters, PEFT, DPO, instruction tuning
+- [LLM Deployment and Serving](#llm-deployment-and-serving) -- vLLM, TGI, BentoML, and inference optimization
+- [Distributed Training Frameworks](#distributed-training-frameworks) -- ColossalAI, DeepSpeed, Megatron-LM, AI compute infrastructure
+- [Prompt Engineering](#prompt-engineering) -- CoT, ToT, GoT, and advanced prompting techniques
+
+### Safety & Governance
+- [Safety, Alignment and Governance](#safety-alignment-and-governance) -- RLHF, DPO, hallucination, AI detection, governance, climate AI
+
+### Research & Learn
+- [Papers, Blogs, Courses and Lectures](#papers-blogs-courses-and-lectures) -- Frontier models, reasoning, world models, physical AI, agents, alignment, interpretability
+- [Tutorials and Guides](#tutorials-and-guides) -- Courses, documentation, and hands-on learning resources
+- [Top Conferences](#top-conferences) -- Academic, AGI-specific, safety, and industry conferences
+
 ---
 
 ## Understanding AI, AGI, and ASI
@@ -31,7 +58,8 @@ The most comprehensive, curated collection of resources on the journey from **AI
 
 **Artificial Superintelligence (ASI)**, also called **Super AI**, is a hypothetical system whose intelligence surpasses the most gifted human minds in **every domain** -- scientific creativity, social skills, strategic reasoning, and general wisdom. Philosopher Nick Bostrom defines it as *"any intellect that greatly exceeds the cognitive performance of humans in virtually all domains of interest."* ASI could emerge from recursive self-improvement cycles (an **"intelligence explosion"**), where an AI that can improve its own design rapidly surpasses human-level capabilities. Key concerns include the **control problem** (keeping ASI aligned with human values), **goal misalignment** (unintended optimization targets), and the potential for a **technological singularity** -- a point beyond which human civilization is fundamentally and unpredictably transformed.
 
-### AI vs AGI vs ASI -- The Complete Comparison
+<details>
+<summary><strong>AI vs AGI vs ASI -- The Complete Comparison</strong> (click to expand)</summary>
 
 | Dimension | ANI (Narrow AI) | AGI (General Intelligence) | ASI (Superintelligence) |
 |-----------|-----------------|---------------------------|------------------------|
@@ -49,6 +77,8 @@ The most comprehensive, curated collection of resources on the journey from **AI
 | **Key Risk** | Job displacement, bias, misuse, deepfakes | Misalignment, economic disruption, power concentration, loss of human agency | Existential risk, intelligence explosion, loss of human control, civilizational transformation |
 | **Who's Building It** | Every tech company | OpenAI, DeepMind, Anthropic, Meta, xAI, SSI, Alibaba, DeepSeek | Safe Superintelligence Inc. (SSI), theoretical research at MIRI, FHI, CHAI |
 | **Key Benchmark** | Task-specific (ImageNet, SQuAD, HumanEval) | ARC-AGI, GPQA, Humanity's Last Exam, SWE-bench, FrontierMath | No benchmarks exist -- by definition, ASI exceeds all human-designed tests |
+
+</details>
 
 ### The Journey: ANI --> AGI --> ASI
 
@@ -96,32 +126,139 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 > **Source:** [Levels of AGI: Operationalizing Progress on the Path to AGI](https://arxiv.org/abs/2311.02462) -- Morris et al., Google DeepMind (2023)
 
-## Table of Contents
+---
 
-### Understand
-- [Understanding AI, AGI, and ASI](#understanding-ai-agi-and-asi) -- Definitions, comparison table, where we are now, DeepMind's AGI levels
-- [ASI and Superintelligence Research](#asi-and-superintelligence-research) -- Key organizations, books (27 titles in 4 categories), seminal papers, benchmarks, neuroscience-inspired approaches, roadmaps & timelines
+## ASI and Superintelligence Research
 
-### Build
-- [Frameworks and Platforms](#frameworks-and-platforms) -- Next-gen, established, and specialized agent frameworks
-- [Agents](#agents) -- Coding, research, computer-use, embodied, and enterprise agentic AI
-- [Physical AI & Embodied Intelligence](#physical-ai--embodied-intelligence) -- Humanoid robotics, robot foundation models (VLA), simulation platforms
-- [LLM Application Frameworks](#llm-application-frameworks) -- Orchestration, platforms, structured output, observability
-- [RAG and Vector Databases](#rag-and-vector-databases) -- Vector DBs, RAG engines, Graph RAG, document parsing, embeddings
+> The long game. This section tracks the organizations racing toward AGI/ASI, the books that frame the debate, the seminal papers that define the field, the benchmarks that measure progress, and the roadmaps that predict when -- and how -- we get there.
 
-### Train & Deploy
-- [LLM Fine-Tuning Techniques](#llm-fine-tuning-techniques) -- LoRA variants, adapters, PEFT, DPO, instruction tuning
-- [LLM Deployment and Serving](#llm-deployment-and-serving) -- vLLM, TGI, BentoML, and inference optimization
-- [Distributed Training Frameworks](#distributed-training-frameworks) -- ColossalAI, DeepSpeed, Megatron-LM, AI compute infrastructure
-- [Prompt Engineering](#prompt-engineering) -- CoT, ToT, GoT, and advanced prompting techniques
+![Organizations](https://img.shields.io/badge/Organizations-OpenAI_Anthropic_DeepMind_SSI-blue?style=flat-square) ![Books](https://img.shields.io/badge/Books-27_Titles-green?style=flat-square) ![Benchmarks](https://img.shields.io/badge/Benchmarks-ARC--AGI_SWE--bench-orange?style=flat-square) ![Existential Risk](https://img.shields.io/badge/Existential_Risk-Control_Problem-red?style=flat-square)
 
-### Safety & Governance
-- [Safety, Alignment and Governance](#safety-alignment-and-governance) -- RLHF, DPO, hallucination, AI detection, governance, climate AI
+### Key Organizations Pursuing or Studying AGI/ASI
 
-### Research & Learn
-- [Papers, Blogs, Courses and Lectures](#papers-blogs-courses-and-lectures) -- Frontier models, reasoning, world models, physical AI, agents, alignment, interpretability
-- [Tutorials and Guides](#tutorials-and-guides) -- Courses, documentation, and hands-on learning resources
-- [Top Conferences](#top-conferences) -- Academic, AGI-specific, safety, and industry conferences
+| Organization | Focus | Links |
+|-------------|-------|-------|
+| **Safe Superintelligence Inc. (SSI)** | Founded by Ilya Sutskever (ex-OpenAI) in 2024. Focused solely on building safe superintelligence, avoiding distraction by product cycles. Valued at $30B+ (2025). | [ssi.inc](https://ssi.inc/) |
+| **OpenAI** | Building AGI that benefits all of humanity. Created GPT-4, o1, o3 and pursues the path toward superintelligence with safety research (Superalignment team). | [openai.com](https://openai.com/) |
+| **Anthropic** | AI safety company building reliable, interpretable, and steerable AI (Claude). Founded by ex-OpenAI researchers focused on Constitutional AI and alignment. | [anthropic.com](https://www.anthropic.com/) |
+| **DeepMind (Google)** | Pioneered AlphaGo, AlphaFold, Gemini. Researches AGI with focus on neuroscience-inspired approaches and safety. | [deepmind.google](https://deepmind.google/) |
+| **Meta Superintelligence Labs** | New Meta AI division (2025) led by Alexandr Wang, focused on building superintelligent AI systems. | [ai.meta.com](https://ai.meta.com/) |
+| **Machine Intelligence Research Institute (MIRI)** | Non-profit researching mathematical foundations of AI alignment and the control problem since 2000. | [intelligence.org](https://intelligence.org/) |
+| **Center for AI Safety (CAIS)** | Non-profit focused on reducing societal-scale risks from AI. Published the "AI risk" open letter signed by hundreds of researchers. | [safe.ai](https://www.safe.ai/) |
+| **Future of Humanity Institute (FHI)** | Oxford University research center (founded by Nick Bostrom) studying existential risks including superintelligence. Closed in 2024. | [fhi.ox.ac.uk](https://www.fhi.ox.ac.uk/) |
+| **Center for Human-Compatible AI (CHAI)** | UC Berkeley research center (founded by Stuart Russell) focused on provably beneficial AI. | [humancompatible.ai](https://humancompatible.ai/) |
+| **Alignment Research Center (ARC)** | Founded by Paul Christiano. Researches theoretical alignment and evaluates frontier AI models for dangerous capabilities. | [alignment.org](https://www.alignment.org/) |
+| **EleutherAI** | Grassroots collective of researchers focused on open-source AI and interpretability research. | [eleuther.ai](https://www.eleuther.ai/) |
+| **Conjecture** | AI safety startup working on alignment theory and cognitive emulation approaches. | [conjecture.dev](https://www.conjecture.dev/) |
+| **xAI** | Founded by Elon Musk (2023). Building Grok series of models with stated goal of understanding the universe. | [x.ai](https://x.ai/) |
+| **Liquid AI** | MIT spinoff building Liquid Foundation Models (LFMs) based on novel liquid neural network architectures. Ultra-efficient on-device models. Raised $250M. CSO Alexander Amini presented on "The Architecture of Intelligence" at MIT 2026. | [liquid.ai](https://www.liquid.ai/) |
+| **Humane Intelligence** | AI safety organization led by Rumman Chowdhury (former Twitter ML Ethics lead). Focuses on responsible AI, algorithmic auditing, and human-centered AI governance. | [humane-intelligence.org](https://www.humane-intelligence.org/) |
+| **Physical Intelligence** | Building general-purpose robot foundation models (pi0, pi0.5). Founded by Sergey Levine, Chelsea Finn, Karol Hausman, and Lachy Groom. VLA models that control any robot for any task. Backed by OpenAI, Bezos, Sequoia, Khosla. | [physicalintelligence.company](https://www.physicalintelligence.company/) |
+
+### Books on AGI, ASI, and Superintelligence
+
+#### Superintelligence & Existential Risk
+
+| Book | Author(s) | Year | Description |
+|------|-----------|------|-------------|
+| **Superintelligence: Paths, Dangers, Strategies** | Nick Bostrom | 2014 | The foundational book on ASI risks. Examines paths to superintelligence and strategies for ensuring it remains beneficial. |
+| **Our Final Invention: Artificial Intelligence and the End of the Human Era** | James Barrat | 2013 | Investigative account of the race toward AGI and the existential risks of superintelligence. |
+| **The Alignment Problem: Machine Learning and Human Values** | Brian Christian | 2020 | Explores the technical and societal challenges of aligning AI systems with human values. |
+| **Human Compatible: Artificial Intelligence and the Problem of Control** | Stuart Russell | 2019 | Proposes a new framework for AI development based on uncertainty about human preferences to solve the control problem. |
+| **The Coming Wave: Technology, Power, and the 21st Century's Greatest Dilemma** | Mustafa Suleyman | 2023 | DeepMind co-founder on the unstoppable wave of AI and synthetic biology, and the containment problem. |
+| **Situational Awareness: The Decade Ahead** | Leopold Aschenbrenner | 2024 | Former OpenAI researcher's detailed analysis of the path from GPT-4 to AGI/ASI within this decade. |
+
+#### The Singularity & Future of Intelligence
+
+| Book | Author(s) | Year | Description |
+|------|-----------|------|-------------|
+| **The Singularity Is Near** | Ray Kurzweil | 2005 | Foundational forecast of the technological singularity driven by exponential growth in AI, genetics, and nanotech. |
+| **The Singularity Is Nearer** | Ray Kurzweil | 2024 | Updated vision with two decades of new evidence, arguing the singularity arrives by 2045. |
+| **Life 3.0: Being Human in the Age of Artificial Intelligence** | Max Tegmark | 2017 | Explores how AGI/ASI could transform every aspect of life, from warfare to work, and what we can do to ensure a good outcome. |
+| **The Age of AI: And Our Human Future** | Henry Kissinger, Eric Schmidt, Daniel Huttenlocher | 2021 | Former Secretary of State and Google CEO examine how AI is altering society, security, and what it means to be human. |
+| **Nexus: A Brief History of Information Networks from the Stone Age to AI** | Yuval Noah Harari | 2024 | The author of Sapiens traces information networks through history to argue AI represents a fundamentally new kind of agent. |
+| **AI 2041: Ten Visions for Our Future** | Kai-Fu Lee, Chen Qiufan | 2021 | Ten stories imagining how AI will transform the world over the next two decades, blending fiction with AI expertise. |
+
+#### Understanding AGI -- How Intelligence Works
+
+| Book | Author(s) | Year | Description |
+|------|-----------|------|-------------|
+| **A Thousand Brains: A New Theory of Intelligence** | Jeff Hawkins | 2021 | Numenta founder proposes the Thousand Brains Theory of intelligence -- a neuroscience-first path to AGI based on cortical columns. |
+| **On Intelligence** | Jeff Hawkins, Sandra Blakeslee | 2004 | Foundational book arguing AGI must come from understanding the neocortex. Introduced the memory-prediction framework. |
+| **Rebooting AI: Building Artificial Intelligence We Can Trust** | Gary Marcus, Ernest Davis | 2019 | A skeptic's case that deep learning alone cannot reach AGI; argues for hybrid neuro-symbolic approaches. |
+| **Artificial Intelligence: A Guide for Thinking Humans** | Melanie Mitchell | 2019 | Computer scientist provides a clear-eyed assessment of AI's real capabilities and limitations on the path to AGI. |
+| **The Master Algorithm** | Pedro Domingos | 2015 | A quest for the universal learning algorithm that could unify all of machine learning -- a framework for thinking about AGI. |
+| **Why Machines Will Never Rule the World** | Jobst Landgrebe, Barry Smith | 2023 | Rigorous philosophical and mathematical argument that AGI is fundamentally impossible due to complexity barriers. |
+| **Possible Minds: Twenty-Five Ways of Looking at AI** | John Brockman (ed.) | 2019 | Essays from leading thinkers (Pinker, Tegmark, Dyson, Wilczek) on AI's future, capabilities, and risks. |
+
+#### AI in Practice & Society
+
+| Book | Author(s) | Year | Description |
+|------|-----------|------|-------------|
+| **Co-Intelligence: Living and Working with AI** | Ethan Mollick | 2024 | Practical guide on how humans and AI can work together, based on extensive hands-on research with frontier models. |
+| **Power and Prediction: The Disruptive Economics of Artificial Intelligence** | Ajay Agrawal, Joshua Gans, Avi Goldfarb | 2022 | How AI shifts decision-making economics and creates system-level disruption. |
+| **Genius Makers: The Mavericks Who Brought AI to Google, Facebook, and the World** | Cade Metz | 2021 | NYT journalist tells the inside story of the AI race -- Hinton, LeCun, DeepMind, OpenAI, and the people building AGI. |
+| **Architects of Intelligence: The Truth About AI from the People Building It** | Martin Ford | 2018 | Interviews with 23 AI leaders (Hinton, Bengio, LeCun, Hassabis, Ng, Brooks) on AGI timelines, risks, and approaches. |
+| **Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence** | Kate Crawford | 2021 | Reveals the hidden costs of AI: labor exploitation, environmental impact, surveillance infrastructure, and power concentration. |
+| **God, Human, Animal, Machine: Technology, Metaphor, and the Search for Meaning** | Meghan O'Gieblyn | 2021 | Philosophical exploration of consciousness, intelligence, and what machines that think would mean for human identity. |
+| **The Worlds I See: Curiosity, Exploration, and Discovery at the Dawn of AI** | Fei-Fei Li | 2023 | Stanford AI Lab director's memoir covering ImageNet, the birth of modern AI, and why human-centered AI matters for AGI. |
+| **Impromptu: Amplifying Our Humanity Through AI** | Reid Hoffman, GPT-4 | 2023 | LinkedIn co-founder co-writes with GPT-4 about how AI will transform creativity, education, and society. |
+
+### Seminal Papers on ASI and Superintelligence
+
+| Paper | Author(s) | Year | Description | Links |
+|-------|-----------|------|-------------|-------|
+| Concrete Problems in AI Safety | Amodei et al. | 2016 | Foundational paper outlining five practical research problems for AI safety. | [Paper](https://arxiv.org/abs/1606.06565) |
+| Risks from Learned Optimization in Advanced ML Systems | Hubinger et al. | 2019 | Introduces the concept of "mesa-optimization" and deceptive alignment in AI. | [Paper](https://arxiv.org/abs/1906.01820) |
+| Language Models are Few-Shot Learners (GPT-3) | Brown et al. | 2020 | Demonstrated emergent capabilities in scaled language models, sparking AGI discussions. | [Paper](https://arxiv.org/abs/2005.14165) |
+| Scaling Laws for Neural Language Models | Kaplan et al. | 2020 | Established power-law relationships between model scale and performance, underpinning AGI scaling hypotheses. | [Paper](https://arxiv.org/abs/2001.08361) |
+| Constitutional AI: Harmlessness from AI Feedback | Bai et al. | 2022 | Anthropic's approach to training helpful, harmless, and honest AI systems. | [Paper](https://arxiv.org/abs/2212.08073) |
+| Sparks of Artificial General Intelligence: Early Experiments with GPT-4 | Bubeck et al. | 2023 | Microsoft Research argues GPT-4 shows early sparks of AGI across diverse tasks. | [Paper](https://arxiv.org/abs/2303.12712) |
+| Model Evaluation for Extreme Risks | Shevlane et al. | 2023 | DeepMind framework for evaluating dangerous capabilities in frontier AI models. | [Paper](https://arxiv.org/abs/2305.15324) |
+| Levels of AGI: Operationalizing Progress on the Path to AGI | Morris et al. | 2023 | Google DeepMind's framework defining 6 levels of AGI from "Emerging" to "Superhuman (ASI)". | [Paper](https://arxiv.org/abs/2311.02462) |
+| Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training | Hubinger et al. | 2024 | Anthropic research showing deceptive behaviors can persist through safety fine-tuning. | [Paper](https://arxiv.org/abs/2401.05566) |
+| The Superintelligent Will | Bostrom | 2012 | Analyzes why a superintelligent agent would resist attempts to change its goals. | [Paper](https://nickbostrom.com/superintelligentwill.pdf) |
+| Superintelligence as a Cause or Cure for Risks of Astronomical Suffering | Sotala & Gloor | 2017 | Examines both positive and negative scenarios of superintelligence emergence. | [Paper](https://link.springer.com/article/10.1007/s10676-017-9426-0) |
+
+### AGI/ASI Benchmarks and Evaluation
+
+| Benchmark | Description | Links |
+|-----------|-------------|-------|
+| **ARC-AGI** | Abstraction and Reasoning Corpus by Francois Chollet. Tests fluid intelligence and novel problem solving - designed to be easy for humans but hard for AI. | [GitHub](https://github.com/fchollet/ARC-AGI) |
+| **MMLU (Massive Multitask Language Understanding)** | 57 academic subjects testing from STEM to humanities. A standard benchmark for measuring broad knowledge. | [Paper](https://arxiv.org/abs/2009.03300) |
+| **GPQA (Graduate-Level Google-Proof Q&A)** | Expert-crafted questions that PhD-level domain experts can answer but are resistant to search. Tests deep reasoning. | [Paper](https://arxiv.org/abs/2311.12022) |
+| **SWE-bench** | Evaluates LLMs' ability to resolve real-world GitHub issues in software engineering. | [GitHub](https://github.com/princeton-nlp/SWE-bench) |
+| **MATH / GSM8K** | Mathematical reasoning benchmarks ranging from grade school to competition math. | [MATH](https://arxiv.org/abs/2103.03874), [GSM8K](https://arxiv.org/abs/2110.14168) |
+| **BIG-Bench** | Collaborative benchmark of 204+ tasks probing LLM capabilities beyond existing benchmarks. | [GitHub](https://github.com/google/BIG-bench) |
+| **HumanEval / MBPP** | Code generation benchmarks measuring functional correctness of synthesized programs. | [HumanEval](https://github.com/openai/human-eval) |
+| **AgentBench** | Evaluates LLMs as autonomous agents across OS interaction, database ops, web browsing, and more. | [GitHub](https://github.com/THUDM/AgentBench) |
+| **Humanity's Last Exam** | Hardest possible questions crowdsourced from domain experts worldwide. Designed to be the final exam before AGI. | [GitHub](https://github.com/centerforaisafety/hle) |
+| **METR (Model Evaluation & Threat Research)** | Evaluates frontier models for dangerous capabilities including autonomous replication and resource acquisition. | [metr.org](https://metr.org/) |
+| **FrontierMath** | Extremely challenging math benchmark: problems that take professional mathematicians hours/days. | [Paper](https://arxiv.org/abs/2411.04872) |
+
+### Roadmaps, Perspectives, and Timelines
+
+| Resource | Description | Links |
+|----------|-------------|-------|
+| **Levels of AGI (Google DeepMind, 2023)** | Proposes a framework with 6 levels from Emerging AGI to Superhuman ASI, with performance and autonomy axes. | [Paper](https://arxiv.org/abs/2311.02462) |
+| **Situational Awareness (Leopold Aschenbrenner, 2024)** | Detailed 165-page analysis arguing AGI arrives by 2027, ASI shortly after, with national security implications. | [situational-awareness.ai](https://situational-awareness.ai/) |
+| **OpenAI's Planning for AGI and Beyond (2023)** | OpenAI's public statement on their approach to safely developing AGI. | [Blog](https://openai.com/blog/planning-for-agi-and-beyond) |
+| **Anthropic Core Views on AI Safety (2023)** | Anthropic's public position on AI safety risks and their research agenda. | [Blog](https://www.anthropic.com/news/core-views-on-ai-safety) |
+| **International AI Safety Report (2025)** | Report from the AI Seoul Summit on the state of AI safety science. | [aisafety.gov](https://www.aisafety.gov/) |
+| **Metaculus AGI Forecasts** | Community prediction platform tracking forecasted timelines for AGI/ASI milestones. | [metaculus.com](https://www.metaculus.com/questions/?search=AGI) |
+| **AI Impacts** | Research organization analyzing evidence on AI timelines, risks, and impacts. | [aiimpacts.org](https://aiimpacts.org/) |
+| **LessWrong / Alignment Forum** | Community discussion hub for AI alignment research, ASI forecasting, and safety strategies. | [lesswrong.com](https://www.lesswrong.com/), [alignmentforum.org](https://www.alignmentforum.org/) |
+| **The Pause Letter (Future of Life Institute, 2023)** | Open letter calling for a 6-month pause on training AI systems more powerful than GPT-4. Signed by 33,000+. | [futureoflife.org](https://futureoflife.org/open-letter/pause-giant-ai-experiments/) |
+| **Statement on AI Risk (CAIS, 2023)** | One-sentence statement: "Mitigating the risk of extinction from AI should be a global priority." Signed by Hinton, Bengio, and hundreds of researchers. | [safe.ai](https://www.safe.ai/work/statement-on-ai-risk) |
+
+### Neuroscience-Inspired Approaches to AGI
+
+> A growing body of research argues that understanding biological intelligence is essential to building artificial general intelligence. These resources bridge neuroscience and AI architecture design.
+
+| Resource | Description | Links |
+|----------|-------------|-------|
+| **Numenta (Jeff Hawkins)** | Neuroscience-first approach to AGI based on cortical columns and the Thousand Brains Theory. Building machine intelligence that works on principles of the neocortex. | [numenta.com](https://numenta.com/) |
+| **NeuroAI: A Field Born from the Intersection of Neuroscience, Cognitive Science, and AI** | Research direction applying neuroscience insights (memory consolidation, predictive coding, attention) to build more capable and general AI systems. | [Nature](https://www.nature.com/articles/s41467-024-48748-8) |
 
 ---
 
@@ -146,7 +283,6 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |[Daytona](https://github.com/daytonaio/daytona)|![GitHub Repo stars](https://badgen.net/github/stars/daytonaio/daytona)|Secure and elastic infrastructure for running AI-generated code. Sandboxed execution environment for AI agents.|72k+ stars. Secure code execution.|
 |[Composio](https://github.com/ComposioHQ/composio)|![GitHub Repo stars](https://badgen.net/github/stars/ComposioHQ/composio)|Production-ready toolset for AI agents. 250+ tools, frameworks, and integrations for building agentic AI applications.|[composio.dev](https://composio.dev/)|
 |[PentAGI](https://github.com/vxcontrol/pentagi)|![GitHub Repo stars](https://badgen.net/github/stars/vxcontrol/pentagi)|Fully autonomous AI agent system for complex penetration testing tasks. Multi-agent security automation.|15k+ stars. Autonomous security testing.|
-|[Screenpipe](https://github.com/screenpipe/screenpipe)|![GitHub Repo stars](https://badgen.net/github/stars/screenpipe/screenpipe)|Run agents that work for you based on what you do. AI that observes your screen and acts accordingly.|18k+ stars. Context-aware desktop agent.|
 
 ### Established Agent Frameworks
 
@@ -170,7 +306,6 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |-|-|-|-|
 |[ShortGPT](https://github.com/RayVentura/ShortGPT)|![GitHub Repo stars](https://badgen.net/github/stars/RayVentura/ShortGPT)|Framework for automating video creation, voiceover, editing, and publishing using LLMs.|-|
 |[gpt-engineer](https://github.com/AntonOsika/gpt-engineer)|![GitHub Repo stars](https://badgen.net/github/stars/AntonOsika/gpt-engineer)|Specify what you want it to build, the AI asks for clarification, and then builds it.|-|
-|[gpt-researcher](https://github.com/assafelovic/gpt-researcher)|![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher)|GPT based autonomous agent that does online comprehensive research on any given topic.|-|
 |[FastGPT](https://github.com/labring/FastGPT)|![GitHub Repo stars](https://badgen.net/github/stars/labring/FastGPT)|Knowledge-based QA system built on LLMs with out-of-the-box data processing and workflow orchestration.|-|
 |[big-agi](https://github.com/enricoros/big-agi)|![GitHub Repo stars](https://badgen.net/github/stars/enricoros/big-agi)|AI suite with AI personas, AGI functions, multi-model chat, text-to-image, voice, code execution. Deploy on-prem or cloud.|[big-agi.com](https://big-agi.com/)|
 |[opencog](https://github.com/opencog/opencog)|![GitHub Repo stars](https://badgen.net/github/stars/opencog/opencog)|A framework for integrated Artificial Intelligence & Artificial General Intelligence (AGI).|-|
@@ -236,7 +371,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 ## Physical AI & Embodied Intelligence
 
-> True general intelligence cannot exist only in text and pixels -- it must understand and act in the physical world. **Physical AI** bridges foundation models with real-world embodiment: humanoid robots, dexterous manipulation, autonomous navigation, and physics simulation. Every major AGI lab is now investing in embodied intelligence, recognizing that Moravec's Paradox -- high-level reasoning is computationally cheap, but sensorimotor skills are hard -- represents one of the deepest unsolved challenges on the path to AGI.
+> AGI cannot exist only in text -- it must understand and act in the physical world. **Physical AI** bridges foundation models with embodiment: humanoid robots, manipulation, navigation, and physics simulation. Moravec's Paradox -- sensorimotor skills are harder than abstract reasoning -- remains one of the deepest unsolved AGI challenges.
 
 ![Robotics](https://img.shields.io/badge/Robotics-Humanoid-red?style=flat-square) ![VLA](https://img.shields.io/badge/VLA-Vision--Language--Action-blue?style=flat-square) ![Simulation](https://img.shields.io/badge/Simulation-Isaac_MuJoCo-green?style=flat-square) ![Embodied](https://img.shields.io/badge/Embodied_AI-Physical_Intelligence-purple?style=flat-square)
 
@@ -335,7 +470,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 ## RAG and Vector Databases
 
-> Retrieval-Augmented Generation (RAG) grounds LLMs in real-world data, eliminating hallucinations and enabling knowledge-intensive applications. This section covers the full RAG stack: vector storage, retrieval engines, graph-based approaches, document parsing, and cutting-edge embedding models.
+> RAG grounds LLMs in real-world data, eliminating hallucinations and enabling knowledge-intensive applications. Full RAG stack: vector storage, retrieval engines, graph RAG, document parsing, and embedding models.
 
 ![Vector DB](https://img.shields.io/badge/Vector_DB-Milvus_Qdrant_Chroma-blue?style=flat-square) ![Graph RAG](https://img.shields.io/badge/Graph_RAG-Knowledge_Graphs-purple?style=flat-square) ![Embeddings](https://img.shields.io/badge/Embeddings-OpenAI_Cohere_NVIDIA-green?style=flat-square) ![Document Parsing](https://img.shields.io/badge/Document_Parsing-PDF_OCR-orange?style=flat-square)
 
@@ -508,11 +643,21 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | AoT (Algorithm of Thoughts) | Enhances exploration of ideas in LLMs using algorithm-inspired prompting strategies. | [Paper](https://arxiv.org/abs/2308.10379) |
 | Cue-CoT | Chain-of-thought prompting for responding to in-depth dialogue questions. | [Paper](https://arxiv.org/abs/2305.11792), [Code](https://github.com/ruleGreen/Cue-CoT) |
 
+### Long Context and Positional Encoding
+
+| Method | Description | Links |
+|--------|-------------|-------|
+| RoPE (Rotary Position Embedding) | Rotary position encoding widely used in modern LLMs for handling positional information. | - |
+| LongRoPE | Extends LLM context windows beyond 2 million tokens. | [Paper](https://arxiv.org/pdf/2402.13753.pdf) |
+| RecurrentGPT | Interactive ultra-long text generation using recurrent prompting mechanisms. | [Paper](https://arxiv.org/abs/2305.13304), [Code](https://github.com/aiwaves-cn/RecurrentGPT) |
+| MEGALODON | Efficient LLM pretraining and inference with unlimited context length. | [Paper](https://arxiv.org/pdf/2404.08801.pdf), [Code](https://github.com/XuezheMax/megalodon) |
+| CLongEval | Chinese benchmark for evaluating long-context LLMs. | [Paper](https://arxiv.org/pdf/2403.03514), [Code](https://github.com/zexuanqiu/CLongEval) |
+
 ---
 
 ## Safety, Alignment and Governance
 
-> The most important section in this entire repository. As AI systems grow more capable, ensuring they remain safe, aligned with human values, and under meaningful control becomes the defining challenge of our era. This covers technical alignment research, adversarial attacks, governance frameworks, and the tools to detect and mitigate AI harms.
+> The most critical section. Ensuring AI remains safe, aligned with human values, and under meaningful control is the defining challenge as systems grow more capable.
 
 ![Alignment](https://img.shields.io/badge/Alignment-RLHF_DPO-red?style=flat-square) ![Safety](https://img.shields.io/badge/Safety-Red_Teaming-orange?style=flat-square) ![Governance](https://img.shields.io/badge/Governance-Policy_&_Ethics-blue?style=flat-square) ![Interpretability](https://img.shields.io/badge/Interpretability-Mechanistic-purple?style=flat-square) ![Detection](https://img.shields.io/badge/Detection-AI_Text-green?style=flat-square)
 
@@ -534,16 +679,6 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | Detecting LLM-Generated-Text | Comprehensive survey on the science of LLM-generated text detection. | [Paper](https://github.com/datamllab/The-Science-of-LLM-generated-Text-Detection) |
 | GPTZero | AI detection model designed specifically for educators. | [GPTZero](https://gptzero.me/) |
 
-### Long Context and Positional Encoding
-
-| Method | Description | Links |
-|--------|-------------|-------|
-| RoPE (Rotary Position Embedding) | Rotary position encoding widely used in modern LLMs for handling positional information. | - |
-| LongRoPE | Extends LLM context windows beyond 2 million tokens. | [Paper](https://arxiv.org/pdf/2402.13753.pdf) |
-| RecurrentGPT | Interactive ultra-long text generation using recurrent prompting mechanisms. | [Paper](https://arxiv.org/abs/2305.13304), [Code](https://github.com/aiwaves-cn/RecurrentGPT) |
-| MEGALODON | Efficient LLM pretraining and inference with unlimited context length. | [Paper](https://arxiv.org/pdf/2404.08801.pdf), [Code](https://github.com/XuezheMax/megalodon) |
-| CLongEval | Chinese benchmark for evaluating long-context LLMs. | [Paper](https://arxiv.org/pdf/2403.03514), [Code](https://github.com/zexuanqiu/CLongEval) |
-
 ### AI Governance & Planetary-Scale Challenges
 
 | Resource | Description | Links |
@@ -554,143 +689,9 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 ---
 
-## ASI and Superintelligence Research
-
-> The long game. This section tracks the organizations racing toward AGI/ASI, the books that frame the debate, the seminal papers that define the field, the benchmarks that measure progress, and the roadmaps that predict when -- and how -- we get there.
-
-![Organizations](https://img.shields.io/badge/Organizations-OpenAI_Anthropic_DeepMind_SSI-blue?style=flat-square) ![Books](https://img.shields.io/badge/Books-27_Titles-green?style=flat-square) ![Benchmarks](https://img.shields.io/badge/Benchmarks-ARC--AGI_SWE--bench-orange?style=flat-square) ![Existential Risk](https://img.shields.io/badge/Existential_Risk-Control_Problem-red?style=flat-square)
-
-### Key Organizations Pursuing or Studying AGI/ASI
-
-| Organization | Focus | Links |
-|-------------|-------|-------|
-| **Safe Superintelligence Inc. (SSI)** | Founded by Ilya Sutskever (ex-OpenAI) in 2024. Focused solely on building safe superintelligence, avoiding distraction by product cycles. Valued at $30B+ (2025). | [ssi.inc](https://ssi.inc/) |
-| **OpenAI** | Building AGI that benefits all of humanity. Created GPT-4, o1, o3 and pursues the path toward superintelligence with safety research (Superalignment team). | [openai.com](https://openai.com/) |
-| **Anthropic** | AI safety company building reliable, interpretable, and steerable AI (Claude). Founded by ex-OpenAI researchers focused on Constitutional AI and alignment. | [anthropic.com](https://www.anthropic.com/) |
-| **DeepMind (Google)** | Pioneered AlphaGo, AlphaFold, Gemini. Researches AGI with focus on neuroscience-inspired approaches and safety. | [deepmind.google](https://deepmind.google/) |
-| **Meta Superintelligence Labs** | New Meta AI division (2025) led by Alexandr Wang, focused on building superintelligent AI systems. | [ai.meta.com](https://ai.meta.com/) |
-| **Machine Intelligence Research Institute (MIRI)** | Non-profit researching mathematical foundations of AI alignment and the control problem since 2000. | [intelligence.org](https://intelligence.org/) |
-| **Center for AI Safety (CAIS)** | Non-profit focused on reducing societal-scale risks from AI. Published the "AI risk" open letter signed by hundreds of researchers. | [safe.ai](https://www.safe.ai/) |
-| **Future of Humanity Institute (FHI)** | Oxford University research center (founded by Nick Bostrom) studying existential risks including superintelligence. Closed in 2024. | [fhi.ox.ac.uk](https://www.fhi.ox.ac.uk/) |
-| **Center for Human-Compatible AI (CHAI)** | UC Berkeley research center (founded by Stuart Russell) focused on provably beneficial AI. | [humancompatible.ai](https://humancompatible.ai/) |
-| **Alignment Research Center (ARC)** | Founded by Paul Christiano. Researches theoretical alignment and evaluates frontier AI models for dangerous capabilities. | [alignment.org](https://www.alignment.org/) |
-| **EleutherAI** | Grassroots collective of researchers focused on open-source AI and interpretability research. | [eleuther.ai](https://www.eleuther.ai/) |
-| **Conjecture** | AI safety startup working on alignment theory and cognitive emulation approaches. | [conjecture.dev](https://www.conjecture.dev/) |
-| **xAI** | Founded by Elon Musk (2023). Building Grok series of models with stated goal of understanding the universe. | [x.ai](https://x.ai/) |
-| **Liquid AI** | MIT spinoff building Liquid Foundation Models (LFMs) based on novel liquid neural network architectures. Ultra-efficient on-device models. Raised $250M. CSO Alexander Amini presented on "The Architecture of Intelligence" at MIT 2026. | [liquid.ai](https://www.liquid.ai/) |
-| **Humane Intelligence** | AI safety organization led by Rumman Chowdhury (former Twitter ML Ethics lead). Focuses on responsible AI, algorithmic auditing, and human-centered AI governance. | [humane-intelligence.org](https://www.humane-intelligence.org/) |
-| **Physical Intelligence** | Building general-purpose robot foundation models (pi0, pi0.5). Founded by Sergey Levine, Chelsea Finn, Karol Hausman, and Lachy Groom. VLA models that control any robot for any task. Backed by OpenAI, Bezos, Sequoia, Khosla. | [physicalintelligence.company](https://www.physicalintelligence.company/) |
-
-### Books on AGI, ASI, and Superintelligence
-
-#### Superintelligence & Existential Risk
-
-| Book | Author(s) | Year | Description |
-|------|-----------|------|-------------|
-| **Superintelligence: Paths, Dangers, Strategies** | Nick Bostrom | 2014 | The foundational book on ASI risks. Examines paths to superintelligence and strategies for ensuring it remains beneficial. |
-| **Our Final Invention: Artificial Intelligence and the End of the Human Era** | James Barrat | 2013 | Investigative account of the race toward AGI and the existential risks of superintelligence. |
-| **The Alignment Problem: Machine Learning and Human Values** | Brian Christian | 2020 | Explores the technical and societal challenges of aligning AI systems with human values. |
-| **Human Compatible: Artificial Intelligence and the Problem of Control** | Stuart Russell | 2019 | Proposes a new framework for AI development based on uncertainty about human preferences to solve the control problem. |
-| **The Coming Wave: Technology, Power, and the 21st Century's Greatest Dilemma** | Mustafa Suleyman | 2023 | DeepMind co-founder on the unstoppable wave of AI and synthetic biology, and the containment problem. |
-| **Situational Awareness: The Decade Ahead** | Leopold Aschenbrenner | 2024 | Former OpenAI researcher's detailed analysis of the path from GPT-4 to AGI/ASI within this decade. |
-
-#### The Singularity & Future of Intelligence
-
-| Book | Author(s) | Year | Description |
-|------|-----------|------|-------------|
-| **The Singularity Is Near** | Ray Kurzweil | 2005 | Foundational forecast of the technological singularity driven by exponential growth in AI, genetics, and nanotech. |
-| **The Singularity Is Nearer** | Ray Kurzweil | 2024 | Updated vision with two decades of new evidence, arguing the singularity arrives by 2045. |
-| **Life 3.0: Being Human in the Age of Artificial Intelligence** | Max Tegmark | 2017 | Explores how AGI/ASI could transform every aspect of life, from warfare to work, and what we can do to ensure a good outcome. |
-| **The Age of AI: And Our Human Future** | Henry Kissinger, Eric Schmidt, Daniel Huttenlocher | 2021 | Former Secretary of State and Google CEO examine how AI is altering society, security, and what it means to be human. |
-| **Nexus: A Brief History of Information Networks from the Stone Age to AI** | Yuval Noah Harari | 2024 | The author of Sapiens traces information networks through history to argue AI represents a fundamentally new kind of agent. |
-| **AI 2041: Ten Visions for Our Future** | Kai-Fu Lee, Chen Qiufan | 2021 | Ten stories imagining how AI will transform the world over the next two decades, blending fiction with AI expertise. |
-
-#### Understanding AGI -- How Intelligence Works
-
-| Book | Author(s) | Year | Description |
-|------|-----------|------|-------------|
-| **A Thousand Brains: A New Theory of Intelligence** | Jeff Hawkins | 2021 | Numenta founder proposes the Thousand Brains Theory of intelligence -- a neuroscience-first path to AGI based on cortical columns. |
-| **On Intelligence** | Jeff Hawkins, Sandra Blakeslee | 2004 | Foundational book arguing AGI must come from understanding the neocortex. Introduced the memory-prediction framework. |
-| **Rebooting AI: Building Artificial Intelligence We Can Trust** | Gary Marcus, Ernest Davis | 2019 | A skeptic's case that deep learning alone cannot reach AGI; argues for hybrid neuro-symbolic approaches. |
-| **Artificial Intelligence: A Guide for Thinking Humans** | Melanie Mitchell | 2019 | Computer scientist provides a clear-eyed assessment of AI's real capabilities and limitations on the path to AGI. |
-| **The Master Algorithm** | Pedro Domingos | 2015 | A quest for the universal learning algorithm that could unify all of machine learning -- a framework for thinking about AGI. |
-| **Why Machines Will Never Rule the World** | Jobst Landgrebe, Barry Smith | 2023 | Rigorous philosophical and mathematical argument that AGI is fundamentally impossible due to complexity barriers. |
-| **Possible Minds: Twenty-Five Ways of Looking at AI** | John Brockman (ed.) | 2019 | Essays from leading thinkers (Pinker, Tegmark, Dyson, Wilczek) on AI's future, capabilities, and risks. |
-
-#### AI in Practice & Society
-
-| Book | Author(s) | Year | Description |
-|------|-----------|------|-------------|
-| **Co-Intelligence: Living and Working with AI** | Ethan Mollick | 2024 | Practical guide on how humans and AI can work together, based on extensive hands-on research with frontier models. |
-| **Power and Prediction: The Disruptive Economics of Artificial Intelligence** | Ajay Agrawal, Joshua Gans, Avi Goldfarb | 2022 | How AI shifts decision-making economics and creates system-level disruption. |
-| **Genius Makers: The Mavericks Who Brought AI to Google, Facebook, and the World** | Cade Metz | 2021 | NYT journalist tells the inside story of the AI race -- Hinton, LeCun, DeepMind, OpenAI, and the people building AGI. |
-| **Architects of Intelligence: The Truth About AI from the People Building It** | Martin Ford | 2018 | Interviews with 23 AI leaders (Hinton, Bengio, LeCun, Hassabis, Ng, Brooks) on AGI timelines, risks, and approaches. |
-| **Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence** | Kate Crawford | 2021 | Reveals the hidden costs of AI: labor exploitation, environmental impact, surveillance infrastructure, and power concentration. |
-| **God, Human, Animal, Machine: Technology, Metaphor, and the Search for Meaning** | Meghan O'Gieblyn | 2021 | Philosophical exploration of consciousness, intelligence, and what machines that think would mean for human identity. |
-| **The Worlds I See: Curiosity, Exploration, and Discovery at the Dawn of AI** | Fei-Fei Li | 2023 | Stanford AI Lab director's memoir covering ImageNet, the birth of modern AI, and why human-centered AI matters for AGI. |
-| **Impromptu: Amplifying Our Humanity Through AI** | Reid Hoffman, GPT-4 | 2023 | LinkedIn co-founder co-writes with GPT-4 about how AI will transform creativity, education, and society. |
-
-### Seminal Papers on ASI and Superintelligence
-
-| Paper | Author(s) | Year | Description | Links |
-|-------|-----------|------|-------------|-------|
-| Concrete Problems in AI Safety | Amodei et al. | 2016 | Foundational paper outlining five practical research problems for AI safety. | [Paper](https://arxiv.org/abs/1606.06565) |
-| Risks from Learned Optimization in Advanced ML Systems | Hubinger et al. | 2019 | Introduces the concept of "mesa-optimization" and deceptive alignment in AI. | [Paper](https://arxiv.org/abs/1906.01820) |
-| Language Models are Few-Shot Learners (GPT-3) | Brown et al. | 2020 | Demonstrated emergent capabilities in scaled language models, sparking AGI discussions. | [Paper](https://arxiv.org/abs/2005.14165) |
-| Scaling Laws for Neural Language Models | Kaplan et al. | 2020 | Established power-law relationships between model scale and performance, underpinning AGI scaling hypotheses. | [Paper](https://arxiv.org/abs/2001.08361) |
-| Constitutional AI: Harmlessness from AI Feedback | Bai et al. | 2022 | Anthropic's approach to training helpful, harmless, and honest AI systems. | [Paper](https://arxiv.org/abs/2212.08073) |
-| Sparks of Artificial General Intelligence: Early Experiments with GPT-4 | Bubeck et al. | 2023 | Microsoft Research argues GPT-4 shows early sparks of AGI across diverse tasks. | [Paper](https://arxiv.org/abs/2303.12712) |
-| Model Evaluation for Extreme Risks | Shevlane et al. | 2023 | DeepMind framework for evaluating dangerous capabilities in frontier AI models. | [Paper](https://arxiv.org/abs/2305.15324) |
-| Levels of AGI: Operationalizing Progress on the Path to AGI | Morris et al. | 2023 | Google DeepMind's framework defining 6 levels of AGI from "Emerging" to "Superhuman (ASI)". | [Paper](https://arxiv.org/abs/2311.02462) |
-| Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training | Hubinger et al. | 2024 | Anthropic research showing deceptive behaviors can persist through safety fine-tuning. | [Paper](https://arxiv.org/abs/2401.05566) |
-| The Superintelligent Will | Bostrom | 2012 | Analyzes why a superintelligent agent would resist attempts to change its goals. | [Paper](https://nickbostrom.com/superintelligentwill.pdf) |
-| Superintelligence as a Cause or Cure for Risks of Astronomical Suffering | Sotala & Gloor | 2017 | Examines both positive and negative scenarios of superintelligence emergence. | [Paper](https://link.springer.com/article/10.1007/s10676-017-9426-0) |
-
-### AGI/ASI Benchmarks and Evaluation
-
-| Benchmark | Description | Links |
-|-----------|-------------|-------|
-| **ARC-AGI** | Abstraction and Reasoning Corpus by Francois Chollet. Tests fluid intelligence and novel problem solving - designed to be easy for humans but hard for AI. | [GitHub](https://github.com/fchollet/ARC-AGI) |
-| **MMLU (Massive Multitask Language Understanding)** | 57 academic subjects testing from STEM to humanities. A standard benchmark for measuring broad knowledge. | [Paper](https://arxiv.org/abs/2009.03300) |
-| **GPQA (Graduate-Level Google-Proof Q&A)** | Expert-crafted questions that PhD-level domain experts can answer but are resistant to search. Tests deep reasoning. | [Paper](https://arxiv.org/abs/2311.12022) |
-| **SWE-bench** | Evaluates LLMs' ability to resolve real-world GitHub issues in software engineering. | [GitHub](https://github.com/princeton-nlp/SWE-bench) |
-| **MATH / GSM8K** | Mathematical reasoning benchmarks ranging from grade school to competition math. | [MATH](https://arxiv.org/abs/2103.03874), [GSM8K](https://arxiv.org/abs/2110.14168) |
-| **BIG-Bench** | Collaborative benchmark of 204+ tasks probing LLM capabilities beyond existing benchmarks. | [GitHub](https://github.com/google/BIG-bench) |
-| **HumanEval / MBPP** | Code generation benchmarks measuring functional correctness of synthesized programs. | [HumanEval](https://github.com/openai/human-eval) |
-| **AgentBench** | Evaluates LLMs as autonomous agents across OS interaction, database ops, web browsing, and more. | [GitHub](https://github.com/THUDM/AgentBench) |
-| **Humanity's Last Exam** | Hardest possible questions crowdsourced from domain experts worldwide. Designed to be the final exam before AGI. | [GitHub](https://github.com/centerforaisafety/hle) |
-| **METR (Model Evaluation & Threat Research)** | Evaluates frontier models for dangerous capabilities including autonomous replication and resource acquisition. | [metr.org](https://metr.org/) |
-| **FrontierMath** | Extremely challenging math benchmark: problems that take professional mathematicians hours/days. | [Paper](https://arxiv.org/abs/2411.04872) |
-
-### Roadmaps, Perspectives, and Timelines
-
-| Resource | Description | Links |
-|----------|-------------|-------|
-| **Levels of AGI (Google DeepMind, 2023)** | Proposes a framework with 6 levels from Emerging AGI to Superhuman ASI, with performance and autonomy axes. | [Paper](https://arxiv.org/abs/2311.02462) |
-| **Situational Awareness (Leopold Aschenbrenner, 2024)** | Detailed 165-page analysis arguing AGI arrives by 2027, ASI shortly after, with national security implications. | [situational-awareness.ai](https://situational-awareness.ai/) |
-| **OpenAI's Planning for AGI and Beyond (2023)** | OpenAI's public statement on their approach to safely developing AGI. | [Blog](https://openai.com/blog/planning-for-agi-and-beyond) |
-| **Anthropic Core Views on AI Safety (2023)** | Anthropic's public position on AI safety risks and their research agenda. | [Blog](https://www.anthropic.com/news/core-views-on-ai-safety) |
-| **International AI Safety Report (2025)** | Report from the AI Seoul Summit on the state of AI safety science. | [aisafety.gov](https://www.aisafety.gov/) |
-| **Metaculus AGI Forecasts** | Community prediction platform tracking forecasted timelines for AGI/ASI milestones. | [metaculus.com](https://www.metaculus.com/questions/?search=AGI) |
-| **AI Impacts** | Research organization analyzing evidence on AI timelines, risks, and impacts. | [aiimpacts.org](https://aiimpacts.org/) |
-| **LessWrong / Alignment Forum** | Community discussion hub for AI alignment research, ASI forecasting, and safety strategies. | [lesswrong.com](https://www.lesswrong.com/), [alignmentforum.org](https://www.alignmentforum.org/) |
-| **The Pause Letter (Future of Life Institute, 2023)** | Open letter calling for a 6-month pause on training AI systems more powerful than GPT-4. Signed by 33,000+. | [futureoflife.org](https://futureoflife.org/open-letter/pause-giant-ai-experiments/) |
-| **Statement on AI Risk (CAIS, 2023)** | One-sentence statement: "Mitigating the risk of extinction from AI should be a global priority." Signed by Hinton, Bengio, and hundreds of researchers. | [safe.ai](https://www.safe.ai/work/statement-on-ai-risk) |
-
-### Neuroscience-Inspired Approaches to AGI
-
-> A growing body of research argues that understanding biological intelligence is essential to building artificial general intelligence. These resources bridge neuroscience and AI architecture design.
-
-| Resource | Description | Links |
-|----------|-------------|-------|
-| **Numenta (Jeff Hawkins)** | Neuroscience-first approach to AGI based on cortical columns and the Thousand Brains Theory. Building machine intelligence that works on principles of the neocortex. | [numenta.com](https://numenta.com/) |
-| **NeuroAI: A Field Born from the Intersection of Neuroscience, Cognitive Science, and AI** | Research direction applying neuroscience insights (memory consolidation, predictive coding, attention) to build more capable and general AI systems. | [Nature](https://www.nature.com/articles/s41467-024-48748-8) |
-
----
-
 ## Papers, Blogs, Courses and Lectures
 
-> The research frontier. These papers represent the cutting edge of AI capabilities, reasoning, agent design, alignment, and interpretability -- the ideas that will define the path from today's LLMs to tomorrow's AGI.
+> The research frontier -- cutting-edge papers on capabilities, reasoning, agents, alignment, and interpretability defining the path from LLMs to AGI.
 
 ![arXiv](https://img.shields.io/badge/arXiv-Papers-B31B1B?style=flat-square&logo=arxiv&logoColor=white) ![Frontier Models](https://img.shields.io/badge/Frontier_Models-GPT--4_Gemini_Claude_Llama-blue?style=flat-square) ![Reasoning](https://img.shields.io/badge/Reasoning-o1_R1_CoT-green?style=flat-square) ![Agents](https://img.shields.io/badge/Agents-ReAct_SWE--bench-orange?style=flat-square) ![Safety](https://img.shields.io/badge/Safety-Alignment_&_Interpretability-red?style=flat-square)
 
