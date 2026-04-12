@@ -98,7 +98,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 ### Understand
 - [Understanding AI, AGI, and ASI](#understanding-ai-agi-and-asi) -- Definitions, comparison table, where we are now, DeepMind's AGI levels
-- [ASI and Superintelligence Research](#asi-and-superintelligence-research) -- Key organizations, books, seminal papers, benchmarks, roadmaps & timelines
+- [ASI and Superintelligence Research](#asi-and-superintelligence-research) -- Key organizations, books (27 titles in 4 categories), seminal papers, benchmarks, roadmaps & timelines
 
 ### Build
 - [Frameworks and Platforms](#frameworks-and-platforms) -- Next-gen, established, and specialized agent frameworks
@@ -481,20 +481,52 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 ### Books on AGI, ASI, and Superintelligence
 
+#### Superintelligence & Existential Risk
+
 | Book | Author(s) | Year | Description |
 |------|-----------|------|-------------|
 | **Superintelligence: Paths, Dangers, Strategies** | Nick Bostrom | 2014 | The foundational book on ASI risks. Examines paths to superintelligence and strategies for ensuring it remains beneficial. |
-| **Life 3.0: Being Human in the Age of Artificial Intelligence** | Max Tegmark | 2017 | Explores how AGI/ASI could transform every aspect of life, from warfare to work, and what we can do to ensure a good outcome. |
-| **Human Compatible: Artificial Intelligence and the Problem of Control** | Stuart Russell | 2019 | Proposes a new framework for AI development based on uncertainty about human preferences to solve the control problem. |
-| **The Alignment Problem: Machine Learning and Human Values** | Brian Christian | 2020 | Explores the technical and societal challenges of aligning AI systems with human values. |
-| **AI 2041: Ten Visions for Our Future** | Kai-Fu Lee, Chen Qiufan | 2021 | Ten stories imagining how AI will transform the world over the next two decades, blending fiction with AI expertise. |
-| **Power and Prediction: The Disruptive Economics of Artificial Intelligence** | Ajay Agrawal, Joshua Gans, Avi Goldfarb | 2022 | How AI shifts decision-making economics and creates system-level disruption. |
-| **The Coming Wave: Technology, Power, and the 21st Century's Greatest Dilemma** | Mustafa Suleyman | 2023 | DeepMind co-founder on the unstoppable wave of AI and synthetic biology, and the containment problem. |
-| **Co-Intelligence: Living and Working with AI** | Ethan Mollick | 2024 | Practical guide on how humans and AI can work together, based on extensive hands-on research with frontier models. |
-| **Situational Awareness: The Decade Ahead** | Leopold Aschenbrenner | 2024 | Former OpenAI researcher's detailed analysis of the path from GPT-4 to AGI/ASI within this decade. |
 | **Our Final Invention: Artificial Intelligence and the End of the Human Era** | James Barrat | 2013 | Investigative account of the race toward AGI and the existential risks of superintelligence. |
+| **The Alignment Problem: Machine Learning and Human Values** | Brian Christian | 2020 | Explores the technical and societal challenges of aligning AI systems with human values. |
+| **Human Compatible: Artificial Intelligence and the Problem of Control** | Stuart Russell | 2019 | Proposes a new framework for AI development based on uncertainty about human preferences to solve the control problem. |
+| **The Coming Wave: Technology, Power, and the 21st Century's Greatest Dilemma** | Mustafa Suleyman | 2023 | DeepMind co-founder on the unstoppable wave of AI and synthetic biology, and the containment problem. |
+| **Situational Awareness: The Decade Ahead** | Leopold Aschenbrenner | 2024 | Former OpenAI researcher's detailed analysis of the path from GPT-4 to AGI/ASI within this decade. |
+
+#### The Singularity & Future of Intelligence
+
+| Book | Author(s) | Year | Description |
+|------|-----------|------|-------------|
 | **The Singularity Is Near** | Ray Kurzweil | 2005 | Foundational forecast of the technological singularity driven by exponential growth in AI, genetics, and nanotech. |
 | **The Singularity Is Nearer** | Ray Kurzweil | 2024 | Updated vision with two decades of new evidence, arguing the singularity arrives by 2045. |
+| **Life 3.0: Being Human in the Age of Artificial Intelligence** | Max Tegmark | 2017 | Explores how AGI/ASI could transform every aspect of life, from warfare to work, and what we can do to ensure a good outcome. |
+| **The Age of AI: And Our Human Future** | Henry Kissinger, Eric Schmidt, Daniel Huttenlocher | 2021 | Former Secretary of State and Google CEO examine how AI is altering society, security, and what it means to be human. |
+| **Nexus: A Brief History of Information Networks from the Stone Age to AI** | Yuval Noah Harari | 2024 | The author of Sapiens traces information networks through history to argue AI represents a fundamentally new kind of agent. |
+| **AI 2041: Ten Visions for Our Future** | Kai-Fu Lee, Chen Qiufan | 2021 | Ten stories imagining how AI will transform the world over the next two decades, blending fiction with AI expertise. |
+
+#### Understanding AGI -- How Intelligence Works
+
+| Book | Author(s) | Year | Description |
+|------|-----------|------|-------------|
+| **A Thousand Brains: A New Theory of Intelligence** | Jeff Hawkins | 2021 | Numenta founder proposes the Thousand Brains Theory of intelligence -- a neuroscience-first path to AGI based on cortical columns. |
+| **On Intelligence** | Jeff Hawkins, Sandra Blakeslee | 2004 | Foundational book arguing AGI must come from understanding the neocortex. Introduced the memory-prediction framework. |
+| **Rebooting AI: Building Artificial Intelligence We Can Trust** | Gary Marcus, Ernest Davis | 2019 | A skeptic's case that deep learning alone cannot reach AGI; argues for hybrid neuro-symbolic approaches. |
+| **Artificial Intelligence: A Guide for Thinking Humans** | Melanie Mitchell | 2019 | Computer scientist provides a clear-eyed assessment of AI's real capabilities and limitations on the path to AGI. |
+| **The Master Algorithm** | Pedro Domingos | 2015 | A quest for the universal learning algorithm that could unify all of machine learning -- a framework for thinking about AGI. |
+| **Why Machines Will Never Rule the World** | Jobst Landgrebe, Barry Smith | 2023 | Rigorous philosophical and mathematical argument that AGI is fundamentally impossible due to complexity barriers. |
+| **Possible Minds: Twenty-Five Ways of Looking at AI** | John Brockman (ed.) | 2019 | Essays from leading thinkers (Pinker, Tegmark, Dyson, Wilczek) on AI's future, capabilities, and risks. |
+
+#### AI in Practice & Society
+
+| Book | Author(s) | Year | Description |
+|------|-----------|------|-------------|
+| **Co-Intelligence: Living and Working with AI** | Ethan Mollick | 2024 | Practical guide on how humans and AI can work together, based on extensive hands-on research with frontier models. |
+| **Power and Prediction: The Disruptive Economics of Artificial Intelligence** | Ajay Agrawal, Joshua Gans, Avi Goldfarb | 2022 | How AI shifts decision-making economics and creates system-level disruption. |
+| **Genius Makers: The Mavericks Who Brought AI to Google, Facebook, and the World** | Cade Metz | 2021 | NYT journalist tells the inside story of the AI race -- Hinton, LeCun, DeepMind, OpenAI, and the people building AGI. |
+| **Architects of Intelligence: The Truth About AI from the People Building It** | Martin Ford | 2018 | Interviews with 23 AI leaders (Hinton, Bengio, LeCun, Hassabis, Ng, Brooks) on AGI timelines, risks, and approaches. |
+| **Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence** | Kate Crawford | 2021 | Reveals the hidden costs of AI: labor exploitation, environmental impact, surveillance infrastructure, and power concentration. |
+| **God, Human, Animal, Machine: Technology, Metaphor, and the Search for Meaning** | Meghan O'Gieblyn | 2021 | Philosophical exploration of consciousness, intelligence, and what machines that think would mean for human identity. |
+| **The Worlds I See: Curiosity, Exploration, and Discovery at the Dawn of AI** | Fei-Fei Li | 2023 | Stanford AI Lab director's memoir covering ImageNet, the birth of modern AI, and why human-centered AI matters for AGI. |
+| **Impromptu: Amplifying Our Humanity Through AI** | Reid Hoffman, GPT-4 | 2023 | LinkedIn co-founder co-writes with GPT-4 about how AI will transform creativity, education, and society. |
 
 ### Seminal Papers on ASI and Superintelligence
 
