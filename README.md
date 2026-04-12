@@ -105,8 +105,11 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 | Signal | What It Means |
 |--------|---------------|
-| **GPT-4, Claude 3.5, Gemini 2.0** score expert-level on many benchmarks | Frontier models approach human performance in narrow domains, but still fail on novel reasoning |
+| **Gemini 2.5 Pro** tops LMArena, 18.8% on Humanity's Last Exam | Google's thinking model leads reasoning, math, and code benchmarks; the frontier keeps advancing |
+| **Llama 4** (Scout, Maverick, Behemoth) ships natively multimodal MoE | Meta's open-weight models match GPT-4o; Behemoth 288B teacher outperforms GPT-4.5 on STEM |
+| **Meta Muse Spark** scores 58% on Humanity's Last Exam | First model from Meta Superintelligence Labs: visual chain-of-thought, multi-agent orchestration, "personal superintelligence" vision |
 | **o1, o3, DeepSeek-R1** use chain-of-thought reasoning | Test-time compute scaling is a new paradigm -- models that "think longer" perform better |
+| **Gemini Robotics 1.5** VLA model powers physical agents | DeepMind's vision-language-action model controls diverse robots with generality, dexterity, and agentic reasoning |
 | **ARC-AGI scores remain <65%** (humans score ~85%) | Core fluid reasoning and abstraction remain unsolved -- the gap to AGI is real |
 | **Autonomous coding agents** (OpenHands, Devin, SWE-agent) resolve real GitHub issues | Agents are achieving narrow AGI-like performance in software engineering |
 | **Safe Superintelligence Inc.** raised $30B+ in 2024 | Ilya Sutskever (ex-OpenAI chief scientist) is betting everything on the ASI path |
@@ -141,8 +144,9 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | **Safe Superintelligence Inc. (SSI)** | Founded by Ilya Sutskever (ex-OpenAI) in 2024. Focused solely on building safe superintelligence, avoiding distraction by product cycles. Valued at $30B+ (2025). | [ssi.inc](https://ssi.inc/) |
 | **OpenAI** | Building AGI that benefits all of humanity. Created GPT-4, o1, o3 and pursues the path toward superintelligence with safety research (Superalignment team). | [openai.com](https://openai.com/) |
 | **Anthropic** | AI safety company building reliable, interpretable, and steerable AI (Claude). Founded by ex-OpenAI researchers focused on Constitutional AI and alignment. | [anthropic.com](https://www.anthropic.com/) |
-| **DeepMind (Google)** | Pioneered AlphaGo, AlphaFold, Gemini. Researches AGI with focus on neuroscience-inspired approaches and safety. | [deepmind.google](https://deepmind.google/) |
-| **Meta Superintelligence Labs** | New Meta AI division (2025) led by Alexandr Wang, focused on building superintelligent AI systems. | [ai.meta.com](https://ai.meta.com/) |
+| **DeepMind (Google)** | Pioneered AlphaGo, AlphaFold, Gemini. Latest: Gemini 2.5 Pro (thinking model, #1 LMArena), Gemini Robotics 1.5 (VLA for physical AI), Genie 3 (interactive world models), SIMA 2 (3D world agents), AlphaGenome (genetics). | [deepmind.google](https://deepmind.google/) |
+| **Meta Superintelligence Labs** | Meta AI division (2025) focused on building superintelligent AI. Released Muse Spark (2026) -- natively multimodal reasoning model scoring 58% on Humanity's Last Exam, with visual chain-of-thought and multi-agent orchestration. Also drives Llama 4 and open-source AI. | [ai.meta.com](https://ai.meta.com/) |
+| **DeepSeek** | Chinese AI lab that shocked the industry with DeepSeek-V3 (671B MoE, $5.5M training cost) and DeepSeek-R1 (reasoning via pure RL, matching o1). Published in Nature 2025. Open-weight models challenging frontier labs at fraction of the cost. | [deepseek.com](https://www.deepseek.com/) |
 | **Machine Intelligence Research Institute (MIRI)** | Non-profit researching mathematical foundations of AI alignment and the control problem since 2000. | [intelligence.org](https://intelligence.org/) |
 | **Center for AI Safety (CAIS)** | Non-profit focused on reducing societal-scale risks from AI. Published the "AI risk" open letter signed by hundreds of researchers. | [safe.ai](https://www.safe.ai/) |
 | **Future of Humanity Institute (FHI)** | Oxford University research center (founded by Nick Bostrom) studying existential risks including superintelligence. Closed in 2024. | [fhi.ox.ac.uk](https://www.fhi.ox.ac.uk/) |
@@ -396,6 +400,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 | Model | Org | Year | Description | Links |
 |-------|-----|------|-------------|-------|
+| **Gemini Robotics 1.5** | Google DeepMind | 2025 | Agentic VLA model that turns visual information and language instructions into motor commands. Generality across novel situations, dexterity (origami, food prep), agentic tool-use, and thinking before acting. Supports multiple embodiments (ALOHA, Franka, Apptronik Apollo). Dual approach with Robotics-ER 1.5 for embodied reasoning. | [Site](https://deepmind.google/models/gemini-robotics/), [Report](https://deepmind.google/models/gemini-robotics/gemini-robotics/) |
 | **pi0** | Physical Intelligence | 2024 | VLA flow model for general robot control. Novel flow matching architecture on top of pre-trained VLM. Trained on diverse dexterous tasks (laundry folding, table cleaning, box assembly) across single-arm, dual-arm, and mobile manipulators. Open-sourced weights. | [Paper](https://arxiv.org/abs/2410.24164), [Site](https://www.physicalintelligence.company/) |
 | **RT-2** | Google DeepMind | 2023 | Vision-Language-Action model that transfers web-scale knowledge to robotic control. Expresses actions as text tokens, enabling emergent reasoning (pick up the "improvised hammer" -> picks rock). 6k evaluation trials. | [Paper](https://arxiv.org/abs/2307.15818) |
 | **PaLM-E** | Google | 2023 | 562B-parameter embodied multimodal language model. Directly incorporates continuous sensor modalities into LLMs. Positive transfer across internet-scale language, vision, and robotics domains. | [Paper](https://arxiv.org/abs/2303.03378) |
@@ -623,6 +628,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | [Crusoe Energy](https://crusoe.ai/) | Clean-energy AI data centers powered by stranded natural gas and renewables. Purpose-built GPU clouds for AI training and inference. | [crusoe.ai](https://crusoe.ai/) |
 | [Cerebras](https://cerebras.ai/) | Wafer-Scale Engine (WSE) -- the largest chip ever built -- designed for AI training. CS-3 system eliminates memory bottlenecks with 44GB on-chip SRAM. | [cerebras.ai](https://cerebras.ai/) |
 | [SambaNova](https://sambanova.ai/) | Reconfigurable Dataflow Architecture (RDA) for enterprise AI. Purpose-built hardware that adapts to model topology. | [sambanova.ai](https://sambanova.ai/) |
+| [Meta MTIA](https://ai.meta.com/blog/next-generation-meta-training-inference-accelerator-mtia/) | Meta Training and Inference Accelerator -- custom AI silicon designed for Meta's recommendation and generative AI workloads. 4 chip generations in 2 years, powering AI for billions of users. | [ai.meta.com](https://ai.meta.com/) |
+| [Google TPU (Trillium)](https://cloud.google.com/tpu) | Google's 6th-gen TPU (Trillium, 2024) with 4.7x compute per chip improvement over TPU v5e. Powers Gemini training and inference at scale across Google's AI fleet. | [cloud.google.com/tpu](https://cloud.google.com/tpu) |
 
 ---
 
@@ -709,6 +716,10 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | Mixtral of Experts | Mistral AI | 2024 | Mixtral 8x7B sparse MoE matching Llama 2 70B with 5x lower inference cost. | [Paper](https://arxiv.org/abs/2401.04088) |
 | Qwen2.5 Technical Report | Qwen Team (Alibaba) | 2025 | Qwen2.5 series with improved coding and math specializations. | [Paper](https://arxiv.org/abs/2412.15115) |
 | Phi-3: A Highly Capable Language Model on Your Phone | Microsoft | 2024 | 3.8B model trained on curated synthetic data that rivals models 10x its size. | [Paper](https://arxiv.org/abs/2404.14219) |
+| The Llama 4 Herd: Natively Multimodal AI Innovation | Meta AI | 2025 | First Llama with MoE architecture: Scout (17B/16 experts, 10M context), Maverick (17B/128 experts), Behemoth (288B/16 experts teacher). Natively multimodal with early fusion. Behemoth outperforms GPT-4.5 on STEM. | [Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) |
+| Gemini 2.5 Pro | Google DeepMind | 2025 | Thinking model with advanced reasoning. #1 on LMArena by significant margin. 18.8% on Humanity's Last Exam. State-of-art on GPQA, AIME 2025, and coding benchmarks. | [Blog](https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/) |
+| Meta Muse Spark | Meta Superintelligence Labs | 2026 | First model from Meta Superintelligence Labs. Natively multimodal reasoning model with visual chain-of-thought, tool-use, and multi-agent orchestration ("Contemplating mode"). 58% on Humanity's Last Exam. Scaling toward "personal superintelligence." | [Blog](https://ai.meta.com/blog/muse-spark/) |
+| Gemma: Open Models from Gemini Research | Google DeepMind | 2024 | Open-weight models (2B/7B) built from Gemini research. Gemma 2 (2024) and Gemma 3 (2025) with state-of-art performance at size. Responsible AI toolkit included. | [Site](https://ai.google.dev/gemma), [GitHub](https://github.com/google-deepmind/gemma) |
 
 ### Reasoning, Scaling & Architecture Papers
 
@@ -732,6 +743,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | Liquid Time-Constant Networks | Hasani, Lechner, Amini, Rus (MIT CSAIL) | 2020 | Novel continuous-time neural networks with liquid (varying) time-constants -- the architecture behind Liquid AI's foundation models. | [Paper](https://arxiv.org/abs/2006.04439), [Code](https://github.com/raminmh/liquid_time_constant_networks) |
 | Video Generation Models as World Simulators (Sora) | OpenAI | 2024 | Sora: text-to-video diffusion transformer that models physics and long-horizon consistency. | [Blog](https://openai.com/research/video-generation-models-as-world-simulators) |
 | Genie: Generative Interactive Environments | Bruce et al. (DeepMind) | 2024 | Learns playable 2D world models from unlabeled internet video. | [Paper](https://arxiv.org/abs/2402.15391) |
+| Genie 3: Generating and Exploring Interactive Worlds | Google DeepMind | 2025 | Next-generation world model that generates and enables exploration of interactive 3D environments. Breakthrough in environment simulation fidelity and interactivity. | [Site](https://deepmind.google/models/genie/) |
+| SIMA 2: An Agent That Plays, Reasons, and Learns | Google DeepMind | 2025 | Generalist AI agent that plays, reasons, and learns in virtual 3D worlds. Advances embodied agent capabilities in complex open-ended environments with persistent learning. | [Blog](https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/) |
 | NVIDIA Cosmos | NVIDIA | 2025 | Open-source world foundation model platform for physical AI -- robotics, autonomous vehicles, and simulation. 8k+ stars. | [GitHub](https://github.com/nvidia-cosmos) |
 
 ### Physical AI & Embodied Intelligence Papers
@@ -743,6 +756,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | pi0: A VLA Flow Model for General Robot Control | Black, Levine, Finn et al. (Physical Intelligence) | 2024 | Novel flow matching architecture on pre-trained VLM for general-purpose robot policies. Laundry folding, table cleaning, box assembly across diverse embodiments. Open-sourced. | [Paper](https://arxiv.org/abs/2410.24164) |
 | Open X-Embodiment: Robotic Learning Datasets and RT-X Models | Open X-Embodiment Collaboration (21 institutions) | 2023 | Largest cross-embodiment robotics dataset (22 robots, 527 skills, 160k+ tasks). RT-X shows positive transfer across robot morphologies -- robotics' "ImageNet moment." | [Paper](https://arxiv.org/abs/2310.08864) |
 | TD-MPC2: Scalable World Models for Continuous Control | Hansen, Su, Wang | 2023 | 317M-parameter agent controlling 80 tasks across multiple embodiments and action spaces using implicit world models. ICLR 2024. | [Paper](https://arxiv.org/abs/2310.16828) |
+| Gemini Robotics: Bringing AI into the Physical World | Google DeepMind | 2025 | Dual-model approach: Gemini Robotics 1.5 (VLA) for direct motor control and Robotics-ER 1.5 for embodied reasoning. Generality, dexterity, agentic tool-use, thinking, and multi-embodiment support (static arms to humanoids). | [Site](https://deepmind.google/models/gemini-robotics/) |
 
 ### Agent Papers
 
