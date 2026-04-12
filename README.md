@@ -100,27 +100,27 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 ### Understand
 - [Understanding AI, AGI, and ASI](#understanding-ai-agi-and-asi) -- Definitions, comparison table, where we are now, DeepMind's AGI levels
-- [ASI and Superintelligence Research](#asi-and-superintelligence-research) -- Key organizations, books (27 titles in 4 categories), seminal papers, benchmarks, roadmaps & timelines
+- [ASI and Superintelligence Research](#asi-and-superintelligence-research) -- Key organizations, books (27 titles in 4 categories), seminal papers, benchmarks, neuroscience-inspired approaches, roadmaps & timelines
 
 ### Build
 - [Frameworks and Platforms](#frameworks-and-platforms) -- Next-gen, established, and specialized agent frameworks
-- [Agents](#agents) -- Coding, research, computer-use, and embodied agents
+- [Agents](#agents) -- Coding, research, computer-use, embodied, and enterprise agentic AI
 - [LLM Application Frameworks](#llm-application-frameworks) -- Orchestration, platforms, structured output, observability
 - [RAG and Vector Databases](#rag-and-vector-databases) -- Vector DBs, RAG engines, Graph RAG, document parsing, embeddings
 
 ### Train & Deploy
 - [LLM Fine-Tuning Techniques](#llm-fine-tuning-techniques) -- LoRA variants, adapters, PEFT, DPO, instruction tuning
 - [LLM Deployment and Serving](#llm-deployment-and-serving) -- vLLM, TGI, BentoML, and inference optimization
-- [Distributed Training Frameworks](#distributed-training-frameworks) -- ColossalAI, DeepSpeed, Megatron-LM
+- [Distributed Training Frameworks](#distributed-training-frameworks) -- ColossalAI, DeepSpeed, Megatron-LM, AI compute infrastructure
 - [Prompt Engineering](#prompt-engineering) -- CoT, ToT, GoT, and advanced prompting techniques
 
 ### Safety & Governance
-- [Safety, Alignment and Governance](#safety-alignment-and-governance) -- RLHF, DPO, hallucination, AI detection, long context
+- [Safety, Alignment and Governance](#safety-alignment-and-governance) -- RLHF, DPO, hallucination, AI detection, governance, climate AI
 
 ### Research & Learn
-- [Papers, Blogs, Courses and Lectures](#papers-blogs-courses-and-lectures) -- Frontier models, reasoning, agents, alignment, interpretability
+- [Papers, Blogs, Courses and Lectures](#papers-blogs-courses-and-lectures) -- Frontier models, reasoning, world models, agents, alignment, interpretability
 - [Tutorials and Guides](#tutorials-and-guides) -- Courses, documentation, and hands-on learning resources
-- [Top Conferences](#top-conferences) -- Academic, AGI-specific, safety, industry conferences, and MIT Imagination in Action 2026 highlights
+- [Top Conferences](#top-conferences) -- Academic, AGI-specific, safety, and industry conferences
 
 ---
 
@@ -220,6 +220,16 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |[Voyager](https://github.com/MineDojo/Voyager)|![GitHub Repo stars](https://badgen.net/github/stars/MineDojo/Voyager)|Open-Ended Embodied Agent with LLMs. Plays Minecraft autonomously, continuously discovers new skills via a self-growing code library.|[Paper](https://arxiv.org/abs/2305.16291). NVIDIA/CMU. Lifelong skill acquisition.|
 |[RoboGen](https://github.com/Genesis-Embodied-AI/RoboGen)|![GitHub Repo stars](https://badgen.net/github/stars/Genesis-Embodied-AI/RoboGen)|Generative simulation for automated robot learning. Auto-generates tasks, environments, and training data using GPT-4.|[Paper](https://arxiv.org/abs/2311.01455). Self-improving robot curriculum.|
 |[ai-town](https://github.com/a16z-infra/ai-town)|![GitHub Repo stars](https://badgen.net/github/stars/a16z-infra/ai-town)|Deployable starter kit for building AI town — a virtual town where AI characters live, chat, and socialize. By a16z.|-|
+
+### Enterprise & Agentic AI Platforms
+
+> AI agents moving from demos to enterprise production. These platforms enable organizations to deploy autonomous agents into real workflows at scale.
+
+|Name|Introduction| Notes |
+|-|-|-|
+|[Salesforce Agentforce](https://www.salesforce.com/agentforce/)|Enterprise AI agent platform integrated into Salesforce CRM. Autonomous agents handle sales, service, marketing, and commerce workflows.|Largest enterprise AI agent deployment. Announced 2024.|
+|[Microsoft Copilot Studio](https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio)|Low-code platform for building and deploying custom AI agents and copilots across Microsoft 365 and Azure.|Powers enterprise-wide agentic automation.|
+|[Zapier AI Agents](https://zapier.com/agents)|No-code AI agents that automate cross-app workflows. Connects 7,000+ apps with autonomous decision-making and action.|Enterprise workflow automation at scale.|
 
 ---
 
@@ -420,6 +430,17 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | [DeepSpeed](https://github.com/microsoft/DeepSpeed) | Microsoft's deep learning optimization library for distributed training and inference. | [deepspeed.ai](https://www.deepspeed.ai/) |
 | [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) | NVIDIA's research framework for training large-scale Transformer models with model and data parallelism. | - |
 
+### AI Compute Infrastructure
+
+> The physical backbone of the AGI race. As models scale to trillions of parameters and inference demand explodes, energy, hardware, and data center capacity become the defining bottleneck.
+
+| Name | Description | Links |
+|------|-------------|-------|
+| [Groq](https://groq.com/) | LPU (Language Processing Unit) inference engine delivering record-breaking tokens/second. Custom ASIC designed from the ground up for LLM inference. | [groq.com](https://groq.com/) |
+| [Crusoe Energy](https://crusoe.ai/) | Clean-energy AI data centers powered by stranded natural gas and renewables. Purpose-built GPU clouds for AI training and inference. | [crusoe.ai](https://crusoe.ai/) |
+| [Cerebras](https://cerebras.ai/) | Wafer-Scale Engine (WSE) -- the largest chip ever built -- designed for AI training. CS-3 system eliminates memory bottlenecks with 44GB on-chip SRAM. | [cerebras.ai](https://cerebras.ai/) |
+| [SambaNova](https://sambanova.ai/) | Reconfigurable Dataflow Architecture (RDA) for enterprise AI. Purpose-built hardware that adapts to model topology. | [sambanova.ai](https://sambanova.ai/) |
+
 ---
 
 ## Prompt Engineering
@@ -474,6 +495,14 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | RecurrentGPT | Interactive ultra-long text generation using recurrent prompting mechanisms. | [Paper](https://arxiv.org/abs/2305.13304), [Code](https://github.com/aiwaves-cn/RecurrentGPT) |
 | MEGALODON | Efficient LLM pretraining and inference with unlimited context length. | [Paper](https://arxiv.org/pdf/2404.08801.pdf), [Code](https://github.com/XuezheMax/megalodon) |
 | CLongEval | Chinese benchmark for evaluating long-context LLMs. | [Paper](https://arxiv.org/pdf/2403.03514), [Code](https://github.com/zexuanqiu/CLongEval) |
+
+### AI Governance & Planetary-Scale Challenges
+
+| Resource | Description | Links |
+|----------|-------------|-------|
+| **Climate Change AI** | Global non-profit catalyzing impactful work at the intersection of climate change and machine learning. Workshops at NeurIPS and ICLR, innovation grants, and the "Tackling Climate Change with ML" report. Co-founded by Priya Donti (MIT EECS). | [climatechange.ai](https://www.climatechange.ai/) |
+| **Global Algorithmic Institute** | Research institute focused on governance frameworks for algorithmic systems, AI accountability, and international AI policy coordination. | [globalalgorithmicinstitute.org](https://globalalgorithmicinstitute.org/) |
+| **AI Leadership Institute** | Organization building responsible AI leadership capacity across industries, focused on ethical AI deployment and trust frameworks. | [aileadershipinstitute.com](https://www.aileadershipinstitute.com/) |
 
 ---
 
@@ -599,6 +628,15 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | **The Pause Letter (Future of Life Institute, 2023)** | Open letter calling for a 6-month pause on training AI systems more powerful than GPT-4. Signed by 33,000+. | [futureoflife.org](https://futureoflife.org/open-letter/pause-giant-ai-experiments/) |
 | **Statement on AI Risk (CAIS, 2023)** | One-sentence statement: "Mitigating the risk of extinction from AI should be a global priority." Signed by Hinton, Bengio, and hundreds of researchers. | [safe.ai](https://www.safe.ai/work/statement-on-ai-risk) |
 
+### Neuroscience-Inspired Approaches to AGI
+
+> A growing body of research argues that understanding biological intelligence is essential to building artificial general intelligence. These resources bridge neuroscience and AI architecture design.
+
+| Resource | Description | Links |
+|----------|-------------|-------|
+| **Numenta (Jeff Hawkins)** | Neuroscience-first approach to AGI based on cortical columns and the Thousand Brains Theory. Building machine intelligence that works on principles of the neocortex. | [numenta.com](https://numenta.com/) |
+| **NeuroAI: A Field Born from the Intersection of Neuroscience, Cognitive Science, and AI** | Research direction applying neuroscience insights (memory consolidation, predictive coding, attention) to build more capable and general AI systems. | [Nature](https://www.nature.com/articles/s41467-024-48748-8) |
+
 ---
 
 ## Papers, Blogs, Courses and Lectures
@@ -632,10 +670,19 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | Scaling LLM Test-Time Compute Optimally | Snell et al. (Berkeley) | 2024 | More compute at inference can equal more training compute on hard tasks. | [Paper](https://arxiv.org/abs/2408.03314) |
 | Training Compute-Optimal LLMs (Chinchilla) | Hoffmann et al. (DeepMind) | 2022 | Optimal LLM training scales data and parameters equally. | [Paper](https://arxiv.org/abs/2203.15556) |
 | Scaling Laws for Neural Language Models | Kaplan et al. (OpenAI) | 2020 | Power-law relationships between model scale and performance, underpinning AGI scaling hypotheses. | [Paper](https://arxiv.org/abs/2001.08361) |
-| Video Generation Models as World Simulators (Sora) | OpenAI | 2024 | Sora: text-to-video diffusion transformer that models physics and long-horizon consistency. | [Blog](https://openai.com/research/video-generation-models-as-world-simulators) |
-| Genie: Generative Interactive Environments | Bruce et al. (DeepMind) | 2024 | Learns playable 2D world models from unlabeled internet video. | [Paper](https://arxiv.org/abs/2402.15391) |
 | LongRoPE: Extending LLM Context Beyond 2M Tokens | Ding et al. (Microsoft) | 2024 | Extends RoPE to 2M tokens via non-uniform interpolation. | [Paper](https://arxiv.org/abs/2402.13753) |
 | Infini-Attention | Munkhdalai et al. (Google) | 2024 | Compressive memory in standard attention for infinite-length inputs with bounded memory. | [Paper](https://arxiv.org/abs/2404.07143) |
+
+### World Models & Environment Simulation Papers
+
+| Paper | Authors | Year | Description | Links |
+|-------|---------|------|-------------|-------|
+| World Models | Ha & Schmidhuber | 2018 | Foundational paper: learning compressed spatial and temporal representations of environments; agents trained entirely inside hallucinated dreams. | [Paper](https://arxiv.org/abs/1803.10122), [Interactive](https://worldmodels.github.io/) |
+| I-JEPA: Joint-Embedding Predictive Architecture | Assran et al. (Meta / LeCun) | 2023 | LeCun's vision for AGI through self-supervised prediction in representation space rather than pixel space. Non-generative, highly scalable. | [Paper](https://arxiv.org/abs/2301.08243) |
+| Liquid Time-Constant Networks | Hasani, Lechner, Amini, Rus (MIT CSAIL) | 2020 | Novel continuous-time neural networks with liquid (varying) time-constants -- the architecture behind Liquid AI's foundation models. | [Paper](https://arxiv.org/abs/2006.04439), [Code](https://github.com/raminmh/liquid_time_constant_networks) |
+| Video Generation Models as World Simulators (Sora) | OpenAI | 2024 | Sora: text-to-video diffusion transformer that models physics and long-horizon consistency. | [Blog](https://openai.com/research/video-generation-models-as-world-simulators) |
+| Genie: Generative Interactive Environments | Bruce et al. (DeepMind) | 2024 | Learns playable 2D world models from unlabeled internet video. | [Paper](https://arxiv.org/abs/2402.15391) |
+| NVIDIA Cosmos | NVIDIA | 2025 | Open-source world foundation model platform for physical AI -- robotics, autonomous vehicles, and simulation. 8k+ stars. | [GitHub](https://github.com/nvidia-cosmos) |
 
 ### Agent Papers
 
@@ -770,30 +817,6 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | **WAIC** | Shanghai Gov + MIIT | Jul, Annual | [worldaic.com.cn](https://www.worldaic.com.cn) | China's flagship AI summit. Qwen, Ernie, Kimi announcements. Essential for understanding AGI race geopolitics. |
 | **WEF Davos** | World Economic Forum | Jan, Annual | [weforum.org](https://www.weforum.org) | Highest-level AGI governance discussions. World leaders and AI lab CEOs shape policy frameworks. |
 | **AI for Good** | ITU / United Nations | May-Jun, Annual | [aiforgood.itu.int](https://aiforgood.itu.int) | UN-level AI governance. Global south's primary voice in AGI governance debate. |
-| **Imagination in Action @ MIT** | Imagination in Action + MIT CSAIL | Apr, Annual | [imaginationinaction.co](https://imaginationinaction.co) | MIT-hosted summit on AGI, agentic AI, world models, and AI governance. Speakers from OpenAI, DeepMind, Amazon AGI, LiquidAI, Salesforce, Stanford HAI. 3 stages, 40+ sessions. |
-
-### MIT Imagination in Action Summit -- AGI/ASI Highlights (April 2026)
-
-> The Imagination in Action summit at MIT brought together frontier AI researchers, industry leaders, and policymakers across three stages (Futurist Forum, Tech Talks, Builder's Lab) for a full-day deep dive into the path toward general intelligence. Below are the sessions most relevant to AGI and ASI.
-
-| Session | Stage | Speakers | AGI/ASI Relevance |
-|---------|-------|----------|-------------------|
-| **The Road to General Intelligence** | Tech Talks | Rohit Prasad (Amazon, Former SVP & Head Scientist of AGI), Steve Frey (AGI, Inc. Co-Founder), Christopher O'Donnell (Day AI) | Where AGI research stands today -- from frontier labs to AI-native products putting general capabilities into users' hands. |
-| **The Architecture of Intelligence** | Forum | Peter Danenberg (Google DeepMind), Alexander Amini (LiquidAI, Co-Founder & CSO) | Deep dive into frontier AI system design -- model architecture, reasoning, scaling laws, and the path toward more general intelligence. |
-| **World Models and the Inflection Point of Intelligence** | Forum | Aleksander Madry (OpenAI), Daniela Rus (MIT CSAIL Director) | Frontier AI research on world models and the inflection point where machine intelligence reshapes scientific discovery. |
-| **A Pro Human Future** | Forum (Keynote) | Max Tegmark (MIT, Professor of Physics & AI), Ramesh Raskar (MIT Media Lab) | Keynote on ensuring AI amplifies human agency, creativity, and flourishing -- not replaces it. Tegmark is author of *Life 3.0*. |
-| **Intelligence at Scale: Building the Next Era of AI** | Forum | Rohit Prasad (Amazon AGI), Daniela Rus (MIT CSAIL) | How AI is moving from breakthrough models to systems that shape how we work, communicate, and make decisions. |
-| **The Neuroscience of Intelligence** | Tech Talks | Manolis Kellis (MIT & Broad Institute), Simran Chana (Cambridge, Frontier Technologies Lab), David Rock (NeuroLeadership Institute) | What neuroscience reveals about how intelligence works -- and how those insights inform next-generation AI architectures. |
-| **Embodied Intelligence: How Machines Learn, Move, and Decide** | Forum | Daniela Rus, Russ Tedrake, Leslie Pack Kaelbling (all MIT CSAIL) | Latest from MIT robotics on how machines learn to move, manipulate, and decide in the physical world. |
-| **Building the Agentic Enterprise** | Forum (Fireside) | Wade Foster (Zapier, Co-Founder & CEO) | Building agentic systems at enterprise scale -- how AI agents and the future of work converge inside real organizations. |
-| **Governance in the Age of AI** | Tech Talks | Hamid Rashid (Global Algorithmic Institute), Suneel Ratan (Precognitive), Moinul Khan (Aurascape AI) | The governance gap: are institutions and frameworks keeping pace as AI capabilities accelerate? |
-| **Human-centered AI** | Tech Talks | Rumman Chowdhury (Humane Intelligence CEO), Stephen Casper (MIT), Keyun Ruan (Harvard AI & Flourishing) | Designing AI systems that serve human needs first -- frameworks and trade-offs for human-centered AGI. |
-| **Trust in the Intelligent World** | Forum | Rumman Chowdhury (Humane Intelligence), Noelle Russell (AI Leadership Institute), Ashley Reichheld (Deloitte Digital) | Building trust at institutional scale -- responsible deployment and what defines ethical AI. |
-| **Building the Backbone: Energy, Compute, and the Future of Infrastructure** | Forum | Jeremy Kepner (MIT Lincoln Lab, Head of Supercomputing), Chase Lochmiller (Crusoe CEO), Libby Wayman (Breakthrough Energy Ventures) | The physical bottleneck behind AI's exponential growth -- power plants, data centers, and the compute fabric the frontier depends on. |
-| **AI, Power, and the Global Chessboard** | Forum (Fireside) | Mark Machin (Intrepid Growth Partners), Alvin Graylin (Stanford HAI), Sean Batir (AWS, Global Head of Mission Innovation) | How AI is reshaping global competition -- cloud infrastructure, defense, capital flows, and the shifting balance of power. |
-| **Leading at the Frontier** | Forum (Fireside) | Marc Benioff (Salesforce, Chair & CEO) | Leading an AI-first enterprise -- transformation at scale, trust, and what comes next. |
-| **Biotech Meets AI** | Builder's Lab | Alexander Wissner-Gross, Fridolin Haugg (Harvard Medical School), Disleve Kanku (OncoSys AI) | Convergence of computational biology and AI -- drug discovery, clinical trial optimization, and molecular intelligence. |
-| **Planetary Intelligence** | Builder's Lab | Priya Donti (Climate Change AI, MIT EECS), Libby Wayman (Breakthrough Energy Ventures) | Deploying AI for climate, sustainability, and Earth systems -- planetary-scale problems meet planetary-scale intelligence. |
 
 ---
 
