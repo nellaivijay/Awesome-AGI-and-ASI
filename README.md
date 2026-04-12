@@ -15,8 +15,6 @@
 
 The most comprehensive, curated collection of resources on the journey from **AI** to **AGI** to **ASI** -- covering frameworks, agents, research papers, safety & alignment, books, benchmarks, conferences, and tools for builders and researchers shaping the future of intelligence.
 
-**Related Resources:** [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Explained](https://github.com/dair-ai/ML-Papers-Explained) | [Awesome AGI & ASI by shajibghosh](https://github.com/shajibghosh/Awesome-AGI-and-ASI)
-
 ---
 
 ## Understanding AI, AGI, and ASI
