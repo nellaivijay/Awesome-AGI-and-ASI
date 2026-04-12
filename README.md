@@ -36,8 +36,22 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
     - [Established Agent Frameworks](#established-agent-frameworks)
     - [Specialized & Utility Frameworks](#specialized--utility-frameworks)
   - [Agents](#agents)
+    - [Coding & Software Engineering Agents](#coding--software-engineering-agents)
+    - [Research & Knowledge Agents](#research--knowledge-agents)
+    - [Computer-Use & Desktop Agents](#computer-use--desktop-agents)
+    - [Embodied & Simulation Agents](#embodied--simulation-agents)
   - [LLM Application Frameworks](#llm-application-frameworks)
+    - [Core Orchestration Frameworks](#core-orchestration-frameworks)
+    - [LLM Platforms & Developer Tools](#llm-platforms--developer-tools)
+    - [Structured Output & Prompt Engineering Tools](#structured-output--prompt-engineering-tools)
+    - [LLM Observability & Evaluation](#llm-observability--evaluation)
   - [RAG and Vector Databases](#rag-and-vector-databases)
+    - [Vector Databases](#vector-databases)
+    - [RAG Engines & Platforms](#rag-engines--platforms)
+    - [Graph RAG](#graph-rag)
+    - [Document Parsing for RAG](#document-parsing-for-rag)
+    - [Advanced RAG Techniques](#advanced-rag-techniques)
+    - [Embedding Models (2024-2026)](#embedding-models-2024-2026)
   - [LLM Fine-Tuning Techniques](#llm-fine-tuning-techniques)
   - [LLM Deployment and Serving](#llm-deployment-and-serving)
   - [Prompt Engineering](#prompt-engineering)
@@ -49,7 +63,11 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
     - [AGI/ASI Benchmarks and Evaluation](#agiasi-benchmarks-and-evaluation)
     - [Roadmaps and Perspectives](#roadmaps-perspectives-and-timelines)
   - [Papers, Blogs, Courses and Lectures](#papers-blogs-courses-and-lectures)
-    - [Papers](#papers)
+    - [Frontier Model Papers](#frontier-model-papers)
+    - [Reasoning, Scaling & Architecture Papers](#reasoning-scaling--architecture-papers)
+    - [Agent Papers](#agent-papers)
+    - [Alignment & Reward Modeling Papers](#alignment--reward-modeling-papers)
+    - [Safety & Interpretability Papers](#safety--interpretability-papers)
     - [Blogs and News](#blogs-and-news)
   - [Tutorials and Guides](#tutorials-and-guides)
 
@@ -109,38 +127,88 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 
 ## Agents
 
+### Coding & Software Engineering Agents
+
 |Name|Github Stars|Introduction| Notes |
 |-|-|-|-|
-|[:fire: generative_agents](https://github.com/joonspk-research/generative_agents)|![GitHub Repo stars](https://badgen.net/github/stars/joonspk-research/generative_agents)|Generative Agents: Interactive Simulacra of Human Behavior.| Stanford & Google research: 25 AI agents living in a simulated town with unique identities, memories, and behaviors. [Paper](https://arxiv.org/abs/2304.03442)|
-|[:fire: ai-town](https://github.com/a16z-infra/ai-town)|![GitHub Repo stars](https://badgen.net/github/stars/a16z-infra/ai-town)|A MIT-licensed, deployable starter kit for building and customizing your own version of AI town - a virtual town where AI characters live, chat and socialize.|-|
-|[:fire: gpt-engineer](https://github.com/AntonOsika/gpt-engineer)|![GitHub Repo stars](https://badgen.net/github/stars/AntonOsika/gpt-engineer)|Specify what you want it to build, the AI asks for clarification, and then builds it.|-|
-|[:fire: MetaGPT](https://github.com/geekan/MetaGPT) |![GitHub Repo stars](https://badgen.net/github/stars/geekan/MetaGPT)|The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo.|-|
-|[gpt-researcher](https://github.com/assafelovic/gpt-researcher)|![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher)|GPT based autonomous agent that does online comprehensive research on any given topic.|-|
-|[llama-hub, shopify agent](https://github.com/emptycrown/llama-hub/blob/main/llama_hub/tools/notebooks/shopify.ipynb)|![GitHub Repo stars](https://badgen.net/github/stars/emptycrown/llama-hub)|A customer support agent that can interface with Shopify's ENTIRE GraphQL API Spec (>50k lines!).|-|
-|[FastGPT](https://github.com/labring/FastGPT)|![GitHub Repo stars](https://badgen.net/github/stars/labring/FastGPT)|FastGPT is a knowledge-based question answering system built on LLMs. Offers out-of-the-box data processing, model invocation capabilities, and workflow orchestration through Flow visualization.|-|
-|[AutoGen](https://github.com/microsoft/autogen)|![GitHub Repo stars](https://badgen.net/github/stars/microsoft/autogen)|AutoGen is a framework that enables development of LLM applications using multiple agents that can converse with each other to solve tasks. Developed by Microsoft, supports multi-agent communication, human feedback, and tool integration.|-|
-|[Agents](https://github.com/aiwaves-cn/agents)|![GitHub Repo stars](https://badgen.net/github/stars/aiwaves-cn/agents)|An Open-source Framework for Autonomous Language Agents.|[Paper](https://arxiv.org/pdf/2309.07870.pdf), [aiwaves-agents.com](http://www.aiwaves-agents.com/)|
-|[HuggingGPT](https://github.com/microsoft/JARVIS)|![GitHub Repo stars](https://badgen.net/github/stars/microsoft/JARVIS)|Uses ChatGPT as a controller to manage AI models on HuggingFace for solving complex AI tasks across language, vision, and speech.|[HuggingGPT Demo](https://huggingface.co/spaces/microsoft/HuggingGPT)|
-|[RestGPT](https://github.com/Yifan-Song793/RestGPT)|![GitHub Repo stars](https://badgen.net/github/stars/Yifan-Song793/RestGPT)|Connecting Large Language Models with Real-World RESTful APIs for autonomous API interaction.|[Paper](https://arxiv.org/abs/2306.06624)|
-|[RoboGen](https://github.com/Genesis-Embodied-AI)|![GitHub Repo stars](https://badgen.net/github/stars/Genesis-Embodied-AI/RoboGen)|Towards Unleashing Infinite Data for Automated Robot Learning via Generative Simulation.|[Paper](https://arxiv.org/abs/2311.01455), [Project Page](https://robogen-ai.github.io/)|
-|[Toolformer](https://arxiv.org/pdf/2302.04761.pdf)|-|Language Models Can Teach Themselves to Use Tools. Meta AI research on LLMs learning when and how to call external APIs.|[Paper](https://arxiv.org/pdf/2302.04761.pdf)|
-|[FixAgent](https://arxiv.org/abs/2404.17153)|-|A multi-agent system for automated debugging that improves model debug capability by ~20%.|[Paper](https://arxiv.org/abs/2404.17153)|
-|[NexusGPT](https://nexus.snikpic.io/)|-|A marketplace and platform for building AI agents with no-code tools.|[NexusGPT](https://nexus.snikpic.io/)|
-|[Godmode](https://godmode.space/)|-|Web-based autonomous AI agent interface for exploring the capabilities of autoGPT.|[Godmode](https://godmode.space/)|
-|[Do Anything Machine](https://www.doanythingmachine.com/)|-|A web-based AI agent that attempts to accomplish any task you describe.|[Demo](https://www.doanythingmachine.com/)|
+|[:fire: Aider](https://github.com/Aider-AI/aider)|![GitHub Repo stars](https://badgen.net/github/stars/Aider-AI/aider)|AI pair programming in your terminal. Edit code across your entire repo with LLMs. Tops SWE-bench Lite.|Best-in-class AI pair programmer. Works with GPT-4o, Claude, DeepSeek, local models.|
+|[:fire: SWE-agent](https://github.com/princeton-nlp/SWE-agent)|![GitHub Repo stars](https://badgen.net/github/stars/princeton-nlp/SWE-agent)|Turns LLMs into software engineering agents that fix real GitHub issues. Pioneered the Agent-Computer Interface (ACI) concept.|[Paper](https://arxiv.org/abs/2405.15232). Princeton NLP. Key SWE-bench benchmark agent.|
+|[goose](https://github.com/block/goose)|![GitHub Repo stars](https://badgen.net/github/stars/block/goose)|Open-source extensible AI agent that goes beyond code suggestions — install, execute, edit, and test with any LLM. Written in Rust.|Supports MCP and ACP protocols. By Block.|
+|[Open Interpreter](https://github.com/OpenInterpreter/open-interpreter)|![GitHub Repo stars](https://badgen.net/github/stars/OpenInterpreter/open-interpreter)|A natural language interface for computers. Lets LLMs run code (Python, JS, shell) locally with no restrictions.|Full computer control via natural language. Like ChatGPT Code Interpreter but unrestricted.|
+
+### Research & Knowledge Agents
+
+|Name|Github Stars|Introduction| Notes |
+|-|-|-|-|
+|[:fire: STORM](https://github.com/stanford-oval/storm)|![GitHub Repo stars](https://badgen.net/github/stars/stanford-oval/storm)|Stanford: Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking. Writes Wikipedia-quality long-form articles autonomously.|[Paper](https://arxiv.org/abs/2402.14207). Expert-level knowledge synthesis agent.|
+|[:fire: AI Scientist](https://github.com/SakanaAI/AI-Scientist)|![GitHub Repo stars](https://badgen.net/github/stars/SakanaAI/AI-Scientist)|Fully autonomous scientific research pipeline: generates ideas, implements experiments, writes and reviews full academic papers.|[Paper](https://arxiv.org/abs/2408.06292). By Sakana AI. ASI-threshold capability.|
+|[gpt-researcher](https://github.com/assafelovic/gpt-researcher)|![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher)|GPT-based autonomous agent for comprehensive online research on any topic. Searches, reads, and synthesizes long-form reports.|-|
+|[mem0](https://github.com/mem0ai/mem0)|![GitHub Repo stars](https://badgen.net/github/stars/mem0ai/mem0)|Universal memory layer for AI agents. Persistent long-term, episodic, and semantic memory across agent sessions.|52k+ stars. Key missing component between current agents and AGI.|
+
+### Computer-Use & Desktop Agents
+
+|Name|Github Stars|Introduction| Notes |
+|-|-|-|-|
+|[:fire: everything-claude-code](https://github.com/anthropics/claude-code)|![GitHub Repo stars](https://badgen.net/github/stars/anthropics/claude-code)|Agent harness performance optimization system with skills, instincts, memory, and security for AI coding agents.|Cognitive scaffolding for agentic AI — directly relevant to persistent AGI.|
+|[nanobot](https://github.com/HKUDS/nanobot)|![GitHub Repo stars](https://badgen.net/github/stars/HKUDS/nanobot)|Ultra-lightweight personal AI agent. Minimal footprint with full agent capabilities.|39k+ stars. Edge-AGI and ubiquitous deployment.|
+|[Screenpipe](https://github.com/screenpipe/screenpipe)|![GitHub Repo stars](https://badgen.net/github/stars/screenpipe/screenpipe)|Run agents that work for you based on what you do. Continuously observes your screen, builds personal memory, and triggers AI actions.|Always-on environmental awareness — a prototype AGI assistant.|
+
+### Embodied & Simulation Agents
+
+|Name|Github Stars|Introduction| Notes |
+|-|-|-|-|
+|[:fire: generative_agents](https://github.com/joonspk-research/generative_agents)|![GitHub Repo stars](https://badgen.net/github/stars/joonspk-research/generative_agents)|Generative Agents: Interactive Simulacra of Human Behavior. 25 AI agents in a simulated town with unique identities, memories, and behaviors.|[Paper](https://arxiv.org/abs/2304.03442). Stanford & Google. Emergent social cognition.|
+|[Voyager](https://github.com/MineDojo/Voyager)|![GitHub Repo stars](https://badgen.net/github/stars/MineDojo/Voyager)|Open-Ended Embodied Agent with LLMs. Plays Minecraft autonomously, continuously discovers new skills via a self-growing code library.|[Paper](https://arxiv.org/abs/2305.16291). NVIDIA/CMU. Lifelong skill acquisition.|
+|[RoboGen](https://github.com/Genesis-Embodied-AI/RoboGen)|![GitHub Repo stars](https://badgen.net/github/stars/Genesis-Embodied-AI/RoboGen)|Generative simulation for automated robot learning. Auto-generates tasks, environments, and training data using GPT-4.|[Paper](https://arxiv.org/abs/2311.01455). Self-improving robot curriculum.|
+|[ai-town](https://github.com/a16z-infra/ai-town)|![GitHub Repo stars](https://badgen.net/github/stars/a16z-infra/ai-town)|Deployable starter kit for building AI town — a virtual town where AI characters live, chat, and socialize. By a16z.|-|
 
 ---
 
 ## LLM Application Frameworks
 
+### Core Orchestration Frameworks
+
 | Name | Description | Links |
 |------|-------------|-------|
-| [LangChain](https://github.com/langchain-ai/langchain) | Framework for developing applications powered by language models. Enables chaining of LLM calls with tools, memory, and retrieval. | [Docs](https://python.langchain.com/docs/) |
-| [LlamaIndex](https://github.com/run-llama/llama_index) | Data framework for LLM applications. Connect custom data sources to LLMs with indexing, retrieval, and query interfaces. | [Docs](https://docs.llamaindex.ai/) |
-| [LangSmith](https://www.langchain.com/langsmith) | Platform by LangChain for debugging, testing, evaluating, and monitoring LLM chains and agents. | [Docs](https://python.langchain.com/docs/langsmith/walkthrough) |
-| [LangFuse](https://langfuse.com/) | Open-source LLM engineering platform. Traces, evals, prompt management and metrics for LLM apps. | [GitHub](https://github.com/langfuse) |
-| [Opik](https://github.com/comet-ml/opik) | Open-source LLM observability and evaluation platform. Supports tracing, evaluation, and prompt optimization. | [Docs](https://www.comet.com/docs/opik/) |
-| [TaskingAI](https://github.com/TaskingAI/TaskingAI) | BaaS (Backend as a Service) platform for LLM-based agent development with integrated tools and retrieval. | [Docs](https://docs.tasking.ai/) |
+| [LangChain](https://github.com/langchain-ai/langchain) | The agent engineering platform. Framework for developing applications powered by LLMs with chaining, tools, memory, and retrieval. 133k+ stars. | [Docs](https://python.langchain.com/docs/) |
+| [LangGraph](https://github.com/langchain-ai/langgraph) | Graph-based framework for building stateful, multi-actor LLM agents as directed graphs. Supports cycles, branching, persistent state, and human-in-the-loop. | [Docs](https://langchain-ai.github.io/langgraph/) |
+| [LlamaIndex](https://github.com/run-llama/llama_index) | Leading document agent and RAG platform. Connect custom data sources to LLMs with indexing, retrieval, and query interfaces. 48k+ stars. | [Docs](https://docs.llamaindex.ai/) |
+| [DSPy](https://github.com/stanfordnlp/dspy) | Stanford's paradigm-shifting framework for *programming* (not prompting) LLMs. Declarative modules with automatic prompt optimization. 20k+ stars. | [Paper](https://arxiv.org/abs/2310.03714), [dspy.ai](https://dspy.ai) |
+| [Haystack](https://github.com/deepset-ai/haystack) | Production-grade NLP/LLM framework for RAG pipelines, QA, and conversational AI. Composable pipeline architecture with 60+ integrations. | [Docs](https://docs.haystack.deepset.ai) |
+| [Semantic Kernel](https://github.com/microsoft/semantic-kernel) | Microsoft's enterprise SDK for LLM integration. Plugin/skill architecture powering Microsoft Copilot. Python, C#, Java. 23k+ stars. | [Docs](https://learn.microsoft.com/en-us/semantic-kernel/) |
+| [smolagents](https://github.com/huggingface/smolagents) | HuggingFace's minimalist agent library. Code-first agents that write and execute Python. ~1000 lines core. 14k+ stars. | [Docs](https://huggingface.co/docs/smolagents) |
+| [PydanticAI](https://github.com/pydantic/pydantic-ai) | Agent framework with type safety, structured outputs via Pydantic, and dependency injection for testing. Async-first. | [Docs](https://ai.pydantic.dev) |
+| [Agno](https://github.com/agno-agi/agno) | Full-stack agent framework (formerly Phidata). Lightning-fast runtime, multimodal agents, native teams, 100+ tools. 20k+ stars. | [Docs](https://docs.agno.com) |
+
+### LLM Platforms & Developer Tools
+
+| Name | Description | Links |
+|------|-------------|-------|
+| [Dify](https://github.com/langgenius/dify) | Open-source LLM app development platform with visual workflow orchestration, RAG, and agent framework. 137k+ stars. | [dify.ai](https://dify.ai/) |
+| [Flowise](https://github.com/FlowiseAI/Flowise) | Drag-and-drop no-code builder for LLM apps and chatbots using visual node graphs. 52k+ stars. | [flowiseai.com](https://flowiseai.com/) |
+| [Ollama](https://github.com/ollama/ollama) | The de-facto standard for running open-weight LLMs locally. Dead-simple CLI. OpenAI-compatible API. 110k+ stars. | [ollama.com](https://ollama.com/) |
+| [Open WebUI](https://github.com/open-webui/open-webui) | User-friendly AI interface supporting Ollama, OpenAI API, and more. Self-hosted ChatGPT alternative. 131k+ stars. | [openwebui.com](https://openwebui.com/) |
+| [Jan.ai](https://github.com/janhq/jan) | Open-source, privacy-first desktop AI assistant. Runs 100% offline on-device. OpenAI-compatible local API. 25k+ stars. | [jan.ai](https://jan.ai/) |
+| [LiteLLM](https://github.com/BerriAI/litellm) | Unified API for 100+ LLMs using OpenAI SDK format. Proxy server with load balancing, cost tracking, and key management. | [Docs](https://docs.litellm.ai/) |
+
+### Structured Output & Prompt Engineering Tools
+
+| Name | Description | Links |
+|------|-------------|-------|
+| [Instructor](https://github.com/instructor-ai/instructor) | Get structured, typed outputs from LLMs using Pydantic models. Handles retries, validation, and streaming. 10k+ stars. | [Docs](https://python.useinstructor.com/) |
+| [Outlines](https://github.com/dottxt-ai/outlines) | Structured text generation at the token level using FSM-guided decoding. Guarantees valid JSON/regex output. 11k+ stars. | [Docs](https://dottxt-ai.github.io/outlines/) |
+| [guidance](https://github.com/guidance-ai/guidance) | Microsoft's language for constrained and structured LLM generation with token-level control. 20k+ stars. | [GitHub](https://github.com/guidance-ai/guidance) |
+
+### LLM Observability & Evaluation
+
+| Name | Description | Links |
+|------|-------------|-------|
+| [LangFuse](https://github.com/langfuse/langfuse) | Open-source LLM engineering platform. Tracing, prompt management, evals, metrics. Self-hostable. 8k+ stars. | [langfuse.com](https://langfuse.com/) |
+| [Phoenix](https://github.com/Arize-ai/phoenix) | Open-source LLM observability with OpenTelemetry-native tracing, retrieval evaluation, and experiment comparison. By Arize. | [Docs](https://docs.arize.com/phoenix/) |
+| [Ragas](https://github.com/explodinggradients/ragas) | Leading RAG evaluation framework. Metrics: faithfulness, relevancy, precision, recall. Synthetic test set generation. 8k+ stars. | [Docs](https://docs.ragas.io/) |
+| [LangSmith](https://www.langchain.com/langsmith) | LangChain's platform for debugging, testing, evaluating, and monitoring LLM chains and agents. | [Docs](https://docs.smith.langchain.com/) |
+| [Opik](https://github.com/comet-ml/opik) | Open-source LLM observability and evaluation. Tracing, evaluation, and prompt optimization. | [Docs](https://www.comet.com/docs/opik/) |
+| [Helicone](https://github.com/Helicone/helicone) | LLM observability via one-line proxy. Cost tracking, caching, rate limiting. | [helicone.ai](https://helicone.ai/) |
 
 ---
 
@@ -150,21 +218,68 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 
 | Name | Description | Links |
 |------|-------------|-------|
-| [Chroma](https://github.com/chroma-core/chroma) | Open-source embedding database for building AI apps with embeddings and LLMs. | [Docs](https://docs.trychroma.com/) |
-| [Milvus](https://github.com/milvus-io/milvus) | Open-source vector database for scalable similarity search and AI applications. | [milvus.io](https://milvus.io/) |
+| [Milvus](https://github.com/milvus-io/milvus) | Cloud-native, distributed vector database for billion-scale similarity search. Most scalable open-source vector DB. 44k+ stars. | [milvus.io](https://milvus.io/) |
+| [Qdrant](https://github.com/qdrant/qdrant) | High-performance vector search engine in Rust. Dense + sparse vectors, hybrid search, payload filtering, quantization. 30k+ stars. | [qdrant.tech](https://qdrant.tech/) |
+| [Weaviate](https://github.com/weaviate/weaviate) | AI-native vector database with GraphQL API, built-in vectorization, hybrid search, and generative search modules. 16k+ stars. | [weaviate.io](https://weaviate.io/) |
+| [Chroma](https://github.com/chroma-core/chroma) | AI-native open-source embedding database. Extremely easy to start, built-in embedding functions. 16k+ stars. | [trychroma.com](https://trychroma.com/) |
+| [pgvector](https://github.com/pgvector/pgvector) | PostgreSQL extension for vector similarity search. HNSW + IVFFlat indexes. Game-changer for Postgres users. 14k+ stars. | [GitHub](https://github.com/pgvector/pgvector) |
+| [LanceDB](https://github.com/lancedb/lancedb) | Serverless vector database built on Lance columnar format. Embedded, multimodal, full-text + vector hybrid search. | [lancedb.com](https://lancedb.com/) |
+| [Meilisearch](https://github.com/meilisearch/meilisearch) | Lightning-fast search engine API with AI-powered hybrid search (full-text + vector). 57k+ stars. | [meilisearch.com](https://www.meilisearch.com/) |
+| [Vespa](https://github.com/vespa-engine/vespa) | Yahoo's battle-tested big data serving engine. ANN + lexical hybrid, tensor expressions, complex ML ranking. | [vespa.ai](https://vespa.ai/) |
 | [Pinecone](https://www.pinecone.io/) | Managed vector database for high-performance vector search at scale. | [Docs](https://docs.pinecone.io/) |
-| [Weaviate](https://github.com/weaviate/weaviate) | Open-source vector search engine with built-in vectorization and hybrid search. | [weaviate.io](https://weaviate.io/) |
-| [Qdrant](https://github.com/qdrant/qdrant) | High-performance vector similarity search engine with filtering support. | [qdrant.tech](https://qdrant.tech/) |
-| [LanceDB](https://github.com/lancedb/lancedb) | Serverless vector database for AI applications, built on Lance columnar format. | [lancedb.com](https://lancedb.com/) |
 | [Zilliz](https://zilliz.com/) | Cloud-native vector database service (managed Milvus). | [zilliz.com](https://zilliz.com/) |
-| [DingoDB](https://github.com/dingodb/dingo) | Distributed multi-modal vector database for real-time data analysis. | [dingodb.com](https://www.dingodb.com/) |
+| [Turbopuffer](https://turbopuffer.com/) | Serverless vector database using object storage (S3) for cost-efficient large-scale search. | [Docs](https://turbopuffer.com/docs) |
 
-### RAG Tools and Platforms
+### RAG Engines & Platforms
 
 | Name | Description | Links |
 |------|-------------|-------|
-| [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) | All-in-one AI application that can use any LLM, any document, and any vector database. | [useanything.com](https://useanything.com/) |
-| [QAnything](https://github.com/netease-youdao/QAnything) | Question answering system based on anything (files, URLs, databases) by NetEase Youdao. | - |
+| [:fire: RAGFlow](https://github.com/infiniflow/ragflow) | Leading open-source RAG engine with vision-based document parsing (tables, figures, layouts). Multi-recall: vector + full-text + knowledge graph. 78k+ stars. | [ragflow.io](https://ragflow.io/) |
+| [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) | All-in-one AI app with RAG, agents, MCP support. Use any LLM, any document, any vector database. Privacy-first. 58k+ stars. | [useanything.com](https://useanything.com/) |
+| [Kotaemon](https://github.com/Cinnamon/kotaemon) | Open-source RAG document QA tool with chat UI, graph RAG, multi-modal support, and citation highlighting. 22k+ stars. | [GitHub](https://github.com/Cinnamon/kotaemon) |
+| [Pathway LLM App](https://github.com/pathwaycom/llm-app) | Ready-to-run cloud templates for RAG and AI pipelines with live data sync (Sharepoint, S3, Kafka, Postgres). 60k+ stars. | [pathway.com](https://pathway.com/) |
+| [Cognee](https://github.com/topoteretes/cognee) | Memory management for AI agents and apps. Builds knowledge graphs from documents for reasoning-based RAG. 15k+ stars. | [cognee.ai](https://www.cognee.ai/) |
+| [R2R (SciPhi)](https://github.com/SciPhi-AI/R2R) | Production RAG engine with hybrid search, knowledge graph building (Neo4j), ingestion pipelines, and REST API. | [Docs](https://r2r-docs.sciphi.ai/) |
+
+### Graph RAG
+
+| Name | Description | Links |
+|------|-------------|-------|
+| [:fire: Microsoft GraphRAG](https://github.com/microsoft/graphrag) | Landmark Graph-based RAG: extracts knowledge graphs from documents, performs global queries via community summaries. 32k+ stars. | [Paper](https://arxiv.org/abs/2404.16130), [Docs](https://microsoft.github.io/graphrag/) |
+| [LightRAG](https://github.com/HKUDS/LightRAG) | Faster, simpler alternative to GraphRAG. Dual-level retrieval (entity + thematic) with incremental knowledge graph updates. 15k+ stars. | [GitHub](https://github.com/HKUDS/LightRAG) |
+| [PageIndex](https://github.com/VectifyAI/PageIndex) | Document index for vectorless, reasoning-based RAG. Bypasses traditional embedding for reasoning-first retrieval. 25k+ stars. | [GitHub](https://github.com/VectifyAI/PageIndex) |
+| [Neo4j GraphRAG](https://github.com/neo4j/neo4j-graphrag-python) | Official Neo4j library for GraphRAG pipelines. KG construction, hybrid retrieval (vector + Cypher). | [Docs](https://neo4j.com/docs/neo4j-graphrag-python/current/) |
+
+### Document Parsing for RAG
+
+| Name | Description | Links |
+|------|-------------|-------|
+| [Docling](https://github.com/DS4SD/docling) | IBM's fast document conversion: PDFs with layout understanding, table recognition (TableFormer), figure extraction. 20k+ stars. | [Docs](https://ds4sd.github.io/docling/) |
+| [Unstructured](https://github.com/Unstructured-IO/unstructured) | Document parsing ETL for RAG. Extracts from PDFs, DOCX, HTML, images, and 30+ formats. 10k+ stars. | [unstructured.io](https://unstructured.io/) |
+| [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) | Turn any PDF or image into structured data for AI. Supports 100+ languages. 75k+ stars. | [GitHub](https://github.com/PaddlePaddle/PaddleOCR) |
+
+### Advanced RAG Techniques
+
+| Technique | Description | Links |
+|-----------|-------------|-------|
+| Self-RAG | LLMs that reflect on retrieval decisions using special tokens. Adaptive retrieval — only retrieve when needed. | [Paper](https://arxiv.org/abs/2310.11511), [Code](https://github.com/AkariAsai/self-rag) |
+| CRAG (Corrective RAG) | Adds retrieval evaluator + correction mechanism. Falls back to web search if retrieved docs are irrelevant. | [Paper](https://arxiv.org/abs/2401.15884) |
+| ColPali (Visual RAG) | Revolutionary: indexes documents as images using vision-language models, eliminating OCR failures entirely. | [Paper](https://arxiv.org/abs/2407.01449), [Code](https://github.com/illuin-tech/colpali) |
+| HippoRAG | Neurobiologically-inspired RAG using knowledge graphs mimicking hippocampal memory for multi-hop reasoning. | [Code](https://github.com/OSU-NLP-Group/HippoRAG) |
+| RAG Techniques Guide | Comprehensive tutorial repository showcasing 20+ advanced RAG techniques with notebooks. 27k+ stars. | [GitHub](https://github.com/NirDiamant/RAG_Techniques) |
+
+### Embedding Models (2024-2026)
+
+| Model | Provider | Key Notes | Links |
+|-------|----------|-----------|-------|
+| text-embedding-3-large | OpenAI | 3072 dims (Matryoshka), strong general performance. | [Docs](https://platform.openai.com/docs/guides/embeddings) |
+| embed-v4.0 | Cohere | Multimodal (text+image), 128K context, 100+ languages. | [Docs](https://docs.cohere.com/docs/cohere-embed) |
+| voyage-3 | Voyage AI | Top MTEB scores (esp. code/finance/law), 32K context. Anthropic-backed. | [Docs](https://docs.voyageai.com/) |
+| NV-Embed-v2 | NVIDIA | #1 MTEB overall at release. Decoder-only LLM architecture. 4096 dims. | [HuggingFace](https://huggingface.co/nvidia/NV-Embed-v2) |
+| nomic-embed-text-v1.5 | Nomic AI | Fully open (weights + data + code). Matryoshka dimensions. 8K context. | [HuggingFace](https://huggingface.co/nomic-ai/nomic-embed-text-v1.5) |
+| jina-embeddings-v3 | Jina AI | Task-specific LoRA adapters, Matryoshka, multilingual. | [HuggingFace](https://huggingface.co/jinaai/jina-embeddings-v3) |
+| bge-m3 | BAAI | Multilingual (100 langs), multi-functionality: dense + sparse + ColBERT. | [HuggingFace](https://huggingface.co/BAAI/bge-m3) |
+| gte-Qwen2-7B-instruct | Alibaba | LLM-based embedding, top MTEB, instruction-tuned, 32K context. | [HuggingFace](https://huggingface.co/Alibaba-NLP/gte-Qwen2-7B-instruct) |
 
 ---
 
@@ -363,32 +478,89 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 
 ## Papers, Blogs, Courses and Lectures
 
-### Papers
+### Frontier Model Papers
 
-| Paper | Description | Links |
-|-------|-------------|-------|
-| Generative Agents: Interactive Simulacra of Human Behavior | Stanford/Google research on AI agents simulating human behavior in a virtual town. | [Paper](https://arxiv.org/abs/2304.03442) |
-| HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face | System using ChatGPT to orchestrate specialized AI models. | [Paper](https://arxiv.org/abs/2303.17580) |
-| Toolformer: Language Models Can Teach Themselves to Use Tools | Meta AI research on LLMs learning API tool use. | [Paper](https://arxiv.org/pdf/2302.04761.pdf) |
-| Chain-of-Thought Prompting Elicits Reasoning in LLMs | Foundational paper on CoT prompting by Google. | [Paper](https://arxiv.org/abs/2201.11903) |
-| Tree of Thoughts: Deliberate Problem Solving with LLMs | Tree-structured reasoning for complex problems. | [Paper](https://arxiv.org/abs/2305.10601) |
-| LoRA: Low-Rank Adaptation of Large Language Models | Parameter-efficient fine-tuning through low-rank decomposition. | [Paper](https://arxiv.org/pdf/2106.09685.pdf) |
-| QLoRA: Efficient Finetuning of Quantized LLMs | 4-bit quantized fine-tuning enabling LLM training on consumer GPUs. | [Paper](https://arxiv.org/abs/2305.14314) |
-| Instruction Tuning for LLMs: A Survey | Comprehensive survey on instruction tuning techniques. | [Paper](https://arxiv.org/abs/2308.10792) |
-| Agents: An Open-source Framework for Autonomous Language Agents | Framework for building autonomous language agents. | [Paper](https://arxiv.org/pdf/2309.07870.pdf) |
-| RestGPT: Connecting LLMs with Real-World RESTful APIs | Enabling LLMs to autonomously interact with REST APIs. | [Paper](https://arxiv.org/abs/2306.06624) |
-| RoboGen: Towards Unleashing Infinite Data for Automated Robot Learning | Generative simulation for robot learning. | [Paper](https://arxiv.org/abs/2311.01455) |
+| Paper | Authors / Org | Year | Description | Links |
+|-------|---------------|------|-------------|-------|
+| GPT-4 Technical Report | OpenAI | 2023 | Foundational technical report describing GPT-4's multimodal capabilities, RLHF training, and safety evaluations. | [Paper](https://arxiv.org/abs/2303.08774) |
+| Learning to Reason with LLMs (o1) | OpenAI | 2024 | Introduces o1 — trained with RL to think deeply before responding, achieving PhD-level reasoning performance. | [Blog](https://openai.com/index/learning-to-reason-with-llms) |
+| Gemini: A Family of Highly Capable Multimodal Models | Google DeepMind | 2023 | The Gemini family (Ultra/Pro/Nano) with native multimodal training, surpassing GPT-4 on 30/32 benchmarks. | [Paper](https://arxiv.org/abs/2312.11805) |
+| Gemini 1.5: Unlocking Multimodal Understanding Across Millions of Tokens | Google DeepMind | 2024 | Extends Gemini to 1M-token context (later 2M) via efficient MoE architecture. | [Paper](https://arxiv.org/abs/2403.05530) |
+| The Llama 3 Herd of Models | Meta AI | 2024 | Open-weight Llama 3 (8B–405B), competitive with GPT-4 on key benchmarks; 15T+ training tokens. | [Paper](https://arxiv.org/abs/2407.21783) |
+| DeepSeek-V3 Technical Report | DeepSeek-AI | 2024 | 671B MoE model trained for $5.5M via FP8 mixed-precision; competitive with GPT-4o. | [Paper](https://arxiv.org/abs/2412.19437) |
+| DeepSeek-R1: Incentivizing Reasoning via RL | DeepSeek-AI | 2025 | Chain-of-thought reasoning purely through RL (GRPO) without SFT — matches o1 on math/code. | [Paper](https://arxiv.org/abs/2501.12948) |
+| Mixtral of Experts | Mistral AI | 2024 | Mixtral 8x7B sparse MoE matching Llama 2 70B with 5x lower inference cost. | [Paper](https://arxiv.org/abs/2401.04088) |
+| Qwen2.5 Technical Report | Qwen Team (Alibaba) | 2025 | Qwen2.5 series with improved coding and math specializations. | [Paper](https://arxiv.org/abs/2412.15115) |
+| Phi-3: A Highly Capable Language Model on Your Phone | Microsoft | 2024 | 3.8B model trained on curated synthetic data that rivals models 10x its size. | [Paper](https://arxiv.org/abs/2404.14219) |
+
+### Reasoning, Scaling & Architecture Papers
+
+| Paper | Authors | Year | Description | Links |
+|-------|---------|------|-------------|-------|
+| Chain-of-Thought Prompting Elicits Reasoning in LLMs | Wei et al. (Google) | 2022 | Foundational paper: intermediate reasoning steps dramatically improve LLM performance. | [Paper](https://arxiv.org/abs/2201.11903) |
+| Tree of Thoughts: Deliberate Problem Solving with LLMs | Yao et al. (Princeton/Google) | 2023 | Tree-structured reasoning enabling backtracking and lookahead. | [Paper](https://arxiv.org/abs/2305.10601) |
+| Let's Verify Step by Step | Lightman et al. (OpenAI) | 2023 | Process reward models (PRMs) scoring each reasoning step — the mechanism behind o1-style training. | [Paper](https://arxiv.org/abs/2305.20050) |
+| Scaling LLM Test-Time Compute Optimally | Snell et al. (Berkeley) | 2024 | More compute at inference can equal more training compute on hard tasks. | [Paper](https://arxiv.org/abs/2408.03314) |
+| Training Compute-Optimal LLMs (Chinchilla) | Hoffmann et al. (DeepMind) | 2022 | Optimal LLM training scales data and parameters equally. | [Paper](https://arxiv.org/abs/2203.15556) |
+| Scaling Laws for Neural Language Models | Kaplan et al. (OpenAI) | 2020 | Power-law relationships between model scale and performance, underpinning AGI scaling hypotheses. | [Paper](https://arxiv.org/abs/2001.08361) |
+| Video Generation Models as World Simulators (Sora) | OpenAI | 2024 | Sora: text-to-video diffusion transformer that models physics and long-horizon consistency. | [Blog](https://openai.com/research/video-generation-models-as-world-simulators) |
+| Genie: Generative Interactive Environments | Bruce et al. (DeepMind) | 2024 | Learns playable 2D world models from unlabeled internet video. | [Paper](https://arxiv.org/abs/2402.15391) |
+| LongRoPE: Extending LLM Context Beyond 2M Tokens | Ding et al. (Microsoft) | 2024 | Extends RoPE to 2M tokens via non-uniform interpolation. | [Paper](https://arxiv.org/abs/2402.13753) |
+| Infini-Attention | Munkhdalai et al. (Google) | 2024 | Compressive memory in standard attention for infinite-length inputs with bounded memory. | [Paper](https://arxiv.org/abs/2404.07143) |
+
+### Agent Papers
+
+| Paper | Authors | Year | Description | Links |
+|-------|---------|------|-------------|-------|
+| ReAct: Synergizing Reasoning and Acting in LMs | Yao et al. (Princeton/Google) | 2022 | Interleaves reasoning with grounded actions — the dominant LLM agent paradigm. | [Paper](https://arxiv.org/abs/2210.03629) |
+| Reflexion: Language Agents with Verbal Reinforcement Learning | Shinn et al. | 2023 | Agents reflect on failures in natural language and use episodic memory to improve. | [Paper](https://arxiv.org/abs/2303.11366) |
+| Generative Agents: Interactive Simulacra of Human Behavior | Park et al. (Stanford/Google) | 2023 | 25 AI agents in a simulated town exhibiting emergent social behaviors. | [Paper](https://arxiv.org/abs/2304.03442) |
+| Voyager: An Open-Ended Embodied Agent with LLMs | Wang et al. (NVIDIA/CMU) | 2023 | First LLM-powered Minecraft agent with lifelong learning via skill library. | [Paper](https://arxiv.org/abs/2305.16291) |
+| ToolLLM: Facilitating LLMs to Master 16,000+ APIs | Qin et al. (Tsinghua) | 2023 | Framework for training and evaluating LLMs on tool use across 16,464 real APIs. | [Paper](https://arxiv.org/abs/2307.16789) |
+| SWE-bench: Can LMs Resolve Real-World GitHub Issues? | Jimenez et al. (Princeton) | 2023 | Benchmark of 2,294 real GitHub issues driving the coding agent race. | [Paper](https://arxiv.org/abs/2310.06770) |
+| WebArena: A Realistic Web Environment for Autonomous Agents | Zhou et al. | 2023 | 812 real-world web tasks exposing the gap between LLMs and human agents. | [Paper](https://arxiv.org/abs/2307.13854) |
+| OSWorld: Benchmarking Multimodal Agents in Real Computer Environments | Xie et al. | 2024 | GUI agents across real OS; top agents score ~7% vs. human 72%. | [Paper](https://arxiv.org/abs/2404.07972) |
+| The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery | Sakana AI | 2024 | Fully autonomous research pipeline — idea generation to paper writing. | [Paper](https://arxiv.org/abs/2408.06292) |
+
+### Alignment & Reward Modeling Papers
+
+| Paper | Authors | Year | Description | Links |
+|-------|---------|------|-------------|-------|
+| Direct Preference Optimization (DPO) | Rafailov et al. (Stanford) | 2023 | Eliminates separate RL + reward model in RLHF by directly optimizing on preference data. | [Paper](https://arxiv.org/abs/2305.18290) |
+| KTO: Model Alignment as Prospect Theoretic Optimization | Ethayarajh et al. | 2024 | Alignment with only binary (good/bad) feedback, no paired comparisons needed. | [Paper](https://arxiv.org/abs/2402.01306) |
+| ORPO: Monolithic Preference Optimization without Reference Model | Hong et al. | 2024 | Eliminates reference model in DPO-style training, reducing compute. | [Paper](https://arxiv.org/abs/2403.07691) |
+| SimPO: Simple Preference Optimization with Reference-Free Reward | Meng et al. | 2024 | Average log-probability as implicit reward with target margin — cleaner than DPO. | [Paper](https://arxiv.org/abs/2405.14734) |
+| Self-Rewarding Language Models | Yuan et al. (Meta) | 2024 | Models generate and evaluate own preference data for iterative self-improvement. | [Paper](https://arxiv.org/abs/2401.10020) |
+
+### Safety & Interpretability Papers
+
+| Paper | Authors | Year | Description | Links |
+|-------|---------|------|-------------|-------|
+| Constitutional AI: Harmlessness from AI Feedback | Bai et al. (Anthropic) | 2022 | Training helpful, harmless AI using AI-written critiques derived from a constitution. | [Paper](https://arxiv.org/abs/2212.08073) |
+| Representation Engineering | Zou et al. (UCSD) | 2023 | Identifies and steers high-level concepts (honesty, power-seeking) in neural representations. | [Paper](https://arxiv.org/abs/2310.01405) |
+| Towards Monosemanticity: Dictionary Learning for LMs | Bricken et al. (Anthropic) | 2023 | Sparse autoencoders decomposing polysemantic neurons into interpretable features. | [Blog](https://transformer-circuits.pub/2023/monosemantic-features/) |
+| Scaling Monosemanticity: Interpretable Features from Claude 3 Sonnet | Templeton et al. (Anthropic) | 2024 | 34M features including "Assistant" identity, emotions, and safety-relevant concepts. | [Blog](https://transformer-circuits.pub/2024/scaling-monosemanticity/) |
+| Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training | Hubinger et al. (Anthropic) | 2024 | Deceptive backdoor behaviors survive RLHF, SFT, and adversarial training. | [Paper](https://arxiv.org/abs/2401.05566) |
+| Weak-to-Strong Generalization | Burns et al. (OpenAI) | 2023 | GPT-2 supervising GPT-4 as proxy for "human supervising superintelligence." | [Paper](https://arxiv.org/abs/2312.09390) |
+| AI Control: Improving Safety Despite Intentional Subversion | Greenblatt et al. (Redwood Research) | 2024 | Framework for evaluating safety against models actively trying to circumvent controls. | [Paper](https://arxiv.org/abs/2312.06942) |
+| Sparks of AGI: Early Experiments with GPT-4 | Bubeck et al. (Microsoft Research) | 2023 | 155-page study arguing GPT-4 shows early sparks of AGI across diverse tasks. | [Paper](https://arxiv.org/abs/2303.12712) |
+| Levels of AGI: Operationalizing Progress on the Path to AGI | Morris et al. (Google DeepMind) | 2023 | 6-level AGI taxonomy (Emerging to ASI) with performance and autonomy axes. | [Paper](https://arxiv.org/abs/2311.02462) |
 
 ### Blogs and News
 
 | Resource | Description |
 |----------|-------------|
 | [OpenAI Blog](https://openai.com/blog) | Official blog from OpenAI with research updates and announcements. |
-| [Google AI Blog](https://ai.googleblog.com/) | Google's AI research blog. |
-| [HuggingFace Blog](https://huggingface.co/blog) | Latest in open-source ML and NLP. |
-| [LangChain Blog](https://blog.langchain.dev/) | Updates on LangChain framework and LLM applications. |
+| [Anthropic Research](https://www.anthropic.com/research) | Anthropic's AI safety and capabilities research publications. |
+| [Google DeepMind Blog](https://deepmind.google/discover/blog/) | Research updates from Google DeepMind. |
+| [Meta AI Blog](https://ai.meta.com/blog/) | Meta's AI research blog, including Llama and open-source releases. |
+| [HuggingFace Blog](https://huggingface.co/blog) | Latest in open-source ML, NLP, and the HF ecosystem. |
+| [LangChain Blog](https://blog.langchain.dev/) | Updates on LangChain/LangGraph and LLM application patterns. |
 | [The Gradient](https://thegradient.pub/) | Perspectives on AI research and its implications. |
-| [Lilian Weng's Blog](https://lilianweng.github.io/) | In-depth technical posts on LLMs, agents, and AI research. |
+| [Lilian Weng's Blog](https://lilianweng.github.io/) | In-depth technical posts on LLMs, agents, and AI research (by OpenAI). |
+| [Simon Willison's Blog](https://simonwillison.net/) | Prolific coverage of LLM tools, agents, and practical AI engineering. |
+| [The Alignment Forum](https://www.alignmentforum.org/) | Hub for AI alignment research discussions and papers. |
+| [Transformer Circuits](https://transformer-circuits.pub/) | Anthropic's mechanistic interpretability research publications. |
 
 ---
 
@@ -397,11 +569,14 @@ Related Resources:  [LangGPT](https://github.com/yzfly/LangGPT) | [ML Papers Exp
 | Resource | Description | Links |
 |----------|-------------|-------|
 | [awesome-agi-cocosci](https://github.com/YuzheSHI/awesome-agi-cocosci) | Collection of resources on AGI from the perspective of cognitive science. | [GitHub](https://github.com/YuzheSHI/awesome-agi-cocosci) |
-| [Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide) | Comprehensive guide to prompt engineering techniques, papers, and tools. | [promptingguide.ai](https://www.promptingguide.ai/) |
+| [Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide) | Comprehensive guide to prompt engineering, RAG, context engineering, and AI agents. 73k+ stars. | [promptingguide.ai](https://www.promptingguide.ai/) |
 | [LLM Course](https://github.com/mlabonne/llm-course) | Course to get into Large Language Models with roadmaps and Colab notebooks. | [GitHub](https://github.com/mlabonne/llm-course) |
+| [awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | Collection of awesome LLM apps with AI Agents and RAG. 105k+ stars. | [GitHub](https://github.com/Shubhamsaboo/awesome-llm-apps) |
+| [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners) | Microsoft's introductory course on building AI agents. | [GitHub](https://github.com/microsoft/ai-agents-for-beginners) |
 | [LangChain Documentation](https://python.langchain.com/docs/) | Official documentation and tutorials for the LangChain framework. | [Docs](https://python.langchain.com/docs/) |
 | [LlamaIndex Documentation](https://docs.llamaindex.ai/) | Official docs for LlamaIndex data framework. | [Docs](https://docs.llamaindex.ai/) |
 | [PEFT Documentation](https://huggingface.co/docs/peft/) | HuggingFace's guide to parameter-efficient fine-tuning methods. | [Docs](https://huggingface.co/docs/peft/) |
+| [DSPy Documentation](https://dspy.ai/) | Stanford's guide to programming (not prompting) LLMs. | [Docs](https://dspy.ai/) |
 
 ---
 
