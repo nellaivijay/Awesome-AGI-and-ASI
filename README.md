@@ -105,6 +105,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 ### Build
 - [Frameworks and Platforms](#frameworks-and-platforms) -- Next-gen, established, and specialized agent frameworks
 - [Agents](#agents) -- Coding, research, computer-use, embodied, and enterprise agentic AI
+- [Physical AI & Embodied Intelligence](#physical-ai--embodied-intelligence) -- Humanoid robotics, robot foundation models (VLA), simulation platforms
 - [LLM Application Frameworks](#llm-application-frameworks) -- Orchestration, platforms, structured output, observability
 - [RAG and Vector Databases](#rag-and-vector-databases) -- Vector DBs, RAG engines, Graph RAG, document parsing, embeddings
 
@@ -118,7 +119,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 - [Safety, Alignment and Governance](#safety-alignment-and-governance) -- RLHF, DPO, hallucination, AI detection, governance, climate AI
 
 ### Research & Learn
-- [Papers, Blogs, Courses and Lectures](#papers-blogs-courses-and-lectures) -- Frontier models, reasoning, world models, agents, alignment, interpretability
+- [Papers, Blogs, Courses and Lectures](#papers-blogs-courses-and-lectures) -- Frontier models, reasoning, world models, physical AI, agents, alignment, interpretability
 - [Tutorials and Guides](#tutorials-and-guides) -- Courses, documentation, and hands-on learning resources
 - [Top Conferences](#top-conferences) -- Academic, AGI-specific, safety, and industry conferences
 
@@ -230,6 +231,53 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |[Salesforce Agentforce](https://www.salesforce.com/agentforce/)|Enterprise AI agent platform integrated into Salesforce CRM. Autonomous agents handle sales, service, marketing, and commerce workflows.|Largest enterprise AI agent deployment. Announced 2024.|
 |[Microsoft Copilot Studio](https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio)|Low-code platform for building and deploying custom AI agents and copilots across Microsoft 365 and Azure.|Powers enterprise-wide agentic automation.|
 |[Zapier AI Agents](https://zapier.com/agents)|No-code AI agents that automate cross-app workflows. Connects 7,000+ apps with autonomous decision-making and action.|Enterprise workflow automation at scale.|
+
+---
+
+## Physical AI & Embodied Intelligence
+
+> True general intelligence cannot exist only in text and pixels -- it must understand and act in the physical world. **Physical AI** bridges foundation models with real-world embodiment: humanoid robots, dexterous manipulation, autonomous navigation, and physics simulation. Every major AGI lab is now investing in embodied intelligence, recognizing that Moravec's Paradox -- high-level reasoning is computationally cheap, but sensorimotor skills are hard -- represents one of the deepest unsolved challenges on the path to AGI.
+
+![Robotics](https://img.shields.io/badge/Robotics-Humanoid-red?style=flat-square) ![VLA](https://img.shields.io/badge/VLA-Vision--Language--Action-blue?style=flat-square) ![Simulation](https://img.shields.io/badge/Simulation-Isaac_MuJoCo-green?style=flat-square) ![Embodied](https://img.shields.io/badge/Embodied_AI-Physical_Intelligence-purple?style=flat-square)
+
+### Humanoid Robotics & AGI Hardware
+
+> The race to build general-purpose humanoid robots capable of operating in unstructured human environments. These platforms are the physical embodiment layer for AGI.
+
+| Company | Description | Links |
+|---------|-------------|-------|
+| **Figure AI** | Humanoid robots with advanced AI. Partnered with OpenAI and Microsoft for embodied AI. Figure 02 demonstrates autonomous manipulation, language-guided task execution, and learning from human feedback. Raised $2.6B+. | [figure.ai](https://www.figure.ai/) |
+| **Tesla Optimus** | General-purpose humanoid robot leveraging Tesla's massive autonomous driving AI stack (FSD neural nets, Dojo supercomputer). Targeting manufacturing and consumer deployment at scale. | [tesla.com](https://www.tesla.com/) |
+| **Boston Dynamics** | Pioneers of advanced locomotion. Atlas (humanoid) and Spot (quadruped) set the standard for physical capability, agility, and dexterity. Now Hyundai-owned, pivoting to AI-first control. | [bostondynamics.com](https://www.bostondynamics.com/) |
+| **1X Technologies** | NEO humanoid robot with human-like form factor. Backed by OpenAI. Focused on safe, embodied AI for real-world deployment in homes and workplaces. | [1x.tech](https://www.1x.tech/) |
+| **Unitree Robotics** | Democratizing humanoid robotics with affordable platforms (G1, H1 series). Enables broad research access to embodied AI experimentation. | [unitree.com](https://www.unitree.com/) |
+| **Sanctuary AI** | Phoenix humanoid robot powered by "Carbon" -- a proprietary AI system designed for general-purpose task learning and autonomous execution. | [sanctuary.ai](https://www.sanctuary.ai/) |
+| **Agility Robotics** | Digit bipedal robot designed for logistics and warehouse automation. Real-world deployment partner with Amazon. | [agilityrobotics.com](https://www.agilityrobotics.com/) |
+| **Apptronik** | Apollo full-size humanoid robot for industrial applications. Emphasis on safe human-robot collaboration. Mercedes-Benz partnership. | [apptronik.com](https://www.apptronik.com/) |
+
+### Robot Foundation Models (Vision-Language-Action)
+
+> The frontier of embodied AI research: models that take visual observations and language commands as input and directly output robot motor actions. VLA models represent the convergence of foundation models and physical intelligence.
+
+| Model | Org | Year | Description | Links |
+|-------|-----|------|-------------|-------|
+| **pi0** | Physical Intelligence | 2024 | VLA flow model for general robot control. Novel flow matching architecture on top of pre-trained VLM. Trained on diverse dexterous tasks (laundry folding, table cleaning, box assembly) across single-arm, dual-arm, and mobile manipulators. Open-sourced weights. | [Paper](https://arxiv.org/abs/2410.24164), [Site](https://www.physicalintelligence.company/) |
+| **RT-2** | Google DeepMind | 2023 | Vision-Language-Action model that transfers web-scale knowledge to robotic control. Expresses actions as text tokens, enabling emergent reasoning (pick up the "improvised hammer" -> picks rock). 6k evaluation trials. | [Paper](https://arxiv.org/abs/2307.15818) |
+| **PaLM-E** | Google | 2023 | 562B-parameter embodied multimodal language model. Directly incorporates continuous sensor modalities into LLMs. Positive transfer across internet-scale language, vision, and robotics domains. | [Paper](https://arxiv.org/abs/2303.03378) |
+| **Open X-Embodiment / RT-X** | 21 Institutions | 2023 | Largest robotics dataset: 22 robots, 527 skills, 160k+ tasks from 21 institutions. RT-X model shows positive transfer across robot morphologies. The "ImageNet moment" for robotics. | [Paper](https://arxiv.org/abs/2310.08864) |
+| **OpenVLA** | Stanford / UC Berkeley | 2024 | Open-source 7B-parameter VLA. Democratizes embodied AI research -- matches proprietary models on manipulation benchmarks. Fine-tunable for new robots and tasks. | [GitHub](https://github.com/openvla/openvla) |
+| **NVIDIA GR00T** | NVIDIA | 2024 | Foundation model for humanoid robots. Multimodal inputs (text, video, demonstration) to robot actions. Part of NVIDIA's Physical AI platform alongside Isaac and Cosmos. | [nvidia.com](https://developer.nvidia.com/isaac) |
+
+### Simulation & Infrastructure for Physical AI
+
+> Training embodied AI requires massive simulation before real-world deployment. These platforms enable sim-to-real transfer, digital twins, and scalable robot learning.
+
+| Platform | Description | Links |
+|----------|-------------|-------|
+| **NVIDIA Isaac Sim / Isaac Lab** | Production-grade robotics simulation platform with photorealistic rendering, physics accuracy, and domain randomization. Isaac Lab provides GPU-accelerated RL environments for robot learning at scale. | [Developer](https://developer.nvidia.com/isaac/), [GitHub](https://github.com/isaac-sim/) |
+| **NVIDIA Omniverse** | Collaborative 3D simulation platform for building digital twins and physics-based robotics simulation. Foundation for NVIDIA's Physical AI ecosystem. | [nvidia.com/omniverse](https://www.nvidia.com/en-us/omniverse/) |
+| **MuJoCo** | Google DeepMind's open-source physics engine optimized for robotics and biomechanics. Fast, accurate contact dynamics. The standard tool for embodied AI research and RL benchmarking. | [mujoco.org](https://mujoco.org/), [GitHub](https://github.com/google-deepmind/mujoco) |
+| **Genesis** | Next-generation open-source physics engine for embodied AI. Differentiable simulation enabling gradient-based learning for physical systems. | [GitHub](https://github.com/Genesis-Embodied-AI/Genesis) |
 
 ---
 
@@ -531,6 +579,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | **xAI** | Founded by Elon Musk (2023). Building Grok series of models with stated goal of understanding the universe. | [x.ai](https://x.ai/) |
 | **Liquid AI** | MIT spinoff building Liquid Foundation Models (LFMs) based on novel liquid neural network architectures. Ultra-efficient on-device models. Raised $250M. CSO Alexander Amini presented on "The Architecture of Intelligence" at MIT 2026. | [liquid.ai](https://www.liquid.ai/) |
 | **Humane Intelligence** | AI safety organization led by Rumman Chowdhury (former Twitter ML Ethics lead). Focuses on responsible AI, algorithmic auditing, and human-centered AI governance. | [humane-intelligence.org](https://www.humane-intelligence.org/) |
+| **Physical Intelligence** | Building general-purpose robot foundation models (pi0, pi0.5). Founded by Sergey Levine, Chelsea Finn, Karol Hausman, and Lachy Groom. VLA models that control any robot for any task. Backed by OpenAI, Bezos, Sequoia, Khosla. | [physicalintelligence.company](https://www.physicalintelligence.company/) |
 
 ### Books on AGI, ASI, and Superintelligence
 
@@ -683,6 +732,16 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | Video Generation Models as World Simulators (Sora) | OpenAI | 2024 | Sora: text-to-video diffusion transformer that models physics and long-horizon consistency. | [Blog](https://openai.com/research/video-generation-models-as-world-simulators) |
 | Genie: Generative Interactive Environments | Bruce et al. (DeepMind) | 2024 | Learns playable 2D world models from unlabeled internet video. | [Paper](https://arxiv.org/abs/2402.15391) |
 | NVIDIA Cosmos | NVIDIA | 2025 | Open-source world foundation model platform for physical AI -- robotics, autonomous vehicles, and simulation. 8k+ stars. | [GitHub](https://github.com/nvidia-cosmos) |
+
+### Physical AI & Embodied Intelligence Papers
+
+| Paper | Authors / Org | Year | Description | Links |
+|-------|---------------|------|-------------|-------|
+| RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control | Brohan, Levine et al. (Google DeepMind) | 2023 | Landmark VLA model: co-fine-tunes vision-language models on robot trajectory data. Actions as text tokens enable emergent semantic reasoning for physical tasks. | [Paper](https://arxiv.org/abs/2307.15818) |
+| PaLM-E: An Embodied Multimodal Language Model | Driess, Levine et al. (Google) | 2023 | 562B-parameter embodied LLM grounding language in continuous sensor modalities. Positive transfer across internet-scale language, vision, and robotics. | [Paper](https://arxiv.org/abs/2303.03378) |
+| pi0: A VLA Flow Model for General Robot Control | Black, Levine, Finn et al. (Physical Intelligence) | 2024 | Novel flow matching architecture on pre-trained VLM for general-purpose robot policies. Laundry folding, table cleaning, box assembly across diverse embodiments. Open-sourced. | [Paper](https://arxiv.org/abs/2410.24164) |
+| Open X-Embodiment: Robotic Learning Datasets and RT-X Models | Open X-Embodiment Collaboration (21 institutions) | 2023 | Largest cross-embodiment robotics dataset (22 robots, 527 skills, 160k+ tasks). RT-X shows positive transfer across robot morphologies -- robotics' "ImageNet moment." | [Paper](https://arxiv.org/abs/2310.08864) |
+| TD-MPC2: Scalable World Models for Continuous Control | Hansen, Su, Wang | 2023 | 317M-parameter agent controlling 80 tasks across multiple embodiments and action spaces using implicit world models. ICLR 2024. | [Paper](https://arxiv.org/abs/2310.16828) |
 
 ### Agent Papers
 
