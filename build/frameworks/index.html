@@ -559,6 +559,8 @@
       
         
       
+        
+      
     
     
     
@@ -619,6 +621,34 @@
     
   
     Understanding AI, AGI, and ASI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../understand/benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGI Benchmarks & Evals
   
 
     
@@ -801,6 +831,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#agent-communication-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent Communication Protocols
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#next-generation-agent-frameworks-2025-2026" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -941,6 +982,8 @@
   
     
     
+      
+        
       
         
       
@@ -1156,6 +1199,34 @@
     
   
     Distributed Training Frameworks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infrastructure/compute-hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compute, Hardware & Quantization
   
 
     
@@ -1855,9 +1926,43 @@
 
 <h1 id="frameworks-and-platforms">Frameworks and Platforms<a class="headerlink" href="#frameworks-and-platforms" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p>The infrastructure powering the next generation of autonomous AI. These frameworks let you build, orchestrate, and deploy AI agents that can reason, browse, code, and collaborate -- from single-agent tools to multi-agent orchestration platforms.</p>
+<p>The infrastructure powering <strong>Large Agentic Models (LAMs)</strong> and multi-agent systems. The conversation has moved past simple LLMs and chatbots -- AGI is about systems that take actions. These frameworks let you build, orchestrate, and deploy AI agents that can reason, browse, code, and collaborate autonomously.</p>
 </blockquote>
 <p><img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" /> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&amp;logo=typescript&amp;logoColor=white" /> <img alt="Rust" src="https://img.shields.io/badge/Rust-000000?style=flat-square&amp;logo=rust&amp;logoColor=white" /> <img alt="Multi-Agent" src="https://img.shields.io/badge/Multi--Agent-blue?style=flat-square" /> <img alt="Browser" src="https://img.shields.io/badge/Browser_Automation-orange?style=flat-square" /> <img alt="Open Source" src="https://img.shields.io/badge/Open_Source-green?style=flat-square" /></p>
+<h3 id="agent-communication-protocols">Agent Communication Protocols<a class="headerlink" href="#agent-communication-protocols" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Standardized protocols enabling agents to discover tools, communicate with services, and coordinate with each other -- the TCP/IP of the agentic era.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Protocol</th>
+<th>Description</th>
+<th>Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><strong>MCP (Model Context Protocol)</strong></td>
+<td>Anthropic's open protocol for connecting AI models to external tools and data sources. Adopted by Claude, Cursor, Windsurf, and dozens of agent frameworks. The emerging standard for agent-tool communication.</td>
+<td><a href="https://modelcontextprotocol.io/">modelcontextprotocol.io</a>, <a href="https://github.com/modelcontextprotocol">GitHub</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>A2A (Agent-to-Agent Protocol)</strong></td>
+<td>Google's open protocol for agent-to-agent communication. Enables agents built on different frameworks to discover capabilities, negotiate tasks, and collaborate securely.</td>
+<td><a href="https://google.github.io/A2A/">google.github.io/A2A</a></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>ACP (Agent Communication Protocol)</strong></td>
+<td>BeeAI's open protocol for structured agent-to-agent messaging. Supports streaming, async tasks, and multi-turn interactions.</td>
+<td><a href="https://github.com/i-am-bee/beeai">github.com/i-am-bee/beeai</a></td>
+</tr>
+</tbody>
+</table>
 <h3 id="next-generation-agent-frameworks-2025-2026">Next-Generation Agent Frameworks (2025-2026)<a class="headerlink" href="#next-generation-agent-frameworks-2025-2026" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1961,12 +2066,6 @@
 <td>Mimics a software company with PM, architect, and engineer agent roles.</td>
 </tr>
 <tr>
-<td><a href="https://github.com/reworkd/AgentGPT">AgentGPT</a></td>
-<td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/reworkd/AgentGPT" /></td>
-<td>Assemble, configure, and deploy autonomous AI Agents in your browser.</td>
-<td>36k+ stars. Browser-based agent deployment.</td>
-</tr>
-<tr>
 <td><a href="https://github.com/TransformerOptimus/SuperAGI">SuperAGI</a></td>
 <td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/TransformerOptimus/SuperAGI" /></td>
 <td>Dev-first open source autonomous AI agent framework. Run concurrent agents with tools, GUI, multiple vector DBs, performance telemetry, and agent memory.</td>
@@ -1991,21 +2090,9 @@
 <td><a href="https://www.camel-ai.org/">camel-ai.org</a></td>
 </tr>
 <tr>
-<td><a href="https://github.com/OpenBMB/XAgent">XAgent</a></td>
-<td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/OpenBMB/XAgent" /></td>
-<td>An autonomous LLM-based agent for complex task solving.</td>
-<td><a href="https://x-agent.net/">x-agent.net</a></td>
-</tr>
-<tr>
-<td><a href="https://github.com/microsoft/JARVIS">JARVIS / HuggingGPT</a></td>
-<td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/microsoft/JARVIS" /></td>
-<td>Uses ChatGPT as a controller to manage AI models on HuggingFace for task planning, model selection, and execution.</td>
-<td>-</td>
-</tr>
-<tr>
 <td><a href="https://github.com/yoheinakajima/babyagi">babyagi</a></td>
 <td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/yoheinakajima/babyagi" /></td>
-<td>Task-driven autonomous agent using OpenAI and vector DBs to create, prioritize, and execute tasks.</td>
+<td>Task-driven autonomous agent using OpenAI and vector DBs to create, prioritize, and execute tasks. <em>Archived -- historically significant as the project that popularized task-driven agents.</em></td>
 <td>-</td>
 </tr>
 <tr>
@@ -2028,12 +2115,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/RayVentura/ShortGPT">ShortGPT</a></td>
-<td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/RayVentura/ShortGPT" /></td>
-<td>Framework for automating video creation, voiceover, editing, and publishing using LLMs.</td>
-<td>-</td>
-</tr>
-<tr>
 <td><a href="https://github.com/AntonOsika/gpt-engineer">gpt-engineer</a></td>
 <td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/AntonOsika/gpt-engineer" /></td>
 <td>Specify what you want it to build, the AI asks for clarification, and then builds it.</td>
@@ -2055,30 +2136,6 @@
 <td><a href="https://github.com/opencog/opencog">opencog</a></td>
 <td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/opencog/opencog" /></td>
 <td>A framework for integrated Artificial Intelligence &amp; Artificial General Intelligence (AGI).</td>
-<td>-</td>
-</tr>
-<tr>
-<td><a href="https://github.com/smol-ai/developer">smol-ai/developer</a></td>
-<td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/smol-ai/developer" /></td>
-<td>The first library to let you embed a developer agent in your own app!</td>
-<td>-</td>
-</tr>
-<tr>
-<td><a href="https://github.com/farizrahman4u/loopgpt">loopgpt</a></td>
-<td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/farizrahman4u/loopgpt" /></td>
-<td>Modular Auto-GPT Framework. Improved GPT-3.5 support, lower API token cost.</td>
-<td>-</td>
-</tr>
-<tr>
-<td><a href="https://github.com/EmbraceAGI/LocalAGI">LocalAGI</a></td>
-<td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/EmbraceAGI/LocalAGI" /></td>
-<td>Locally run AGI powered by LLaMA, ChatGLM and more.</td>
-<td>-</td>
-</tr>
-<tr>
-<td><a href="https://github.com/melih-unsal/DemoGPT">DemoGPT</a></td>
-<td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/melih-unsal/DemoGPT" /></td>
-<td>Create quick demos by just using prompts.</td>
 <td>-</td>
 </tr>
 </tbody>
@@ -2106,7 +2163,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 13, 2026 17:26:12 UTC"><span class="timeago" datetime="2026-04-13T17:26:12+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 13, 2026 17:26:12 UTC">2026-04-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 13, 2026 18:10:27 UTC"><span class="timeago" datetime="2026-04-13T18:10:27+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 13, 2026 18:10:27 UTC">2026-04-13</span>
   </span>
 
     

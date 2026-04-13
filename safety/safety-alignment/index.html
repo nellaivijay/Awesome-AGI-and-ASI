@@ -559,6 +559,8 @@
       
         
       
+        
+      
     
     
     
@@ -619,6 +621,34 @@
     
   
     Understanding AI, AGI, and ASI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../understand/benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGI Benchmarks & Evals
   
 
     
@@ -871,6 +901,8 @@
       
         
       
+        
+      
     
     
     
@@ -1091,6 +1123,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../infrastructure/compute-hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compute, Hardware & Quantization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../infrastructure/prompt-engineering/" class="md-nav__link">
         
   
@@ -1262,6 +1322,17 @@
     <span class="md-ellipsis">
       
         Scalable Oversight &amp; Automated Alignment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#superalignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Superalignment
       
     </span>
   </a>
@@ -1962,9 +2033,44 @@
 </tr>
 </tbody>
 </table>
+<h3 id="superalignment">Superalignment<a class="headerlink" href="#superalignment" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>The defining challenge of the ASI transition: how do you align a system that is smarter than you? These research programs aim to solve alignment for superhuman AI systems before they arrive.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Description</th>
+<th>Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OpenAI Superalignment</strong></td>
+<td>Dedicated 20% of OpenAI compute to solving alignment for superintelligence. Key output: Weak-to-Strong Generalization framework. Team restructured after leadership departures in 2024, work continues under safety team.</td>
+<td><a href="https://openai.com/index/introducing-superalignment/">Blog</a></td>
+</tr>
+<tr>
+<td><strong>Anthropic RSP (Responsible Scaling Policy)</strong></td>
+<td>Framework committing to evaluate dangerous capabilities at each scaling threshold and pause if safety measures are insufficient. The leading industry self-governance approach.</td>
+<td><a href="https://www.anthropic.com/index/anthropics-responsible-scaling-policy">Paper</a></td>
+</tr>
+<tr>
+<td><strong>DeepMind Scalable Alignment</strong></td>
+<td>Research program on reward modeling, debate, and recursive oversight for superhuman systems. Key papers on process reward models and AI-assisted evaluation.</td>
+<td><a href="https://deepmind.google/">deepmind.google</a></td>
+</tr>
+<tr>
+<td><strong>Eliciting Latent Knowledge (ELK)</strong></td>
+<td>ARC's theoretical framework for extracting truthful beliefs from AI systems, even when they might have incentives to deceive. A core unsolved problem for superalignment.</td>
+<td><a href="https://docs.google.com/document/d/1WwsnJQstPq91_Yh-Ch2XRL8H_EpsnjrC1dwZXR37PC8/">Paper</a></td>
+</tr>
+</tbody>
+</table>
 <h3 id="mechanistic-interpretability">Mechanistic Interpretability<a class="headerlink" href="#mechanistic-interpretability" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>Understanding <em>how</em> neural networks actually compute internally. If we can reverse-engineer the algorithms learned by frontier models, we can detect dangerous capabilities, verify alignment, and build safer systems. This is arguably the most important field for AGI safety.</p>
+<p>Understanding <em>how</em> neural networks actually compute internally. If we can reverse-engineer the algorithms learned by frontier models, we can detect dangerous capabilities, verify alignment, and build safer systems. This is arguably the most important field for AGI safety -- and the key to <strong>superalignment</strong>: aligning systems smarter than us.</p>
 </blockquote>
 <table>
 <thead>
@@ -1999,6 +2105,26 @@
 <td><strong>SAE Bench</strong></td>
 <td>Standardized benchmark for evaluating sparse autoencoder quality -- enabling reproducible interpretability research.</td>
 <td><a href="https://github.com/adamkarvonen/SAEBench">GitHub</a></td>
+</tr>
+<tr>
+<td><strong>Steering Vectors / Activation Engineering</strong></td>
+<td>Directly modifying model behavior by adding computed direction vectors to activations at inference time. Enables real-time control of model outputs (e.g., making a model more honest, less toxic) without retraining.</td>
+<td><a href="https://arxiv.org/abs/2308.10248">Paper</a>, <a href="https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-vectors">Blog</a></td>
+</tr>
+<tr>
+<td><strong>Goodfire</strong></td>
+<td>Commercial platform for mechanistic interpretability. Visualize, search, and steer neural network features in production models. Makes mech interp practical for non-researchers.</td>
+<td><a href="https://goodfire.ai/">goodfire.ai</a></td>
+</tr>
+<tr>
+<td><strong>Neuronpedia</strong></td>
+<td>Open platform for exploring and sharing neuron-level interpretability research. Hosts sparse autoencoder features from multiple models. Community-driven mech interp infrastructure.</td>
+<td><a href="https://neuronpedia.org/">neuronpedia.org</a></td>
+</tr>
+<tr>
+<td><strong>Circuits Updates (Anthropic, 2025)</strong></td>
+<td>Anthropic's continued circuit-level analysis revealing how transformers implement algorithms: multi-step reasoning circuits, planning circuits, and safety-relevant feature interactions in Claude 3.5/4.</td>
+<td><a href="https://transformer-circuits.pub/">Blog</a></td>
 </tr>
 <tr>
 <td><strong>Transformer Circuits Thread</strong> (Anthropic)</td>
@@ -2059,6 +2185,21 @@
 <td>Organization building responsible AI leadership capacity across industries, focused on ethical AI deployment and trust frameworks.</td>
 <td><a href="https://www.aileadershipinstitute.com/">aileadershipinstitute.com</a></td>
 </tr>
+<tr>
+<td><strong>EU AI Act</strong></td>
+<td>World's first comprehensive AI regulation (effective 2024-2026). Risk-based framework classifying AI systems, with strict requirements for "high-risk" and bans on certain uses. Sets global regulatory precedent.</td>
+<td><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">digital-strategy.ec.europa.eu</a></td>
+</tr>
+<tr>
+<td><strong>US Executive Order on AI Safety</strong></td>
+<td>Executive Order 14110 (Oct 2023). Requires safety testing and reporting for frontier models, red-teaming standards, and AI watermarking research.</td>
+<td><a href="https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/">whitehouse.gov</a></td>
+</tr>
+<tr>
+<td><strong>Frontier Model Forum</strong></td>
+<td>Industry consortium (OpenAI, Google, Microsoft, Anthropic) for responsible development of frontier AI. Shared safety research and red-teaming practices.</td>
+<td><a href="https://www.frontiermodelforum.org/">frontiermodelforum.org</a></td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -2084,7 +2225,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 13, 2026 17:26:12 UTC"><span class="timeago" datetime="2026-04-13T17:26:12+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 13, 2026 17:26:12 UTC">2026-04-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 13, 2026 18:10:27 UTC"><span class="timeago" datetime="2026-04-13T18:10:27+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 13, 2026 18:10:27 UTC">2026-04-13</span>
   </span>
 
     

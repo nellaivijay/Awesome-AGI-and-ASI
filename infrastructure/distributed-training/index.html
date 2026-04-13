@@ -18,7 +18,7 @@
         <link rel="prev" href="../deployment/">
       
       
-        <link rel="next" href="../prompt-engineering/">
+        <link rel="next" href="../compute-hardware/">
       
       
         
@@ -559,6 +559,8 @@
       
         
       
+        
+      
     
     
     
@@ -619,6 +621,34 @@
     
   
     Understanding AI, AGI, and ASI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../understand/benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AGI Benchmarks & Evals
   
 
     
@@ -858,6 +888,8 @@
   
     
     
+      
+        
       
         
       
@@ -1128,21 +1160,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ai-compute-infrastructure" class="md-nav__link">
+  <a href="#additional-training-frameworks-libraries" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AI Compute Infrastructure
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#energy-data-centers-physical-constraints" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Energy, Data Centers &amp; Physical Constraints
+        Additional Training Frameworks &amp; Libraries
       
     </span>
   </a>
@@ -1153,6 +1174,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compute-hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compute, Hardware & Quantization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1873,10 +1922,10 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ai-compute-infrastructure">AI Compute Infrastructure<a class="headerlink" href="#ai-compute-infrastructure" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>The physical backbone of the AGI race. As models scale to trillions of parameters and inference demand explodes, energy, hardware, and data center capacity become the defining bottleneck.</p>
+<p><strong>Looking for AI hardware, quantization, and compute infrastructure?</strong> See <a href="../compute-hardware/">Compute, Hardware &amp; Quantization</a>.</p>
 </blockquote>
+<h3 id="additional-training-frameworks-libraries">Additional Training Frameworks &amp; Libraries<a class="headerlink" href="#additional-training-frameworks-libraries" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1887,74 +1936,24 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="https://groq.com/">Groq</a></td>
-<td>LPU (Language Processing Unit) inference engine delivering record-breaking tokens/second. Custom ASIC designed from the ground up for LLM inference.</td>
-<td><a href="https://groq.com/">groq.com</a></td>
+<td><a href="https://pytorch.org/docs/stable/fsdp.html">PyTorch FSDP</a></td>
+<td>Fully Sharded Data Parallelism built into PyTorch. Shards model parameters, gradients, and optimizer states across GPUs. Native PyTorch solution for large model training.</td>
+<td><a href="https://pytorch.org/docs/stable/fsdp.html">Docs</a></td>
 </tr>
 <tr>
-<td><a href="https://crusoe.ai/">Crusoe Energy</a></td>
-<td>Clean-energy AI data centers powered by stranded natural gas and renewables. Purpose-built GPU clouds for AI training and inference.</td>
-<td><a href="https://crusoe.ai/">crusoe.ai</a></td>
+<td><a href="https://github.com/huggingface/accelerate">Hugging Face Accelerate</a></td>
+<td>Simple library to run PyTorch training across any distributed configuration (multi-GPU, TPU, FSDP, DeepSpeed) with minimal code changes. 8k+ stars.</td>
+<td><a href="https://huggingface.co/docs/accelerate">Docs</a></td>
 </tr>
 <tr>
-<td><a href="https://cerebras.ai/">Cerebras</a></td>
-<td>Wafer-Scale Engine (WSE) -- the largest chip ever built -- designed for AI training. CS-3 system eliminates memory bottlenecks with 44GB on-chip SRAM.</td>
-<td><a href="https://cerebras.ai/">cerebras.ai</a></td>
+<td><a href="https://github.com/determined-ai/determined">Determined AI</a></td>
+<td>Open-source deep learning training platform with distributed training, hyperparameter search, and resource management.</td>
+<td><a href="https://www.determined.ai/">determined.ai</a></td>
 </tr>
 <tr>
-<td><a href="https://sambanova.ai/">SambaNova</a></td>
-<td>Reconfigurable Dataflow Architecture (RDA) for enterprise AI. Purpose-built hardware that adapts to model topology.</td>
-<td><a href="https://sambanova.ai/">sambanova.ai</a></td>
-</tr>
-<tr>
-<td><a href="https://ai.meta.com/blog/next-generation-meta-training-inference-accelerator-mtia/">Meta MTIA</a></td>
-<td>Meta Training and Inference Accelerator -- custom AI silicon designed for Meta's recommendation and generative AI workloads. 4 chip generations in 2 years, powering AI for billions of users.</td>
-<td><a href="https://ai.meta.com/">ai.meta.com</a></td>
-</tr>
-<tr>
-<td><a href="https://cloud.google.com/tpu">Google TPU (Trillium)</a></td>
-<td>Google's 6th-gen TPU (Trillium, 2024) with 4.7x compute per chip improvement over TPU v5e. Powers Gemini training and inference at scale across Google's AI fleet.</td>
-<td><a href="https://cloud.google.com/tpu">cloud.google.com/tpu</a></td>
-</tr>
-<tr>
-<td><a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/">NVIDIA Blackwell (B200/GB200)</a></td>
-<td>NVIDIA's 2024 GPU architecture: 208B transistors, 2nd-gen Transformer Engine with FP4, 30x faster inference on LLMs vs. Hopper. GB200 NVL72 rack delivers 1.4 exaFLOPS. The dominant hardware for frontier model training.</td>
-<td><a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/">nvidia.com/blackwell</a></td>
-</tr>
-</tbody>
-</table>
-<h3 id="energy-data-centers-physical-constraints">Energy, Data Centers &amp; Physical Constraints<a class="headerlink" href="#energy-data-centers-physical-constraints" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>The AGI race is ultimately constrained by physics: energy, cooling, and chip fabrication. As training runs scale from gigawatt-hours to hundreds of gigawatt-hours, the physical infrastructure becomes as important as the algorithms.</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>Challenge</th>
-<th>Current State</th>
-<th>Links</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Gigawatt-scale data centers</strong></td>
-<td>Microsoft, Meta, Google, Amazon, and xAI are all building or planning 1-5 GW data centers. xAI's Memphis "Colossus" cluster: 100k H100s. Microsoft's $100B Stargate project with OpenAI.</td>
-<td>Industry announcements</td>
-</tr>
-<tr>
-<td><strong>Nuclear-powered AI</strong></td>
-<td>Microsoft restarted Three Mile Island Unit 1 for AI power. Amazon, Google, and Oracle securing nuclear power for data centers. SMR (Small Modular Reactor) partnerships proliferating.</td>
-<td><a href="https://www.reuters.com/technology/">News</a></td>
-</tr>
-<tr>
-<td><strong>The Memory Wall</strong></td>
-<td>Context window expansion (4K -&gt; 128K -&gt; 1M -&gt; 10M tokens) functions as "working memory" for AGI. Llama 4 Scout: 10M tokens. Gemini 1.5: 2M. But attention scales quadratically -- memory-efficient architectures (Infini-Attention, Mamba, RWKV) are essential.</td>
-<td>See <a href="../../research/papers-blogs/#reasoning-scaling-architecture-papers">Reasoning Papers</a></td>
-</tr>
-<tr>
-<td><strong>Training cost trajectory</strong></td>
-<td>GPT-4: ~$100M. Llama 3 405B: ~$30M. DeepSeek-V3: $5.5M. Efficiency gains (MoE, distillation, FP8/FP4) are democratizing frontier training.</td>
-<td>Model technical reports</td>
+<td><a href="https://github.com/mosaicml/composer">Composer</a></td>
+<td>MosaicML's training library with speed-up algorithms (FlashAttention, streaming datasets, mixed precision) for efficient large model training.</td>
+<td><a href="https://github.com/mosaicml/composer">GitHub</a></td>
 </tr>
 </tbody>
 </table>
@@ -1981,7 +1980,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 13, 2026 17:26:12 UTC"><span class="timeago" datetime="2026-04-13T17:26:12+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 13, 2026 17:26:12 UTC">2026-04-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 13, 2026 18:10:27 UTC"><span class="timeago" datetime="2026-04-13T18:10:27+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 13, 2026 18:10:27 UTC">2026-04-13</span>
   </span>
 
     
