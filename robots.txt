@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nellaivijay.github.io/Awesome-AGI-and-ASI/sitemap.xml
