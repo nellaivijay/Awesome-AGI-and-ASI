@@ -19,18 +19,20 @@ The most comprehensive, curated collection of resources on the journey from **AI
 
 ### Understand
 - [Understanding AI, AGI, and ASI](#understanding-ai-agi-and-asi) -- Definitions, comparison table, state of the field metrics, DeepMind's AGI levels
-- [ASI and Superintelligence Research](#asi-and-superintelligence-research) -- Key organizations, books (27 titles), seminal papers, benchmarks, neuroscience-inspired approaches, recursive self-improvement, roadmaps & timelines
+- [ASI and Superintelligence Research](#asi-and-superintelligence-research) -- Key organizations, books (27 titles), seminal papers, benchmarks, neuroscience-inspired approaches, alternative architectures (SSMs, neuromorphic, decentralized), recursive self-improvement, roadmaps & timelines
 
 ### Build
 - [Frameworks and Platforms](#frameworks-and-platforms) -- Next-gen, established, and specialized agent frameworks
 - [Agents](#agents) -- Coding, research, computer-use, embodied, and enterprise agentic AI
 - [Physical AI & Embodied Intelligence](#physical-ai--embodied-intelligence) -- Humanoid robotics, robot foundation models (VLA), simulation platforms
+- [Paper-to-Code Automation](#paper-to-code-automation) -- Research2Repo, PaperCoder, AI Scientist, Papers with Code
 
 ### Foundation Model Infrastructure
 - [LLM Application Frameworks](#llm-application-frameworks) -- Orchestration, platforms, structured output, observability
 - [RAG and Vector Databases](#rag-and-vector-databases) -- Vector DBs, RAG engines, Graph RAG, document parsing, embeddings
+- [Data Infrastructure for AI at Scale](#data-infrastructure-for-ai-at-scale) -- Data lakehouse (Iceberg, Spark, Delta Lake), MLOps (MLflow, W&B, Ray), feature stores
 - [LLM Fine-Tuning Techniques](#llm-fine-tuning-techniques) -- LoRA variants, adapters, PEFT, DPO, instruction tuning
-- [LLM Deployment and Serving](#llm-deployment-and-serving) -- vLLM, TGI, BentoML, and inference optimization
+- [LLM Deployment and Serving](#llm-deployment-and-serving) -- Inference engines (vLLM, TGI), production orchestration (Vertex AI, Bedrock, Azure AI, Triton)
 - [Distributed Training Frameworks](#distributed-training-frameworks) -- ColossalAI, DeepSpeed, Megatron-LM, AI compute infrastructure, energy & physical constraints
 - [Prompt Engineering](#prompt-engineering) -- CoT, ToT, GoT, and advanced prompting techniques
 
@@ -282,6 +284,43 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | **Numenta (Jeff Hawkins)** | Neuroscience-first approach to AGI based on cortical columns and the Thousand Brains Theory. Building machine intelligence that works on principles of the neocortex. | [numenta.com](https://numenta.com/) |
 | **NeuroAI: A Field Born from the Intersection of Neuroscience, Cognitive Science, and AI** | Research direction applying neuroscience insights (memory consolidation, predictive coding, attention) to build more capable and general AI systems. | [Nature](https://www.nature.com/articles/s41467-024-48748-8) |
 
+### Alternative Architectures & Paths to AGI
+
+> The current "Transformer + Scaling" paradigm dominates, but it may not be the only -- or even the best -- path to AGI. These alternative approaches address fundamental limitations: the quadratic scaling of attention, the energy costs of dense computation, and the architectural gap between silicon and biological intelligence.
+
+#### State-Space Models & Non-Transformer Architectures
+
+> These architectures process sequences with linear (not quadratic) complexity, solving the memory and compute bottlenecks that limit Transformer context windows. If AGI requires reasoning over lifelong context, these models may be essential.
+
+| Model / Architecture | Description | Links |
+|---------------------|-------------|-------|
+| **Mamba** (Gu & Dao, 2023) | Selective State Space Model with input-dependent selection. Linear-time sequence modeling matching or exceeding Transformer quality at scale, with 5x higher throughput on long sequences. The leading Transformer alternative. | [Paper](https://arxiv.org/abs/2312.00752), [Code](https://github.com/state-spaces/mamba) |
+| **Mamba-2** (Dao & Gu, 2024) | Unifies state space models with structured attention variants via State Space Duality (SSD). 2-8x faster than Mamba while maintaining quality. | [Paper](https://arxiv.org/abs/2405.21060) |
+| **RWKV** (Peng et al., 2023) | "Reinventing RNNs for the Transformer Era." Recurrent architecture achieving Transformer-level performance with O(n) complexity and constant memory during inference. Open-source (14B+ parameters). | [Paper](https://arxiv.org/abs/2305.13048), [GitHub](https://github.com/BlinkDL/RWKV-LM) |
+| **Jamba** (AI21 Labs, 2024) | Production hybrid: interleaves Mamba layers with Transformer attention layers plus MoE. 256K context, fits on a single 80GB GPU despite 52B total parameters. Proves hybrid architectures work at scale. | [Paper](https://arxiv.org/abs/2403.19887) |
+| **xLSTM** (Hochreiter et al., 2024) | Extended Long Short-Term Memory from the original LSTM inventor. Exponential gating and matrix memory enable competitive performance with Transformers and SSMs. | [Paper](https://arxiv.org/abs/2405.04517) |
+
+#### Neuromorphic Computing
+
+> Brain-inspired hardware that uses spiking neural networks and event-driven processing. Neuromorphic chips consume 100-1000x less energy than GPUs for certain AI tasks -- potentially solving the energy constraint identified in the [Key Metrics](#state-of-the-field-key-metrics-2025-2026) table.
+
+| Platform | Description | Links |
+|----------|-------------|-------|
+| **Intel Loihi 2** | Intel's neuromorphic research chip with 1M neurons and 120M synapses per chip. Programmable spiking neural networks with on-chip learning. Lava open-source framework for neuromorphic development. | [intel.com/loihi](https://www.intel.com/content/www/us/en/research/neuromorphic-computing.html), [Lava](https://github.com/lava-nc/lava) |
+| **BrainChip Akida** | Commercial neuromorphic processor for edge AI. Event-based processing consuming <1W. Deployed in industrial and automotive applications. One of the few neuromorphic chips available for commercial use. | [brainchip.com](https://brainchip.com/) |
+| **SpiNNaker 2** (University of Manchester) | Million-core neuromorphic supercomputer designed to simulate a billion neurons in real-time. Built for computational neuroscience and brain-scale neural network simulation. | [spinnaker.io](https://spinnakermanchester.io/) |
+
+#### Decentralized AI Compute
+
+> If AGI requires 10^28+ FLOP training runs, centralized infrastructure may not scale fast enough. Decentralized networks distribute training and inference across the globe, potentially democratizing access to AGI-scale compute.
+
+| Network | Description | Links |
+|---------|-------------|-------|
+| **Together AI** | Decentralized cloud for running and training open-source AI. Together Inference Engine delivers high-throughput serving; Together GPU Cluster enables distributed training across geographies. | [together.ai](https://www.together.ai/) |
+| **Gensyn** | Decentralized ML compute protocol. Verification layer ensures honest compute via probabilistic proofs -- solving the trust problem in distributed training. Backed by a16z. | [gensyn.ai](https://www.gensyn.ai/) |
+| **Bittensor** | Decentralized AI network with TAO token incentives. Miners contribute ML compute (training, inference); validators ensure quality. 32+ specialized subnets for different AI tasks. | [bittensor.com](https://bittensor.com/), [GitHub](https://github.com/opentensor/bittensor) |
+| **Prime Intellect** | Decentralized training infrastructure for frontier models. INTELLECT-2 demonstrated training a 32B-parameter model across globally distributed GPUs. Open-source. | [primeintellect.ai](https://www.primeintellect.ai/) |
+
 ### Recursive Self-Improvement & the Path to ASI
 
 > The core mechanism theorized to trigger an **intelligence explosion**: an AI system that can improve its own design, creating a more capable version that improves itself further, in a feedback loop surpassing human intelligence. This is the bridge from AGI to ASI -- and the most critical unsolved problem in AI safety.
@@ -456,6 +495,22 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 ---
 
+## Paper-to-Code Automation
+
+> The leap from research paper to working implementation is one of the biggest bottlenecks in AI progress. These tools automate the translation of academic papers into production-ready code repositories -- accelerating the research-to-engineering pipeline and democratizing access to frontier techniques.
+
+![Automation](https://img.shields.io/badge/Automation-Paper→Code-blue?style=flat-square) ![Research](https://img.shields.io/badge/Research-Implementation-green?style=flat-square) ![Agentic](https://img.shields.io/badge/Agentic-Multi--Step-purple?style=flat-square)
+
+| Tool | Description | Links |
+|------|-------------|-------|
+| [Research2Repo](https://github.com/nellaivijay/Research2Repo) | Multi-model agentic framework that converts ML research papers (PDFs) into production-ready GitHub repos. 4-stage decomposed planning, per-file analysis, self-refine loops, Docker sandbox with auto-debugging (19+ error types), CodeRAG for reference mining, and full DevOps generation (Dockerfile, CI, Makefile). Supports Gemini (2M context), GPT-4o/o3, Claude, and Ollama. | [GitHub](https://github.com/nellaivijay/Research2Repo) |
+| [PaperCoder (Paper2Code)](https://github.com/going-doer/Paper2Code) | The pioneering paper-to-code system. Converts research papers into code repositories using a 3-stage pipeline (planning, analysis, generation). GPT-4o-based. Inspired Research2Repo and the broader paper-to-code movement. | [Paper](https://arxiv.org/abs/2504.17192), [GitHub](https://github.com/going-doer/Paper2Code) |
+| [The AI Scientist](https://github.com/SakanaAI/AI-Scientist) | Goes beyond code generation: fully autonomous research pipeline that generates ideas, designs experiments, implements code, runs experiments, and writes complete academic papers. A prototype for self-improving AI research. | [Paper](https://arxiv.org/abs/2408.06292), [GitHub](https://github.com/SakanaAI/AI-Scientist) |
+| [Papers with Code](https://paperswithcode.com/) | The standard platform linking 150,000+ ML papers to their official implementations, benchmarks, and leaderboards. Not an automation tool -- a curation platform that serves as the reference layer for the entire research-to-code ecosystem. | [paperswithcode.com](https://paperswithcode.com/) |
+| [STORM](https://github.com/stanford-oval/storm) | Stanford's autonomous system that writes Wikipedia-quality long-form articles by researching a topic from scratch. Demonstrates AI's ability to synthesize research into structured knowledge. | [Paper](https://arxiv.org/abs/2402.14207), [GitHub](https://github.com/stanford-oval/storm) |
+
+---
+
 ## LLM Application Frameworks
 
 > The developer toolkits for building production LLM applications. From orchestration chains to observability platforms, these frameworks are the backbone of every AI product shipping today.
@@ -583,6 +638,35 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 ---
 
+## Data Infrastructure for AI at Scale
+
+> AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.
+
+![Data](https://img.shields.io/badge/Data-Lakehouse-blue?style=flat-square) ![MLOps](https://img.shields.io/badge/MLOps-Experiment_Tracking-green?style=flat-square) ![Infrastructure](https://img.shields.io/badge/Infrastructure-Kubernetes-purple?style=flat-square) ![Scale](https://img.shields.io/badge/Scale-Petabyte-orange?style=flat-square)
+
+### Data Lakehouse & Analytical Processing
+
+| Name | Description | Links |
+|------|-------------|-------|
+| [Apache Iceberg](https://iceberg.apache.org/) | Open table format for massive analytic datasets. ACID transactions, time travel, schema evolution, and partition evolution on data lakes. The emerging standard for AI training data management (adopted by Netflix, Apple, Snowflake). V4 adds row-lineage tracking. | [iceberg.apache.org](https://iceberg.apache.org/), [GitHub](https://github.com/apache/iceberg) |
+| [Apache Spark](https://spark.apache.org/) | Unified analytics engine for large-scale data processing. Powers the data pipelines behind most frontier model training -- ETL, feature engineering, and distributed data transformation at petabyte scale. | [spark.apache.org](https://spark.apache.org/), [GitHub](https://github.com/apache/spark) |
+| [Delta Lake](https://delta.io/) | Open-source storage layer providing ACID transactions on data lakes. Originally Databricks; now open ecosystem. Delta UniForm provides interoperability with Iceberg and Hudi. | [delta.io](https://delta.io/), [GitHub](https://github.com/delta-io/delta) |
+| [Greenplum](https://greenplum.org/) | Massively Parallel Processing (MPP) database for large-scale analytics and AI workloads. Open-source, PostgreSQL-based, purpose-built for analytical queries across petabytes. Used in enterprise AI pipelines for feature computation and data preparation. | [greenplum.org](https://greenplum.org/), [GitHub](https://github.com/greenplum-db/gpdb) |
+| [DuckDB](https://duckdb.org/) | In-process analytical database that runs anywhere. Blazing-fast OLAP queries on local data. Increasingly used for dataset analysis, feature engineering, and rapid prototyping in ML workflows. | [duckdb.org](https://duckdb.org/), [GitHub](https://github.com/duckdb/duckdb) |
+
+### MLOps & Experiment Tracking
+
+| Name | Description | Links |
+|------|-------------|-------|
+| [MLflow](https://mlflow.org/) | Open-source platform for the complete ML lifecycle: experiment tracking, model registry, deployment, and model evaluation. The standard MLOps platform. 20k+ stars. | [mlflow.org](https://mlflow.org/), [GitHub](https://github.com/mlflow/mlflow) |
+| [Weights & Biases (W&B)](https://wandb.ai/) | ML experiment tracking, dataset versioning, and model management. Used by OpenAI, DeepMind, and most frontier labs for training runs. | [wandb.ai](https://wandb.ai/) |
+| [KubeFlow](https://www.kubeflow.org/) | ML toolkit for Kubernetes. Manages ML workflows: training pipelines, hyperparameter tuning, model serving, and notebook environments on Kubernetes clusters. | [kubeflow.org](https://www.kubeflow.org/), [GitHub](https://github.com/kubeflow/kubeflow) |
+| [Ray](https://www.ray.io/) | Unified framework for scaling AI applications. Ray Train for distributed training, Ray Serve for inference, Ray Data for preprocessing. Powers Anyscale and used by OpenAI, Uber, and Spotify. | [ray.io](https://www.ray.io/), [GitHub](https://github.com/ray-project/ray) |
+| [Feast](https://feast.dev/) | Open-source feature store for ML. Bridges the gap between training and serving by providing consistent access to feature data across offline training and online inference. | [feast.dev](https://feast.dev/), [GitHub](https://github.com/feast-dev/feast) |
+| [Label Studio](https://labelstud.io/) | Open-source data labeling platform for text, image, audio, video, and multi-modal tasks. Critical infrastructure for creating the human-annotated data that drives RLHF and supervised fine-tuning. 20k+ stars. | [labelstud.io](https://labelstud.io/), [GitHub](https://github.com/HumanSignal/label-studio) |
+
+---
+
 ## LLM Fine-Tuning Techniques
 
 > Making foundation models your own. Fine-tuning adapts pre-trained LLMs to specific tasks, domains, or behaviors -- from lightweight LoRA adapters that train in hours on a single GPU to full alignment techniques like DPO that shape model values.
@@ -626,6 +710,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 ![vLLM](https://img.shields.io/badge/vLLM-PagedAttention-blue?style=flat-square) ![CUDA](https://img.shields.io/badge/CUDA-GPU_Inference-76B900?style=flat-square&logo=nvidia&logoColor=white) ![Quantization](https://img.shields.io/badge/Quantization-INT4_INT8-orange?style=flat-square) ![Production](https://img.shields.io/badge/Production-Serving-green?style=flat-square)
 
+### Inference Engines
+
 | Name | Description | Links |
 |------|-------------|-------|
 | [vLLM](https://github.com/vllm-project/vllm) | High-throughput and memory-efficient inference and serving engine for LLMs with PagedAttention. | [Docs](https://docs.vllm.ai/) |
@@ -638,6 +724,19 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | [DeepSpeed-MII](https://github.com/microsoft/DeepSpeed-MII) | Model Implementations for Inference by DeepSpeed. Low-latency, low-cost inference. | - |
 | [CTranslate2](https://github.com/OpenNMT/CTranslate2) | Fast inference engine for Transformer models with quantization, pruning, and optimized execution. | - |
 | [OpenLLM](https://github.com/bentoml/OpenLLM) | Operating LLMs in production. Fine-tuning, serving, deploying, and monitoring. | - |
+
+### Production AI Orchestration & Cloud Platforms
+
+> Training a frontier model is only half the battle -- orchestrating it in production is the other. These platforms handle the end-to-end lifecycle: model hosting, autoscaling, monitoring, A/B testing, and supporting massive context windows at enterprise scale.
+
+| Name | Description | Links |
+|------|-------------|-------|
+| [Google Vertex AI](https://cloud.google.com/vertex-ai) | Google Cloud's unified AI platform. Model Garden (100+ models including Gemini), managed pipelines, AutoML, and Gemini API with native 1M+ token context support. The production backend for Gemini-scale deployments. | [Docs](https://cloud.google.com/vertex-ai/docs) |
+| [Amazon Bedrock](https://aws.amazon.com/bedrock/) | Fully managed service for building generative AI applications. Access Claude, Llama, Titan, and more via unified API. Guardrails, RAG (Knowledge Bases), fine-tuning, and Agents for multi-step tasks. | [Docs](https://docs.aws.amazon.com/bedrock/) |
+| [Amazon SageMaker](https://aws.amazon.com/sagemaker/) | Complete ML platform for building, training, and deploying models at scale. SageMaker HyperPod for distributed training, JumpStart for model hub, and real-time + batch inference endpoints. | [Docs](https://docs.aws.amazon.com/sagemaker/) |
+| [Azure AI Studio](https://ai.azure.com/) | Microsoft's platform for building and deploying enterprise AI. Unified model catalog (OpenAI, Meta, Mistral), prompt flow orchestration, content safety, and Azure OpenAI Service for GPT-4/o1 deployment. | [Docs](https://learn.microsoft.com/en-us/azure/ai-studio/) |
+| [NVIDIA Triton Inference Server](https://github.com/triton-inference-server/server) | Production inference serving for any framework (TensorFlow, PyTorch, ONNX, vLLM, TensorRT-LLM). Dynamic batching, model ensembles, multi-GPU, and multi-node inference. The standard for high-throughput GPU inference. | [Docs](https://docs.nvidia.com/deeplearning/triton-inference-server/), [GitHub](https://github.com/triton-inference-server/server) |
+| [KServe](https://kserve.github.io/website/) | Kubernetes-native model serving. Autoscaling (including scale-to-zero), canary deployments, request batching, and GPU inference on Kubernetes. CNCF-backed. | [Docs](https://kserve.github.io/website/), [GitHub](https://github.com/kserve/kserve) |
 
 ---
 
