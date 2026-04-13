@@ -35,6 +35,11 @@
 }
 
 /* ── Body content ── */
+.md-typeset {
+  font-size: 0.76rem;
+  line-height: 1.65;
+}
+
 .md-content {
   max-width: 960px;
 }
@@ -46,7 +51,7 @@
 }
 
 .md-typeset table:not([class]) {
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   border: 1px solid #e8e8e8;
   border-collapse: collapse;
   display: table;
@@ -169,7 +174,7 @@
   }
 
   .md-typeset table:not([class]) {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     min-width: 500px;
   }
 
@@ -199,7 +204,7 @@
   .md-typeset blockquote {
     padding: 0.3rem 0.6rem;
     margin: 0.5rem 0;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   /* Code blocks */
@@ -235,7 +240,7 @@
   }
 
   .md-typeset table:not([class]) {
-    font-size: 0.7rem;
+    font-size: 0.66rem;
   }
 
   .md-typeset table:not([class]) th,
@@ -250,6 +255,6 @@
   }
 
   .md-typeset blockquote {
-    font-size: 0.8rem;
+    font-size: 0.76rem;
   }
 }
