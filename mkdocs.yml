@@ -97,5 +97,6 @@ nav:
     - Top Conferences: research/conferences.md
   - Blog:
     - blog/index.md
-  - Contributing: contributing.md
-  - DevOps Guide: devops-guide.md
+  - Contributing:
+    - Contributing: contributing.md
+    - DevOps Guide: devops-guide.md
