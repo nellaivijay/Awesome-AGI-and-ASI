@@ -1,4 +1,4 @@
-/* Minimal white overrides */
+/* ── Minimal white overrides ── */
 
 :root {
   --md-primary-fg-color: #ffffff;
@@ -8,7 +8,7 @@
   --md-accent-fg-color: #1a73e8;
 }
 
-/* Clean white header */
+/* ── Clean white header ── */
 .md-header {
   background-color: #ffffff;
   color: #333333;
@@ -34,41 +34,208 @@
   color: #1a73e8;
 }
 
-/* Minimal body */
+/* ── Body content ── */
 .md-content {
   max-width: 960px;
 }
 
-/* Clean tables */
+/* ── Tables: scrollable wrapper for wide content ── */
+.md-typeset__scrollwrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .md-typeset table:not([class]) {
   font-size: 0.82rem;
   border: 1px solid #e8e8e8;
+  border-collapse: collapse;
+  display: table;
+  width: 100%;
 }
 
 .md-typeset table:not([class]) th {
   background-color: #f8f9fa;
   font-weight: 600;
+  white-space: nowrap;
 }
 
-/* Subtle sidebar */
+.md-typeset table:not([class]) td {
+  vertical-align: top;
+  word-break: break-word;
+}
+
+/* Minimum column widths for readability */
+.md-typeset table:not([class]) td:first-child {
+  min-width: 100px;
+  font-weight: 500;
+}
+
+/* ── Subtle sidebar ── */
 .md-nav__link {
   font-size: 0.82rem;
 }
 
-/* Search bar */
+/* ── Search bar ── */
 .md-search__input {
   background-color: #f5f5f5;
 }
 
-/* Badge images inline */
+/* ── Badge images ── */
 .md-typeset img[src*="shields.io"],
-.md-typeset img[src*="awesome.re"] {
+.md-typeset img[src*="awesome.re"],
+.md-typeset img[src*="badgen.net"] {
   vertical-align: middle;
   margin: 2px 2px;
+  height: 20px;
 }
 
-/* Blockquote styling */
+/* ── Blockquote styling ── */
 .md-typeset blockquote {
   border-left: 3px solid #1a73e8;
   color: #555555;
+}
+
+/* ── Links: larger tap targets ── */
+.md-typeset a {
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  text-decoration: underline;
+}
+
+/* ── Details/summary (collapsible sections) ── */
+.md-typeset details {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.md-typeset details summary {
+  cursor: pointer;
+  padding: 0.4rem 0;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE — screens <= 768px
+   ============================================ */
+@media screen and (max-width: 768px) {
+
+  /* Tighter content padding */
+  .md-content__inner {
+    padding: 0 0.6rem;
+  }
+
+  /* Smaller heading on mobile */
+  .md-typeset h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.15rem;
+  }
+
+  .md-typeset h3 {
+    font-size: 1rem;
+  }
+
+  /* Badges: wrap nicely in a row */
+  .md-typeset p > img[src*="shields.io"],
+  .md-typeset p > img[src*="awesome.re"],
+  .md-typeset p > img[src*="badgen.net"] {
+    height: 18px;
+    margin: 1px 1px;
+  }
+
+  /* Tables: horizontal scroll with momentum */
+  .md-typeset__scrollwrap {
+    margin: 0 -0.6rem;
+    padding: 0 0.6rem;
+  }
+
+  .md-typeset table:not([class]) {
+    font-size: 0.75rem;
+    min-width: 500px;
+  }
+
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    padding: 0.4rem 0.5rem;
+    line-height: 1.4;
+  }
+
+  /* Scroll hint: subtle gradient fade on the right edge */
+  .md-typeset__scrollwrap::after {
+    content: "";
+    position: sticky;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.9));
+    pointer-events: none;
+    display: block;
+    float: right;
+    margin-top: -100%;
+    height: 100%;
+  }
+
+  /* Blockquotes: tighter on mobile */
+  .md-typeset blockquote {
+    padding: 0.3rem 0.6rem;
+    margin: 0.5rem 0;
+    font-size: 0.85rem;
+  }
+
+  /* Code blocks */
+  .md-typeset pre {
+    font-size: 0.75rem;
+    padding: 0.6rem;
+  }
+
+  /* Search: full width */
+  .md-search__input {
+    font-size: 1rem;
+  }
+
+  /* Navigation drawer: larger tap targets */
+  .md-nav__link {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  /* Explore table on home: stack-friendly */
+  .md-typeset table:not([class]) td:first-child {
+    min-width: 80px;
+  }
+}
+
+/* ============================================
+   SMALL MOBILE — screens <= 480px
+   ============================================ */
+@media screen and (max-width: 480px) {
+
+  .md-typeset h1 {
+    font-size: 1.2rem;
+  }
+
+  .md-typeset table:not([class]) {
+    font-size: 0.7rem;
+  }
+
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    padding: 0.3rem 0.4rem;
+  }
+
+  /* Badges even smaller */
+  .md-typeset p > img[src*="shields.io"],
+  .md-typeset p > img[src*="awesome.re"] {
+    height: 16px;
+  }
+
+  .md-typeset blockquote {
+    font-size: 0.8rem;
+  }
 }
