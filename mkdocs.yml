@@ -98,3 +98,4 @@ nav:
   - Blog:
     - blog/index.md
   - Contributing: contributing.md
+  - DevOps Guide: devops-guide.md

@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0            # full history needed for git-revision-date plugin
 
       - name: Set up Python
         uses: actions/setup-python@v5
