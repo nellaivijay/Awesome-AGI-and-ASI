@@ -1,0 +1,71 @@
+# ──────────────────────────────────────────────────────────────
+# Ingestion Pipeline — Step 1
+#
+# Triggers on every push to `main` (including merged PRs).
+# Parses the markdown diff, extracts new URLs, and uploads
+# them as a downloadable JSON artifact.
+# ──────────────────────────────────────────────────────────────
+
+name: Ingest New URLs
+
+on:
+  push:
+    branches: [main]
+    paths: ["**.md"]
+
+permissions:
+  contents: read
+
+jobs:
+  extract-urls:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Resolve base ref
+        id: base
+        run: |
+          if [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+            echo "ref=${{ github.event.before }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "ref=HEAD~1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Extract new URLs from diff
+        id: extract
+        env:
+          INPUT_BASE_REF: ${{ steps.base.outputs.ref }}
+          OUTPUT_DIR: queue
+        run: python scripts/extract_urls.py
+
+      - name: Upload URL queue artifact
+        if: hashFiles('queue/*.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: new-urls-${{ github.sha }}
+          path: queue/*.json
+          retention-days: 90
+
+      - name: Job summary
+        run: |
+          echo "## Ingestion Pipeline — New URLs" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          if [ -d queue ] && ls queue/*.json 1>/dev/null 2>&1; then
+            COUNT=$(python3 -c "import json,glob; print(sum(j['url_count'] for j in (json.load(open(f)) for f in glob.glob('queue/*.json'))))")
+            echo "**$COUNT** new URL(s) extracted from commit \`${GITHUB_SHA::8}\`." >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            cat queue/*.json >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No new URLs detected in this push." >> "$GITHUB_STEP_SUMMARY"
+          fi
