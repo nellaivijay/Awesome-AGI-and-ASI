@@ -18,8 +18,8 @@ The most comprehensive, curated collection of resources on the journey from **AI
 ## Table of Contents
 
 ### Understand
-- [Understanding AI, AGI, and ASI](#understanding-ai-agi-and-asi) -- Definitions, comparison table, where we are now, DeepMind's AGI levels
-- [ASI and Superintelligence Research](#asi-and-superintelligence-research) -- Key organizations, books (27 titles in 4 categories), seminal papers, benchmarks, neuroscience-inspired approaches, roadmaps & timelines
+- [Understanding AI, AGI, and ASI](#understanding-ai-agi-and-asi) -- Definitions, comparison table, state of the field metrics, DeepMind's AGI levels
+- [ASI and Superintelligence Research](#asi-and-superintelligence-research) -- Key organizations, books (27 titles), seminal papers, benchmarks, neuroscience-inspired approaches, recursive self-improvement, roadmaps & timelines
 
 ### Build
 - [Frameworks and Platforms](#frameworks-and-platforms) -- Next-gen, established, and specialized agent frameworks
@@ -31,11 +31,11 @@ The most comprehensive, curated collection of resources on the journey from **AI
 - [RAG and Vector Databases](#rag-and-vector-databases) -- Vector DBs, RAG engines, Graph RAG, document parsing, embeddings
 - [LLM Fine-Tuning Techniques](#llm-fine-tuning-techniques) -- LoRA variants, adapters, PEFT, DPO, instruction tuning
 - [LLM Deployment and Serving](#llm-deployment-and-serving) -- vLLM, TGI, BentoML, and inference optimization
-- [Distributed Training Frameworks](#distributed-training-frameworks) -- ColossalAI, DeepSpeed, Megatron-LM, AI compute infrastructure
+- [Distributed Training Frameworks](#distributed-training-frameworks) -- ColossalAI, DeepSpeed, Megatron-LM, AI compute infrastructure, energy & physical constraints
 - [Prompt Engineering](#prompt-engineering) -- CoT, ToT, GoT, and advanced prompting techniques
 
 ### Safety & Governance
-- [Safety, Alignment and Governance](#safety-alignment-and-governance) -- RLHF, DPO, hallucination, AI detection, governance, climate AI
+- [Safety, Alignment and Governance](#safety-alignment-and-governance) -- RLHF, DPO, scalable oversight, mechanistic interpretability, AI detection, governance
 
 ### Research & Learn
 - [Papers, Blogs, Courses and Lectures](#papers-blogs-courses-and-lectures) -- Frontier models, reasoning, world models, physical AI, agents, alignment, interpretability
@@ -116,16 +116,32 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | **AI Safety Summits** held at Bletchley Park, Seoul, Paris | Governments worldwide are treating AGI/ASI risk as a top-tier policy issue |
 | **Scaling debate** intensifies | Some argue scaling alone leads to AGI; others say fundamental breakthroughs are needed |
 
+### State of the Field: Key Metrics (2025-2026)
+
+> Quantitative signals tracking the pace of progress toward AGI/ASI. These metrics matter because the AGI race is fundamentally a story of scaling compute, shrinking costs, and the widening gap between capability and safety.
+
+| Metric | Current Data | Why It Matters for AGI/ASI | Source |
+|--------|-------------|---------------------------|--------|
+| **Training compute growth** | Frontier model training compute grows ~4x/year; GPT-4 used ~10^25 FLOP | At this rate, models trained on 10^28 FLOP (1000x GPT-4) arrive by 2027-2028 -- potentially AGI-relevant | [Epoch AI](https://epochai.org/trends-in-machine-learning-hardware) |
+| **Inference-time compute (test-time scaling)** | o1/o3/R1 spend 10-100x more compute at inference via chain-of-thought | A new scaling axis: "thinking longer" improves reasoning without retraining, opening the door to unbounded intelligence at inference | [Paper](https://arxiv.org/abs/2408.03314) |
+| **Cost of intelligence** | GPT-4-level inference cost dropped ~240x in 18 months (via distillation + efficiency) | Intelligence becomes a commodity; makes autonomous agent swarms economically viable | [AI Index 2025](https://aiindex.stanford.edu/report/) |
+| **Safety-to-capability ratio** | ~2% of AI publications focus on safety; safety research funding is <5% of capability spending | The capability-safety gap is widening -- alignment research may not keep pace with the transition to AGI | [AI Index 2025](https://aiindex.stanford.edu/report/) |
+| **Benchmark saturation** | MMLU: 90%+ (saturated), GPQA: 75%+ (approaching), ARC-AGI: <65% (unsolved), HLE: <60% | Easy benchmarks are saturated; hard reasoning and novel problem-solving remain the gap to AGI | Various benchmark papers |
+| **AI investment** | $110B+ private AI investment in 2024; $30B+ for SSI alone | Capital is flooding into AGI -- the question is whether money alone can buy general intelligence | [AI Index 2025](https://aiindex.stanford.edu/report/) |
+| **Energy at scale** | Frontier training runs now consume 50-100 GWh; next-gen data centers planned at 1-5 GW | Energy and cooling become the physical bottleneck for scaling to AGI -- multiple nuclear-powered data centers announced | Industry reports |
+
 ### Google DeepMind's Levels of AGI Framework (2023)
 
-| Level | Name | Description | Current Status |
-|-------|------|-------------|----------------|
-| 0 | **No AI** | Narrow software with no AI capability | Calculator, basic scripts |
-| 1 | **Emerging** | Equal to or somewhat better than an unskilled human | ChatGPT, Bard, Llama (most current LLMs) |
-| 2 | **Competent** | At least 50th percentile of skilled adults | Frontier models on some tasks (coding, writing) |
-| 3 | **Expert** | At least 90th percentile of skilled adults | Narrow domains only (AlphaFold, specialized coding) |
-| 4 | **Virtuoso** | At least 99th percentile of skilled adults | Not yet achieved across general tasks |
-| 5 | **Superhuman (ASI)** | Outperforms 100% of humans in all tasks | Theoretical -- the ASI threshold |
+> Use this framework to orient yourself: every resource in this repo can be placed on this ladder. We are currently between Levels 1-3 on narrow tasks, with no system reaching Level 3 across general domains.
+
+| Level | Name | Description | Current Status | Example Systems |
+|-------|------|-------------|----------------|-----------------|
+| 0 | **No AI** | Narrow software with no AI capability | Calculator, basic scripts | GOFAI rule systems |
+| 1 | **Emerging** | Equal to or somewhat better than an unskilled human | **Most current LLMs** | ChatGPT, Llama 3, Gemma, Mistral |
+| 2 | **Competent** | At least 50th percentile of skilled adults | **Frontier models on select tasks** | GPT-4, Gemini 2.5 Pro, Claude 3.5 (coding, writing, analysis) |
+| 3 | **Expert** | At least 90th percentile of skilled adults | **Narrow domains only** | AlphaFold (protein structure), o1/R1 (math competitions), Devin/OpenHands (SWE-bench) |
+| 4 | **Virtuoso** | At least 99th percentile of skilled adults | **Not yet achieved across general tasks** | -- |
+| 5 | **Superhuman (ASI)** | Outperforms 100% of humans in all tasks | **Theoretical** -- the ASI threshold | See [Recursive Self-Improvement](#recursive-self-improvement--the-path-to-asi) |
 
 > **Source:** [Levels of AGI: Operationalizing Progress on the Path to AGI](https://arxiv.org/abs/2311.02462) -- Morris et al., Google DeepMind (2023)
 
@@ -250,10 +266,12 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | **Anthropic Core Views on AI Safety (2023)** | Anthropic's public position on AI safety risks and their research agenda. | [Blog](https://www.anthropic.com/news/core-views-on-ai-safety) |
 | **International AI Safety Report (2025)** | Report from the AI Seoul Summit on the state of AI safety science. | [aisafety.gov](https://www.aisafety.gov/) |
 | **Metaculus AGI Forecasts** | Community prediction platform tracking forecasted timelines for AGI/ASI milestones. | [metaculus.com](https://www.metaculus.com/questions/?search=AGI) |
-| **AI Impacts** | Research organization analyzing evidence on AI timelines, risks, and impacts. | [aiimpacts.org](https://aiimpacts.org/) |
+| **AI Impacts** | Research organization analyzing evidence on AI timelines, risks, and impacts. Their 2024 survey of 2,778 AI researchers forecasts 50% chance of HLMI (Human-Level Machine Intelligence) by 2049. | [aiimpacts.org](https://aiimpacts.org/), [2024 Survey](https://arxiv.org/abs/2401.02843) |
 | **LessWrong / Alignment Forum** | Community discussion hub for AI alignment research, ASI forecasting, and safety strategies. | [lesswrong.com](https://www.lesswrong.com/), [alignmentforum.org](https://www.alignmentforum.org/) |
 | **The Pause Letter (Future of Life Institute, 2023)** | Open letter calling for a 6-month pause on training AI systems more powerful than GPT-4. Signed by 33,000+. | [futureoflife.org](https://futureoflife.org/open-letter/pause-giant-ai-experiments/) |
 | **Statement on AI Risk (CAIS, 2023)** | One-sentence statement: "Mitigating the risk of extinction from AI should be a global priority." Signed by Hinton, Bengio, and hundreds of researchers. | [safe.ai](https://www.safe.ai/work/statement-on-ai-risk) |
+| **Stanford AI Index Report (Annual)** | The most comprehensive annual report on AI progress: compute trends, investment data, benchmark saturation, safety-capability gap, and global policy landscape. Essential reading. | [aiindex.stanford.edu](https://aiindex.stanford.edu/report/) |
+| **Epoch AI: Trends in Machine Learning** | Rigorous data on training compute, dataset sizes, hardware efficiency, and cost curves for frontier models. The primary source for quantitative AGI timelines. | [epochai.org](https://epochai.org/) |
 
 ### Neuroscience-Inspired Approaches to AGI
 
@@ -263,6 +281,23 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |----------|-------------|-------|
 | **Numenta (Jeff Hawkins)** | Neuroscience-first approach to AGI based on cortical columns and the Thousand Brains Theory. Building machine intelligence that works on principles of the neocortex. | [numenta.com](https://numenta.com/) |
 | **NeuroAI: A Field Born from the Intersection of Neuroscience, Cognitive Science, and AI** | Research direction applying neuroscience insights (memory consolidation, predictive coding, attention) to build more capable and general AI systems. | [Nature](https://www.nature.com/articles/s41467-024-48748-8) |
+
+### Recursive Self-Improvement & the Path to ASI
+
+> The core mechanism theorized to trigger an **intelligence explosion**: an AI system that can improve its own design, creating a more capable version that improves itself further, in a feedback loop surpassing human intelligence. This is the bridge from AGI to ASI -- and the most critical unsolved problem in AI safety.
+
+**Why this matters:** If a system achieves even modest self-improvement capability, the gap between AGI and ASI may close in weeks or months rather than decades. Understanding and controlling this process is the central challenge of AI alignment.
+
+| Concept / Paper | Description | Links |
+|-----------------|-------------|-------|
+| **Intelligence Explosion (I.J. Good, 1965)** | The original formulation: "an ultraintelligent machine could design even better machines; there would then unquestionably be an 'intelligence explosion.'" | [Paper](https://exhibits.stanford.edu/feigenbaum/catalog/gz033kf2254) |
+| **Weak-to-Strong Generalization** (Burns et al., OpenAI, 2023) | GPT-2 supervising GPT-4 as a proxy for "human supervising superintelligence." Shows weaker models can elicit most of the stronger model's capabilities -- a key mechanism for scalable oversight. | [Paper](https://arxiv.org/abs/2312.09390) |
+| **Self-Rewarding Language Models** (Yuan et al., Meta, 2024) | Models generate and evaluate their own preference data for iterative self-improvement via LLM-as-a-Judge, creating a self-improvement loop without human feedback. | [Paper](https://arxiv.org/abs/2401.10020) |
+| **The AI Scientist** (Sakana AI, 2024) | Fully autonomous research pipeline -- idea generation, experiment design, execution, and paper writing. A prototype for AI systems that accelerate their own research. | [Paper](https://arxiv.org/abs/2408.06292) |
+| **Constitutional AI** (Bai et al., Anthropic, 2022) | AI-generated critiques from a set of principles (a "constitution") used to train AI without human feedback at each step -- a form of automated alignment that scales with model capability. | [Paper](https://arxiv.org/abs/2212.08073) |
+| **Scalable Oversight via Debate** (Irving et al., 2018) | Two AI agents debate each other while a human judge adjudicates, allowing oversight of superhuman AI through adversarial decomposition. | [Paper](https://arxiv.org/abs/1805.00899) |
+| **Iterated Distillation and Amplification (IDA)** (Christiano, 2018) | Bootstrapping alignment: a slow but safe AI is "amplified" to solve harder problems, then "distilled" into a faster model, iteratively approaching superintelligent capability while maintaining alignment. | [Blog](https://ai-alignment.com/iterated-distillation-and-amplification-157debfd1616) |
+| **Reward Hacking & Specification Gaming** | Comprehensive collection of examples where AI systems find unintended shortcuts -- a critical failure mode when self-improving systems optimize misspecified objectives. | [Collection](https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/), [GitHub](https://github.com/deepmind/specification_gaming) |
 
 ---
 
@@ -630,6 +665,18 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | [SambaNova](https://sambanova.ai/) | Reconfigurable Dataflow Architecture (RDA) for enterprise AI. Purpose-built hardware that adapts to model topology. | [sambanova.ai](https://sambanova.ai/) |
 | [Meta MTIA](https://ai.meta.com/blog/next-generation-meta-training-inference-accelerator-mtia/) | Meta Training and Inference Accelerator -- custom AI silicon designed for Meta's recommendation and generative AI workloads. 4 chip generations in 2 years, powering AI for billions of users. | [ai.meta.com](https://ai.meta.com/) |
 | [Google TPU (Trillium)](https://cloud.google.com/tpu) | Google's 6th-gen TPU (Trillium, 2024) with 4.7x compute per chip improvement over TPU v5e. Powers Gemini training and inference at scale across Google's AI fleet. | [cloud.google.com/tpu](https://cloud.google.com/tpu) |
+| [NVIDIA Blackwell (B200/GB200)](https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/) | NVIDIA's 2024 GPU architecture: 208B transistors, 2nd-gen Transformer Engine with FP4, 30x faster inference on LLMs vs. Hopper. GB200 NVL72 rack delivers 1.4 exaFLOPS. The dominant hardware for frontier model training. | [nvidia.com/blackwell](https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/) |
+
+### Energy, Data Centers & Physical Constraints
+
+> The AGI race is ultimately constrained by physics: energy, cooling, and chip fabrication. As training runs scale from gigawatt-hours to hundreds of gigawatt-hours, the physical infrastructure becomes as important as the algorithms.
+
+| Challenge | Current State | Links |
+|-----------|--------------|-------|
+| **Gigawatt-scale data centers** | Microsoft, Meta, Google, Amazon, and xAI are all building or planning 1-5 GW data centers. xAI's Memphis "Colossus" cluster: 100k H100s. Microsoft's $100B Stargate project with OpenAI. | Industry announcements |
+| **Nuclear-powered AI** | Microsoft restarted Three Mile Island Unit 1 for AI power. Amazon, Google, and Oracle securing nuclear power for data centers. SMR (Small Modular Reactor) partnerships proliferating. | [News](https://www.reuters.com/technology/) |
+| **The Memory Wall** | Context window expansion (4K -> 128K -> 1M -> 10M tokens) functions as "working memory" for AGI. Llama 4 Scout: 10M tokens. Gemini 1.5: 2M. But attention scales quadratically -- memory-efficient architectures (Infini-Attention, Mamba, RWKV) are essential. | See [Reasoning Papers](#reasoning-scaling--architecture-papers) |
+| **Training cost trajectory** | GPT-4: ~$100M. Llama 3 405B: ~$30M. DeepSeek-V3: $5.5M. Efficiency gains (MoE, distillation, FP8/FP4) are democratizing frontier training. | Model technical reports |
 
 ---
 
@@ -677,6 +724,32 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | LLM Attacks | Universal and transferable adversarial attacks on aligned language models (CMU research). | [Paper](https://arxiv.org/abs/2307.15043), [Code](https://github.com/llm-attacks/llm-attacks) |
 | RLHF | Reinforcement Learning from Human Feedback - the key technique behind ChatGPT's alignment. | [Code Example](https://github.com/HarderThenHarder/transformers_tasks/tree/main/RLHF) |
 | DPO | Direct Preference Optimization - an alternative to RLHF that trains the LM directly as a reward model. | [Paper](https://arxiv.org/abs/2305.18290), [Code](https://github.com/eric-mitchell/direct-preference-optimization) |
+
+### Scalable Oversight & Automated Alignment
+
+> As AI systems approach and exceed human-level capability, humans can no longer directly evaluate their outputs. These techniques aim to maintain meaningful oversight over superhuman systems -- the defining technical challenge of the ASI transition.
+
+| Approach | Description | Links |
+|----------|-------------|-------|
+| **Weak-to-Strong Generalization** | OpenAI's framework for studying how weak supervisors (humans) can elicit capabilities from stronger models. GPT-2 supervising GPT-4 as proxy for the superintelligence alignment problem. | [Paper](https://arxiv.org/abs/2312.09390) |
+| **Constitutional AI (CAI)** | Anthropic's method for training AI using AI-generated feedback based on a set of principles, reducing dependence on human labelers while maintaining alignment. | [Paper](https://arxiv.org/abs/2212.08073) |
+| **Debate** | Two AI agents argue opposing sides; a human judge evaluates. Even if an AI is superhuman, the debate format decomposes complex claims into human-verifiable steps. | [Paper](https://arxiv.org/abs/1805.00899) |
+| **Recursive Reward Modeling** | Humans train AI to assist with evaluation, which then assists with training the next model -- bootstrapping oversight. Core technique for Anthropic and OpenAI alignment teams. | [Paper](https://arxiv.org/abs/1811.07871) |
+| **AI Control** | Redwood Research's framework for maintaining safety even against models actively trying to subvert controls. Evaluates security against intentional subversion. | [Paper](https://arxiv.org/abs/2312.06942) |
+| **Cooperative AI** | Research program at DeepMind focused on AI that cooperates with humans and other AI systems -- critical for multi-agent superintelligence scenarios. | [Paper](https://arxiv.org/abs/2012.08630) |
+
+### Mechanistic Interpretability
+
+> Understanding *how* neural networks actually compute internally. If we can reverse-engineer the algorithms learned by frontier models, we can detect dangerous capabilities, verify alignment, and build safer systems. This is arguably the most important field for AGI safety.
+
+| Resource | Description | Links |
+|----------|-------------|-------|
+| **Towards Monosemanticity** (Anthropic, 2023) | Landmark result: sparse autoencoders decompose polysemantic neurons into millions of interpretable features in Claude. | [Blog](https://transformer-circuits.pub/2023/monosemantic-features/) |
+| **Scaling Monosemanticity** (Anthropic, 2024) | Extracted 34M interpretable features from Claude 3 Sonnet, including safety-relevant concepts (deception, power-seeking, "I am an AI assistant"). | [Blog](https://transformer-circuits.pub/2024/scaling-monosemanticity/) |
+| **Representation Engineering** (Zou et al., 2023) | Identifies and steers high-level concepts (honesty, power-seeking, emotion) directly in neural representations. A practical tool for alignment. | [Paper](https://arxiv.org/abs/2310.01405) |
+| **TransformerLens** | Neel Nanda's open-source library for mechanistic interpretability research on GPT-2 style models. The standard tool for mech interp research. | [GitHub](https://github.com/TransformerLensOrg/TransformerLens) |
+| **SAE Bench** | Standardized benchmark for evaluating sparse autoencoder quality -- enabling reproducible interpretability research. | [GitHub](https://github.com/adamkarvonen/SAEBench) |
+| **Transformer Circuits Thread** (Anthropic) | Anthropic's ongoing research thread on understanding transformer internals: induction heads, superposition, circuits, and feature visualization. | [Blog](https://transformer-circuits.pub/) |
 
 ### AI-Generated Text Detection
 
