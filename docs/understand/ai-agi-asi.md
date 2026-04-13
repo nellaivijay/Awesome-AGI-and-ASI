@@ -12,27 +12,24 @@
 
 **Artificial Superintelligence (ASI)**, also called **Super AI**, is a hypothetical system whose intelligence surpasses the most gifted human minds in **every domain** -- scientific creativity, social skills, strategic reasoning, and general wisdom. Philosopher Nick Bostrom defines it as *"any intellect that greatly exceeds the cognitive performance of humans in virtually all domains of interest."* ASI could emerge from recursive self-improvement cycles (an **"intelligence explosion"**), where an AI that can improve its own design rapidly surpasses human-level capabilities. Key concerns include the **control problem** (keeping ASI aligned with human values), **goal misalignment** (unintended optimization targets), and the potential for a **technological singularity** -- a point beyond which human civilization is fundamentally and unpredictably transformed.
 
-<details markdown="block">
-<summary><strong>AI vs AGI vs ASI -- The Complete Comparison</strong> (click to expand)</summary>
+??? info "AI vs AGI vs ASI -- The Complete Comparison (click to expand)"
 
-| Dimension | ANI (Narrow AI) | AGI (General Intelligence) | ASI (Superintelligence) |
-|-----------|-----------------|---------------------------|------------------------|
-| **Definition** | AI that excels at a single, specific task or narrow domain | AI with human-level cognitive abilities across all intellectual tasks | AI that vastly surpasses the best human minds in every domain |
-| **Intelligence Scope** | Single domain only | All human cognitive domains | All domains, far beyond human capacity |
-| **Learning** | Trained on specific datasets for specific tasks; cannot learn new domains without retraining | Can learn any new domain autonomously, transfer knowledge across fields | Can learn instantly, discover entirely new fields of knowledge humans haven't conceived |
-| **Reasoning** | Pattern matching and statistical inference within trained domain | Human-like reasoning, abstraction, common sense, and causal understanding | Reasoning capabilities incomprehensible to humans; solves problems we cannot even formulate |
-| **Creativity** | Can remix and recombine patterns from training data | Genuine novel creativity comparable to the best human minds | Creates entirely new paradigms of science, art, and mathematics |
-| **Self-Awareness** | None -- no understanding of its own existence | Potentially self-aware; debated whether consciousness is required | Likely self-aware; may possess forms of consciousness beyond human understanding |
-| **Adaptability** | Brittle -- fails on out-of-distribution inputs | Robust generalization to novel situations, like humans | Adapts to any environment or challenge, including ones humans cannot survive or comprehend |
-| **Autonomy** | Requires human oversight, goals, and guardrails | Can set its own goals, plan long-term, and act independently | Fully autonomous; may pursue goals humans cannot predict or understand |
-| **Physical Capability** | Software only, or narrow robotics (e.g., robotic arm) | Could operate any physical system, robot, or interface | Could design and build its own hardware, infrastructure, or physical embodiment |
-| **Current Examples** | ChatGPT, AlphaFold, DALL-E, Tesla Autopilot, Siri, Google Search | None yet -- frontier models (GPT-4, Claude, Gemini) show early sparks but remain narrow | None -- purely theoretical |
-| **Status** | **Exists today** -- deployed at massive scale | **In active development** -- billions invested, estimated 2027-2035 | **Theoretical** -- may follow AGI within years or decades |
-| **Key Risk** | Job displacement, bias, misuse, deepfakes | Misalignment, economic disruption, power concentration, loss of human agency | Existential risk, intelligence explosion, loss of human control, civilizational transformation |
-| **Who's Building It** | Every tech company | OpenAI, DeepMind, Anthropic, Meta, xAI, SSI, Alibaba, DeepSeek | Safe Superintelligence Inc. (SSI), theoretical research at MIRI, FHI, CHAI |
-| **Key Benchmark** | Task-specific (ImageNet, SQuAD, HumanEval) | ARC-AGI, GPQA, Humanity's Last Exam, SWE-bench, FrontierMath | No benchmarks exist -- by definition, ASI exceeds all human-designed tests |
-
-</details>
+    | Dimension | ANI (Narrow AI) | AGI (General Intelligence) | ASI (Superintelligence) |
+    |-----------|-----------------|---------------------------|------------------------|
+    | **Definition** | AI that excels at a single, specific task or narrow domain | AI with human-level cognitive abilities across all intellectual tasks | AI that vastly surpasses the best human minds in every domain |
+    | **Intelligence Scope** | Single domain only | All human cognitive domains | All domains, far beyond human capacity |
+    | **Learning** | Trained on specific datasets for specific tasks; cannot learn new domains without retraining | Can learn any new domain autonomously, transfer knowledge across fields | Can learn instantly, discover entirely new fields of knowledge humans haven't conceived |
+    | **Reasoning** | Pattern matching and statistical inference within trained domain | Human-like reasoning, abstraction, common sense, and causal understanding | Reasoning capabilities incomprehensible to humans; solves problems we cannot even formulate |
+    | **Creativity** | Can remix and recombine patterns from training data | Genuine novel creativity comparable to the best human minds | Creates entirely new paradigms of science, art, and mathematics |
+    | **Self-Awareness** | None -- no understanding of its own existence | Potentially self-aware; debated whether consciousness is required | Likely self-aware; may possess forms of consciousness beyond human understanding |
+    | **Adaptability** | Brittle -- fails on out-of-distribution inputs | Robust generalization to novel situations, like humans | Adapts to any environment or challenge, including ones humans cannot survive or comprehend |
+    | **Autonomy** | Requires human oversight, goals, and guardrails | Can set its own goals, plan long-term, and act independently | Fully autonomous; may pursue goals humans cannot predict or understand |
+    | **Physical Capability** | Software only, or narrow robotics (e.g., robotic arm) | Could operate any physical system, robot, or interface | Could design and build its own hardware, infrastructure, or physical embodiment |
+    | **Current Examples** | ChatGPT, AlphaFold, DALL-E, Tesla Autopilot, Siri, Google Search | None yet -- frontier models (GPT-4, Claude, Gemini) show early sparks but remain narrow | None -- purely theoretical |
+    | **Status** | **Exists today** -- deployed at massive scale | **In active development** -- billions invested, estimated 2027-2035 | **Theoretical** -- may follow AGI within years or decades |
+    | **Key Risk** | Job displacement, bias, misuse, deepfakes | Misalignment, economic disruption, power concentration, loss of human agency | Existential risk, intelligence explosion, loss of human control, civilizational transformation |
+    | **Who's Building It** | Every tech company | OpenAI, DeepMind, Anthropic, Meta, xAI, SSI, Alibaba, DeepSeek | Safe Superintelligence Inc. (SSI), theoretical research at MIRI, FHI, CHAI |
+    | **Key Benchmark** | Task-specific (ImageNet, SQuAD, HumanEval) | ARC-AGI, GPQA, Humanity's Last Exam, SWE-bench, FrontierMath | No benchmarks exist -- by definition, ASI exceeds all human-designed tests |
 
 ### The Journey: ANI --> AGI --> ASI
 
