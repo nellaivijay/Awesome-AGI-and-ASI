@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 2
 
@@ -50,7 +50,7 @@ jobs:
 
       - name: Upload URL queue artifact
         if: hashFiles('queue/*.json') != ''
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: new-urls-${{ github.sha }}
           path: queue/*.json
