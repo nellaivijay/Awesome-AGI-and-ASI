@@ -1096,3 +1096,4 @@ We're building the most comprehensive AGI/ASI resource on the internet -- and we
 ---
 
 > **If you find this resource useful, please give it a star!** It helps others discover it and motivates us to keep it updated as the field evolves at breakneck speed.
+
