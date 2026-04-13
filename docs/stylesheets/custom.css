@@ -55,24 +55,32 @@
   border: 1px solid #e8e8e8;
   border-collapse: collapse;
   display: table;
+  table-layout: fixed;
   width: 100%;
 }
 
 .md-typeset table:not([class]) th {
   background-color: #f8f9fa;
   font-weight: 600;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .md-typeset table:not([class]) td {
   vertical-align: top;
-  word-break: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
 }
 
-/* Minimum column widths for readability */
+/* Name/title columns: compact, no excessive wrapping */
 .md-typeset table:not([class]) td:first-child {
-  min-width: 100px;
+  min-width: 80px;
   font-weight: 500;
+}
+
+/* Description columns: get the remaining space */
+.md-typeset table:not([class]) td:last-child {
+  min-width: 200px;
 }
 
 /* ── Subtle sidebar ── */
@@ -175,6 +183,7 @@
 
   .md-typeset table:not([class]) {
     font-size: 0.7rem;
+    table-layout: auto;
     min-width: 500px;
   }
 

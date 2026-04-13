@@ -10,11 +10,11 @@ keywords: "paper to code, research automation, AI scientist, Research2Repo, Pape
 
 | Tool | Description | Links |
 |------|-------------|-------|
-| [Research2Repo](https://github.com/nellaivijay/Research2Repo) | Multi-model agentic framework that converts ML research papers (PDFs) into production-ready GitHub repos. 4-stage decomposed planning, per-file analysis, self-refine loops, Docker sandbox with auto-debugging (19+ error types), CodeRAG for reference mining, and full DevOps generation (Dockerfile, CI, Makefile). Supports Gemini (2M context), GPT-4o/o3, Claude, and Ollama. | [GitHub](https://github.com/nellaivijay/Research2Repo) |
-| [PaperCoder (Paper2Code)](https://github.com/going-doer/Paper2Code) | The pioneering paper-to-code system. Converts research papers into code repositories using a 3-stage pipeline (planning, analysis, generation). GPT-4o-based. Inspired Research2Repo and the broader paper-to-code movement. | [Paper](https://arxiv.org/abs/2504.17192), [GitHub](https://github.com/going-doer/Paper2Code) |
-| [The AI Scientist](https://github.com/SakanaAI/AI-Scientist) | Goes beyond code generation: fully autonomous research pipeline that generates ideas, designs experiments, implements code, runs experiments, and writes complete academic papers. A prototype for self-improving AI research. | [Paper](https://arxiv.org/abs/2408.06292), [GitHub](https://github.com/SakanaAI/AI-Scientist) |
-| [Papers with Code](https://paperswithcode.com/) | The standard platform linking 150,000+ ML papers to their official implementations, benchmarks, and leaderboards. Not an automation tool -- a curation platform that serves as the reference layer for the entire research-to-code ecosystem. | [paperswithcode.com](https://paperswithcode.com/) |
-| [STORM](https://github.com/stanford-oval/storm) | Stanford's autonomous system that writes Wikipedia-quality long-form articles by researching a topic from scratch. Demonstrates AI's ability to synthesize research into structured knowledge. | [Paper](https://arxiv.org/abs/2402.14207), [GitHub](https://github.com/stanford-oval/storm) |
+| [Research2Repo](https://github.com/nellaivijay/Research2Repo) | Multi-model agentic framework converting ML papers to GitHub repos. 4-stage planning, CodeRAG, Docker sandbox, auto-debugging. Supports Gemini, GPT-4o, Claude, Ollama. | [GitHub](https://github.com/nellaivijay/Research2Repo) |
+| [PaperCoder (Paper2Code)](https://github.com/going-doer/Paper2Code) | Pioneering paper-to-code system. 3-stage pipeline (planning, analysis, generation). GPT-4o-based. | [Paper](https://arxiv.org/abs/2504.17192), [GitHub](https://github.com/going-doer/Paper2Code) |
+| [The AI Scientist](https://github.com/SakanaAI/AI-Scientist) | Autonomous research pipeline: generates ideas, runs experiments, writes papers. | [Paper](https://arxiv.org/abs/2408.06292), [GitHub](https://github.com/SakanaAI/AI-Scientist) |
+| [Papers with Code](https://paperswithcode.com/) | Platform linking 150,000+ ML papers to implementations, benchmarks, and leaderboards. | [paperswithcode.com](https://paperswithcode.com/) |
+| [STORM](https://github.com/stanford-oval/storm) | Stanford's autonomous system writing Wikipedia-quality articles from scratch. | [Paper](https://arxiv.org/abs/2402.14207), [GitHub](https://github.com/stanford-oval/storm) |
 
 ---
 

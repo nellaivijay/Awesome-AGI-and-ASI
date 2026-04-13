@@ -10,14 +10,14 @@ keywords: "prompt engineering, chain of thought, tree of thoughts, graph of thou
 
 | Technique | Description | Paper |
 |-----------|-------------|-------|
-| CoT (Chain-of-Thought) | Prompting that elicits step-by-step reasoning in LLMs for complex problem solving. | [Paper](https://arxiv.org/abs/2201.11903) |
-| CoT-SC (Self-Consistency) | Samples multiple reasoning paths and takes the majority vote for improved chain-of-thought. | [Paper](https://arxiv.org/abs/2203.11171) |
-| ToT (Tree of Thoughts) | Enables deliberate problem solving via tree-structured exploration of reasoning paths. | [Paper](https://arxiv.org/abs/2305.10601) |
-| GoT (Graph of Thoughts) | Generalizes chain/tree of thought into arbitrary graph structures for more flexible reasoning. | [Paper](https://arxiv.org/abs/2308.09687) |
-| SoT (Skeleton-of-Thought) | Enables LLMs to do parallel decoding by first generating a skeleton then filling in details. | [Paper](https://arxiv.org/abs/2307.15337) |
-| PoT (Program of Thoughts) | Disentangles computation from reasoning by generating programs for numerical reasoning tasks. | [Paper](https://arxiv.org/abs/2211.12588) |
-| AoT (Algorithm of Thoughts) | Enhances exploration of ideas in LLMs using algorithm-inspired prompting strategies. | [Paper](https://arxiv.org/abs/2308.10379) |
-| Cue-CoT | Chain-of-thought prompting for responding to in-depth dialogue questions. | [Paper](https://arxiv.org/abs/2305.11792), [Code](https://github.com/ruleGreen/Cue-CoT) |
+| CoT (Chain-of-Thought) | Step-by-step reasoning prompting for complex problem solving. | [Paper](https://arxiv.org/abs/2201.11903) |
+| CoT-SC (Self-Consistency) | Samples multiple reasoning paths and takes majority vote for improved CoT. | [Paper](https://arxiv.org/abs/2203.11171) |
+| ToT (Tree of Thoughts) | Tree-structured exploration of reasoning paths with backtracking. | [Paper](https://arxiv.org/abs/2305.10601) |
+| GoT (Graph of Thoughts) | Generalizes chain/tree of thought into arbitrary graph structures. | [Paper](https://arxiv.org/abs/2308.09687) |
+| SoT (Skeleton-of-Thought) | Parallel decoding: generate skeleton first, then fill in details. | [Paper](https://arxiv.org/abs/2307.15337) |
+| PoT (Program of Thoughts) | Generates programs for numerical reasoning, separating computation from reasoning. | [Paper](https://arxiv.org/abs/2211.12588) |
+| AoT (Algorithm of Thoughts) | Algorithm-inspired prompting to enhance idea exploration in LLMs. | [Paper](https://arxiv.org/abs/2308.10379) |
+| Cue-CoT | CoT prompting for in-depth dialogue questions. | [Paper](https://arxiv.org/abs/2305.11792), [Code](https://github.com/ruleGreen/Cue-CoT) |
 
 ### Long Context and Positional Encoding
 

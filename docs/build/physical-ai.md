@@ -14,14 +14,14 @@ keywords: "physical AI, humanoid robots, embodied intelligence, VLA models, robo
 
 | Company | Description | Links |
 |---------|-------------|-------|
-| **Figure AI** | Humanoid robots with advanced AI. Partnered with OpenAI and Microsoft for embodied AI. Figure 02 demonstrates autonomous manipulation, language-guided task execution, and learning from human feedback. Raised $2.6B+. | [figure.ai](https://www.figure.ai/) |
-| **Tesla Optimus** | General-purpose humanoid robot leveraging Tesla's massive autonomous driving AI stack (FSD neural nets, Dojo supercomputer). Targeting manufacturing and consumer deployment at scale. | [tesla.com](https://www.tesla.com/) |
-| **Boston Dynamics** | Pioneers of advanced locomotion. Atlas (humanoid) and Spot (quadruped) set the standard for physical capability, agility, and dexterity. Now Hyundai-owned, pivoting to AI-first control. | [bostondynamics.com](https://www.bostondynamics.com/) |
-| **1X Technologies** | NEO humanoid robot with human-like form factor. Backed by OpenAI. Focused on safe, embodied AI for real-world deployment in homes and workplaces. | [1x.tech](https://www.1x.tech/) |
-| **Unitree Robotics** | Democratizing humanoid robotics with affordable platforms (G1, H1 series). Enables broad research access to embodied AI experimentation. | [unitree.com](https://www.unitree.com/) |
-| **Sanctuary AI** | Phoenix humanoid robot powered by "Carbon" -- a proprietary AI system designed for general-purpose task learning and autonomous execution. | [sanctuary.ai](https://www.sanctuary.ai/) |
-| **Agility Robotics** | Digit bipedal robot designed for logistics and warehouse automation. Real-world deployment partner with Amazon. | [agilityrobotics.com](https://www.agilityrobotics.com/) |
-| **Apptronik** | Apollo full-size humanoid robot for industrial applications. Emphasis on safe human-robot collaboration. Mercedes-Benz partnership. | [apptronik.com](https://www.apptronik.com/) |
+| **Figure AI** | Humanoid robots partnered with OpenAI/Microsoft. Figure 02: autonomous manipulation, language-guided tasks. Raised $2.6B+. | [figure.ai](https://www.figure.ai/) |
+| **Tesla Optimus** | General-purpose humanoid leveraging Tesla FSD stack and Dojo. Targeting manufacturing at scale. | [tesla.com](https://www.tesla.com/) |
+| **Boston Dynamics** | Pioneers of advanced locomotion. Atlas (humanoid), Spot (quadruped). Hyundai-owned, pivoting to AI-first. | [bostondynamics.com](https://www.bostondynamics.com/) |
+| **1X Technologies** | NEO humanoid, backed by OpenAI. Safe embodied AI for homes and workplaces. | [1x.tech](https://www.1x.tech/) |
+| **Unitree Robotics** | Affordable humanoid platforms (G1, H1). Democratizing embodied AI research. | [unitree.com](https://www.unitree.com/) |
+| **Sanctuary AI** | Phoenix humanoid powered by Carbon AI for general-purpose task learning. | [sanctuary.ai](https://www.sanctuary.ai/) |
+| **Agility Robotics** | Digit bipedal robot for logistics and warehouse automation. Amazon deployment partner. | [agilityrobotics.com](https://www.agilityrobotics.com/) |
+| **Apptronik** | Apollo full-size humanoid for industrial use. Mercedes-Benz partnership. | [apptronik.com](https://www.apptronik.com/) |
 
 ### Robot Foundation Models (Vision-Language-Action)
 
@@ -29,13 +29,13 @@ keywords: "physical AI, humanoid robots, embodied intelligence, VLA models, robo
 
 | Model | Org | Year | Description | Links |
 |-------|-----|------|-------------|-------|
-| **Gemini Robotics 1.5** | Google DeepMind | 2025 | Agentic VLA model that turns visual information and language instructions into motor commands. Generality across novel situations, dexterity (origami, food prep), agentic tool-use, and thinking before acting. Supports multiple embodiments (ALOHA, Franka, Apptronik Apollo). Dual approach with Robotics-ER 1.5 for embodied reasoning. | [Site](https://deepmind.google/models/gemini-robotics/), [Report](https://deepmind.google/models/gemini-robotics/gemini-robotics/) |
-| **pi0** | Physical Intelligence | 2024 | VLA flow model for general robot control. Novel flow matching architecture on top of pre-trained VLM. Trained on diverse dexterous tasks (laundry folding, table cleaning, box assembly) across single-arm, dual-arm, and mobile manipulators. Open-sourced weights. | [Paper](https://arxiv.org/abs/2410.24164), [Site](https://www.physicalintelligence.company/) |
-| **RT-2** | Google DeepMind | 2023 | Vision-Language-Action model that transfers web-scale knowledge to robotic control. Expresses actions as text tokens, enabling emergent reasoning (pick up the "improvised hammer" -> picks rock). 6k evaluation trials. | [Paper](https://arxiv.org/abs/2307.15818) |
-| **PaLM-E** | Google | 2023 | 562B-parameter embodied multimodal language model. Directly incorporates continuous sensor modalities into LLMs. Positive transfer across internet-scale language, vision, and robotics domains. | [Paper](https://arxiv.org/abs/2303.03378) |
-| **Open X-Embodiment / RT-X** | 21 Institutions | 2023 | Largest robotics dataset: 22 robots, 527 skills, 160k+ tasks from 21 institutions. RT-X model shows positive transfer across robot morphologies. The "ImageNet moment" for robotics. | [Paper](https://arxiv.org/abs/2310.08864) |
-| **OpenVLA** | Stanford / UC Berkeley | 2024 | Open-source 7B-parameter VLA. Democratizes embodied AI research -- matches proprietary models on manipulation benchmarks. Fine-tunable for new robots and tasks. | [GitHub](https://github.com/openvla/openvla) |
-| **NVIDIA GR00T** | NVIDIA | 2024 | Foundation model for humanoid robots. Multimodal inputs (text, video, demonstration) to robot actions. Part of NVIDIA's Physical AI platform alongside Isaac and Cosmos. | [nvidia.com](https://developer.nvidia.com/isaac) |
+| **Gemini Robotics 1.5** | Google DeepMind | 2025 | Agentic VLA: vision + language → motor commands. Dexterous manipulation, tool-use, multi-embodiment (ALOHA, Franka, Apollo). | [Site](https://deepmind.google/models/gemini-robotics/), [Report](https://deepmind.google/models/gemini-robotics/gemini-robotics/) |
+| **pi0** | Physical Intelligence | 2024 | VLA flow model for general robot control. Flow matching on pre-trained VLM. Diverse dexterous tasks. Open weights. | [Paper](https://arxiv.org/abs/2410.24164), [Site](https://www.physicalintelligence.company/) |
+| **RT-2** | Google DeepMind | 2023 | VLA transferring web-scale knowledge to robotic control. Actions as text tokens, emergent reasoning. | [Paper](https://arxiv.org/abs/2307.15818) |
+| **PaLM-E** | Google | 2023 | 562B embodied multimodal LM. Continuous sensor modalities directly in LLMs. Positive transfer across domains. | [Paper](https://arxiv.org/abs/2303.03378) |
+| **Open X-Embodiment / RT-X** | 21 Institutions | 2023 | Largest robotics dataset: 22 robots, 527 skills, 160k+ tasks. Positive cross-embodiment transfer. | [Paper](https://arxiv.org/abs/2310.08864) |
+| **OpenVLA** | Stanford / UC Berkeley | 2024 | Open-source 7B VLA matching proprietary models. Fine-tunable for new robots and tasks. | [GitHub](https://github.com/openvla/openvla) |
+| **NVIDIA GR00T** | NVIDIA | 2024 | Foundation model for humanoids. Multimodal inputs to robot actions. Part of NVIDIA Physical AI platform. | [nvidia.com](https://developer.nvidia.com/isaac) |
 
 ### Simulation & Infrastructure for Physical AI
 
@@ -43,10 +43,10 @@ keywords: "physical AI, humanoid robots, embodied intelligence, VLA models, robo
 
 | Platform | Description | Links |
 |----------|-------------|-------|
-| **NVIDIA Isaac Sim / Isaac Lab** | Production-grade robotics simulation platform with photorealistic rendering, physics accuracy, and domain randomization. Isaac Lab provides GPU-accelerated RL environments for robot learning at scale. | [Developer](https://developer.nvidia.com/isaac/), [GitHub](https://github.com/isaac-sim/) |
-| **NVIDIA Omniverse** | Collaborative 3D simulation platform for building digital twins and physics-based robotics simulation. Foundation for NVIDIA's Physical AI ecosystem. | [nvidia.com/omniverse](https://www.nvidia.com/en-us/omniverse/) |
-| **MuJoCo** | Google DeepMind's open-source physics engine optimized for robotics and biomechanics. Fast, accurate contact dynamics. The standard tool for embodied AI research and RL benchmarking. | [mujoco.org](https://mujoco.org/), [GitHub](https://github.com/google-deepmind/mujoco) |
-| **Genesis** | Next-generation open-source physics engine for embodied AI. Differentiable simulation enabling gradient-based learning for physical systems. | [GitHub](https://github.com/Genesis-Embodied-AI/Genesis) |
+| **NVIDIA Isaac Sim / Isaac Lab** | Production-grade robotics sim with photorealistic rendering and domain randomization. GPU-accelerated RL. | [Developer](https://developer.nvidia.com/isaac/), [GitHub](https://github.com/isaac-sim/) |
+| **NVIDIA Omniverse** | Collaborative 3D simulation for digital twins and physics-based robotics. | [nvidia.com/omniverse](https://www.nvidia.com/en-us/omniverse/) |
+| **MuJoCo** | DeepMind's open-source physics engine for robotics and RL. Fast, accurate contact dynamics. | [mujoco.org](https://mujoco.org/), [GitHub](https://github.com/google-deepmind/mujoco) |
+| **Genesis** | Next-gen open-source differentiable physics engine for gradient-based embodied AI learning. | [GitHub](https://github.com/Genesis-Embodied-AI/Genesis) |
 
 ### Reinforcement Learning Environments for Embodied AI
 
@@ -54,13 +54,13 @@ keywords: "physical AI, humanoid robots, embodied intelligence, VLA models, robo
 
 | Environment | Description | Links |
 |-------------|-------------|-------|
-| **Gymnasium (OpenAI Gym)** | The standard API for RL environments. Maintained by Farama Foundation. Hundreds of environments from classic control to Atari to robotics. | [gymnasium.farama.org](https://gymnasium.farama.org/), [GitHub](https://github.com/Farama-Foundation/Gymnasium) |
-| **IsaacGym / Isaac Lab** | NVIDIA's GPU-accelerated RL environment for robotics. Thousands of parallel environments on a single GPU. State-of-art sim-to-real transfer. | [GitHub](https://github.com/isaac-sim/IsaacLab) |
-| **ManiSkill** | Large-scale robotics benchmark with GPU-parallelized simulation. 20+ manipulation task families with diverse objects. SAPIEN-based. | [GitHub](https://github.com/haosulab/ManiSkill) |
-| **Habitat** | Meta's platform for training embodied AI in photorealistic 3D environments. Navigation, rearrangement, and social tasks. | [aihabitat.org](https://aihabitat.org/), [GitHub](https://github.com/facebookresearch/habitat-sim) |
-| **MineDojo** | NVIDIA's open-ended agent benchmark built on Minecraft. 1000s of tasks, internet-scale knowledge base, programmatic task generation. | [minedojo.org](https://minedojo.org/), [GitHub](https://github.com/MineDojo/MineDojo) |
-| **RoboCasa** | Large-scale simulation framework for household robot tasks. 150+ object categories, diverse kitchens/rooms, procedural generation. | [GitHub](https://github.com/robocasa/robocasa) |
-| **BEHAVIOR-1K** | 1,000 everyday activities across 50 scenes. Comprehensive benchmark for embodied AI covering mobility, manipulation, and social tasks. | [behavior.stanford.edu](https://behavior.stanford.edu/) |
+| **Gymnasium (OpenAI Gym)** | Standard RL API by Farama Foundation. Hundreds of environments from classic control to robotics. | [gymnasium.farama.org](https://gymnasium.farama.org/), [GitHub](https://github.com/Farama-Foundation/Gymnasium) |
+| **IsaacGym / Isaac Lab** | NVIDIA GPU-accelerated RL. Thousands of parallel envs on one GPU. State-of-art sim-to-real. | [GitHub](https://github.com/isaac-sim/IsaacLab) |
+| **ManiSkill** | Large-scale robotics benchmark with GPU-parallelized sim. 20+ manipulation task families. | [GitHub](https://github.com/haosulab/ManiSkill) |
+| **Habitat** | Meta's platform for embodied AI in photorealistic 3D. Navigation and rearrangement tasks. | [aihabitat.org](https://aihabitat.org/), [GitHub](https://github.com/facebookresearch/habitat-sim) |
+| **MineDojo** | Open-ended agent benchmark on Minecraft. 1000s of tasks, programmatic generation. | [minedojo.org](https://minedojo.org/), [GitHub](https://github.com/MineDojo/MineDojo) |
+| **RoboCasa** | Household robot simulation. 150+ object categories, diverse kitchens, procedural generation. | [GitHub](https://github.com/robocasa/robocasa) |
+| **BEHAVIOR-1K** | 1,000 everyday activities across 50 scenes. Mobility, manipulation, and social tasks. | [behavior.stanford.edu](https://behavior.stanford.edu/) |
 
 ---
 

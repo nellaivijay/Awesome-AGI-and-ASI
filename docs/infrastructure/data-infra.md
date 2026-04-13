@@ -12,22 +12,22 @@ keywords: "data infrastructure, MLOps, Apache Iceberg, Spark, Delta Lake, MLflow
 
 | Name | Description | Links |
 |------|-------------|-------|
-| [Apache Iceberg](https://iceberg.apache.org/) | Open table format for massive analytic datasets. ACID transactions, time travel, schema evolution, and partition evolution on data lakes. The emerging standard for AI training data management (adopted by Netflix, Apple, Snowflake). V4 adds row-lineage tracking. | [iceberg.apache.org](https://iceberg.apache.org/), [GitHub](https://github.com/apache/iceberg) |
-| [Apache Spark](https://spark.apache.org/) | Unified analytics engine for large-scale data processing. Powers the data pipelines behind most frontier model training -- ETL, feature engineering, and distributed data transformation at petabyte scale. | [spark.apache.org](https://spark.apache.org/), [GitHub](https://github.com/apache/spark) |
-| [Delta Lake](https://delta.io/) | Open-source storage layer providing ACID transactions on data lakes. Originally Databricks; now open ecosystem. Delta UniForm provides interoperability with Iceberg and Hudi. | [delta.io](https://delta.io/), [GitHub](https://github.com/delta-io/delta) |
-| [Greenplum](https://greenplum.org/) | Massively Parallel Processing (MPP) database for large-scale analytics and AI workloads. Open-source, PostgreSQL-based, purpose-built for analytical queries across petabytes. Used in enterprise AI pipelines for feature computation and data preparation. | [greenplum.org](https://greenplum.org/), [GitHub](https://github.com/greenplum-db/gpdb) |
-| [DuckDB](https://duckdb.org/) | In-process analytical database that runs anywhere. Blazing-fast OLAP queries on local data. Increasingly used for dataset analysis, feature engineering, and rapid prototyping in ML workflows. | [duckdb.org](https://duckdb.org/), [GitHub](https://github.com/duckdb/duckdb) |
+| [Apache Iceberg](https://iceberg.apache.org/) | Open table format for massive datasets. ACID, time travel, schema evolution. Adopted by Netflix, Apple, Snowflake. V4 adds row-lineage. | [iceberg.apache.org](https://iceberg.apache.org/), [GitHub](https://github.com/apache/iceberg) |
+| [Apache Spark](https://spark.apache.org/) | Unified analytics engine for large-scale data processing. Powers ETL pipelines behind most frontier model training. | [spark.apache.org](https://spark.apache.org/), [GitHub](https://github.com/apache/spark) |
+| [Delta Lake](https://delta.io/) | ACID transactions on data lakes. Delta UniForm provides Iceberg/Hudi interop. Originally Databricks. | [delta.io](https://delta.io/), [GitHub](https://github.com/delta-io/delta) |
+| [Greenplum](https://greenplum.org/) | MPP database for large-scale analytics. PostgreSQL-based, purpose-built for petabyte-scale queries. | [greenplum.org](https://greenplum.org/), [GitHub](https://github.com/greenplum-db/gpdb) |
+| [DuckDB](https://duckdb.org/) | In-process analytical DB. Fast OLAP on local data. Used for dataset analysis and ML prototyping. | [duckdb.org](https://duckdb.org/), [GitHub](https://github.com/duckdb/duckdb) |
 
 ### MLOps & Experiment Tracking
 
 | Name | Description | Links |
 |------|-------------|-------|
-| [MLflow](https://mlflow.org/) | Open-source platform for the complete ML lifecycle: experiment tracking, model registry, deployment, and model evaluation. The standard MLOps platform. 20k+ stars. | [mlflow.org](https://mlflow.org/), [GitHub](https://github.com/mlflow/mlflow) |
-| [Weights & Biases (W&B)](https://wandb.ai/) | ML experiment tracking, dataset versioning, and model management. Used by OpenAI, DeepMind, and most frontier labs for training runs. | [wandb.ai](https://wandb.ai/) |
-| [KubeFlow](https://www.kubeflow.org/) | ML toolkit for Kubernetes. Manages ML workflows: training pipelines, hyperparameter tuning, model serving, and notebook environments on Kubernetes clusters. | [kubeflow.org](https://www.kubeflow.org/), [GitHub](https://github.com/kubeflow/kubeflow) |
-| [Ray](https://www.ray.io/) | Unified framework for scaling AI applications. Ray Train for distributed training, Ray Serve for inference, Ray Data for preprocessing. Powers Anyscale and used by OpenAI, Uber, and Spotify. | [ray.io](https://www.ray.io/), [GitHub](https://github.com/ray-project/ray) |
-| [Feast](https://feast.dev/) | Open-source feature store for ML. Bridges the gap between training and serving by providing consistent access to feature data across offline training and online inference. | [feast.dev](https://feast.dev/), [GitHub](https://github.com/feast-dev/feast) |
-| [Label Studio](https://labelstud.io/) | Open-source data labeling platform for text, image, audio, video, and multi-modal tasks. Critical infrastructure for creating the human-annotated data that drives RLHF and supervised fine-tuning. 20k+ stars. | [labelstud.io](https://labelstud.io/), [GitHub](https://github.com/HumanSignal/label-studio) |
+| [MLflow](https://mlflow.org/) | Open-source ML lifecycle platform: experiment tracking, model registry, deployment, eval. 20k+ stars. | [mlflow.org](https://mlflow.org/), [GitHub](https://github.com/mlflow/mlflow) |
+| [Weights & Biases (W&B)](https://wandb.ai/) | ML experiment tracking and model management. Used by OpenAI, DeepMind, and most frontier labs. | [wandb.ai](https://wandb.ai/) |
+| [KubeFlow](https://www.kubeflow.org/) | ML toolkit for Kubernetes: training pipelines, hyperparameter tuning, serving, notebooks. | [kubeflow.org](https://www.kubeflow.org/), [GitHub](https://github.com/kubeflow/kubeflow) |
+| [Ray](https://www.ray.io/) | Unified AI scaling framework. Train, Serve, Data. Used by OpenAI, Uber, Spotify. | [ray.io](https://www.ray.io/), [GitHub](https://github.com/ray-project/ray) |
+| [Feast](https://feast.dev/) | Open-source feature store bridging offline training and online inference. | [feast.dev](https://feast.dev/), [GitHub](https://github.com/feast-dev/feast) |
+| [Label Studio](https://labelstud.io/) | Open-source data labeling for text, image, audio, video. Critical for RLHF/SFT data. 20k+ stars. | [labelstud.io](https://labelstud.io/), [GitHub](https://github.com/HumanSignal/label-studio) |
 
 ---
 

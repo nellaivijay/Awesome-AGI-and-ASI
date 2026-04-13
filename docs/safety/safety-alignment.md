@@ -12,11 +12,11 @@ keywords: "AI safety, alignment, RLHF, interpretability, red teaming, AI governa
 
 | Topic | Description | Links |
 |-------|-------------|-------|
-| LLM Hallucination Survey | Comprehensive survey on detecting, explaining, and mitigating hallucinations in LLMs. | [Paper](https://arxiv.org/abs/2309.06794v1), [Code](https://github.com/hongbinye/Cognitive-Mirage-Hallucinations-in-LLMs) |
-| Hallucination Detection | Survey on hallucination in LLMs covering detection methods and mitigation strategies. | [Paper](https://www.zhuanzhi.ai/paper/61ebe9c5007cf1373b900452ad52f0ae), [Code](https://github.com/HillZhang1999/llm-hallucination-survey) |
-| LLM Attacks | Universal and transferable adversarial attacks on aligned language models (CMU research). | [Paper](https://arxiv.org/abs/2307.15043), [Code](https://github.com/llm-attacks/llm-attacks) |
-| RLHF | Reinforcement Learning from Human Feedback - the key technique behind ChatGPT's alignment. | [Code Example](https://github.com/HarderThenHarder/transformers_tasks/tree/main/RLHF) |
-| DPO | Direct Preference Optimization - an alternative to RLHF that trains the LM directly as a reward model. | [Paper](https://arxiv.org/abs/2305.18290), [Code](https://github.com/eric-mitchell/direct-preference-optimization) |
+| LLM Hallucination Survey | Survey on detecting, explaining, and mitigating hallucinations in LLMs. | [Paper](https://arxiv.org/abs/2309.06794v1), [Code](https://github.com/hongbinye/Cognitive-Mirage-Hallucinations-in-LLMs) |
+| Hallucination Detection | Survey covering hallucination detection methods and mitigation strategies. | [Paper](https://www.zhuanzhi.ai/paper/61ebe9c5007cf1373b900452ad52f0ae), [Code](https://github.com/HillZhang1999/llm-hallucination-survey) |
+| LLM Attacks | Universal adversarial attacks on aligned language models (CMU). | [Paper](https://arxiv.org/abs/2307.15043), [Code](https://github.com/llm-attacks/llm-attacks) |
+| RLHF | Reinforcement Learning from Human Feedback -- key technique behind ChatGPT alignment. | [Code Example](https://github.com/HarderThenHarder/transformers_tasks/tree/main/RLHF) |
+| DPO | Direct Preference Optimization -- trains LM directly as reward model, alternative to RLHF. | [Paper](https://arxiv.org/abs/2305.18290), [Code](https://github.com/eric-mitchell/direct-preference-optimization) |
 
 ### Scalable Oversight & Automated Alignment
 
@@ -24,12 +24,12 @@ keywords: "AI safety, alignment, RLHF, interpretability, red teaming, AI governa
 
 | Approach | Description | Links |
 |----------|-------------|-------|
-| **Weak-to-Strong Generalization** | OpenAI's framework for studying how weak supervisors (humans) can elicit capabilities from stronger models. GPT-2 supervising GPT-4 as proxy for the superintelligence alignment problem. | [Paper](https://arxiv.org/abs/2312.09390) |
-| **Constitutional AI (CAI)** | Anthropic's method for training AI using AI-generated feedback based on a set of principles, reducing dependence on human labelers while maintaining alignment. | [Paper](https://arxiv.org/abs/2212.08073) |
-| **Debate** | Two AI agents argue opposing sides; a human judge evaluates. Even if an AI is superhuman, the debate format decomposes complex claims into human-verifiable steps. | [Paper](https://arxiv.org/abs/1805.00899) |
-| **Recursive Reward Modeling** | Humans train AI to assist with evaluation, which then assists with training the next model -- bootstrapping oversight. Core technique for Anthropic and OpenAI alignment teams. | [Paper](https://arxiv.org/abs/1811.07871) |
-| **AI Control** | Redwood Research's framework for maintaining safety even against models actively trying to subvert controls. Evaluates security against intentional subversion. | [Paper](https://arxiv.org/abs/2312.06942) |
-| **Cooperative AI** | Research program at DeepMind focused on AI that cooperates with humans and other AI systems -- critical for multi-agent superintelligence scenarios. | [Paper](https://arxiv.org/abs/2012.08630) |
+| **Weak-to-Strong Generalization** | Weak supervisors eliciting capabilities from stronger models. GPT-2 supervising GPT-4 as alignment proxy. | [Paper](https://arxiv.org/abs/2312.09390) |
+| **Constitutional AI (CAI)** | AI-generated feedback from principles, reducing dependence on human labelers. | [Paper](https://arxiv.org/abs/2212.08073) |
+| **Debate** | Two AIs argue opposing sides; human judge evaluates. Decomposes claims into verifiable steps. | [Paper](https://arxiv.org/abs/1805.00899) |
+| **Recursive Reward Modeling** | AI assists with evaluation, then assists training the next model. Bootstrapping oversight. | [Paper](https://arxiv.org/abs/1811.07871) |
+| **AI Control** | Redwood Research's framework for safety against models actively trying to subvert controls. | [Paper](https://arxiv.org/abs/2312.06942) |
+| **Cooperative AI** | DeepMind research on AI cooperating with humans and other AI systems. | [Paper](https://arxiv.org/abs/2012.08630) |
 
 ### Superalignment
 
@@ -37,10 +37,10 @@ keywords: "AI safety, alignment, RLHF, interpretability, red teaming, AI governa
 
 | Program | Description | Links |
 |---------|-------------|-------|
-| **OpenAI Superalignment** | Dedicated 20% of OpenAI compute to solving alignment for superintelligence. Key output: Weak-to-Strong Generalization framework. Team restructured after leadership departures in 2024, work continues under safety team. | [Blog](https://openai.com/index/introducing-superalignment/) |
-| **Anthropic RSP (Responsible Scaling Policy)** | Framework committing to evaluate dangerous capabilities at each scaling threshold and pause if safety measures are insufficient. The leading industry self-governance approach. | [Paper](https://www.anthropic.com/index/anthropics-responsible-scaling-policy) |
-| **DeepMind Scalable Alignment** | Research program on reward modeling, debate, and recursive oversight for superhuman systems. Key papers on process reward models and AI-assisted evaluation. | [deepmind.google](https://deepmind.google/) |
-| **Eliciting Latent Knowledge (ELK)** | ARC's theoretical framework for extracting truthful beliefs from AI systems, even when they might have incentives to deceive. A core unsolved problem for superalignment. | [Paper](https://docs.google.com/document/d/1WwsnJQstPq91_Yh-Ch2XRL8H_EpsnjrC1dwZXR37PC8/) |
+| **OpenAI Superalignment** | 20% of OpenAI compute for superintelligence alignment. Key output: Weak-to-Strong Generalization. | [Blog](https://openai.com/index/introducing-superalignment/) |
+| **Anthropic RSP (Responsible Scaling Policy)** | Evaluate dangerous capabilities at each scaling threshold; pause if safety insufficient. | [Paper](https://www.anthropic.com/index/anthropics-responsible-scaling-policy) |
+| **DeepMind Scalable Alignment** | Research on reward modeling, debate, and recursive oversight for superhuman systems. | [deepmind.google](https://deepmind.google/) |
+| **Eliciting Latent Knowledge (ELK)** | ARC's framework for extracting truthful beliefs from AI, even when models may deceive. | [Paper](https://docs.google.com/document/d/1WwsnJQstPq91_Yh-Ch2XRL8H_EpsnjrC1dwZXR37PC8/) |
 
 ### Mechanistic Interpretability
 
@@ -48,16 +48,16 @@ keywords: "AI safety, alignment, RLHF, interpretability, red teaming, AI governa
 
 | Resource | Description | Links |
 |----------|-------------|-------|
-| **Towards Monosemanticity** (Anthropic, 2023) | Landmark result: sparse autoencoders decompose polysemantic neurons into millions of interpretable features in Claude. | [Blog](https://transformer-circuits.pub/2023/monosemantic-features/) |
-| **Scaling Monosemanticity** (Anthropic, 2024) | Extracted 34M interpretable features from Claude 3 Sonnet, including safety-relevant concepts (deception, power-seeking, "I am an AI assistant"). | [Blog](https://transformer-circuits.pub/2024/scaling-monosemanticity/) |
-| **Representation Engineering** (Zou et al., 2023) | Identifies and steers high-level concepts (honesty, power-seeking, emotion) directly in neural representations. A practical tool for alignment. | [Paper](https://arxiv.org/abs/2310.01405) |
-| **TransformerLens** | Neel Nanda's open-source library for mechanistic interpretability research on GPT-2 style models. The standard tool for mech interp research. | [GitHub](https://github.com/TransformerLensOrg/TransformerLens) |
-| **SAE Bench** | Standardized benchmark for evaluating sparse autoencoder quality -- enabling reproducible interpretability research. | [GitHub](https://github.com/adamkarvonen/SAEBench) |
-| **Steering Vectors / Activation Engineering** | Directly modifying model behavior by adding computed direction vectors to activations at inference time. Enables real-time control of model outputs (e.g., making a model more honest, less toxic) without retraining. | [Paper](https://arxiv.org/abs/2308.10248), [Blog](https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-vectors) |
-| **Goodfire** | Commercial platform for mechanistic interpretability. Visualize, search, and steer neural network features in production models. Makes mech interp practical for non-researchers. | [goodfire.ai](https://goodfire.ai/) |
-| **Neuronpedia** | Open platform for exploring and sharing neuron-level interpretability research. Hosts sparse autoencoder features from multiple models. Community-driven mech interp infrastructure. | [neuronpedia.org](https://neuronpedia.org/) |
-| **Circuits Updates (Anthropic, 2025)** | Anthropic's continued circuit-level analysis revealing how transformers implement algorithms: multi-step reasoning circuits, planning circuits, and safety-relevant feature interactions in Claude 3.5/4. | [Blog](https://transformer-circuits.pub/) |
-| **Transformer Circuits Thread** (Anthropic) | Anthropic's ongoing research thread on understanding transformer internals: induction heads, superposition, circuits, and feature visualization. | [Blog](https://transformer-circuits.pub/) |
+| **Towards Monosemanticity** (Anthropic, 2023) | Sparse autoencoders decompose polysemantic neurons into interpretable features in Claude. | [Blog](https://transformer-circuits.pub/2023/monosemantic-features/) |
+| **Scaling Monosemanticity** (Anthropic, 2024) | 34M interpretable features from Claude 3 Sonnet, including safety-relevant concepts. | [Blog](https://transformer-circuits.pub/2024/scaling-monosemanticity/) |
+| **Representation Engineering** (Zou et al., 2023) | Identifies and steers high-level concepts (honesty, power-seeking) in neural representations. | [Paper](https://arxiv.org/abs/2310.01405) |
+| **TransformerLens** | Neel Nanda's open-source library for mechanistic interpretability on GPT-2 style models. | [GitHub](https://github.com/TransformerLensOrg/TransformerLens) |
+| **SAE Bench** | Standardized benchmark for evaluating sparse autoencoder quality. | [GitHub](https://github.com/adamkarvonen/SAEBench) |
+| **Steering Vectors / Activation Engineering** | Modify model behavior by adding direction vectors to activations at inference. No retraining needed. | [Paper](https://arxiv.org/abs/2308.10248), [Blog](https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-vectors) |
+| **Goodfire** | Commercial platform for visualizing, searching, and steering neural network features. | [goodfire.ai](https://goodfire.ai/) |
+| **Neuronpedia** | Open platform for neuron-level interpretability. Hosts SAE features from multiple models. | [neuronpedia.org](https://neuronpedia.org/) |
+| **Circuits Updates (Anthropic, 2025)** | Anthropic's circuit-level analysis of multi-step reasoning and safety-relevant features in Claude. | [Blog](https://transformer-circuits.pub/) |
+| **Transformer Circuits Thread** (Anthropic) | Anthropic's research on transformer internals: induction heads, superposition, circuits. | [Blog](https://transformer-circuits.pub/) |
 
 ### AI-Generated Text Detection
 
@@ -71,12 +71,12 @@ keywords: "AI safety, alignment, RLHF, interpretability, red teaming, AI governa
 
 | Resource | Description | Links |
 |----------|-------------|-------|
-| **Climate Change AI** | Global non-profit catalyzing impactful work at the intersection of climate change and machine learning. Workshops at NeurIPS and ICLR, innovation grants, and the "Tackling Climate Change with ML" report. Co-founded by Priya Donti (MIT EECS). | [climatechange.ai](https://www.climatechange.ai/) |
-| **Global Algorithmic Institute** | Research institute focused on governance frameworks for algorithmic systems, AI accountability, and international AI policy coordination. | [globalalgorithmicinstitute.org](https://globalalgorithmicinstitute.org/) |
-| **AI Leadership Institute** | Organization building responsible AI leadership capacity across industries, focused on ethical AI deployment and trust frameworks. | [aileadershipinstitute.com](https://www.aileadershipinstitute.com/) |
-| **EU AI Act** | World's first comprehensive AI regulation (effective 2024-2026). Risk-based framework classifying AI systems, with strict requirements for "high-risk" and bans on certain uses. Sets global regulatory precedent. | [digital-strategy.ec.europa.eu](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) |
-| **US Executive Order on AI Safety** | Executive Order 14110 (Oct 2023). Requires safety testing and reporting for frontier models, red-teaming standards, and AI watermarking research. | [whitehouse.gov](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/) |
-| **Frontier Model Forum** | Industry consortium (OpenAI, Google, Microsoft, Anthropic) for responsible development of frontier AI. Shared safety research and red-teaming practices. | [frontiermodelforum.org](https://www.frontiermodelforum.org/) |
+| **Climate Change AI** | Global non-profit at the intersection of climate change and ML. NeurIPS/ICLR workshops. | [climatechange.ai](https://www.climatechange.ai/) |
+| **Global Algorithmic Institute** | Governance frameworks for algorithmic systems, AI accountability, international policy. | [globalalgorithmicinstitute.org](https://globalalgorithmicinstitute.org/) |
+| **AI Leadership Institute** | Building responsible AI leadership across industries. Ethical deployment and trust. | [aileadershipinstitute.com](https://www.aileadershipinstitute.com/) |
+| **EU AI Act** | First comprehensive AI regulation (2024-2026). Risk-based framework, sets global precedent. | [digital-strategy.ec.europa.eu](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) |
+| **US Executive Order on AI Safety** | EO 14110 (Oct 2023). Safety testing for frontier models, red-teaming standards, watermarking. | [whitehouse.gov](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/) |
+| **Frontier Model Forum** | Industry consortium (OpenAI, Google, Microsoft, Anthropic) for responsible frontier AI. | [frontiermodelforum.org](https://www.frontiermodelforum.org/) |
 
 ---
 
