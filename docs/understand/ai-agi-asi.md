@@ -12,7 +12,7 @@
 
 **Artificial Superintelligence (ASI)**, also called **Super AI**, is a hypothetical system whose intelligence surpasses the most gifted human minds in **every domain** -- scientific creativity, social skills, strategic reasoning, and general wisdom. Philosopher Nick Bostrom defines it as *"any intellect that greatly exceeds the cognitive performance of humans in virtually all domains of interest."* ASI could emerge from recursive self-improvement cycles (an **"intelligence explosion"**), where an AI that can improve its own design rapidly surpasses human-level capabilities. Key concerns include the **control problem** (keeping ASI aligned with human values), **goal misalignment** (unintended optimization targets), and the potential for a **technological singularity** -- a point beyond which human civilization is fundamentally and unpredictably transformed.
 
-<details>
+<details markdown="block">
 <summary><strong>AI vs AGI vs ASI -- The Complete Comparison</strong> (click to expand)</summary>
 
 | Dimension | ANI (Narrow AI) | AGI (General Intelligence) | ASI (Superintelligence) |
