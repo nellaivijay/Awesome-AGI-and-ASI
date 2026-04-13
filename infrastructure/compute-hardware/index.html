@@ -1952,22 +1952,22 @@
 <tbody>
 <tr>
 <td><a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/">NVIDIA Blackwell (B200/GB200)</a></td>
-<td>2024 GPU architecture, 208B transistors, 2nd-gen Transformer Engine with FP4, 30x faster inference vs Hopper. GB200 NVL72 rack: 1.4 exaFLOPS. Dominant hardware for frontier training.</td>
+<td>208B transistors, FP4 Transformer Engine, 30x inference vs Hopper. GB200 NVL72: 1.4 exaFLOPS.</td>
 <td><a href="https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/">nvidia.com/blackwell</a></td>
 </tr>
 <tr>
 <td><a href="https://cloud.google.com/tpu">Google TPU (Trillium)</a></td>
-<td>6th-gen TPU (2024), 4.7x compute per chip vs TPU v5e. Powers Gemini training and inference.</td>
+<td>6th-gen TPU (2024), 4.7x compute vs v5e. Powers Gemini training and inference.</td>
 <td><a href="https://cloud.google.com/tpu">cloud.google.com/tpu</a></td>
 </tr>
 <tr>
 <td><a href="https://groq.com/">Groq LPU</a></td>
-<td>Language Processing Unit, custom ASIC for record-breaking tokens/second inference. Deterministic execution model eliminates batching overhead.</td>
+<td>Custom ASIC for record tokens/sec inference. Deterministic execution, no batching overhead.</td>
 <td><a href="https://groq.com/">groq.com</a></td>
 </tr>
 <tr>
 <td><a href="https://cerebras.ai/">Cerebras WSE-3</a></td>
-<td>Wafer-Scale Engine, largest chip ever built. 44GB on-chip SRAM eliminates memory bottleneck. CS-3 system for training.</td>
+<td>Wafer-Scale Engine, largest chip ever. 44GB on-chip SRAM eliminates memory bottleneck.</td>
 <td><a href="https://cerebras.ai/">cerebras.ai</a></td>
 </tr>
 <tr>
@@ -1977,22 +1977,22 @@
 </tr>
 <tr>
 <td><a href="https://ai.meta.com/blog/next-generation-meta-training-inference-accelerator-mtia/">Meta MTIA</a></td>
-<td>Meta Training and Inference Accelerator, custom silicon for recommendation and generative AI at Meta scale. 4 chip generations in 2 years.</td>
+<td>Custom silicon for recommendation and generative AI at Meta scale.</td>
 <td><a href="https://ai.meta.com/">ai.meta.com</a></td>
 </tr>
 <tr>
 <td><a href="https://habana.ai/">Intel Gaudi 3</a></td>
-<td>Habana Labs AI accelerator, competitive on price-performance for training and inference.</td>
+<td>Habana Labs AI accelerator, competitive price-performance for training and inference.</td>
 <td><a href="https://habana.ai/">habana.ai</a></td>
 </tr>
 <tr>
 <td><a href="https://www.amd.com/en/products/accelerators/instinct/mi300x.html">AMD Instinct MI300X</a></td>
-<td>192GB HBM3 memory, competitive with H100 for inference workloads. Growing adoption.</td>
+<td>192GB HBM3, competitive with H100 for inference. Growing adoption.</td>
 <td><a href="https://www.amd.com/en/products/accelerators/instinct/mi300x.html">amd.com</a></td>
 </tr>
 <tr>
 <td><a href="https://aws.amazon.com/machine-learning/trainium/">AWS Trainium2 / Inferentia2</a></td>
-<td>Amazon's custom ML chips for training (Trainium) and inference (Inferentia). Powers Bedrock and SageMaker.</td>
+<td>Amazon's custom ML chips for training and inference. Powers Bedrock and SageMaker.</td>
 <td><a href="https://aws.amazon.com/machine-learning/trainium/">aws.amazon.com</a></td>
 </tr>
 </tbody>
@@ -2012,42 +2012,42 @@
 <tbody>
 <tr>
 <td><a href="https://github.com/TimDettmers/bitsandbytes">bitsandbytes</a></td>
-<td>8-bit and 4-bit quantization for PyTorch. QLoRA's backbone. Easy integration with HuggingFace Transformers.</td>
+<td>8-bit and 4-bit quantization for PyTorch. QLoRA backbone. HuggingFace integrated.</td>
 <td><a href="https://github.com/TimDettmers/bitsandbytes">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/AutoGPTQ/AutoGPTQ">GPTQ</a></td>
-<td>Post-training quantization using approximate second-order information (Hessian). 3-4 bit with minimal quality loss.</td>
+<td>Post-training quantization via Hessian approximation. 3-4 bit, minimal quality loss.</td>
 <td><a href="https://arxiv.org/abs/2210.17323">Paper</a>, <a href="https://github.com/AutoGPTQ/AutoGPTQ">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/mit-han-lab/llm-awq">AWQ (Activation-Aware Weight Quantization)</a></td>
-<td>Protects salient weights based on activation patterns. Often better quality than GPTQ at same bit-width.</td>
+<td>Protects salient weights by activation patterns. Often better than GPTQ at same bit-width.</td>
 <td><a href="https://arxiv.org/abs/2306.00978">Paper</a>, <a href="https://github.com/mit-han-lab/llm-awq">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/ggerganov/llama.cpp">llama.cpp / GGUF</a></td>
-<td>C/C++ inference engine with GGUF quantization format. Runs LLMs on CPU and consumer GPUs. The backbone of local LLM deployment.</td>
+<td>C/C++ inference with GGUF format. Runs LLMs on CPU and consumer GPUs. Local LLM backbone.</td>
 <td><a href="https://github.com/ggerganov/llama.cpp">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/turboderp/exllamav2">ExLlamaV2</a></td>
-<td>Optimized GPTQ inference for consumer GPUs. Mixed-precision with EXL2 format for fine-grained bit allocation.</td>
+<td>Optimized GPTQ inference for consumer GPUs. Mixed-precision EXL2 format.</td>
 <td><a href="https://github.com/turboderp/exllamav2">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://docs.vllm.ai/">vLLM Quantization</a></td>
-<td>Built-in quantization support (AWQ, GPTQ, FP8, INT8) in the vLLM inference engine.</td>
+<td>Built-in AWQ, GPTQ, FP8, INT8 quantization in the vLLM inference engine.</td>
 <td><a href="https://docs.vllm.ai/">docs.vllm.ai</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/NVIDIA/TensorRT-LLM">TensorRT-LLM</a></td>
-<td>NVIDIA's LLM optimization library with INT4/INT8/FP8 quantization, KV cache quantization, and layer fusion.</td>
+<td>NVIDIA's LLM optimization with INT4/INT8/FP8, KV cache quantization, layer fusion.</td>
 <td><a href="https://github.com/NVIDIA/TensorRT-LLM">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://github.com/ggerganov/ggml">GGML</a></td>
-<td>Tensor library for machine learning, enabling LLM inference on commodity hardware. Foundation for llama.cpp and whisper.cpp.</td>
+<td>Tensor library for ML, enabling LLM inference on commodity hardware.</td>
 <td><a href="https://github.com/ggerganov/ggml">GitHub</a></td>
 </tr>
 </tbody>
@@ -2067,27 +2067,27 @@
 <tbody>
 <tr>
 <td><a href="https://www.intel.com/content/www/us/en/research/neuromorphic-computing.html">Intel Loihi 2</a></td>
-<td>Neuromorphic research chip with on-chip learning. 1M neurons. Event-driven, ultra-low power.</td>
+<td>Neuromorphic chip with on-chip learning. 1M neurons, event-driven, ultra-low power.</td>
 <td><a href="https://www.intel.com/content/www/us/en/research/neuromorphic-computing.html">intel.com/neuromorphic</a></td>
 </tr>
 <tr>
 <td><a href="https://research.ibm.com/blog/northpole-ibm-ai-chip">IBM NorthPole</a></td>
-<td>Neural inference chip with 256 cores, no external memory access during inference. 25x energy efficiency vs GPU for specific workloads.</td>
+<td>256-core neural inference chip. No external memory during inference. 25x energy efficiency vs GPU.</td>
 <td><a href="https://research.ibm.com/blog/northpole-ibm-ai-chip">research.ibm.com</a></td>
 </tr>
 <tr>
 <td><a href="https://www.electronic-visions.com/">BrainScaleS-2</a></td>
-<td>European neuromorphic platform (Human Brain Project). Analog mixed-signal chip operating 1000x faster than biological real-time.</td>
+<td>Analog mixed-signal neuromorphic chip. 1000x faster than biological real-time.</td>
 <td><a href="https://www.electronic-visions.com/">electronic-visions.com</a></td>
 </tr>
 <tr>
 <td><a href="https://www.spinnaker.io/">SpiNNaker 2</a></td>
-<td>University of Manchester. 1M ARM cores simulating neural networks in real-time. Designed for brain simulation.</td>
+<td>1M ARM cores for real-time neural network simulation. Designed for brain simulation.</td>
 <td><a href="https://www.spinnaker.io/">spinnaker.io</a></td>
 </tr>
 <tr>
 <td><a href="https://www.mythic.ai/">Mythic AI</a></td>
-<td>Analog compute-in-memory AI accelerator. Stores weights in flash, computes in analog for massive efficiency.</td>
+<td>Analog compute-in-memory accelerator. Weights in flash, compute in analog.</td>
 <td><a href="https://www.mythic.ai/">mythic.ai</a></td>
 </tr>
 </tbody>
@@ -2107,32 +2107,32 @@
 <tbody>
 <tr>
 <td><a href="https://together.ai/">Together AI</a></td>
-<td>Decentralized cloud for AI. Open-source model hosting, fine-tuning, and inference at scale.</td>
+<td>Decentralized cloud for open-source model hosting, fine-tuning, and inference.</td>
 <td><a href="https://together.ai/">together.ai</a></td>
 </tr>
 <tr>
 <td><a href="https://gensyn.ai/">Gensyn</a></td>
-<td>Decentralized GPU compute protocol for ML training. Verifiable computation with cryptographic proofs.</td>
+<td>Decentralized GPU protocol for ML training with cryptographic verification.</td>
 <td><a href="https://gensyn.ai/">gensyn.ai</a></td>
 </tr>
 <tr>
 <td><a href="https://io.net/">io.net</a></td>
-<td>Decentralized GPU network aggregating underutilized compute from data centers, crypto miners, and consumers.</td>
+<td>Decentralized GPU network aggregating underutilized compute globally.</td>
 <td><a href="https://io.net/">io.net</a></td>
 </tr>
 <tr>
 <td><a href="https://www.primeintellect.ai/">Prime Intellect</a></td>
-<td>Decentralized AI training infrastructure. INTELLECT-1 trained across distributed GPUs. OpenDiLoCo for decentralized training.</td>
+<td>Decentralized training infrastructure. INTELLECT-1, OpenDiLoCo protocol.</td>
 <td><a href="https://www.primeintellect.ai/">primeintellect.ai</a></td>
 </tr>
 <tr>
 <td><a href="https://akash.network/">Akash Network</a></td>
-<td>Open-source, decentralized cloud marketplace for compute resources.</td>
+<td>Open-source decentralized cloud marketplace for compute.</td>
 <td><a href="https://akash.network/">akash.network</a></td>
 </tr>
 <tr>
 <td><a href="https://vast.ai/">Vast.ai</a></td>
-<td>GPU rental marketplace connecting idle GPUs to AI workloads. Cost-effective alternative to cloud providers.</td>
+<td>GPU rental marketplace connecting idle GPUs to AI workloads.</td>
 <td><a href="https://vast.ai/">vast.ai</a></td>
 </tr>
 </tbody>
@@ -2152,22 +2152,22 @@
 <tbody>
 <tr>
 <td><strong>Gigawatt-scale data centers</strong></td>
-<td>Microsoft, Meta, Google, Amazon, and xAI building 1-5 GW data centers. xAI Memphis "Colossus": 100k H100s. Microsoft $100B Stargate with OpenAI.</td>
+<td>Microsoft, Meta, Google, Amazon, xAI building 1-5 GW centers. xAI Colossus: 100k H100s.</td>
 <td>Industry announcements</td>
 </tr>
 <tr>
 <td><strong>Nuclear-powered AI</strong></td>
-<td>Microsoft restarted Three Mile Island for AI. Amazon, Google, Oracle securing nuclear. SMR partnerships proliferating.</td>
+<td>Microsoft restarted Three Mile Island. Amazon, Google, Oracle securing nuclear power.</td>
 <td><a href="https://www.reuters.com/technology/">News</a></td>
 </tr>
 <tr>
 <td><strong>Training cost trajectory</strong></td>
-<td>GPT-4: ~$100M. Llama 3 405B: ~$30M. DeepSeek-V3: $5.5M. Efficiency gains (MoE, distillation, FP8/FP4) democratizing frontier training.</td>
+<td>GPT-4: ~$100M → DeepSeek-V3: $5.5M. MoE, distillation, FP8 driving costs down.</td>
 <td>Model technical reports</td>
 </tr>
 <tr>
 <td><strong>The Memory Wall</strong></td>
-<td>Context 4K -&gt; 128K -&gt; 1M -&gt; 10M tokens. Attention scales quadratically. Memory-efficient architectures (Infini-Attention, Mamba, RWKV) essential.</td>
+<td>4K → 1M+ tokens. Attention scales quadratically. Infini-Attention, Mamba, RWKV emerging.</td>
 <td>Architecture papers</td>
 </tr>
 </tbody>
@@ -2195,7 +2195,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 13, 2026 18:10:27 UTC"><span class="timeago" datetime="2026-04-13T18:10:27+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 13, 2026 18:10:27 UTC">2026-04-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 13, 2026 18:46:36 UTC"><span class="timeago" datetime="2026-04-13T18:46:36+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 13, 2026 18:46:36 UTC">2026-04-13</span>
   </span>
 
     
