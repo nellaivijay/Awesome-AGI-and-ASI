@@ -1,3 +1,7 @@
+---
+description: "Complete RAG stack with vector databases, retrieval engines, Graph RAG, document parsing, and embedding models to ground LLMs in real-world data."
+keywords: "RAG, vector database, retrieval augmented generation, embeddings, Pinecone, Weaviate, ChromaDB, Graph RAG"
+---
 # RAG and Vector Databases
 
 > RAG grounds LLMs in real-world data, eliminating hallucinations and enabling knowledge-intensive applications. Full RAG stack: vector storage, retrieval engines, graph RAG, document parsing, and embedding models.

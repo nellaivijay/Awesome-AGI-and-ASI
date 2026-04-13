@@ -1,3 +1,7 @@
+---
+description: "Automate research paper to production code translation with tools like Research2Repo and PaperCoder, accelerating the research-to-engineering pipeline."
+keywords: "paper to code, research automation, AI scientist, Research2Repo, PaperCoder, code generation, research engineering"
+---
 # Paper-to-Code Automation
 
 > The leap from research paper to working implementation is one of the biggest bottlenecks in AI progress. These tools automate the translation of academic papers into production-ready code repositories -- accelerating the research-to-engineering pipeline and democratizing access to frontier techniques.

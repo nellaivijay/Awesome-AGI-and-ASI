@@ -1,13 +1,18 @@
 site_name: Awesome AGI and ASI
 site_url: https://nellaivijay.github.io/Awesome-AGI-and-ASI/
 site_description: >-
-  The most comprehensive, curated collection of resources on the journey
-  from AI to AGI to ASI.
+  The most comprehensive, curated collection of resources on Artificial General
+  Intelligence (AGI) and Artificial Superintelligence (ASI) -- covering frameworks,
+  agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, and tools
+  for builders and researchers shaping the future of intelligence.
+site_author: nellaivijay
 repo_url: https://github.com/nellaivijay/Awesome-AGI-and-ASI
 repo_name: nellaivijay/Awesome-AGI-and-ASI
+copyright: Copyright &copy; 2024-2026 nellaivijay
 
 theme:
   name: material
+  language: en
   palette:
     scheme: default
   font:
@@ -27,12 +32,19 @@ theme:
     - toc.integrate
   icon:
     repo: fontawesome/brands/github
+  custom_dir: overrides
 
 plugins:
-  - search
+  - search:
+      lang: en
+      separator: '[\s\-\.\_]+'
   - blog:
       blog_dir: blog
       post_date_format: long
+  - social:
+      cards_layout: default
+  - meta
+  - tags
 
 extra_css:
   - stylesheets/custom.css
@@ -41,6 +53,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/nellaivijay/Awesome-AGI-and-ASI
+  generator: false
 
 markdown_extensions:
   - tables
@@ -49,8 +62,10 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - md_in_html
+  - meta
   - toc:
       permalink: true
+      toc_depth: 3
 
 nav:
   - Home: index.md

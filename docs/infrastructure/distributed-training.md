@@ -1,3 +1,7 @@
+---
+description: "Frameworks for training frontier models across thousands of GPUs with data, tensor, and pipeline parallelism plus memory optimization techniques."
+keywords: "distributed training, DeepSpeed, Megatron-LM, ColossalAI, GPU parallelism, model training, FSDP"
+---
 # Distributed Training Frameworks
 
 > Training frontier models requires distributing computation across thousands of GPUs. These frameworks handle the parallelism, memory optimization, and communication needed to train models with billions (or trillions) of parameters.

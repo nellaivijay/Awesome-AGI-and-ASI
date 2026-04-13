@@ -1,3 +1,7 @@
+---
+description: "Learn the differences between Artificial Intelligence, Artificial General Intelligence, and Superintelligence -- capabilities, comparison table, DeepMind AGI levels, and future implications."
+keywords: "AI vs AGI vs ASI, artificial general intelligence, artificial superintelligence, narrow AI, DeepMind AGI levels, intelligence comparison"
+---
 # Understanding AI, AGI, and ASI
 
 ### What is AI (Artificial Intelligence)?

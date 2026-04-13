@@ -1,3 +1,7 @@
+---
+description: "Humanoid robots, vision-language-action models, and physics simulation platforms bridging foundation models with physical embodiment and real-world interaction."
+keywords: "physical AI, humanoid robots, embodied intelligence, VLA models, robotics, simulation, Moravec paradox"
+---
 # Physical AI & Embodied Intelligence
 
 > AGI cannot exist only in text -- it must understand and act in the physical world. **Physical AI** bridges foundation models with embodiment: humanoid robots, manipulation, navigation, and physics simulation. Moravec's Paradox -- sensorimotor skills are harder than abstract reasoning -- remains one of the deepest unsolved AGI challenges.

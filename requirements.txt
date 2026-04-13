@@ -1,2 +1,4 @@
 mkdocs-material>=9.5
 mkdocs-blog-plugin>=0.25
+pillow>=10.0
+cairosvg>=2.7

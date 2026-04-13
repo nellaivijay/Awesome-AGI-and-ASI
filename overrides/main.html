@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+{% if page %}
+
+  {# ── Page description: per-page meta > site description ── #}
+  {% if page.meta and page.meta.description %}
+    {% set page_desc = page.meta.description %}
+  {% else %}
+    {% set page_desc = config.site_description %}
+  {% endif %}
+
+  {# ── Open Graph ── #}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{{ page.title }} - {{ config.site_name }}">
+  <meta property="og:description" content="{{ page_desc }}">
+  {% if page.canonical_url %}
+    <meta property="og:url" content="{{ page.canonical_url }}">
+  {% endif %}
+  {% if page.meta and page.meta.image %}
+    <meta property="og:image" content="{{ config.site_url }}{{ page.meta.image }}">
+  {% endif %}
+  <meta property="og:locale" content="en_US">
+
+  {# ── Twitter Card ── #}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }} - {{ config.site_name }}">
+  <meta name="twitter:description" content="{{ page_desc }}">
+  {% if page.meta and page.meta.image %}
+    <meta name="twitter:image" content="{{ config.site_url }}{{ page.meta.image }}">
+  {% endif %}
+
+  {# ── Additional SEO meta ── #}
+  {% if page.meta and page.meta.keywords %}
+    <meta name="keywords" content="{{ page.meta.keywords }}">
+  {% endif %}
+  <meta name="author" content="{{ config.site_author | default('nellaivijay', true) }}">
+  <meta name="robots" content="index, follow">
+
+  {# ── JSON-LD Structured Data ── #}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{ page.title }} - {{ config.site_name }}",
+    "description": "{{ page_desc }}",
+    {% if page.canonical_url %}"url": "{{ page.canonical_url }}",{% endif %}
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "{{ config.site_name }}",
+      "url": "{{ config.site_url }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ config.site_name }}",
+      "url": "{{ config.site_url }}"
+    },
+    "inLanguage": "en-US"
+  }
+  </script>
+
+  {# ── BreadcrumbList for Google rich results ── #}
+  {% if page.parent %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "{{ config.site_url }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ page.parent.title }}",
+        "item": "{{ config.site_url }}{{ page.parent.url | default('', true) }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{ page.title }}",
+        "item": "{{ page.canonical_url }}"
+      }
+    ]
+  }
+  </script>
+  {% endif %}
+
+{% endif %}
+{% endblock %}

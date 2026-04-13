@@ -1,3 +1,7 @@
+---
+description: "Hands-on courses, tutorials, and learning resources for building AI systems at every skill level from beginner to advanced practitioner."
+keywords: "AI tutorials, machine learning courses, LLM tutorials, deep learning courses, AI education, hands-on AI"
+---
 # Tutorials and Guides
 
 > Hands-on learning resources to go from understanding AI concepts to building production systems. Courses, documentation, and curated collections for every skill level.

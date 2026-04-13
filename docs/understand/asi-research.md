@@ -1,3 +1,7 @@
+---
+description: "Track organizations racing toward AGI and ASI, key books, seminal papers, benchmarks, and roadmaps predicting the timeline to superintelligence."
+keywords: "ASI research, superintelligence, AGI timeline, OpenAI, Anthropic, DeepMind, SSI, AGI benchmarks, intelligence explosion"
+---
 # ASI and Superintelligence Research
 
 > The long game. This section tracks the organizations racing toward AGI/ASI, the books that frame the debate, the seminal papers that define the field, the benchmarks that measure progress, and the roadmaps that predict when -- and how -- we get there.

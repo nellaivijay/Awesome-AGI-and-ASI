@@ -1,3 +1,7 @@
+---
+description: "Petabyte-scale data pipelines, lakehouse architecture, and MLOps infrastructure for training frontier AI models at production scale."
+keywords: "data infrastructure, MLOps, Apache Iceberg, Spark, Delta Lake, MLflow, Ray, data pipelines, lakehouse"
+---
 # Data Infrastructure for AI at Scale
 
 > AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.

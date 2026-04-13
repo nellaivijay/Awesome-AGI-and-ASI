@@ -1,3 +1,7 @@
+---
+description: "35+ next-generation agent frameworks and platforms for building autonomous AI systems that reason, browse, code, and collaborate across multi-agent architectures."
+keywords: "AI agent frameworks, autonomous agents, multi-agent systems, LangChain, CrewAI, AutoGen, agent platforms"
+---
 # Frameworks and Platforms
 
 > The infrastructure powering the next generation of autonomous AI. These frameworks let you build, orchestrate, and deploy AI agents that can reason, browse, code, and collaborate -- from single-agent tools to multi-agent orchestration platforms.

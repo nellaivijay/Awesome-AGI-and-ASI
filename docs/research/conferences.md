@@ -1,3 +1,7 @@
+---
+description: "28 premier academic venues, AGI-specific conferences, safety summits, and industry events where the AI community shares frontier research."
+keywords: "AI conferences, NeurIPS, ICML, ICLR, AGI conference, AI safety summit, machine learning events"
+---
 # Top Conferences
 
 > Where the AGI community gathers. From peer-reviewed academic venues publishing foundational research to government-level safety summits and industry developer conferences shaping the future of AI.

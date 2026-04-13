@@ -1,3 +1,7 @@
+---
+description: "Critical research on AI safety, alignment with human values, red teaming, interpretability, and governance to keep AI under meaningful human control."
+keywords: "AI safety, alignment, RLHF, interpretability, red teaming, AI governance, existential risk, control problem"
+---
 # Safety, Alignment and Governance
 
 > The most critical section. Ensuring AI remains safe, aligned with human values, and under meaningful control is the defining challenge as systems grow more capable.

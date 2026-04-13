@@ -1,3 +1,7 @@
+---
+description: "Autonomous AI agents for coding, research, computer use, and embodied intelligence demonstrating AGI-like capabilities in real-world tasks."
+keywords: "AI agents, coding agents, research agents, computer use agents, embodied AI, autonomous systems, Devin, SWE-agent"
+---
 # Agents
 
 > Autonomous AI systems that perceive, reason, and act in the world. These agents represent the closest things we have to AGI-like behavior in narrow domains -- writing code, conducting research, operating computers, and navigating virtual worlds.

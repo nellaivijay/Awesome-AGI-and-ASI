@@ -1,3 +1,7 @@
+---
+description: "Adapt pre-trained LLMs to specific tasks and domains using LoRA, QLoRA, DPO, RLHF, and other parameter-efficient fine-tuning techniques."
+keywords: "LLM fine-tuning, LoRA, QLoRA, RLHF, DPO, PEFT, instruction tuning, alignment, adapter methods"
+---
 # LLM Fine-Tuning Techniques
 
 > Making foundation models your own. Fine-tuning adapts pre-trained LLMs to specific tasks, domains, or behaviors -- from lightweight LoRA adapters that train in hours on a single GPU to full alignment techniques like DPO that shape model values.

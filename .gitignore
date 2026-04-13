@@ -3,3 +3,4 @@ queue/
 
 # MkDocs build output
 site/
+.cache/

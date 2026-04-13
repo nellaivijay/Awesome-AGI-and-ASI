@@ -1,3 +1,7 @@
+---
+description: "60+ cutting-edge research papers on LLM capabilities, reasoning, agents, alignment, and interpretability from OpenAI, DeepMind, Anthropic, and more."
+keywords: "AI research papers, LLM papers, reasoning, agents research, alignment papers, interpretability, frontier models"
+---
 # Papers, Blogs, Courses and Lectures
 
 > The research frontier -- cutting-edge papers on capabilities, reasoning, agents, alignment, and interpretability defining the path from LLMs to AGI.

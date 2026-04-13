@@ -1,3 +1,7 @@
+---
+description: "Advanced prompt engineering techniques for improving LLM reasoning -- chain-of-thought, tree-of-thoughts, graph-of-thoughts, and structured exploration."
+keywords: "prompt engineering, chain of thought, tree of thoughts, graph of thoughts, LLM prompting, reasoning techniques"
+---
 # Prompt Engineering
 
 > The art and science of communicating with LLMs. These techniques transform how models reason, from simple chain-of-thought to sophisticated graph-structured exploration of solution spaces.

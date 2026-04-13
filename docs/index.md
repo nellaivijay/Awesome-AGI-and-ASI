@@ -1,3 +1,7 @@
+---
+description: "The most comprehensive curated collection of AGI and ASI resources -- frameworks, agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, and tools for AI builders."
+keywords: "AGI, ASI, artificial general intelligence, artificial superintelligence, AI resources, LLM, agents, machine learning"
+---
 # Awesome AGI and ASI Resources [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 ![AGI](https://img.shields.io/badge/AGI-Artificial_General_Intelligence-blue)

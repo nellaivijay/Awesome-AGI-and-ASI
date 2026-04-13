@@ -1,3 +1,7 @@
+---
+description: "Guidelines for contributing resources to the Awesome AGI and ASI repository, including formatting standards and submission process."
+keywords: "contributing, open source, AGI resources, submission guidelines"
+---
 # Contributing
 
 We're building the most comprehensive AGI/ASI resource on the internet -- and we need your help. Contributions are welcome!
