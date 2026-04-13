@@ -1,2 +1,5 @@
 # Extracted URL queue files (produced by CI, uploaded as artifacts)
 queue/
+
+# MkDocs build output
+site/

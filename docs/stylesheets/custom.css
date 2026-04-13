@@ -1,0 +1,74 @@
+/* Minimal white overrides */
+
+:root {
+  --md-primary-fg-color: #ffffff;
+  --md-primary-fg-color--light: #fafafa;
+  --md-primary-fg-color--dark: #f5f5f5;
+  --md-primary-bg-color: #333333;
+  --md-accent-fg-color: #1a73e8;
+}
+
+/* Clean white header */
+.md-header {
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.md-header__title {
+  color: #333333;
+  font-weight: 600;
+}
+
+.md-tabs {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.md-tabs__link {
+  color: #555555;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: #1a73e8;
+}
+
+/* Minimal body */
+.md-content {
+  max-width: 960px;
+}
+
+/* Clean tables */
+.md-typeset table:not([class]) {
+  font-size: 0.82rem;
+  border: 1px solid #e8e8e8;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+/* Subtle sidebar */
+.md-nav__link {
+  font-size: 0.82rem;
+}
+
+/* Search bar */
+.md-search__input {
+  background-color: #f5f5f5;
+}
+
+/* Badge images inline */
+.md-typeset img[src*="shields.io"],
+.md-typeset img[src*="awesome.re"] {
+  vertical-align: middle;
+  margin: 2px 2px;
+}
+
+/* Blockquote styling */
+.md-typeset blockquote {
+  border-left: 3px solid #1a73e8;
+  color: #555555;
+}

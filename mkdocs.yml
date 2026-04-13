@@ -1,0 +1,78 @@
+site_name: Awesome AGI and ASI
+site_url: https://nellaivijay.github.io/Awesome-AGI-and-ASI/
+site_description: >-
+  The most comprehensive, curated collection of resources on the journey
+  from AI to AGI to ASI.
+repo_url: https://github.com/nellaivijay/Awesome-AGI-and-ASI
+repo_name: nellaivijay/Awesome-AGI-and-ASI
+
+theme:
+  name: material
+  palette:
+    scheme: default
+  font:
+    text: Inter
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - toc.integrate
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - blog:
+      blog_dir: blog
+      post_date_format: long
+
+extra_css:
+  - stylesheets/custom.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nellaivijay/Awesome-AGI-and-ASI
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Understand:
+    - Understanding AI, AGI, and ASI: understand/ai-agi-asi.md
+    - ASI and Superintelligence Research: understand/asi-research.md
+  - Build:
+    - Frameworks and Platforms: build/frameworks.md
+    - Agents: build/agents.md
+    - Physical AI & Embodied Intelligence: build/physical-ai.md
+    - Paper-to-Code Automation: build/paper-to-code.md
+  - Infrastructure:
+    - LLM Application Frameworks: infrastructure/llm-frameworks.md
+    - RAG and Vector Databases: infrastructure/rag-vector-db.md
+    - Data Infrastructure for AI at Scale: infrastructure/data-infra.md
+    - LLM Fine-Tuning Techniques: infrastructure/fine-tuning.md
+    - LLM Deployment and Serving: infrastructure/deployment.md
+    - Distributed Training Frameworks: infrastructure/distributed-training.md
+    - Prompt Engineering: infrastructure/prompt-engineering.md
+  - Safety & Governance:
+    - Safety, Alignment and Governance: safety/safety-alignment.md
+  - Research & Learn:
+    - Papers, Blogs, Courses and Lectures: research/papers-blogs.md
+    - Tutorials and Guides: research/tutorials.md
+    - Top Conferences: research/conferences.md
+  - Blog:
+    - blog/index.md
+  - Contributing: contributing.md
