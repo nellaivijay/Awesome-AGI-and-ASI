@@ -116,6 +116,20 @@
   padding: 0.4rem 0;
 }
 
+/* ── Last updated / created date in footer ── */
+.md-source-file {
+  margin-top: 2rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #e8e8e8;
+  font-size: 0.78rem;
+  color: #777;
+}
+
+.md-source-file small {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
 /* ============================================
    MOBILE RESPONSIVE — screens <= 768px
    ============================================ */
