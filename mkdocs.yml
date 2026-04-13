@@ -75,6 +75,7 @@ nav:
   - Home: index.md
   - Understand:
     - Understanding AI, AGI, and ASI: understand/ai-agi-asi.md
+    - AGI Benchmarks & Evals: understand/benchmarks.md
     - ASI and Superintelligence Research: understand/asi-research.md
   - Build:
     - Frameworks and Platforms: build/frameworks.md
@@ -88,6 +89,7 @@ nav:
     - LLM Fine-Tuning Techniques: infrastructure/fine-tuning.md
     - LLM Deployment and Serving: infrastructure/deployment.md
     - Distributed Training Frameworks: infrastructure/distributed-training.md
+    - Compute, Hardware & Quantization: infrastructure/compute-hardware.md
     - Prompt Engineering: infrastructure/prompt-engineering.md
   - Safety & Governance:
     - Safety, Alignment and Governance: safety/safety-alignment.md

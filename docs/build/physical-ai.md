@@ -48,5 +48,19 @@ keywords: "physical AI, humanoid robots, embodied intelligence, VLA models, robo
 | **MuJoCo** | Google DeepMind's open-source physics engine optimized for robotics and biomechanics. Fast, accurate contact dynamics. The standard tool for embodied AI research and RL benchmarking. | [mujoco.org](https://mujoco.org/), [GitHub](https://github.com/google-deepmind/mujoco) |
 | **Genesis** | Next-generation open-source physics engine for embodied AI. Differentiable simulation enabling gradient-based learning for physical systems. | [GitHub](https://github.com/Genesis-Embodied-AI/Genesis) |
 
+### Reinforcement Learning Environments for Embodied AI
+
+> Training embodied agents requires interactive environments where they can learn through trial and error. These platforms provide the virtual proving grounds for physical intelligence.
+
+| Environment | Description | Links |
+|-------------|-------------|-------|
+| **Gymnasium (OpenAI Gym)** | The standard API for RL environments. Maintained by Farama Foundation. Hundreds of environments from classic control to Atari to robotics. | [gymnasium.farama.org](https://gymnasium.farama.org/), [GitHub](https://github.com/Farama-Foundation/Gymnasium) |
+| **IsaacGym / Isaac Lab** | NVIDIA's GPU-accelerated RL environment for robotics. Thousands of parallel environments on a single GPU. State-of-art sim-to-real transfer. | [GitHub](https://github.com/isaac-sim/IsaacLab) |
+| **ManiSkill** | Large-scale robotics benchmark with GPU-parallelized simulation. 20+ manipulation task families with diverse objects. SAPIEN-based. | [GitHub](https://github.com/haosulab/ManiSkill) |
+| **Habitat** | Meta's platform for training embodied AI in photorealistic 3D environments. Navigation, rearrangement, and social tasks. | [aihabitat.org](https://aihabitat.org/), [GitHub](https://github.com/facebookresearch/habitat-sim) |
+| **MineDojo** | NVIDIA's open-ended agent benchmark built on Minecraft. 1000s of tasks, internet-scale knowledge base, programmatic task generation. | [minedojo.org](https://minedojo.org/), [GitHub](https://github.com/MineDojo/MineDojo) |
+| **RoboCasa** | Large-scale simulation framework for household robot tasks. 150+ object categories, diverse kitchens/rooms, procedural generation. | [GitHub](https://github.com/robocasa/robocasa) |
+| **BEHAVIOR-1K** | 1,000 everyday activities across 50 scenes. Comprehensive benchmark for embodied AI covering mobility, manipulation, and social tasks. | [behavior.stanford.edu](https://behavior.stanford.edu/) |
+
 ---
 

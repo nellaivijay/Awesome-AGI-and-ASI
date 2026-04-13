@@ -31,9 +31,20 @@ keywords: "AI safety, alignment, RLHF, interpretability, red teaming, AI governa
 | **AI Control** | Redwood Research's framework for maintaining safety even against models actively trying to subvert controls. Evaluates security against intentional subversion. | [Paper](https://arxiv.org/abs/2312.06942) |
 | **Cooperative AI** | Research program at DeepMind focused on AI that cooperates with humans and other AI systems -- critical for multi-agent superintelligence scenarios. | [Paper](https://arxiv.org/abs/2012.08630) |
 
+### Superalignment
+
+> The defining challenge of the ASI transition: how do you align a system that is smarter than you? These research programs aim to solve alignment for superhuman AI systems before they arrive.
+
+| Program | Description | Links |
+|---------|-------------|-------|
+| **OpenAI Superalignment** | Dedicated 20% of OpenAI compute to solving alignment for superintelligence. Key output: Weak-to-Strong Generalization framework. Team restructured after leadership departures in 2024, work continues under safety team. | [Blog](https://openai.com/index/introducing-superalignment/) |
+| **Anthropic RSP (Responsible Scaling Policy)** | Framework committing to evaluate dangerous capabilities at each scaling threshold and pause if safety measures are insufficient. The leading industry self-governance approach. | [Paper](https://www.anthropic.com/index/anthropics-responsible-scaling-policy) |
+| **DeepMind Scalable Alignment** | Research program on reward modeling, debate, and recursive oversight for superhuman systems. Key papers on process reward models and AI-assisted evaluation. | [deepmind.google](https://deepmind.google/) |
+| **Eliciting Latent Knowledge (ELK)** | ARC's theoretical framework for extracting truthful beliefs from AI systems, even when they might have incentives to deceive. A core unsolved problem for superalignment. | [Paper](https://docs.google.com/document/d/1WwsnJQstPq91_Yh-Ch2XRL8H_EpsnjrC1dwZXR37PC8/) |
+
 ### Mechanistic Interpretability
 
-> Understanding *how* neural networks actually compute internally. If we can reverse-engineer the algorithms learned by frontier models, we can detect dangerous capabilities, verify alignment, and build safer systems. This is arguably the most important field for AGI safety.
+> Understanding *how* neural networks actually compute internally. If we can reverse-engineer the algorithms learned by frontier models, we can detect dangerous capabilities, verify alignment, and build safer systems. This is arguably the most important field for AGI safety -- and the key to **superalignment**: aligning systems smarter than us.
 
 | Resource | Description | Links |
 |----------|-------------|-------|
@@ -42,6 +53,10 @@ keywords: "AI safety, alignment, RLHF, interpretability, red teaming, AI governa
 | **Representation Engineering** (Zou et al., 2023) | Identifies and steers high-level concepts (honesty, power-seeking, emotion) directly in neural representations. A practical tool for alignment. | [Paper](https://arxiv.org/abs/2310.01405) |
 | **TransformerLens** | Neel Nanda's open-source library for mechanistic interpretability research on GPT-2 style models. The standard tool for mech interp research. | [GitHub](https://github.com/TransformerLensOrg/TransformerLens) |
 | **SAE Bench** | Standardized benchmark for evaluating sparse autoencoder quality -- enabling reproducible interpretability research. | [GitHub](https://github.com/adamkarvonen/SAEBench) |
+| **Steering Vectors / Activation Engineering** | Directly modifying model behavior by adding computed direction vectors to activations at inference time. Enables real-time control of model outputs (e.g., making a model more honest, less toxic) without retraining. | [Paper](https://arxiv.org/abs/2308.10248), [Blog](https://www.lesswrong.com/posts/5spBue2z2tw4JuDCx/steering-vectors) |
+| **Goodfire** | Commercial platform for mechanistic interpretability. Visualize, search, and steer neural network features in production models. Makes mech interp practical for non-researchers. | [goodfire.ai](https://goodfire.ai/) |
+| **Neuronpedia** | Open platform for exploring and sharing neuron-level interpretability research. Hosts sparse autoencoder features from multiple models. Community-driven mech interp infrastructure. | [neuronpedia.org](https://neuronpedia.org/) |
+| **Circuits Updates (Anthropic, 2025)** | Anthropic's continued circuit-level analysis revealing how transformers implement algorithms: multi-step reasoning circuits, planning circuits, and safety-relevant feature interactions in Claude 3.5/4. | [Blog](https://transformer-circuits.pub/) |
 | **Transformer Circuits Thread** (Anthropic) | Anthropic's ongoing research thread on understanding transformer internals: induction heads, superposition, circuits, and feature visualization. | [Blog](https://transformer-circuits.pub/) |
 
 ### AI-Generated Text Detection
@@ -59,6 +74,9 @@ keywords: "AI safety, alignment, RLHF, interpretability, red teaming, AI governa
 | **Climate Change AI** | Global non-profit catalyzing impactful work at the intersection of climate change and machine learning. Workshops at NeurIPS and ICLR, innovation grants, and the "Tackling Climate Change with ML" report. Co-founded by Priya Donti (MIT EECS). | [climatechange.ai](https://www.climatechange.ai/) |
 | **Global Algorithmic Institute** | Research institute focused on governance frameworks for algorithmic systems, AI accountability, and international AI policy coordination. | [globalalgorithmicinstitute.org](https://globalalgorithmicinstitute.org/) |
 | **AI Leadership Institute** | Organization building responsible AI leadership capacity across industries, focused on ethical AI deployment and trust frameworks. | [aileadershipinstitute.com](https://www.aileadershipinstitute.com/) |
+| **EU AI Act** | World's first comprehensive AI regulation (effective 2024-2026). Risk-based framework classifying AI systems, with strict requirements for "high-risk" and bans on certain uses. Sets global regulatory precedent. | [digital-strategy.ec.europa.eu](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) |
+| **US Executive Order on AI Safety** | Executive Order 14110 (Oct 2023). Requires safety testing and reporting for frontier models, red-teaming standards, and AI watermarking research. | [whitehouse.gov](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/) |
+| **Frontier Model Forum** | Industry consortium (OpenAI, Google, Microsoft, Anthropic) for responsible development of frontier AI. Shared safety research and red-teaming practices. | [frontiermodelforum.org](https://www.frontiermodelforum.org/) |
 
 ---
 
