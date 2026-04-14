@@ -1,0 +1,338 @@
+section:
+  title: RAG and Vector Databases
+  description: |-
+    RAG grounds LLMs in real-world data, eliminating hallucinations and enabling knowledge-intensive applications. Full RAG stack: vector storage, retrieval engines, graph RAG, document parsing, and embedding models.
+  badges:
+  - alt: Vector DB
+    path: Vector_DB-Milvus_Qdrant_Chroma-blue?style=flat-square
+  - alt: Graph RAG
+    path: Graph_RAG-Knowledge_Graphs-purple?style=flat-square
+  - alt: Embeddings
+    path: Embeddings-OpenAI_Cohere_NVIDIA-green?style=flat-square
+  - alt: Document Parsing
+    path: Document_Parsing-PDF_OCR-orange?style=flat-square
+subsections:
+- title: Vector Databases
+  type: tool
+  level: 3
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: Milvus
+    raw_name: '[Milvus](https://github.com/milvus-io/milvus)'
+    url: https://github.com/milvus-io/milvus
+    description: |-
+      Cloud-native, distributed vector database for billion-scale similarity search. Most scalable open-source vector DB. 44k+ stars.
+    links:
+    - label: milvus.io
+      url: https://milvus.io/
+  - name: Qdrant
+    raw_name: '[Qdrant](https://github.com/qdrant/qdrant)'
+    url: https://github.com/qdrant/qdrant
+    description: |-
+      High-performance vector search engine in Rust. Dense + sparse vectors, hybrid search, payload filtering, quantization. 30k+ stars.
+    links:
+    - label: qdrant.tech
+      url: https://qdrant.tech/
+  - name: Weaviate
+    raw_name: '[Weaviate](https://github.com/weaviate/weaviate)'
+    url: https://github.com/weaviate/weaviate
+    description: |-
+      AI-native vector database with GraphQL API, built-in vectorization, hybrid search, and generative search modules. 16k+ stars.
+    links:
+    - label: weaviate.io
+      url: https://weaviate.io/
+  - name: Chroma
+    raw_name: '[Chroma](https://github.com/chroma-core/chroma)'
+    url: https://github.com/chroma-core/chroma
+    description: AI-native open-source embedding database. Extremely easy to start, built-in embedding functions. 16k+ stars.
+    links:
+    - label: trychroma.com
+      url: https://trychroma.com/
+  - name: pgvector
+    raw_name: '[pgvector](https://github.com/pgvector/pgvector)'
+    url: https://github.com/pgvector/pgvector
+    description: PostgreSQL extension for vector similarity search. HNSW + IVFFlat indexes. Game-changer for Postgres users.
+      14k+ stars.
+    links:
+    - label: GitHub
+      url: https://github.com/pgvector/pgvector
+  - name: LanceDB
+    raw_name: '[LanceDB](https://github.com/lancedb/lancedb)'
+    url: https://github.com/lancedb/lancedb
+    description: Serverless vector database built on Lance columnar format. Embedded, multimodal, full-text + vector hybrid
+      search.
+    links:
+    - label: lancedb.com
+      url: https://lancedb.com/
+  - name: Meilisearch
+    raw_name: '[Meilisearch](https://github.com/meilisearch/meilisearch)'
+    url: https://github.com/meilisearch/meilisearch
+    description: Lightning-fast search engine API with AI-powered hybrid search (full-text + vector). 57k+ stars.
+    links:
+    - label: meilisearch.com
+      url: https://www.meilisearch.com/
+  - name: Vespa
+    raw_name: '[Vespa](https://github.com/vespa-engine/vespa)'
+    url: https://github.com/vespa-engine/vespa
+    description: Yahoo's battle-tested big data serving engine. ANN + lexical hybrid, tensor expressions, complex ML ranking.
+    links:
+    - label: vespa.ai
+      url: https://vespa.ai/
+  - name: Pinecone
+    raw_name: '[Pinecone](https://www.pinecone.io/)'
+    url: https://www.pinecone.io/
+    description: Managed vector database for high-performance vector search at scale.
+    links:
+    - label: Docs
+      url: https://docs.pinecone.io/
+  - name: Zilliz
+    raw_name: '[Zilliz](https://zilliz.com/)'
+    url: https://zilliz.com/
+    description: Cloud-native vector database service (managed Milvus).
+    links:
+    - label: zilliz.com
+      url: https://zilliz.com/
+  - name: Turbopuffer
+    raw_name: '[Turbopuffer](https://turbopuffer.com/)'
+    url: https://turbopuffer.com/
+    description: Serverless vector database using object storage (S3) for cost-efficient large-scale search.
+    links:
+    - label: Docs
+      url: https://turbopuffer.com/docs
+- title: RAG Engines & Platforms
+  type: tool
+  level: 3
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: RAGFlow
+    raw_name: '[RAGFlow](https://github.com/infiniflow/ragflow)'
+    url: https://github.com/infiniflow/ragflow
+    description: |-
+      Leading open-source RAG engine with vision-based document parsing (tables, figures, layouts). Multi-recall: vector + full-text + knowledge graph. 78k+ stars.
+    links:
+    - label: ragflow.io
+      url: https://ragflow.io/
+  - name: AnythingLLM
+    raw_name: '[AnythingLLM](https://github.com/Mintplex-Labs/anything-llm)'
+    url: https://github.com/Mintplex-Labs/anything-llm
+    description: |-
+      All-in-one AI app with RAG, agents, MCP support. Use any LLM, any document, any vector database. Privacy-first. 58k+ stars.
+    links:
+    - label: useanything.com
+      url: https://useanything.com/
+  - name: Kotaemon
+    raw_name: '[Kotaemon](https://github.com/Cinnamon/kotaemon)'
+    url: https://github.com/Cinnamon/kotaemon
+    description: Open-source RAG document QA tool with chat UI, graph RAG, multi-modal support, and citation highlighting.
+      22k+ stars.
+    links:
+    - label: GitHub
+      url: https://github.com/Cinnamon/kotaemon
+  - name: Pathway LLM App
+    raw_name: '[Pathway LLM App](https://github.com/pathwaycom/llm-app)'
+    url: https://github.com/pathwaycom/llm-app
+    description: Ready-to-run cloud templates for RAG and AI pipelines with live data sync (Sharepoint, S3, Kafka, Postgres).
+      60k+ stars.
+    links:
+    - label: pathway.com
+      url: https://pathway.com/
+  - name: Cognee
+    raw_name: '[Cognee](https://github.com/topoteretes/cognee)'
+    url: https://github.com/topoteretes/cognee
+    description: Memory management for AI agents and apps. Builds knowledge graphs from documents for reasoning-based RAG.
+      15k+ stars.
+    links:
+    - label: cognee.ai
+      url: https://www.cognee.ai/
+  - name: R2R (SciPhi)
+    raw_name: '[R2R (SciPhi)](https://github.com/SciPhi-AI/R2R)'
+    url: https://github.com/SciPhi-AI/R2R
+    description: Production RAG engine with hybrid search, knowledge graph building (Neo4j), ingestion pipelines, and REST
+      API.
+    links:
+    - label: Docs
+      url: https://r2r-docs.sciphi.ai/
+- title: Graph RAG
+  type: tool
+  level: 3
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: Microsoft GraphRAG
+    raw_name: '[Microsoft GraphRAG](https://github.com/microsoft/graphrag)'
+    url: https://github.com/microsoft/graphrag
+    description: |-
+      Landmark Graph-based RAG: extracts knowledge graphs from documents, performs global queries via community summaries. 32k+ stars.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2404.16130
+    - label: Docs
+      url: https://microsoft.github.io/graphrag/
+  - name: LightRAG
+    raw_name: '[LightRAG](https://github.com/HKUDS/LightRAG)'
+    url: https://github.com/HKUDS/LightRAG
+    description: |-
+      Faster, simpler alternative to GraphRAG. Dual-level retrieval (entity + thematic) with incremental knowledge graph updates. 15k+ stars.
+    links:
+    - label: GitHub
+      url: https://github.com/HKUDS/LightRAG
+  - name: PageIndex
+    raw_name: '[PageIndex](https://github.com/VectifyAI/PageIndex)'
+    url: https://github.com/VectifyAI/PageIndex
+    description: |-
+      Document index for vectorless, reasoning-based RAG. Bypasses traditional embedding for reasoning-first retrieval. 25k+ stars.
+    links:
+    - label: GitHub
+      url: https://github.com/VectifyAI/PageIndex
+  - name: Neo4j GraphRAG
+    raw_name: '[Neo4j GraphRAG](https://github.com/neo4j/neo4j-graphrag-python)'
+    url: https://github.com/neo4j/neo4j-graphrag-python
+    description: Official Neo4j library for GraphRAG pipelines. KG construction, hybrid retrieval (vector + Cypher).
+    links:
+    - label: Docs
+      url: https://neo4j.com/docs/neo4j-graphrag-python/current/
+- title: Document Parsing for RAG
+  type: tool
+  level: 3
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: Docling
+    raw_name: '[Docling](https://github.com/DS4SD/docling)'
+    url: https://github.com/DS4SD/docling
+    description: |-
+      IBM's fast document conversion: PDFs with layout understanding, table recognition (TableFormer), figure extraction. 20k+ stars.
+    links:
+    - label: Docs
+      url: https://ds4sd.github.io/docling/
+  - name: Unstructured
+    raw_name: '[Unstructured](https://github.com/Unstructured-IO/unstructured)'
+    url: https://github.com/Unstructured-IO/unstructured
+    description: Document parsing ETL for RAG. Extracts from PDFs, DOCX, HTML, images, and 30+ formats. 10k+ stars.
+    links:
+    - label: unstructured.io
+      url: https://unstructured.io/
+  - name: PaddleOCR
+    raw_name: '[PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)'
+    url: https://github.com/PaddlePaddle/PaddleOCR
+    description: Turn any PDF or image into structured data for AI. Supports 100+ languages. 75k+ stars.
+    links:
+    - label: GitHub
+      url: https://github.com/PaddlePaddle/PaddleOCR
+- title: Advanced RAG Techniques
+  type: tool
+  level: 3
+  columns:
+  - Technique
+  - Description
+  - Links
+  items:
+  - name: Self-RAG
+    raw_name: Self-RAG
+    description: LLMs that reflect on retrieval decisions using special tokens. Adaptive retrieval — only retrieve when needed.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2310.11511
+    - label: Code
+      url: https://github.com/AkariAsai/self-rag
+  - name: CRAG (Corrective RAG)
+    raw_name: CRAG (Corrective RAG)
+    description: Adds retrieval evaluator + correction mechanism. Falls back to web search if retrieved docs are irrelevant.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2401.15884
+  - name: ColPali (Visual RAG)
+    raw_name: ColPali (Visual RAG)
+    description: 'Revolutionary: indexes documents as images using vision-language models, eliminating OCR failures entirely.'
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2407.01449
+    - label: Code
+      url: https://github.com/illuin-tech/colpali
+  - name: HippoRAG
+    raw_name: HippoRAG
+    description: Neurobiologically-inspired RAG using knowledge graphs mimicking hippocampal memory for multi-hop reasoning.
+    links:
+    - label: Code
+      url: https://github.com/OSU-NLP-Group/HippoRAG
+  - name: RAG Techniques Guide
+    raw_name: RAG Techniques Guide
+    description: Comprehensive tutorial repository showcasing 20+ advanced RAG techniques with notebooks. 27k+ stars.
+    links:
+    - label: GitHub
+      url: https://github.com/NirDiamant/RAG_Techniques
+- title: Embedding Models (2025-2026)
+  type: model
+  level: 3
+  columns:
+  - Model
+  - Provider
+  - Key Notes
+  - Links
+  items:
+  - name: text-embedding-3-large
+    raw_name: text-embedding-3-large
+    org: OpenAI
+    description: 3072 dims (Matryoshka), strong general performance.
+    links:
+    - label: Docs
+      url: https://platform.openai.com/docs/guides/embeddings
+  - name: embed-v4.0
+    raw_name: embed-v4.0
+    org: Cohere
+    description: Multimodal (text+image), 128K context, 100+ languages.
+    links:
+    - label: Docs
+      url: https://docs.cohere.com/docs/cohere-embed
+  - name: voyage-3
+    raw_name: voyage-3
+    org: Voyage AI
+    description: Top MTEB scores (esp. code/finance/law), 32K context. Anthropic-backed.
+    links:
+    - label: Docs
+      url: https://docs.voyageai.com/
+  - name: NV-Embed-v2
+    raw_name: NV-Embed-v2
+    org: NVIDIA
+    description: '#1 MTEB overall at release. Decoder-only LLM architecture. 4096 dims.'
+    links:
+    - label: HuggingFace
+      url: https://huggingface.co/nvidia/NV-Embed-v2
+  - name: nomic-embed-text-v1.5
+    raw_name: nomic-embed-text-v1.5
+    org: Nomic AI
+    description: Fully open (weights + data + code). Matryoshka dimensions. 8K context.
+    links:
+    - label: HuggingFace
+      url: https://huggingface.co/nomic-ai/nomic-embed-text-v1.5
+  - name: jina-embeddings-v3
+    raw_name: jina-embeddings-v3
+    org: Jina AI
+    description: Task-specific LoRA adapters, Matryoshka, multilingual.
+    links:
+    - label: HuggingFace
+      url: https://huggingface.co/jinaai/jina-embeddings-v3
+  - name: bge-m3
+    raw_name: bge-m3
+    org: BAAI
+    description: 'Multilingual (100 langs), multi-functionality: dense + sparse + ColBERT.'
+    links:
+    - label: HuggingFace
+      url: https://huggingface.co/BAAI/bge-m3
+  - name: gte-Qwen2-7B-instruct
+    raw_name: gte-Qwen2-7B-instruct
+    org: Alibaba
+    description: LLM-based embedding, top MTEB, instruction-tuned, 32K context.
+    links:
+    - label: HuggingFace
+      url: https://huggingface.co/Alibaba-NLP/gte-Qwen2-7B-instruct

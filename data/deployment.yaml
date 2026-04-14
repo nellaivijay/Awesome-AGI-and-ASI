@@ -1,0 +1,136 @@
+section:
+  title: LLM Deployment and Serving
+  description: |-
+    Getting models from research to production. High-performance inference engines, serving frameworks, and optimization tools that make LLMs fast, cost-efficient, and scalable.
+  badges:
+  - alt: vLLM
+    path: vLLM-PagedAttention-blue?style=flat-square
+  - alt: CUDA
+    path: CUDA-GPU_Inference-76B900?style=flat-square&logo=nvidia&logoColor=white
+  - alt: Quantization
+    path: Quantization-INT4_INT8-orange?style=flat-square
+  - alt: Production
+    path: Production-Serving-green?style=flat-square
+subsections:
+- title: Inference Engines
+  type: tool
+  level: 3
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: vLLM
+    raw_name: '[vLLM](https://github.com/vllm-project/vllm)'
+    url: https://github.com/vllm-project/vllm
+    description: High-throughput and memory-efficient inference and serving engine for LLMs with PagedAttention.
+    links:
+    - label: Docs
+      url: https://docs.vllm.ai/
+  - name: TGI (Text Generation Inference)
+    raw_name: '[TGI (Text Generation Inference)](https://github.com/huggingface/text-generation-inference)'
+    url: https://github.com/huggingface/text-generation-inference
+    description: HuggingFace's production-ready inference server for LLMs.
+    links:
+    - label: Docs
+      url: https://huggingface.co/docs/text-generation-inference/
+  - name: BentoML
+    raw_name: '[BentoML](https://github.com/bentoml/BentoML)'
+    url: https://github.com/bentoml/BentoML
+    description: Framework for building reliable, scalable, and cost-efficient AI applications with model serving.
+    links:
+    - label: bentoml.com
+      url: https://bentoml.com/
+  - name: LMDeploy
+    raw_name: '[LMDeploy](https://github.com/InternLM/lmdeploy)'
+    url: https://github.com/InternLM/lmdeploy
+    description: Toolkit for compressing, deploying, and serving LLMs with efficient quantization and inference.
+  - name: MLC LLM
+    raw_name: '[MLC LLM](https://github.com/mlc-ai/mlc-llm)'
+    url: https://github.com/mlc-ai/mlc-llm
+    description: Machine Learning Compilation for LLMs - enables native deployment of any LLM on diverse hardware.
+    links:
+    - label: mlc.ai
+      url: https://mlc.ai/
+  - name: LightLLM
+    raw_name: '[LightLLM](https://github.com/ModelTC/lightllm)'
+    url: https://github.com/ModelTC/lightllm
+    description: Lightweight, high-performance LLM inference framework.
+  - name: FastLLM
+    raw_name: '[FastLLM](https://github.com/ztxz16/fastllm)'
+    url: https://github.com/ztxz16/fastllm
+    description: Efficient and easy-to-use LLM inference library for CPU/GPU.
+  - name: DeepSpeed-MII
+    raw_name: '[DeepSpeed-MII](https://github.com/microsoft/DeepSpeed-MII)'
+    url: https://github.com/microsoft/DeepSpeed-MII
+    description: Model Implementations for Inference by DeepSpeed. Low-latency, low-cost inference.
+  - name: CTranslate2
+    raw_name: '[CTranslate2](https://github.com/OpenNMT/CTranslate2)'
+    url: https://github.com/OpenNMT/CTranslate2
+    description: Fast inference engine for Transformer models with quantization, pruning, and optimized execution.
+  - name: OpenLLM
+    raw_name: '[OpenLLM](https://github.com/bentoml/OpenLLM)'
+    url: https://github.com/bentoml/OpenLLM
+    description: Operating LLMs in production. Fine-tuning, serving, deploying, and monitoring.
+- title: Production AI Orchestration & Cloud Platforms
+  type: tool
+  level: 3
+  description: |-
+    Training a frontier model is only half the battle -- orchestrating it in production is the other. These platforms handle the end-to-end lifecycle: model hosting, autoscaling, monitoring, A/B testing, and supporting massive context windows at enterprise scale.
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: Google Vertex AI
+    raw_name: '[Google Vertex AI](https://cloud.google.com/vertex-ai)'
+    url: https://cloud.google.com/vertex-ai
+    description: |-
+      Google Cloud's unified AI platform. Model Garden (100+ models including Gemini), managed pipelines, AutoML, and Gemini API with native 1M+ token context support. The production backend for Gemini-scale deployments.
+    links:
+    - label: Docs
+      url: https://cloud.google.com/vertex-ai/docs
+  - name: Amazon Bedrock
+    raw_name: '[Amazon Bedrock](https://aws.amazon.com/bedrock/)'
+    url: https://aws.amazon.com/bedrock/
+    description: |-
+      Fully managed service for building generative AI applications. Access Claude, Llama, Titan, and more via unified API. Guardrails, RAG (Knowledge Bases), fine-tuning, and Agents for multi-step tasks.
+    links:
+    - label: Docs
+      url: https://docs.aws.amazon.com/bedrock/
+  - name: Amazon SageMaker
+    raw_name: '[Amazon SageMaker](https://aws.amazon.com/sagemaker/)'
+    url: https://aws.amazon.com/sagemaker/
+    description: |-
+      Complete ML platform for building, training, and deploying models at scale. SageMaker HyperPod for distributed training, JumpStart for model hub, and real-time + batch inference endpoints.
+    links:
+    - label: Docs
+      url: https://docs.aws.amazon.com/sagemaker/
+  - name: Azure AI Studio
+    raw_name: '[Azure AI Studio](https://ai.azure.com/)'
+    url: https://ai.azure.com/
+    description: |-
+      Microsoft's platform for building and deploying enterprise AI. Unified model catalog (OpenAI, Meta, Mistral), prompt flow orchestration, content safety, and Azure OpenAI Service for GPT-4/o1 deployment.
+    links:
+    - label: Docs
+      url: https://learn.microsoft.com/en-us/azure/ai-studio/
+  - name: NVIDIA Triton Inference Server
+    raw_name: '[NVIDIA Triton Inference Server](https://github.com/triton-inference-server/server)'
+    url: https://github.com/triton-inference-server/server
+    description: |-
+      Production inference serving for any framework (TensorFlow, PyTorch, ONNX, vLLM, TensorRT-LLM). Dynamic batching, model ensembles, multi-GPU, and multi-node inference. The standard for high-throughput GPU inference.
+    links:
+    - label: Docs
+      url: https://docs.nvidia.com/deeplearning/triton-inference-server/
+    - label: GitHub
+      url: https://github.com/triton-inference-server/server
+  - name: KServe
+    raw_name: '[KServe](https://kserve.github.io/website/)'
+    url: https://kserve.github.io/website/
+    description: |-
+      Kubernetes-native model serving. Autoscaling (including scale-to-zero), canary deployments, request batching, and GPU inference on Kubernetes. CNCF-backed.
+    links:
+    - label: Docs
+      url: https://kserve.github.io/website/
+    - label: GitHub
+      url: https://github.com/kserve/kserve

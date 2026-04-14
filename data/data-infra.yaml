@@ -1,0 +1,138 @@
+section:
+  title: Data Infrastructure for AI at Scale
+  description: |-
+    AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.
+  badges:
+  - alt: Data
+    path: Data-Lakehouse-blue?style=flat-square
+  - alt: MLOps
+    path: MLOps-Experiment_Tracking-green?style=flat-square
+  - alt: Infrastructure
+    path: Infrastructure-Kubernetes-purple?style=flat-square
+  - alt: Scale
+    path: Scale-Petabyte-orange?style=flat-square
+subsections:
+- title: Data Lakehouse & Analytical Processing
+  type: tool
+  level: 3
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: Apache Iceberg
+    raw_name: '[Apache Iceberg](https://iceberg.apache.org/)'
+    url: https://iceberg.apache.org/
+    description: |-
+      Open table format for massive analytic datasets. ACID transactions, time travel, schema evolution, and partition evolution on data lakes. The emerging standard for AI training data management (adopted by Netflix, Apple, Snowflake). V4 adds row-lineage tracking.
+    links:
+    - label: iceberg.apache.org
+      url: https://iceberg.apache.org/
+    - label: GitHub
+      url: https://github.com/apache/iceberg
+  - name: Apache Spark
+    raw_name: '[Apache Spark](https://spark.apache.org/)'
+    url: https://spark.apache.org/
+    description: |-
+      Unified analytics engine for large-scale data processing. Powers the data pipelines behind most frontier model training -- ETL, feature engineering, and distributed data transformation at petabyte scale.
+    links:
+    - label: spark.apache.org
+      url: https://spark.apache.org/
+    - label: GitHub
+      url: https://github.com/apache/spark
+  - name: Delta Lake
+    raw_name: '[Delta Lake](https://delta.io/)'
+    url: https://delta.io/
+    description: |-
+      Open-source storage layer providing ACID transactions on data lakes. Originally Databricks; now open ecosystem. Delta UniForm provides interoperability with Iceberg and Hudi.
+    links:
+    - label: delta.io
+      url: https://delta.io/
+    - label: GitHub
+      url: https://github.com/delta-io/delta
+  - name: Greenplum
+    raw_name: '[Greenplum](https://greenplum.org/)'
+    url: https://greenplum.org/
+    description: |-
+      Massively Parallel Processing (MPP) database for large-scale analytics and AI workloads. Open-source, PostgreSQL-based, purpose-built for analytical queries across petabytes. Used in enterprise AI pipelines for feature computation and data preparation.
+    links:
+    - label: greenplum.org
+      url: https://greenplum.org/
+    - label: GitHub
+      url: https://github.com/greenplum-db/gpdb
+  - name: DuckDB
+    raw_name: '[DuckDB](https://duckdb.org/)'
+    url: https://duckdb.org/
+    description: |-
+      In-process analytical database that runs anywhere. Blazing-fast OLAP queries on local data. Increasingly used for dataset analysis, feature engineering, and rapid prototyping in ML workflows.
+    links:
+    - label: duckdb.org
+      url: https://duckdb.org/
+    - label: GitHub
+      url: https://github.com/duckdb/duckdb
+- title: MLOps & Experiment Tracking
+  type: tool
+  level: 3
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: MLflow
+    raw_name: '[MLflow](https://mlflow.org/)'
+    url: https://mlflow.org/
+    description: |-
+      Open-source platform for the complete ML lifecycle: experiment tracking, model registry, deployment, and model evaluation. The standard MLOps platform. 20k+ stars.
+    links:
+    - label: mlflow.org
+      url: https://mlflow.org/
+    - label: GitHub
+      url: https://github.com/mlflow/mlflow
+  - name: Weights & Biases (W&B)
+    raw_name: '[Weights & Biases (W&B)](https://wandb.ai/)'
+    url: https://wandb.ai/
+    description: |-
+      ML experiment tracking, dataset versioning, and model management. Used by OpenAI, DeepMind, and most frontier labs for training runs.
+    links:
+    - label: wandb.ai
+      url: https://wandb.ai/
+  - name: KubeFlow
+    raw_name: '[KubeFlow](https://www.kubeflow.org/)'
+    url: https://www.kubeflow.org/
+    description: |-
+      ML toolkit for Kubernetes. Manages ML workflows: training pipelines, hyperparameter tuning, model serving, and notebook environments on Kubernetes clusters.
+    links:
+    - label: kubeflow.org
+      url: https://www.kubeflow.org/
+    - label: GitHub
+      url: https://github.com/kubeflow/kubeflow
+  - name: Ray
+    raw_name: '[Ray](https://www.ray.io/)'
+    url: https://www.ray.io/
+    description: |-
+      Unified framework for scaling AI applications. Ray Train for distributed training, Ray Serve for inference, Ray Data for preprocessing. Powers Anyscale and used by OpenAI, Uber, and Spotify.
+    links:
+    - label: ray.io
+      url: https://www.ray.io/
+    - label: GitHub
+      url: https://github.com/ray-project/ray
+  - name: Feast
+    raw_name: '[Feast](https://feast.dev/)'
+    url: https://feast.dev/
+    description: |-
+      Open-source feature store for ML. Bridges the gap between training and serving by providing consistent access to feature data across offline training and online inference.
+    links:
+    - label: feast.dev
+      url: https://feast.dev/
+    - label: GitHub
+      url: https://github.com/feast-dev/feast
+  - name: Label Studio
+    raw_name: '[Label Studio](https://labelstud.io/)'
+    url: https://labelstud.io/
+    description: |-
+      Open-source data labeling platform for text, image, audio, video, and multi-modal tasks. Critical infrastructure for creating the human-annotated data that drives RLHF and supervised fine-tuning. 20k+ stars.
+    links:
+    - label: labelstud.io
+      url: https://labelstud.io/
+    - label: GitHub
+      url: https://github.com/HumanSignal/label-studio

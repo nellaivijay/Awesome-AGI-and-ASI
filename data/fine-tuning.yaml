@@ -1,0 +1,190 @@
+section:
+  title: LLM Fine-Tuning Techniques
+  description: |-
+    Making foundation models your own. Fine-tuning adapts pre-trained LLMs to specific tasks, domains, or behaviors -- from lightweight LoRA adapters that train in hours on a single GPU to full alignment techniques like DPO that shape model values.
+  badges:
+  - alt: LoRA
+    path: LoRA-Low--Rank_Adaptation-blue?style=flat-square
+  - alt: QLoRA
+    path: QLoRA-4--bit_Quantized-green?style=flat-square
+  - alt: PEFT
+    path: PEFT-Parameter_Efficient-purple?style=flat-square
+  - alt: DPO
+    path: DPO-Preference_Optimization-orange?style=flat-square
+  - alt: RLHF
+    path: RLHF-Human_Feedback-red?style=flat-square
+subsections:
+- title: LoRA and Variants
+  type: method
+  level: 3
+  columns:
+  - Method
+  - Description
+  - Paper
+  - Code
+  items:
+  - name: LoRA
+    raw_name: LoRA
+    description: |-
+      Low-Rank Adaptation of Large Language Models. Adds trainable low-rank matrices to attention layers while freezing pretrained weights. Rank 4-16 is typically sufficient.
+    links:
+    - label: Paper
+      url: https://arxiv.org/pdf/2106.09685.pdf
+    - label: Code
+      url: https://github.com/microsoft/LoRA
+  - name: LoRA+
+    raw_name: LoRA+
+    description: |-
+      Introduces different learning rates for matrices A and B (B gets 16x higher LR), yielding ~2% accuracy improvement and 2x faster training.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2402.12354
+  - name: AdaLoRA
+    raw_name: AdaLoRA
+    description: |-
+      Adaptive budget allocation for LoRA - dynamically allocates parameter budget based on importance scoring via SVD parameterization.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2303.10512
+    - label: Code
+      url: https://github.com/QingruZhang/AdaLoRA
+  - name: QLoRA
+    raw_name: QLoRA
+    description: |-
+      Quantizes pretrained model to 4-bit, then adds trainable low-rank adapters. Uses 4-bit NormalFloat, double quantization, and paged optimizers.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.14314
+    - label: Code
+      url: https://github.com/artidoro/qlora
+  - name: DoRA
+    raw_name: DoRA
+    description: |-
+      Weight-Decomposed Low-Rank Adaptation. Decomposes pretrained weights into magnitude and direction, then fine-tunes separately. By NVIDIA.
+    links:
+    - label: Paper
+      url: https://arxiv.org/pdf/2402.09353.pdf
+    - label: Code
+      url: https://github.com/catid/dora
+  - name: PiSSA
+    raw_name: PiSSA
+    description: |-
+      Principal Singular Values and Singular Vectors Adaptation. Modifies LoRA initialization using SVD for significantly better fine-tuning.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2404.02948
+    - label: Code
+      url: https://github.com/GraphPKU/PiSSA
+  - name: MOELoRA
+    raw_name: MOELoRA
+    description: |-
+      Combines Mixture of Experts (MOE) with LoRA for multi-task parameter-efficient fine-tuning, especially for medical applications.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2310.18339
+    - label: Code
+      url: https://github.com/liuqidong07/MOELoRA-peft
+  - name: LoRA-FA
+    raw_name: LoRA-FA
+    description: |-
+      Freezes matrix A after initialization (as random projection), trains only matrix B. Halves parameter count with comparable performance.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2308.03303
+  - name: LoRA-drop
+    raw_name: LoRA-drop
+    description: Algorithm to determine which layers need LoRA fine-tuning and which don't, based on output evaluation.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2402.07721
+  - name: Delta-LoRA
+    raw_name: Delta-LoRA
+    description: |-
+      Updates the base weight matrix W using the gradient of AB (difference between consecutive timesteps), controlled by hyperparameter lambda.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2309.02411
+- title: Other Fine-Tuning Methods
+  type: method
+  level: 3
+  columns:
+  - Method
+  - Description
+  - Paper
+  - Code
+  items:
+  - name: PEFT
+    raw_name: '[PEFT](https://github.com/huggingface/peft)'
+    url: https://github.com/huggingface/peft
+    description: HuggingFace library implementing multiple parameter-efficient fine-tuning methods.
+    links:
+    - label: Code
+      url: https://github.com/huggingface/peft
+  - name: Instruction Tuning
+    raw_name: Instruction Tuning
+    description: Fine-tuning LLMs on (instruction, output) pairs to improve instruction-following and controllability.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2308.10792
+    - label: Code
+      url: https://github.com/xiaoya-li/Instruction-Tuning-Survey
+  - name: Prefix Tuning
+    raw_name: Prefix Tuning
+    description: |-
+      Adds trainable continuous prefixes to each layer while keeping the LM frozen. Task-specific virtual tokens (soft prompts).
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2101.00190
+    - label: Code
+      url: https://github.com/huggingface/peft
+  - name: Prompt Tuning
+    raw_name: Prompt Tuning
+    description: Simplified version of Prefix Tuning. Adds soft prompt tokens only at the input layer.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2104.08691
+    - label: Code
+      url: https://github.com/huggingface/peft
+  - name: P-Tuning
+    raw_name: P-Tuning
+    description: Converts prompts into learnable embeddings processed by MLP+LSTM. Enabled GPT to surpass BERT on SuperGLUE.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2103.10385
+    - label: Code
+      url: https://github.com/huggingface/peft
+  - name: P-Tuning v2
+    raw_name: P-Tuning v2
+    description: |-
+      Adds prompt tokens at every layer (not just input). Removes reparameterization encoder, uses task-specific prompt lengths.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2110.07602
+    - label: Code
+      url: https://github.com/THUDM/P-tuning-v2
+  - name: Adapter Tuning
+    raw_name: Adapter Tuning
+    description: Inserts small adapter modules into each Transformer layer. Only trains adapters and LayerNorm (~3.6% added
+      params).
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/1902.00751
+    - label: Code
+      url: https://github.com/google-research/adapter-bert
+  - name: BitFit
+    raw_name: BitFit
+    description: Sparse fine-tuning method that only updates bias parameters.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2106.10199
+    - label: Code
+      url: https://github.com/benzakenelad/BitFit
+  - name: DPO
+    raw_name: DPO
+    description: |-
+      Direct Preference Optimization - trains the language model directly as a reward model, eliminating the need for separate reward model training in RLHF.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.18290
+    - label: Code
+      url: https://github.com/eric-mitchell/direct-preference-optimization

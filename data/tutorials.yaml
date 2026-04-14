@@ -1,0 +1,85 @@
+section:
+  title: Tutorials and Guides
+  description: |-
+    Hands-on learning resources to go from understanding AI concepts to building production systems. Courses, documentation, and curated collections for every skill level.
+  badges:
+  - alt: Beginner
+    path: Beginner-Start_Here-brightgreen?style=flat-square
+  - alt: Intermediate
+    path: Intermediate-Build-blue?style=flat-square
+  - alt: Advanced
+    path: Advanced-Research-purple?style=flat-square
+  - alt: Free
+    path: Free-Open_Source-green?style=flat-square
+subsections:
+- title: Tutorials and Guides
+  type: resource
+  level: 3
+  columns:
+  - Resource
+  - Description
+  - Links
+  items:
+  - name: awesome-agi-cocosci
+    raw_name: '[awesome-agi-cocosci](https://github.com/YuzheSHI/awesome-agi-cocosci)'
+    url: https://github.com/YuzheSHI/awesome-agi-cocosci
+    description: Collection of resources on AGI from the perspective of cognitive science.
+    links:
+    - label: GitHub
+      url: https://github.com/YuzheSHI/awesome-agi-cocosci
+  - name: Prompt Engineering Guide
+    raw_name: '[Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide)'
+    url: https://github.com/dair-ai/Prompt-Engineering-Guide
+    description: Comprehensive guide to prompt engineering, RAG, context engineering, and AI agents. 73k+ stars.
+    links:
+    - label: promptingguide.ai
+      url: https://www.promptingguide.ai/
+  - name: LLM Course
+    raw_name: '[LLM Course](https://github.com/mlabonne/llm-course)'
+    url: https://github.com/mlabonne/llm-course
+    description: Course to get into Large Language Models with roadmaps and Colab notebooks.
+    links:
+    - label: GitHub
+      url: https://github.com/mlabonne/llm-course
+  - name: awesome-llm-apps
+    raw_name: '[awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps)'
+    url: https://github.com/Shubhamsaboo/awesome-llm-apps
+    description: Collection of awesome LLM apps with AI Agents and RAG. 105k+ stars.
+    links:
+    - label: GitHub
+      url: https://github.com/Shubhamsaboo/awesome-llm-apps
+  - name: AI Agents for Beginners
+    raw_name: '[AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners)'
+    url: https://github.com/microsoft/ai-agents-for-beginners
+    description: Microsoft's introductory course on building AI agents.
+    links:
+    - label: GitHub
+      url: https://github.com/microsoft/ai-agents-for-beginners
+  - name: LangChain Documentation
+    raw_name: '[LangChain Documentation](https://python.langchain.com/docs/)'
+    url: https://python.langchain.com/docs/
+    description: Official documentation and tutorials for the LangChain framework.
+    links:
+    - label: Docs
+      url: https://python.langchain.com/docs/
+  - name: LlamaIndex Documentation
+    raw_name: '[LlamaIndex Documentation](https://docs.llamaindex.ai/)'
+    url: https://docs.llamaindex.ai/
+    description: Official docs for LlamaIndex data framework.
+    links:
+    - label: Docs
+      url: https://docs.llamaindex.ai/
+  - name: PEFT Documentation
+    raw_name: '[PEFT Documentation](https://huggingface.co/docs/peft/)'
+    url: https://huggingface.co/docs/peft/
+    description: HuggingFace's guide to parameter-efficient fine-tuning methods.
+    links:
+    - label: Docs
+      url: https://huggingface.co/docs/peft/
+  - name: DSPy Documentation
+    raw_name: '[DSPy Documentation](https://dspy.ai/)'
+    url: https://dspy.ai/
+    description: Stanford's guide to programming (not prompting) LLMs.
+    links:
+    - label: Docs
+      url: https://dspy.ai/

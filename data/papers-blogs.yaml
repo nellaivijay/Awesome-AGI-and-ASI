@@ -1,0 +1,572 @@
+section:
+  title: Papers, Blogs, Courses and Lectures
+  description: |-
+    The research frontier -- cutting-edge papers on capabilities, reasoning, agents, alignment, and interpretability defining the path from LLMs to AGI.
+  badges:
+  - alt: arXiv
+    path: arXiv-Papers-B31B1B?style=flat-square&logo=arxiv&logoColor=white
+  - alt: Frontier Models
+    path: Frontier_Models-GPT--4_Gemini_Claude_Llama-blue?style=flat-square
+  - alt: Reasoning
+    path: Reasoning-o1_R1_CoT-green?style=flat-square
+  - alt: Agents
+    path: Agents-ReAct_SWE--bench-orange?style=flat-square
+  - alt: Safety
+    path: Safety-Alignment_&_Interpretability-red?style=flat-square
+subsections:
+- title: Frontier Model Papers
+  type: paper
+  level: 3
+  columns:
+  - Paper
+  - Authors / Org
+  - Year
+  - Description
+  - Links
+  items:
+  - name: GPT-4 Technical Report
+    author: OpenAI
+    year: 2023
+    description: Foundational technical report describing GPT-4's multimodal capabilities, RLHF training, and safety evaluations.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2303.08774
+  - name: Learning to Reason with LLMs (o1)
+    author: OpenAI
+    year: 2024
+    description: Introduces o1 — trained with RL to think deeply before responding, achieving PhD-level reasoning performance.
+    links:
+    - label: Blog
+      url: https://openai.com/index/learning-to-reason-with-llms
+  - name: 'Gemini: A Family of Highly Capable Multimodal Models'
+    author: Google DeepMind
+    year: 2023
+    description: The Gemini family (Ultra/Pro/Nano) with native multimodal training, surpassing GPT-4 on 30/32 benchmarks.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2312.11805
+  - name: 'Gemini 1.5: Unlocking Multimodal Understanding Across Millions of Tokens'
+    author: Google DeepMind
+    year: 2024
+    description: Extends Gemini to 1M-token context (later 2M) via efficient MoE architecture.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2403.05530
+  - name: The Llama 3 Herd of Models
+    author: Meta AI
+    year: 2024
+    description: Open-weight Llama 3 (8B–405B), competitive with GPT-4 on key benchmarks; 15T+ training tokens.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2407.21783
+  - name: DeepSeek-V3 Technical Report
+    author: DeepSeek-AI
+    year: 2024
+    description: 671B MoE model trained for $5.5M via FP8 mixed-precision; competitive with GPT-4o.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2412.19437
+  - name: 'DeepSeek-R1: Incentivizing Reasoning via RL'
+    author: DeepSeek-AI
+    year: 2025
+    description: Chain-of-thought reasoning purely through RL (GRPO) without SFT — matches o1 on math/code.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2501.12948
+  - name: Mixtral of Experts
+    author: Mistral AI
+    year: 2024
+    description: Mixtral 8x7B sparse MoE matching Llama 2 70B with 5x lower inference cost.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2401.04088
+  - name: Qwen2.5 Technical Report
+    author: Qwen Team (Alibaba)
+    year: 2025
+    description: Qwen2.5 series with improved coding and math specializations.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2412.15115
+  - name: 'Phi-3: A Highly Capable Language Model on Your Phone'
+    author: Microsoft
+    year: 2024
+    description: 3.8B model trained on curated synthetic data that rivals models 10x its size.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2404.14219
+  - name: 'The Llama 4 Herd: Natively Multimodal AI Innovation'
+    author: Meta AI
+    year: 2025
+    description: |-
+      First Llama with MoE architecture: Scout (17B/16 experts, 10M context), Maverick (17B/128 experts), Behemoth (288B/16 experts teacher). Natively multimodal with early fusion. Behemoth outperforms GPT-4.5 on STEM.
+    links:
+    - label: Blog
+      url: https://ai.meta.com/blog/llama-4-multimodal-intelligence/
+  - name: Gemini 2.5 Pro
+    author: Google DeepMind
+    year: 2025
+    description: |-
+      Thinking model with advanced reasoning. #1 on LMArena by significant margin. 18.8% on Humanity's Last Exam. State-of-art on GPQA, AIME 2025, and coding benchmarks.
+    links:
+    - label: Blog
+      url: https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/
+  - name: Meta Muse Spark
+    author: Meta Superintelligence Labs
+    year: 2026
+    description: |-
+      First model from Meta Superintelligence Labs. Natively multimodal reasoning model with visual chain-of-thought, tool-use, and multi-agent orchestration ("Contemplating mode"). 58% on Humanity's Last Exam. Scaling toward "personal superintelligence."
+    links:
+    - label: Blog
+      url: https://ai.meta.com/blog/muse-spark/
+  - name: 'Gemma: Open Models from Gemini Research'
+    author: Google DeepMind
+    year: 2024
+    description: |-
+      Open-weight models (2B/7B) built from Gemini research. Gemma 2 (2024) and Gemma 3 (2025) with state-of-art performance at size. Responsible AI toolkit included.
+    links:
+    - label: Site
+      url: https://ai.google.dev/gemma
+    - label: GitHub
+      url: https://github.com/google-deepmind/gemma
+- title: Reasoning, Scaling & Architecture Papers
+  type: paper
+  level: 3
+  columns:
+  - Paper
+  - Authors
+  - Year
+  - Description
+  - Links
+  items:
+  - name: Chain-of-Thought Prompting Elicits Reasoning in LLMs
+    author: Wei et al. (Google)
+    year: 2022
+    description: 'Foundational paper: intermediate reasoning steps dramatically improve LLM performance.'
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2201.11903
+  - name: 'Tree of Thoughts: Deliberate Problem Solving with LLMs'
+    author: Yao et al. (Princeton/Google)
+    year: 2023
+    description: Tree-structured reasoning enabling backtracking and lookahead.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.10601
+  - name: Let's Verify Step by Step
+    author: Lightman et al. (OpenAI)
+    year: 2023
+    description: Process reward models (PRMs) scoring each reasoning step — the mechanism behind o1-style training.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.20050
+  - name: Scaling LLM Test-Time Compute Optimally
+    author: Snell et al. (Berkeley)
+    year: 2024
+    description: More compute at inference can equal more training compute on hard tasks.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2408.03314
+  - name: Training Compute-Optimal LLMs (Chinchilla)
+    author: Hoffmann et al. (DeepMind)
+    year: 2022
+    description: Optimal LLM training scales data and parameters equally.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2203.15556
+  - name: Scaling Laws for Neural Language Models
+    author: Kaplan et al. (OpenAI)
+    year: 2020
+    description: Power-law relationships between model scale and performance, underpinning AGI scaling hypotheses.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2001.08361
+  - name: 'LongRoPE: Extending LLM Context Beyond 2M Tokens'
+    author: Ding et al. (Microsoft)
+    year: 2024
+    description: Extends RoPE to 2M tokens via non-uniform interpolation.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2402.13753
+  - name: Infini-Attention
+    author: Munkhdalai et al. (Google)
+    year: 2024
+    description: Compressive memory in standard attention for infinite-length inputs with bounded memory.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2404.07143
+- title: World Models & Environment Simulation Papers
+  type: paper
+  level: 3
+  columns:
+  - Paper
+  - Authors
+  - Year
+  - Description
+  - Links
+  items:
+  - name: World Models
+    author: Ha & Schmidhuber
+    year: 2018
+    description: |-
+      Foundational paper: learning compressed spatial and temporal representations of environments; agents trained entirely inside hallucinated dreams.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/1803.10122
+    - label: Interactive
+      url: https://worldmodels.github.io/
+  - name: 'I-JEPA: Joint-Embedding Predictive Architecture'
+    author: Assran et al. (Meta / LeCun)
+    year: 2023
+    description: |-
+      LeCun's vision for AGI through self-supervised prediction in representation space rather than pixel space. Non-generative, highly scalable.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2301.08243
+  - name: Liquid Time-Constant Networks
+    author: Hasani, Lechner, Amini, Rus (MIT CSAIL)
+    year: 2020
+    description: |-
+      Novel continuous-time neural networks with liquid (varying) time-constants -- the architecture behind Liquid AI's foundation models.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2006.04439
+    - label: Code
+      url: https://github.com/raminmh/liquid_time_constant_networks
+  - name: Video Generation Models as World Simulators (Sora)
+    author: OpenAI
+    year: 2024
+    description: 'Sora: text-to-video diffusion transformer that models physics and long-horizon consistency.'
+    links:
+    - label: Blog
+      url: https://openai.com/research/video-generation-models-as-world-simulators
+  - name: 'Genie: Generative Interactive Environments'
+    author: Bruce et al. (DeepMind)
+    year: 2024
+    description: Learns playable 2D world models from unlabeled internet video.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2402.15391
+  - name: 'Genie 3: Generating and Exploring Interactive Worlds'
+    author: Google DeepMind
+    year: 2025
+    description: |-
+      Next-generation world model that generates and enables exploration of interactive 3D environments. Breakthrough in environment simulation fidelity and interactivity.
+    links:
+    - label: Site
+      url: https://deepmind.google/models/genie/
+  - name: 'SIMA 2: An Agent That Plays, Reasons, and Learns'
+    author: Google DeepMind
+    year: 2025
+    description: |-
+      Generalist AI agent that plays, reasons, and learns in virtual 3D worlds. Advances embodied agent capabilities in complex open-ended environments with persistent learning.
+    links:
+    - label: Blog
+      url: https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/
+  - name: NVIDIA Cosmos
+    author: NVIDIA
+    year: 2025
+    description: Open-source world foundation model platform for physical AI -- robotics, autonomous vehicles, and simulation.
+      8k+ stars.
+    links:
+    - label: GitHub
+      url: https://github.com/nvidia-cosmos
+- title: Physical AI & Embodied Intelligence Papers
+  type: paper
+  level: 3
+  columns:
+  - Paper
+  - Authors / Org
+  - Year
+  - Description
+  - Links
+  items:
+  - name: 'RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control'
+    author: Brohan, Levine et al. (Google DeepMind)
+    year: 2023
+    description: |-
+      Landmark VLA model: co-fine-tunes vision-language models on robot trajectory data. Actions as text tokens enable emergent semantic reasoning for physical tasks.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2307.15818
+  - name: 'PaLM-E: An Embodied Multimodal Language Model'
+    author: Driess, Levine et al. (Google)
+    year: 2023
+    description: |-
+      562B-parameter embodied LLM grounding language in continuous sensor modalities. Positive transfer across internet-scale language, vision, and robotics.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2303.03378
+  - name: 'pi0: A VLA Flow Model for General Robot Control'
+    author: Black, Levine, Finn et al. (Physical Intelligence)
+    year: 2024
+    description: |-
+      Novel flow matching architecture on pre-trained VLM for general-purpose robot policies. Laundry folding, table cleaning, box assembly across diverse embodiments. Open-sourced.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2410.24164
+  - name: 'Open X-Embodiment: Robotic Learning Datasets and RT-X Models'
+    author: Open X-Embodiment Collaboration (21 institutions)
+    year: 2023
+    description: |-
+      Largest cross-embodiment robotics dataset (22 robots, 527 skills, 160k+ tasks). RT-X shows positive transfer across robot morphologies -- robotics' "ImageNet moment."
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2310.08864
+  - name: 'TD-MPC2: Scalable World Models for Continuous Control'
+    author: Hansen, Su, Wang
+    year: 2023
+    description: |-
+      317M-parameter agent controlling 80 tasks across multiple embodiments and action spaces using implicit world models. ICLR 2024.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2310.16828
+  - name: 'Gemini Robotics: Bringing AI into the Physical World'
+    author: Google DeepMind
+    year: 2025
+    description: |-
+      Dual-model approach: Gemini Robotics 1.5 (VLA) for direct motor control and Robotics-ER 1.5 for embodied reasoning. Generality, dexterity, agentic tool-use, thinking, and multi-embodiment support (static arms to humanoids).
+    links:
+    - label: Site
+      url: https://deepmind.google/models/gemini-robotics/
+- title: Agent Papers
+  type: paper
+  level: 3
+  columns:
+  - Paper
+  - Authors
+  - Year
+  - Description
+  - Links
+  items:
+  - name: 'ReAct: Synergizing Reasoning and Acting in LMs'
+    author: Yao et al. (Princeton/Google)
+    year: 2022
+    description: Interleaves reasoning with grounded actions — the dominant LLM agent paradigm.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2210.03629
+  - name: 'Reflexion: Language Agents with Verbal Reinforcement Learning'
+    author: Shinn et al.
+    year: 2023
+    description: Agents reflect on failures in natural language and use episodic memory to improve.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2303.11366
+  - name: 'Generative Agents: Interactive Simulacra of Human Behavior'
+    author: Park et al. (Stanford/Google)
+    year: 2023
+    description: 25 AI agents in a simulated town exhibiting emergent social behaviors.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2304.03442
+  - name: 'Voyager: An Open-Ended Embodied Agent with LLMs'
+    author: Wang et al. (NVIDIA/CMU)
+    year: 2023
+    description: First LLM-powered Minecraft agent with lifelong learning via skill library.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.16291
+  - name: 'ToolLLM: Facilitating LLMs to Master 16,000+ APIs'
+    author: Qin et al. (Tsinghua)
+    year: 2023
+    description: Framework for training and evaluating LLMs on tool use across 16,464 real APIs.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2307.16789
+  - name: 'SWE-bench: Can LMs Resolve Real-World GitHub Issues?'
+    author: Jimenez et al. (Princeton)
+    year: 2023
+    description: Benchmark of 2,294 real GitHub issues driving the coding agent race.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2310.06770
+  - name: 'WebArena: A Realistic Web Environment for Autonomous Agents'
+    author: Zhou et al.
+    year: 2023
+    description: 812 real-world web tasks exposing the gap between LLMs and human agents.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2307.13854
+  - name: 'OSWorld: Benchmarking Multimodal Agents in Real Computer Environments'
+    author: Xie et al.
+    year: 2024
+    description: GUI agents across real OS; top agents score ~7% vs. human 72%.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2404.07972
+  - name: 'The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery'
+    author: Sakana AI
+    year: 2024
+    description: Fully autonomous research pipeline — idea generation to paper writing.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2408.06292
+- title: Alignment & Reward Modeling Papers
+  type: paper
+  level: 3
+  columns:
+  - Paper
+  - Authors
+  - Year
+  - Description
+  - Links
+  items:
+  - name: Direct Preference Optimization (DPO)
+    author: Rafailov et al. (Stanford)
+    year: 2023
+    description: Eliminates separate RL + reward model in RLHF by directly optimizing on preference data.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.18290
+  - name: 'KTO: Model Alignment as Prospect Theoretic Optimization'
+    author: Ethayarajh et al.
+    year: 2024
+    description: Alignment with only binary (good/bad) feedback, no paired comparisons needed.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2402.01306
+  - name: 'ORPO: Monolithic Preference Optimization without Reference Model'
+    author: Hong et al.
+    year: 2024
+    description: Eliminates reference model in DPO-style training, reducing compute.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2403.07691
+  - name: 'SimPO: Simple Preference Optimization with Reference-Free Reward'
+    author: Meng et al.
+    year: 2024
+    description: Average log-probability as implicit reward with target margin — cleaner than DPO.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2405.14734
+  - name: Self-Rewarding Language Models
+    author: Yuan et al. (Meta)
+    year: 2024
+    description: Models generate and evaluate own preference data for iterative self-improvement.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2401.10020
+- title: Safety & Interpretability Papers
+  type: paper
+  level: 3
+  columns:
+  - Paper
+  - Authors
+  - Year
+  - Description
+  - Links
+  items:
+  - name: 'Constitutional AI: Harmlessness from AI Feedback'
+    author: Bai et al. (Anthropic)
+    year: 2022
+    description: Training helpful, harmless AI using AI-written critiques derived from a constitution.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2212.08073
+  - name: Representation Engineering
+    author: Zou et al. (UCSD)
+    year: 2023
+    description: Identifies and steers high-level concepts (honesty, power-seeking) in neural representations.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2310.01405
+  - name: 'Towards Monosemanticity: Dictionary Learning for LMs'
+    author: Bricken et al. (Anthropic)
+    year: 2023
+    description: Sparse autoencoders decomposing polysemantic neurons into interpretable features.
+    links:
+    - label: Blog
+      url: https://transformer-circuits.pub/2023/monosemantic-features/
+  - name: 'Scaling Monosemanticity: Interpretable Features from Claude 3 Sonnet'
+    author: Templeton et al. (Anthropic)
+    year: 2024
+    description: 34M features including "Assistant" identity, emotions, and safety-relevant concepts.
+    links:
+    - label: Blog
+      url: https://transformer-circuits.pub/2024/scaling-monosemanticity/
+  - name: 'Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training'
+    author: Hubinger et al. (Anthropic)
+    year: 2024
+    description: Deceptive backdoor behaviors survive RLHF, SFT, and adversarial training.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2401.05566
+  - name: Weak-to-Strong Generalization
+    author: Burns et al. (OpenAI)
+    year: 2023
+    description: GPT-2 supervising GPT-4 as proxy for "human supervising superintelligence."
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2312.09390
+  - name: 'AI Control: Improving Safety Despite Intentional Subversion'
+    author: Greenblatt et al. (Redwood Research)
+    year: 2024
+    description: Framework for evaluating safety against models actively trying to circumvent controls.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2312.06942
+  - name: 'Sparks of AGI: Early Experiments with GPT-4'
+    author: Bubeck et al. (Microsoft Research)
+    year: 2023
+    description: 155-page study arguing GPT-4 shows early sparks of AGI across diverse tasks.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2303.12712
+  - name: 'Levels of AGI: Operationalizing Progress on the Path to AGI'
+    author: Morris et al. (Google DeepMind)
+    year: 2023
+    description: 6-level AGI taxonomy (Emerging to ASI) with performance and autonomy axes.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2311.02462
+- title: Blogs and News
+  type: blog
+  level: 3
+  columns:
+  - Resource
+  - Description
+  items:
+  - name: OpenAI Blog
+    raw_name: '[OpenAI Blog](https://openai.com/blog)'
+    url: https://openai.com/blog
+    description: Official blog from OpenAI with research updates and announcements.
+  - name: Anthropic Research
+    raw_name: '[Anthropic Research](https://www.anthropic.com/research)'
+    url: https://www.anthropic.com/research
+    description: Anthropic's AI safety and capabilities research publications.
+  - name: Google DeepMind Blog
+    raw_name: '[Google DeepMind Blog](https://deepmind.google/discover/blog/)'
+    url: https://deepmind.google/discover/blog/
+    description: Research updates from Google DeepMind.
+  - name: Meta AI Blog
+    raw_name: '[Meta AI Blog](https://ai.meta.com/blog/)'
+    url: https://ai.meta.com/blog/
+    description: Meta's AI research blog, including Llama and open-source releases.
+  - name: HuggingFace Blog
+    raw_name: '[HuggingFace Blog](https://huggingface.co/blog)'
+    url: https://huggingface.co/blog
+    description: Latest in open-source ML, NLP, and the HF ecosystem.
+  - name: LangChain Blog
+    raw_name: '[LangChain Blog](https://blog.langchain.dev/)'
+    url: https://blog.langchain.dev/
+    description: Updates on LangChain/LangGraph and LLM application patterns.
+  - name: The Gradient
+    raw_name: '[The Gradient](https://thegradient.pub/)'
+    url: https://thegradient.pub/
+    description: Perspectives on AI research and its implications.
+  - name: Lilian Weng's Blog
+    raw_name: '[Lilian Weng''s Blog](https://lilianweng.github.io/)'
+    url: https://lilianweng.github.io/
+    description: In-depth technical posts on LLMs, agents, and AI research (by OpenAI).
+  - name: Simon Willison's Blog
+    raw_name: '[Simon Willison''s Blog](https://simonwillison.net/)'
+    url: https://simonwillison.net/
+    description: Prolific coverage of LLM tools, agents, and practical AI engineering.
+  - name: The Alignment Forum
+    raw_name: '[The Alignment Forum](https://www.alignmentforum.org/)'
+    url: https://www.alignmentforum.org/
+    description: Hub for AI alignment research discussions and papers.
+  - name: Transformer Circuits
+    raw_name: '[Transformer Circuits](https://transformer-circuits.pub/)'
+    url: https://transformer-circuits.pub/
+    description: Anthropic's mechanistic interpretability research publications.

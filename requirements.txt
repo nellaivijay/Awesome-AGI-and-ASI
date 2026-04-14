@@ -1,5 +1,6 @@
 mkdocs-material>=9.5
 mkdocs-blog-plugin>=0.25
 mkdocs-git-revision-date-localized-plugin>=1.2
+mkdocs-rss-plugin>=1.12
 pillow>=10.0
 cairosvg>=2.7

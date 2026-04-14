@@ -1,0 +1,234 @@
+section:
+  title: LLM Application Frameworks
+  description: |-
+    The developer toolkits for building production LLM applications. From orchestration chains to observability platforms, these frameworks are the backbone of every AI product shipping today.
+  badges:
+  - alt: LangChain
+    path: LangChain-Orchestration-1C3C3C?style=flat-square
+  - alt: LlamaIndex
+    path: LlamaIndex-RAG-purple?style=flat-square
+  - alt: Observability
+    path: Observability-Tracing_&_Evals-blue?style=flat-square
+  - alt: Structured Output
+    path: Structured_Output-Pydantic-green?style=flat-square
+subsections:
+- title: Core Orchestration Frameworks
+  type: tool
+  level: 3
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: LangChain
+    raw_name: '[LangChain](https://github.com/langchain-ai/langchain)'
+    url: https://github.com/langchain-ai/langchain
+    description: |-
+      The agent engineering platform. Framework for developing applications powered by LLMs with chaining, tools, memory, and retrieval. 133k+ stars.
+    links:
+    - label: Docs
+      url: https://python.langchain.com/docs/
+  - name: LangGraph
+    raw_name: '[LangGraph](https://github.com/langchain-ai/langgraph)'
+    url: https://github.com/langchain-ai/langgraph
+    description: |-
+      Graph-based framework for building stateful, multi-actor LLM agents as directed graphs. Supports cycles, branching, persistent state, and human-in-the-loop.
+    links:
+    - label: Docs
+      url: https://langchain-ai.github.io/langgraph/
+  - name: LlamaIndex
+    raw_name: '[LlamaIndex](https://github.com/run-llama/llama_index)'
+    url: https://github.com/run-llama/llama_index
+    description: |-
+      Leading document agent and RAG platform. Connect custom data sources to LLMs with indexing, retrieval, and query interfaces. 48k+ stars.
+    links:
+    - label: Docs
+      url: https://docs.llamaindex.ai/
+  - name: DSPy
+    raw_name: '[DSPy](https://github.com/stanfordnlp/dspy)'
+    url: https://github.com/stanfordnlp/dspy
+    description: |-
+      Stanford's paradigm-shifting framework for *programming* (not prompting) LLMs. Declarative modules with automatic prompt optimization. 20k+ stars.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2310.03714
+    - label: dspy.ai
+      url: https://dspy.ai
+  - name: Haystack
+    raw_name: '[Haystack](https://github.com/deepset-ai/haystack)'
+    url: https://github.com/deepset-ai/haystack
+    description: |-
+      Production-grade NLP/LLM framework for RAG pipelines, QA, and conversational AI. Composable pipeline architecture with 60+ integrations.
+    links:
+    - label: Docs
+      url: https://docs.haystack.deepset.ai
+  - name: Semantic Kernel
+    raw_name: '[Semantic Kernel](https://github.com/microsoft/semantic-kernel)'
+    url: https://github.com/microsoft/semantic-kernel
+    description: |-
+      Microsoft's enterprise SDK for LLM integration. Plugin/skill architecture powering Microsoft Copilot. Python, C#, Java. 23k+ stars.
+    links:
+    - label: Docs
+      url: https://learn.microsoft.com/en-us/semantic-kernel/
+  - name: smolagents
+    raw_name: '[smolagents](https://github.com/huggingface/smolagents)'
+    url: https://github.com/huggingface/smolagents
+    description: HuggingFace's minimalist agent library. Code-first agents that write and execute Python. ~1000 lines core.
+      14k+ stars.
+    links:
+    - label: Docs
+      url: https://huggingface.co/docs/smolagents
+  - name: PydanticAI
+    raw_name: '[PydanticAI](https://github.com/pydantic/pydantic-ai)'
+    url: https://github.com/pydantic/pydantic-ai
+    description: Agent framework with type safety, structured outputs via Pydantic, and dependency injection for testing.
+      Async-first.
+    links:
+    - label: Docs
+      url: https://ai.pydantic.dev
+  - name: Agno
+    raw_name: '[Agno](https://github.com/agno-agi/agno)'
+    url: https://github.com/agno-agi/agno
+    description: |-
+      Full-stack agent framework (formerly Phidata). Lightning-fast runtime, multimodal agents, native teams, 100+ tools. 20k+ stars.
+    links:
+    - label: Docs
+      url: https://docs.agno.com
+- title: LLM Platforms & Developer Tools
+  type: tool
+  level: 3
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: Dify
+    raw_name: '[Dify](https://github.com/langgenius/dify)'
+    url: https://github.com/langgenius/dify
+    description: Open-source LLM app development platform with visual workflow orchestration, RAG, and agent framework. 137k+
+      stars.
+    links:
+    - label: dify.ai
+      url: https://dify.ai/
+  - name: Flowise
+    raw_name: '[Flowise](https://github.com/FlowiseAI/Flowise)'
+    url: https://github.com/FlowiseAI/Flowise
+    description: Drag-and-drop no-code builder for LLM apps and chatbots using visual node graphs. 52k+ stars.
+    links:
+    - label: flowiseai.com
+      url: https://flowiseai.com/
+  - name: Ollama
+    raw_name: '[Ollama](https://github.com/ollama/ollama)'
+    url: https://github.com/ollama/ollama
+    description: The de-facto standard for running open-weight LLMs locally. Dead-simple CLI. OpenAI-compatible API. 110k+
+      stars.
+    links:
+    - label: ollama.com
+      url: https://ollama.com/
+  - name: Open WebUI
+    raw_name: '[Open WebUI](https://github.com/open-webui/open-webui)'
+    url: https://github.com/open-webui/open-webui
+    description: User-friendly AI interface supporting Ollama, OpenAI API, and more. Self-hosted ChatGPT alternative. 131k+
+      stars.
+    links:
+    - label: openwebui.com
+      url: https://openwebui.com/
+  - name: Jan.ai
+    raw_name: '[Jan.ai](https://github.com/janhq/jan)'
+    url: https://github.com/janhq/jan
+    description: Open-source, privacy-first desktop AI assistant. Runs 100% offline on-device. OpenAI-compatible local API.
+      25k+ stars.
+    links:
+    - label: jan.ai
+      url: https://jan.ai/
+  - name: LiteLLM
+    raw_name: '[LiteLLM](https://github.com/BerriAI/litellm)'
+    url: https://github.com/BerriAI/litellm
+    description: Unified API for 100+ LLMs using OpenAI SDK format. Proxy server with load balancing, cost tracking, and key
+      management.
+    links:
+    - label: Docs
+      url: https://docs.litellm.ai/
+- title: Structured Output & Prompt Engineering Tools
+  type: tool
+  level: 3
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: Instructor
+    raw_name: '[Instructor](https://github.com/instructor-ai/instructor)'
+    url: https://github.com/instructor-ai/instructor
+    description: Get structured, typed outputs from LLMs using Pydantic models. Handles retries, validation, and streaming.
+      10k+ stars.
+    links:
+    - label: Docs
+      url: https://python.useinstructor.com/
+  - name: Outlines
+    raw_name: '[Outlines](https://github.com/dottxt-ai/outlines)'
+    url: https://github.com/dottxt-ai/outlines
+    description: Structured text generation at the token level using FSM-guided decoding. Guarantees valid JSON/regex output.
+      11k+ stars.
+    links:
+    - label: Docs
+      url: https://dottxt-ai.github.io/outlines/
+  - name: guidance
+    raw_name: '[guidance](https://github.com/guidance-ai/guidance)'
+    url: https://github.com/guidance-ai/guidance
+    description: Microsoft's language for constrained and structured LLM generation with token-level control. 20k+ stars.
+    links:
+    - label: GitHub
+      url: https://github.com/guidance-ai/guidance
+- title: LLM Observability & Evaluation
+  type: tool
+  level: 3
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: LangFuse
+    raw_name: '[LangFuse](https://github.com/langfuse/langfuse)'
+    url: https://github.com/langfuse/langfuse
+    description: Open-source LLM engineering platform. Tracing, prompt management, evals, metrics. Self-hostable. 8k+ stars.
+    links:
+    - label: langfuse.com
+      url: https://langfuse.com/
+  - name: Phoenix
+    raw_name: '[Phoenix](https://github.com/Arize-ai/phoenix)'
+    url: https://github.com/Arize-ai/phoenix
+    description: |-
+      Open-source LLM observability with OpenTelemetry-native tracing, retrieval evaluation, and experiment comparison. By Arize.
+    links:
+    - label: Docs
+      url: https://docs.arize.com/phoenix/
+  - name: Ragas
+    raw_name: '[Ragas](https://github.com/explodinggradients/ragas)'
+    url: https://github.com/explodinggradients/ragas
+    description: |-
+      Leading RAG evaluation framework. Metrics: faithfulness, relevancy, precision, recall. Synthetic test set generation. 8k+ stars.
+    links:
+    - label: Docs
+      url: https://docs.ragas.io/
+  - name: LangSmith
+    raw_name: '[LangSmith](https://www.langchain.com/langsmith)'
+    url: https://www.langchain.com/langsmith
+    description: LangChain's platform for debugging, testing, evaluating, and monitoring LLM chains and agents.
+    links:
+    - label: Docs
+      url: https://docs.smith.langchain.com/
+  - name: Opik
+    raw_name: '[Opik](https://github.com/comet-ml/opik)'
+    url: https://github.com/comet-ml/opik
+    description: Open-source LLM observability and evaluation. Tracing, evaluation, and prompt optimization.
+    links:
+    - label: Docs
+      url: https://www.comet.com/docs/opik/
+  - name: Helicone
+    raw_name: '[Helicone](https://github.com/Helicone/helicone)'
+    url: https://github.com/Helicone/helicone
+    description: LLM observability via one-line proxy. Cost tracking, caching, rate limiting.
+    links:
+    - label: helicone.ai
+      url: https://helicone.ai/

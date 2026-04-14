@@ -1,0 +1,139 @@
+section:
+  title: Distributed Training Frameworks
+  description: |-
+    Training frontier models requires distributing computation across thousands of GPUs. These frameworks handle the parallelism, memory optimization, and communication needed to train models with billions (or trillions) of parameters.
+  badges:
+  - alt: DeepSpeed
+    path: DeepSpeed-Microsoft-blue?style=flat-square
+  - alt: Megatron
+    path: Megatron-NVIDIA-76B900?style=flat-square
+  - alt: Distributed
+    path: Distributed-Multi--GPU-purple?style=flat-square
+subsections:
+- title: Distributed Training Frameworks
+  type: tool
+  level: 3
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: ColossalAI
+    raw_name: '[ColossalAI](https://github.com/hpcaitech/ColossalAI)'
+    url: https://github.com/hpcaitech/ColossalAI
+    description: Making large AI models cheaper, faster, and more accessible with efficient parallelism techniques.
+    links:
+    - label: colossalai.org
+      url: https://colossalai.org/
+  - name: DeepSpeed
+    raw_name: '[DeepSpeed](https://github.com/microsoft/DeepSpeed)'
+    url: https://github.com/microsoft/DeepSpeed
+    description: Microsoft's deep learning optimization library for distributed training and inference.
+    links:
+    - label: deepspeed.ai
+      url: https://www.deepspeed.ai/
+  - name: Megatron-LM
+    raw_name: '[Megatron-LM](https://github.com/NVIDIA/Megatron-LM)'
+    url: https://github.com/NVIDIA/Megatron-LM
+    description: NVIDIA's research framework for training large-scale Transformer models with model and data parallelism.
+- title: AI Compute Infrastructure
+  type: tool
+  level: 3
+  description: |-
+    The physical backbone of the AGI race. As models scale to trillions of parameters and inference demand explodes, energy, hardware, and data center capacity become the defining bottleneck.
+  columns:
+  - Name
+  - Description
+  - Links
+  items:
+  - name: Groq
+    raw_name: '[Groq](https://groq.com/)'
+    url: https://groq.com/
+    description: |-
+      LPU (Language Processing Unit) inference engine delivering record-breaking tokens/second. Custom ASIC designed from the ground up for LLM inference.
+    links:
+    - label: groq.com
+      url: https://groq.com/
+  - name: Crusoe Energy
+    raw_name: '[Crusoe Energy](https://crusoe.ai/)'
+    url: https://crusoe.ai/
+    description: |-
+      Clean-energy AI data centers powered by stranded natural gas and renewables. Purpose-built GPU clouds for AI training and inference.
+    links:
+    - label: crusoe.ai
+      url: https://crusoe.ai/
+  - name: Cerebras
+    raw_name: '[Cerebras](https://cerebras.ai/)'
+    url: https://cerebras.ai/
+    description: |-
+      Wafer-Scale Engine (WSE) -- the largest chip ever built -- designed for AI training. CS-3 system eliminates memory bottlenecks with 44GB on-chip SRAM.
+    links:
+    - label: cerebras.ai
+      url: https://cerebras.ai/
+  - name: SambaNova
+    raw_name: '[SambaNova](https://sambanova.ai/)'
+    url: https://sambanova.ai/
+    description: Reconfigurable Dataflow Architecture (RDA) for enterprise AI. Purpose-built hardware that adapts to model
+      topology.
+    links:
+    - label: sambanova.ai
+      url: https://sambanova.ai/
+  - name: Meta MTIA
+    raw_name: '[Meta MTIA](https://ai.meta.com/blog/next-generation-meta-training-inference-accelerator-mtia/)'
+    url: https://ai.meta.com/blog/next-generation-meta-training-inference-accelerator-mtia/
+    description: |-
+      Meta Training and Inference Accelerator -- custom AI silicon designed for Meta's recommendation and generative AI workloads. 4 chip generations in 2 years, powering AI for billions of users.
+    links:
+    - label: ai.meta.com
+      url: https://ai.meta.com/
+  - name: Google TPU (Trillium)
+    raw_name: '[Google TPU (Trillium)](https://cloud.google.com/tpu)'
+    url: https://cloud.google.com/tpu
+    description: |-
+      Google's 6th-gen TPU (Trillium, 2024) with 4.7x compute per chip improvement over TPU v5e. Powers Gemini training and inference at scale across Google's AI fleet.
+    links:
+    - label: cloud.google.com/tpu
+      url: https://cloud.google.com/tpu
+  - name: NVIDIA Blackwell (B200/GB200)
+    raw_name: '[NVIDIA Blackwell (B200/GB200)](https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/)'
+    url: https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/
+    description: |-
+      NVIDIA's 2024 GPU architecture: 208B transistors, 2nd-gen Transformer Engine with FP4, 30x faster inference on LLMs vs. Hopper. GB200 NVL72 rack delivers 1.4 exaFLOPS. The dominant hardware for frontier model training.
+    links:
+    - label: nvidia.com/blackwell
+      url: https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/
+- title: Energy, Data Centers & Physical Constraints
+  type: challenge
+  level: 3
+  description: |-
+    The AGI race is ultimately constrained by physics: energy, cooling, and chip fabrication. As training runs scale from gigawatt-hours to hundreds of gigawatt-hours, the physical infrastructure becomes as important as the algorithms.
+  columns:
+  - Challenge
+  - Current State
+  - Links
+  items:
+  - name: Gigawatt-scale data centers
+    raw_name: '**Gigawatt-scale data centers**'
+    description: |-
+      Microsoft, Meta, Google, Amazon, and xAI are all building or planning 1-5 GW data centers. xAI's Memphis "Colossus" cluster: 100k H100s. Microsoft's $100B Stargate project with OpenAI.
+    links_text: Industry announcements
+  - name: Nuclear-powered AI
+    raw_name: '**Nuclear-powered AI**'
+    description: |-
+      Microsoft restarted Three Mile Island Unit 1 for AI power. Amazon, Google, and Oracle securing nuclear power for data centers. SMR (Small Modular Reactor) partnerships proliferating.
+    links:
+    - label: News
+      url: https://www.reuters.com/technology/
+  - name: The Memory Wall
+    raw_name: '**The Memory Wall**'
+    description: |-
+      Context window expansion (4K -> 128K -> 1M -> 10M tokens) functions as "working memory" for AGI. Llama 4 Scout: 10M tokens. Gemini 1.5: 2M. But attention scales quadratically -- memory-efficient architectures (Infini-Attention, Mamba, RWKV) are essential.
+    links:
+    - label: Reasoning Papers
+      url: '#reasoning-scaling--architecture-papers'
+    links_text: See [Reasoning Papers](#reasoning-scaling--architecture-papers)
+  - name: Training cost trajectory
+    raw_name: '**Training cost trajectory**'
+    description: |-
+      GPT-4: ~$100M. Llama 3 405B: ~$30M. DeepSeek-V3: $5.5M. Efficiency gains (MoE, distillation, FP8/FP4) are democratizing frontier training.
+    links_text: Model technical reports

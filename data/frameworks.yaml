@@ -1,0 +1,201 @@
+section:
+  title: Frameworks and Platforms
+  description: |-
+    The infrastructure powering the next generation of autonomous AI. These frameworks let you build, orchestrate, and deploy AI agents that can reason, browse, code, and collaborate -- from single-agent tools to multi-agent orchestration platforms.
+  badges:
+  - alt: Python
+    path: Python-3776AB?style=flat-square&logo=python&logoColor=white
+  - alt: TypeScript
+    path: TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white
+  - alt: Rust
+    path: Rust-000000?style=flat-square&logo=rust&logoColor=white
+  - alt: Multi-Agent
+    path: Multi--Agent-blue?style=flat-square
+  - alt: Browser
+    path: Browser_Automation-orange?style=flat-square
+  - alt: Open Source
+    path: Open_Source-green?style=flat-square
+subsections:
+- title: Next-Generation Agent Frameworks (2025-2026)
+  type: framework
+  level: 3
+  columns:
+  - Name
+  - Github Stars
+  - Introduction
+  - Notes
+  items:
+  - name: OpenHands
+    github: All-Hands-AI/OpenHands
+    description: |-
+      AI-powered software development agent platform (formerly OpenDevin). Autonomous coding agent that can write, test, and debug code end-to-end.
+    raw_notes: '71k+ stars. #1 on SWE-bench. Sandboxed execution environment.'
+    notes: '71k+ stars. #1 on SWE-bench. Sandboxed execution environment.'
+  - name: browser-use
+    github: browser-use/browser-use
+    description: Make websites accessible for AI agents. Automate tasks online with ease using Playwright-based browser automation.
+    raw_notes: 87k+ stars. AI agents that browse the web autonomously.
+    notes: 87k+ stars. AI agents that browse the web autonomously.
+  - name: DeerFlow
+    github: bytedance/deer-flow
+    description: |-
+      ByteDance's open-source long-horizon SuperAgent harness that researches, codes, and creates. Multi-agent with sandboxes, memories, tools, and skills.
+    raw_notes: 60k+ stars. Built on LangGraph.
+    notes: 60k+ stars. Built on LangGraph.
+  - name: Firecrawl
+    github: firecrawl/firecrawl
+    description: The Web Data API for AI - Power AI agents with clean web data. Scrapes and converts websites to LLM-ready
+      markdown.
+    raw_notes: 108k+ stars. Used by major AI agent frameworks.
+    notes: 108k+ stars. Used by major AI agent frameworks.
+  - name: crewAI
+    github: joaomdmoura/crewAI
+    description: Framework for orchestrating role-playing, autonomous AI agents. Craft collaborative AI crews for complex
+      tasks.
+    raw_notes: Production-grade multi-agent orchestration.
+    notes: Production-grade multi-agent orchestration.
+  - name: agenticSeek
+    github: Fosowl/agenticSeek
+    description: Fully local autonomous agent - No APIs, no monthly bills. Thinks, browses the web, and codes using only local
+      LLMs.
+    raw_notes: 26k+ stars. Fully local, privacy-first.
+    notes: 26k+ stars. Fully local, privacy-first.
+  - name: Gemini CLI
+    github: google-gemini/gemini-cli
+    description: Google's open-source AI agent that brings Gemini directly into your terminal. MCP support built-in.
+    raw_notes: 101k+ stars. Official Google agent.
+    notes: 101k+ stars. Official Google agent.
+  - name: Hermes Agent
+    github: NousResearch/hermes-agent
+    description: The agent that grows with you. By Nous Research - multi-model AI agent with Claude, GPT, and open-source
+      model support.
+    raw_notes: 66k+ stars. From Nous Research.
+    notes: 66k+ stars. From Nous Research.
+  - name: Daytona
+    github: daytonaio/daytona
+    description: Secure and elastic infrastructure for running AI-generated code. Sandboxed execution environment for AI agents.
+    raw_notes: 72k+ stars. Secure code execution.
+    notes: 72k+ stars. Secure code execution.
+  - name: Composio
+    github: ComposioHQ/composio
+    description: Production-ready toolset for AI agents. 250+ tools, frameworks, and integrations for building agentic AI
+      applications.
+    raw_notes: '[composio.dev](https://composio.dev/)'
+    notes: composio.dev
+    links:
+    - label: composio.dev
+      url: https://composio.dev/
+  - name: PentAGI
+    github: vxcontrol/pentagi
+    description: Fully autonomous AI agent system for complex penetration testing tasks. Multi-agent security automation.
+    raw_notes: 15k+ stars. Autonomous security testing.
+    notes: 15k+ stars. Autonomous security testing.
+- title: Established Agent Frameworks
+  type: framework
+  level: 3
+  columns:
+  - Name
+  - Github Stars
+  - Introduction
+  - Notes
+  items:
+  - name: Auto-GPT
+    github: Significant-Gravitas/Auto-GPT
+    description: The original autonomous AI agent. Now evolved into a full platform for building and deploying autonomous
+      agents.
+    raw_notes: 183k+ stars. The project that started the autonomous agent movement.
+    notes: 183k+ stars. The project that started the autonomous agent movement.
+  - name: MetaGPT
+    github: geekan/MetaGPT
+    description: 'The Multi-Agent Framework: Given one line Requirement, return PRD, Design, Tasks, Repo.'
+    raw_notes: Mimics a software company with PM, architect, and engineer agent roles.
+    notes: Mimics a software company with PM, architect, and engineer agent roles.
+  - name: AgentGPT
+    github: reworkd/AgentGPT
+    description: Assemble, configure, and deploy autonomous AI Agents in your browser.
+    raw_notes: 36k+ stars. Browser-based agent deployment.
+    notes: 36k+ stars. Browser-based agent deployment.
+  - name: SuperAGI
+    github: TransformerOptimus/SuperAGI
+    description: |-
+      Dev-first open source autonomous AI agent framework. Run concurrent agents with tools, GUI, multiple vector DBs, performance telemetry, and agent memory.
+    raw_notes: 'Toolkits: Email, Jira, GitHub, Google Search, DALL-E, Notion, etc.'
+    notes: 'Toolkits: Email, Jira, GitHub, Google Search, DALL-E, Notion, etc.'
+  - name: AutoGen
+    github: microsoft/autogen
+    description: |-
+      Microsoft's framework for multi-agent conversation. Agents converse with each other to solve tasks with human-in-the-loop support.
+    raw_notes: Now evolved into AG2 with enhanced multi-agent patterns.
+    notes: Now evolved into AG2 with enhanced multi-agent patterns.
+  - name: ChatDev
+    github: OpenBMB/ChatDev
+    description: |-
+      A virtual software company with multiple agents (CEO, CTO, programmer, tester) collaborating to design, code, test, and document software.
+  - name: CAMEL
+    github: camel-ai/camel
+    description: |-
+      Communicative Agents for "Mind" Exploration of Large Language Model Society. Role-playing framework for multi-agent collaboration.
+    raw_notes: '[camel-ai.org](https://www.camel-ai.org/)'
+    notes: camel-ai.org
+    links:
+    - label: camel-ai.org
+      url: https://www.camel-ai.org/
+  - name: XAgent
+    github: OpenBMB/XAgent
+    description: An autonomous LLM-based agent for complex task solving.
+    raw_notes: '[x-agent.net](https://x-agent.net/)'
+    notes: x-agent.net
+    links:
+    - label: x-agent.net
+      url: https://x-agent.net/
+  - name: JARVIS / HuggingGPT
+    github: microsoft/JARVIS
+    description: Uses ChatGPT as a controller to manage AI models on HuggingFace for task planning, model selection, and execution.
+  - name: babyagi
+    github: yoheinakajima/babyagi
+    description: Task-driven autonomous agent using OpenAI and vector DBs to create, prioritize, and execute tasks.
+  - name: OpenAGI
+    github: agiresearch/OpenAGI
+    description: Open-source AGI research platform combining LLMs with domain expert models via RLTF.
+- title: Specialized & Utility Frameworks
+  type: framework
+  level: 3
+  columns:
+  - Name
+  - Github Stars
+  - Introduction
+  - Notes
+  items:
+  - name: ShortGPT
+    github: RayVentura/ShortGPT
+    description: Framework for automating video creation, voiceover, editing, and publishing using LLMs.
+  - name: gpt-engineer
+    github: AntonOsika/gpt-engineer
+    description: Specify what you want it to build, the AI asks for clarification, and then builds it.
+  - name: FastGPT
+    github: labring/FastGPT
+    description: Knowledge-based QA system built on LLMs with out-of-the-box data processing and workflow orchestration.
+  - name: big-agi
+    github: enricoros/big-agi
+    description: |-
+      AI suite with AI personas, AGI functions, multi-model chat, text-to-image, voice, code execution. Deploy on-prem or cloud.
+    raw_notes: '[big-agi.com](https://big-agi.com/)'
+    notes: big-agi.com
+    links:
+    - label: big-agi.com
+      url: https://big-agi.com/
+  - name: opencog
+    github: opencog/opencog
+    description: A framework for integrated Artificial Intelligence & Artificial General Intelligence (AGI).
+  - name: smol-ai/developer
+    github: smol-ai/developer
+    description: The first library to let you embed a developer agent in your own app!
+  - name: loopgpt
+    github: farizrahman4u/loopgpt
+    description: Modular Auto-GPT Framework. Improved GPT-3.5 support, lower API token cost.
+  - name: LocalAGI
+    github: EmbraceAGI/LocalAGI
+    description: Locally run AGI powered by LLaMA, ChatGLM and more.
+  - name: DemoGPT
+    github: melih-unsal/DemoGPT
+    description: Create quick demos by just using prompts.

@@ -1,0 +1,66 @@
+section:
+  title: Paper-to-Code Automation
+  description: |-
+    The leap from research paper to working implementation is one of the biggest bottlenecks in AI progress. These tools automate the translation of academic papers into production-ready code repositories -- accelerating the research-to-engineering pipeline and democratizing access to frontier techniques.
+  badges:
+  - alt: Automation
+    path: Automation-Paper→Code-blue?style=flat-square
+  - alt: Research
+    path: Research-Implementation-green?style=flat-square
+  - alt: Agentic
+    path: Agentic-Multi--Step-purple?style=flat-square
+subsections:
+- title: Paper-to-Code Automation
+  type: tool_method
+  level: 3
+  columns:
+  - Tool
+  - Description
+  - Links
+  items:
+  - name: Research2Repo
+    raw_name: '[Research2Repo](https://github.com/nellaivijay/Research2Repo)'
+    url: https://github.com/nellaivijay/Research2Repo
+    description: |-
+      Multi-model agentic framework that converts ML research papers (PDFs) into production-ready GitHub repos. 4-stage decomposed planning, per-file analysis, self-refine loops, Docker sandbox with auto-debugging (19+ error types), CodeRAG for reference mining, and full DevOps generation (Dockerfile, CI, Makefile). Supports Gemini (2M context), GPT-4o/o3, Claude, and Ollama.
+    links:
+    - label: GitHub
+      url: https://github.com/nellaivijay/Research2Repo
+  - name: PaperCoder (Paper2Code)
+    raw_name: '[PaperCoder (Paper2Code)](https://github.com/going-doer/Paper2Code)'
+    url: https://github.com/going-doer/Paper2Code
+    description: |-
+      The pioneering paper-to-code system. Converts research papers into code repositories using a 3-stage pipeline (planning, analysis, generation). GPT-4o-based. Inspired Research2Repo and the broader paper-to-code movement.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2504.17192
+    - label: GitHub
+      url: https://github.com/going-doer/Paper2Code
+  - name: The AI Scientist
+    raw_name: '[The AI Scientist](https://github.com/SakanaAI/AI-Scientist)'
+    url: https://github.com/SakanaAI/AI-Scientist
+    description: |-
+      Goes beyond code generation: fully autonomous research pipeline that generates ideas, designs experiments, implements code, runs experiments, and writes complete academic papers. A prototype for self-improving AI research.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2408.06292
+    - label: GitHub
+      url: https://github.com/SakanaAI/AI-Scientist
+  - name: Papers with Code
+    raw_name: '[Papers with Code](https://paperswithcode.com/)'
+    url: https://paperswithcode.com/
+    description: |-
+      The standard platform linking 150,000+ ML papers to their official implementations, benchmarks, and leaderboards. Not an automation tool -- a curation platform that serves as the reference layer for the entire research-to-code ecosystem.
+    links:
+    - label: paperswithcode.com
+      url: https://paperswithcode.com/
+  - name: STORM
+    raw_name: '[STORM](https://github.com/stanford-oval/storm)'
+    url: https://github.com/stanford-oval/storm
+    description: |-
+      Stanford's autonomous system that writes Wikipedia-quality long-form articles by researching a topic from scratch. Demonstrates AI's ability to synthesize research into structured knowledge.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2402.14207
+    - label: GitHub
+      url: https://github.com/stanford-oval/storm

@@ -1,0 +1,176 @@
+section:
+  title: Agents
+  description: |-
+    Autonomous AI systems that perceive, reason, and act in the world. These agents represent the closest things we have to AGI-like behavior in narrow domains -- writing code, conducting research, operating computers, and navigating virtual worlds.
+  badges:
+  - alt: Coding
+    path: Coding-green?style=flat-square
+  - alt: Research
+    path: Research-purple?style=flat-square
+  - alt: Computer Use
+    path: Computer_Use-blue?style=flat-square
+  - alt: Embodied
+    path: Embodied-red?style=flat-square
+  - alt: Autonomous
+    path: Autonomous-orange?style=flat-square
+subsections:
+- title: Coding & Software Engineering Agents
+  type: framework
+  level: 3
+  columns:
+  - Name
+  - Github Stars
+  - Introduction
+  - Notes
+  items:
+  - name: Aider
+    github: Aider-AI/aider
+    description: AI pair programming in your terminal. Edit code across your entire repo with LLMs. Tops SWE-bench Lite.
+    raw_notes: Best-in-class AI pair programmer. Works with GPT-4o, Claude, DeepSeek, local models.
+    notes: Best-in-class AI pair programmer. Works with GPT-4o, Claude, DeepSeek, local models.
+  - name: SWE-agent
+    github: princeton-nlp/SWE-agent
+    description: |-
+      Turns LLMs into software engineering agents that fix real GitHub issues. Pioneered the Agent-Computer Interface (ACI) concept.
+    raw_notes: '[Paper](https://arxiv.org/abs/2405.15232). Princeton NLP. Key SWE-bench benchmark agent.'
+    notes: Paper. Princeton NLP. Key SWE-bench benchmark agent.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2405.15232
+  - name: goose
+    github: block/goose
+    description: |-
+      Open-source extensible AI agent that goes beyond code suggestions — install, execute, edit, and test with any LLM. Written in Rust.
+    raw_notes: Supports MCP and ACP protocols. By Block.
+    notes: Supports MCP and ACP protocols. By Block.
+  - name: Open Interpreter
+    github: OpenInterpreter/open-interpreter
+    description: A natural language interface for computers. Lets LLMs run code (Python, JS, shell) locally with no restrictions.
+    raw_notes: Full computer control via natural language. Like ChatGPT Code Interpreter but unrestricted.
+    notes: Full computer control via natural language. Like ChatGPT Code Interpreter but unrestricted.
+- title: Research & Knowledge Agents
+  type: framework
+  level: 3
+  columns:
+  - Name
+  - Github Stars
+  - Introduction
+  - Notes
+  items:
+  - name: STORM
+    github: stanford-oval/storm
+    description: |-
+      Stanford: Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking. Writes Wikipedia-quality long-form articles autonomously.
+    raw_notes: '[Paper](https://arxiv.org/abs/2402.14207). Expert-level knowledge synthesis agent.'
+    notes: Paper. Expert-level knowledge synthesis agent.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2402.14207
+  - name: AI Scientist
+    github: SakanaAI/AI-Scientist
+    description: |-
+      Fully autonomous scientific research pipeline: generates ideas, implements experiments, writes and reviews full academic papers.
+    raw_notes: '[Paper](https://arxiv.org/abs/2408.06292). By Sakana AI. ASI-threshold capability.'
+    notes: Paper. By Sakana AI. ASI-threshold capability.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2408.06292
+  - name: gpt-researcher
+    github: assafelovic/gpt-researcher
+    description: |-
+      GPT-based autonomous agent for comprehensive online research on any topic. Searches, reads, and synthesizes long-form reports.
+  - name: mem0
+    github: mem0ai/mem0
+    description: Universal memory layer for AI agents. Persistent long-term, episodic, and semantic memory across agent sessions.
+    raw_notes: 52k+ stars. Key missing component between current agents and AGI.
+    notes: 52k+ stars. Key missing component between current agents and AGI.
+- title: Computer-Use & Desktop Agents
+  type: framework
+  level: 3
+  columns:
+  - Name
+  - Github Stars
+  - Introduction
+  - Notes
+  items:
+  - name: everything-claude-code
+    github: anthropics/claude-code
+    description: Agent harness performance optimization system with skills, instincts, memory, and security for AI coding
+      agents.
+    raw_notes: Cognitive scaffolding for agentic AI — directly relevant to persistent AGI.
+    notes: Cognitive scaffolding for agentic AI — directly relevant to persistent AGI.
+  - name: nanobot
+    github: HKUDS/nanobot
+    description: Ultra-lightweight personal AI agent. Minimal footprint with full agent capabilities.
+    raw_notes: 39k+ stars. Edge-AGI and ubiquitous deployment.
+    notes: 39k+ stars. Edge-AGI and ubiquitous deployment.
+  - name: Screenpipe
+    github: screenpipe/screenpipe
+    description: |-
+      Run agents that work for you based on what you do. Continuously observes your screen, builds personal memory, and triggers AI actions.
+    raw_notes: Always-on environmental awareness — a prototype AGI assistant.
+    notes: Always-on environmental awareness — a prototype AGI assistant.
+- title: Embodied & Simulation Agents
+  type: framework
+  level: 3
+  columns:
+  - Name
+  - Github Stars
+  - Introduction
+  - Notes
+  items:
+  - name: generative_agents
+    github: joonspk-research/generative_agents
+    description: |-
+      Generative Agents: Interactive Simulacra of Human Behavior. 25 AI agents in a simulated town with unique identities, memories, and behaviors.
+    raw_notes: '[Paper](https://arxiv.org/abs/2304.03442). Stanford & Google. Emergent social cognition.'
+    notes: Paper. Stanford & Google. Emergent social cognition.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2304.03442
+  - name: Voyager
+    github: MineDojo/Voyager
+    description: |-
+      Open-Ended Embodied Agent with LLMs. Plays Minecraft autonomously, continuously discovers new skills via a self-growing code library.
+    raw_notes: '[Paper](https://arxiv.org/abs/2305.16291). NVIDIA/CMU. Lifelong skill acquisition.'
+    notes: Paper. NVIDIA/CMU. Lifelong skill acquisition.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.16291
+  - name: RoboGen
+    github: Genesis-Embodied-AI/RoboGen
+    description: Generative simulation for automated robot learning. Auto-generates tasks, environments, and training data
+      using GPT-4.
+    raw_notes: '[Paper](https://arxiv.org/abs/2311.01455). Self-improving robot curriculum.'
+    notes: Paper. Self-improving robot curriculum.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2311.01455
+  - name: ai-town
+    github: a16z-infra/ai-town
+    description: Deployable starter kit for building AI town — a virtual town where AI characters live, chat, and socialize.
+      By a16z.
+- title: Enterprise & Agentic AI Platforms
+  type: enterprise
+  level: 3
+  description: |-
+    AI agents moving from demos to enterprise production. These platforms enable organizations to deploy autonomous agents into real workflows at scale.
+  columns:
+  - Name
+  - Introduction
+  - Notes
+  items:
+  - name: Salesforce Agentforce
+    url: https://www.salesforce.com/agentforce/
+    description: |-
+      Enterprise AI agent platform integrated into Salesforce CRM. Autonomous agents handle sales, service, marketing, and commerce workflows.
+    notes: Largest enterprise AI agent deployment. Announced 2024.
+  - name: Microsoft Copilot Studio
+    url: https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio
+    description: Low-code platform for building and deploying custom AI agents and copilots across Microsoft 365 and Azure.
+    notes: Powers enterprise-wide agentic automation.
+  - name: Zapier AI Agents
+    url: https://zapier.com/agents
+    description: No-code AI agents that automate cross-app workflows. Connects 7,000+ apps with autonomous decision-making
+      and action.
+    notes: Enterprise workflow automation at scale.
