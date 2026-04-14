@@ -1,0 +1,772 @@
+section:
+  title: ASI and Superintelligence Research
+  description: |-
+    The long game. This section tracks the organizations racing toward AGI/ASI, the books that frame the debate, the seminal papers that define the field, the benchmarks that measure progress, and the roadmaps that predict when -- and how -- we get there.
+  badges:
+  - alt: Organizations
+    path: Organizations-OpenAI_Anthropic_DeepMind_SSI-blue?style=flat-square
+  - alt: Books
+    path: Books-27_Titles-green?style=flat-square
+  - alt: Benchmarks
+    path: Benchmarks-ARC--AGI_SWE--bench-orange?style=flat-square
+  - alt: Existential Risk
+    path: Existential_Risk-Control_Problem-red?style=flat-square
+subsections:
+- title: Key Organizations Pursuing or Studying AGI/ASI
+  type: organization
+  level: 3
+  columns:
+  - Organization
+  - Focus
+  - Links
+  items:
+  - name: Safe Superintelligence Inc. (SSI)
+    raw_name: '**Safe Superintelligence Inc. (SSI)**'
+    description: |-
+      Founded by Ilya Sutskever (ex-OpenAI) in 2024. Focused solely on building safe superintelligence, avoiding distraction by product cycles. Valued at $30B+ (2025).
+    links:
+    - label: ssi.inc
+      url: https://ssi.inc/
+  - name: OpenAI
+    raw_name: '**OpenAI**'
+    description: |-
+      Building AGI that benefits all of humanity. Created GPT-4, o1, o3 and pursues the path toward superintelligence with safety research (Superalignment team).
+    links:
+    - label: openai.com
+      url: https://openai.com/
+  - name: Anthropic
+    raw_name: '**Anthropic**'
+    description: |-
+      AI safety company building reliable, interpretable, and steerable AI (Claude). Founded by ex-OpenAI researchers focused on Constitutional AI and alignment.
+    links:
+    - label: anthropic.com
+      url: https://www.anthropic.com/
+  - name: DeepMind (Google)
+    raw_name: '**DeepMind (Google)**'
+    description: |-
+      Pioneered AlphaGo, AlphaFold, Gemini. Latest: Gemini 2.5 Pro (thinking model, #1 LMArena), Gemini Robotics 1.5 (VLA for physical AI), Genie 3 (interactive world models), SIMA 2 (3D world agents), AlphaGenome (genetics).
+    links:
+    - label: deepmind.google
+      url: https://deepmind.google/
+  - name: Meta Superintelligence Labs
+    raw_name: '**Meta Superintelligence Labs**'
+    description: |-
+      Meta AI division (2025) focused on building superintelligent AI. Released Muse Spark (2026) -- natively multimodal reasoning model scoring 58% on Humanity's Last Exam, with visual chain-of-thought and multi-agent orchestration. Also drives Llama 4 and open-source AI.
+    links:
+    - label: ai.meta.com
+      url: https://ai.meta.com/
+  - name: DeepSeek
+    raw_name: '**DeepSeek**'
+    description: |-
+      Chinese AI lab that shocked the industry with DeepSeek-V3 (671B MoE, $5.5M training cost) and DeepSeek-R1 (reasoning via pure RL, matching o1). Published in Nature 2025. Open-weight models challenging frontier labs at fraction of the cost.
+    links:
+    - label: deepseek.com
+      url: https://www.deepseek.com/
+  - name: Machine Intelligence Research Institute (MIRI)
+    raw_name: '**Machine Intelligence Research Institute (MIRI)**'
+    description: Non-profit researching mathematical foundations of AI alignment and the control problem since 2000.
+    links:
+    - label: intelligence.org
+      url: https://intelligence.org/
+  - name: Center for AI Safety (CAIS)
+    raw_name: '**Center for AI Safety (CAIS)**'
+    description: |-
+      Non-profit focused on reducing societal-scale risks from AI. Published the "AI risk" open letter signed by hundreds of researchers.
+    links:
+    - label: safe.ai
+      url: https://www.safe.ai/
+  - name: Future of Humanity Institute (FHI)
+    raw_name: '**Future of Humanity Institute (FHI)**'
+    description: |-
+      Oxford University research center (founded by Nick Bostrom) studying existential risks including superintelligence. Closed in 2024.
+    links:
+    - label: fhi.ox.ac.uk
+      url: https://www.fhi.ox.ac.uk/
+  - name: Center for Human-Compatible AI (CHAI)
+    raw_name: '**Center for Human-Compatible AI (CHAI)**'
+    description: UC Berkeley research center (founded by Stuart Russell) focused on provably beneficial AI.
+    links:
+    - label: humancompatible.ai
+      url: https://humancompatible.ai/
+  - name: Alignment Research Center (ARC)
+    raw_name: '**Alignment Research Center (ARC)**'
+    description: |-
+      Founded by Paul Christiano. Researches theoretical alignment and evaluates frontier AI models for dangerous capabilities.
+    links:
+    - label: alignment.org
+      url: https://www.alignment.org/
+  - name: EleutherAI
+    raw_name: '**EleutherAI**'
+    description: Grassroots collective of researchers focused on open-source AI and interpretability research.
+    links:
+    - label: eleuther.ai
+      url: https://www.eleuther.ai/
+  - name: Conjecture
+    raw_name: '**Conjecture**'
+    description: AI safety startup working on alignment theory and cognitive emulation approaches.
+    links:
+    - label: conjecture.dev
+      url: https://www.conjecture.dev/
+  - name: xAI
+    raw_name: '**xAI**'
+    description: Founded by Elon Musk (2023). Building Grok series of models with stated goal of understanding the universe.
+    links:
+    - label: x.ai
+      url: https://x.ai/
+  - name: Liquid AI
+    raw_name: '**Liquid AI**'
+    description: |-
+      MIT spinoff building Liquid Foundation Models (LFMs) based on novel liquid neural network architectures. Ultra-efficient on-device models. Raised $250M. CSO Alexander Amini presented on "The Architecture of Intelligence" at MIT 2026.
+    links:
+    - label: liquid.ai
+      url: https://www.liquid.ai/
+  - name: Humane Intelligence
+    raw_name: '**Humane Intelligence**'
+    description: |-
+      AI safety organization led by Rumman Chowdhury (former Twitter ML Ethics lead). Focuses on responsible AI, algorithmic auditing, and human-centered AI governance.
+    links:
+    - label: humane-intelligence.org
+      url: https://www.humane-intelligence.org/
+  - name: Physical Intelligence
+    raw_name: '**Physical Intelligence**'
+    description: |-
+      Building general-purpose robot foundation models (pi0, pi0.5). Founded by Sergey Levine, Chelsea Finn, Karol Hausman, and Lachy Groom. VLA models that control any robot for any task. Backed by OpenAI, Bezos, Sequoia, Khosla.
+    links:
+    - label: physicalintelligence.company
+      url: https://www.physicalintelligence.company/
+- title: Superintelligence & Existential Risk
+  type: book
+  level: 4
+  parent_heading: Books on AGI, ASI, and Superintelligence
+  columns:
+  - Book
+  - Author(s)
+  - Year
+  - Description
+  items:
+  - name: 'Superintelligence: Paths, Dangers, Strategies'
+    author: Nick Bostrom
+    year: 2014
+    description: |-
+      The foundational book on ASI risks. Examines paths to superintelligence and strategies for ensuring it remains beneficial.
+  - name: 'Our Final Invention: Artificial Intelligence and the End of the Human Era'
+    author: James Barrat
+    year: 2013
+    description: Investigative account of the race toward AGI and the existential risks of superintelligence.
+  - name: 'The Alignment Problem: Machine Learning and Human Values'
+    author: Brian Christian
+    year: 2020
+    description: Explores the technical and societal challenges of aligning AI systems with human values.
+  - name: 'Human Compatible: Artificial Intelligence and the Problem of Control'
+    author: Stuart Russell
+    year: 2019
+    description: Proposes a new framework for AI development based on uncertainty about human preferences to solve the control
+      problem.
+  - name: 'The Coming Wave: Technology, Power, and the 21st Century''s Greatest Dilemma'
+    author: Mustafa Suleyman
+    year: 2023
+    description: DeepMind co-founder on the unstoppable wave of AI and synthetic biology, and the containment problem.
+  - name: 'Situational Awareness: The Decade Ahead'
+    author: Leopold Aschenbrenner
+    year: 2024
+    description: Former OpenAI researcher's detailed analysis of the path from GPT-4 to AGI/ASI within this decade.
+- title: The Singularity & Future of Intelligence
+  type: book
+  level: 4
+  parent_heading: Books on AGI, ASI, and Superintelligence
+  columns:
+  - Book
+  - Author(s)
+  - Year
+  - Description
+  items:
+  - name: The Singularity Is Near
+    author: Ray Kurzweil
+    year: 2005
+    description: Foundational forecast of the technological singularity driven by exponential growth in AI, genetics, and
+      nanotech.
+  - name: The Singularity Is Nearer
+    author: Ray Kurzweil
+    year: 2024
+    description: Updated vision with two decades of new evidence, arguing the singularity arrives by 2045.
+  - name: 'Life 3.0: Being Human in the Age of Artificial Intelligence'
+    author: Max Tegmark
+    year: 2017
+    description: |-
+      Explores how AGI/ASI could transform every aspect of life, from warfare to work, and what we can do to ensure a good outcome.
+  - name: 'The Age of AI: And Our Human Future'
+    author: Henry Kissinger, Eric Schmidt, Daniel Huttenlocher
+    year: 2021
+    description: Former Secretary of State and Google CEO examine how AI is altering society, security, and what it means
+      to be human.
+  - name: 'Nexus: A Brief History of Information Networks from the Stone Age to AI'
+    author: Yuval Noah Harari
+    year: 2024
+    description: |-
+      The author of Sapiens traces information networks through history to argue AI represents a fundamentally new kind of agent.
+  - name: 'AI 2041: Ten Visions for Our Future'
+    author: Kai-Fu Lee, Chen Qiufan
+    year: 2021
+    description: Ten stories imagining how AI will transform the world over the next two decades, blending fiction with AI
+      expertise.
+- title: Understanding AGI -- How Intelligence Works
+  type: book
+  level: 4
+  parent_heading: Books on AGI, ASI, and Superintelligence
+  columns:
+  - Book
+  - Author(s)
+  - Year
+  - Description
+  items:
+  - name: 'A Thousand Brains: A New Theory of Intelligence'
+    author: Jeff Hawkins
+    year: 2021
+    description: |-
+      Numenta founder proposes the Thousand Brains Theory of intelligence -- a neuroscience-first path to AGI based on cortical columns.
+  - name: On Intelligence
+    author: Jeff Hawkins, Sandra Blakeslee
+    year: 2004
+    description: Foundational book arguing AGI must come from understanding the neocortex. Introduced the memory-prediction
+      framework.
+  - name: 'Rebooting AI: Building Artificial Intelligence We Can Trust'
+    author: Gary Marcus, Ernest Davis
+    year: 2019
+    description: A skeptic's case that deep learning alone cannot reach AGI; argues for hybrid neuro-symbolic approaches.
+  - name: 'Artificial Intelligence: A Guide for Thinking Humans'
+    author: Melanie Mitchell
+    year: 2019
+    description: Computer scientist provides a clear-eyed assessment of AI's real capabilities and limitations on the path
+      to AGI.
+  - name: The Master Algorithm
+    author: Pedro Domingos
+    year: 2015
+    description: |-
+      A quest for the universal learning algorithm that could unify all of machine learning -- a framework for thinking about AGI.
+  - name: Why Machines Will Never Rule the World
+    author: Jobst Landgrebe, Barry Smith
+    year: 2023
+    description: Rigorous philosophical and mathematical argument that AGI is fundamentally impossible due to complexity barriers.
+  - name: 'Possible Minds: Twenty-Five Ways of Looking at AI'
+    author: John Brockman (ed.)
+    year: 2019
+    description: Essays from leading thinkers (Pinker, Tegmark, Dyson, Wilczek) on AI's future, capabilities, and risks.
+- title: AI in Practice & Society
+  type: book
+  level: 4
+  parent_heading: Books on AGI, ASI, and Superintelligence
+  columns:
+  - Book
+  - Author(s)
+  - Year
+  - Description
+  items:
+  - name: 'Co-Intelligence: Living and Working with AI'
+    author: Ethan Mollick
+    year: 2024
+    description: Practical guide on how humans and AI can work together, based on extensive hands-on research with frontier
+      models.
+  - name: 'Power and Prediction: The Disruptive Economics of Artificial Intelligence'
+    author: Ajay Agrawal, Joshua Gans, Avi Goldfarb
+    year: 2022
+    description: How AI shifts decision-making economics and creates system-level disruption.
+  - name: 'Genius Makers: The Mavericks Who Brought AI to Google, Facebook, and the World'
+    author: Cade Metz
+    year: 2021
+    description: NYT journalist tells the inside story of the AI race -- Hinton, LeCun, DeepMind, OpenAI, and the people building
+      AGI.
+  - name: 'Architects of Intelligence: The Truth About AI from the People Building It'
+    author: Martin Ford
+    year: 2018
+    description: Interviews with 23 AI leaders (Hinton, Bengio, LeCun, Hassabis, Ng, Brooks) on AGI timelines, risks, and
+      approaches.
+  - name: 'Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence'
+    author: Kate Crawford
+    year: 2021
+    description: |-
+      Reveals the hidden costs of AI: labor exploitation, environmental impact, surveillance infrastructure, and power concentration.
+  - name: 'God, Human, Animal, Machine: Technology, Metaphor, and the Search for Meaning'
+    author: Meghan O'Gieblyn
+    year: 2021
+    description: Philosophical exploration of consciousness, intelligence, and what machines that think would mean for human
+      identity.
+  - name: 'The Worlds I See: Curiosity, Exploration, and Discovery at the Dawn of AI'
+    author: Fei-Fei Li
+    year: 2023
+    description: Stanford AI Lab director's memoir covering ImageNet, the birth of modern AI, and why human-centered AI matters
+      for AGI.
+  - name: 'Impromptu: Amplifying Our Humanity Through AI'
+    author: Reid Hoffman, GPT-4
+    year: 2023
+    description: LinkedIn co-founder co-writes with GPT-4 about how AI will transform creativity, education, and society.
+- title: Seminal Papers on ASI and Superintelligence
+  type: paper
+  level: 3
+  columns:
+  - Paper
+  - Author(s)
+  - Year
+  - Description
+  - Links
+  items:
+  - name: Concrete Problems in AI Safety
+    author: Amodei et al.
+    year: 2016
+    description: Foundational paper outlining five practical research problems for AI safety.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/1606.06565
+  - name: Risks from Learned Optimization in Advanced ML Systems
+    author: Hubinger et al.
+    year: 2019
+    description: Introduces the concept of "mesa-optimization" and deceptive alignment in AI.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/1906.01820
+  - name: Language Models are Few-Shot Learners (GPT-3)
+    author: Brown et al.
+    year: 2020
+    description: Demonstrated emergent capabilities in scaled language models, sparking AGI discussions.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2005.14165
+  - name: Scaling Laws for Neural Language Models
+    author: Kaplan et al.
+    year: 2020
+    description: Established power-law relationships between model scale and performance, underpinning AGI scaling hypotheses.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2001.08361
+  - name: 'Constitutional AI: Harmlessness from AI Feedback'
+    author: Bai et al.
+    year: 2022
+    description: Anthropic's approach to training helpful, harmless, and honest AI systems.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2212.08073
+  - name: 'Sparks of Artificial General Intelligence: Early Experiments with GPT-4'
+    author: Bubeck et al.
+    year: 2023
+    description: Microsoft Research argues GPT-4 shows early sparks of AGI across diverse tasks.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2303.12712
+  - name: Model Evaluation for Extreme Risks
+    author: Shevlane et al.
+    year: 2023
+    description: DeepMind framework for evaluating dangerous capabilities in frontier AI models.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.15324
+  - name: 'Levels of AGI: Operationalizing Progress on the Path to AGI'
+    author: Morris et al.
+    year: 2023
+    description: Google DeepMind's framework defining 6 levels of AGI from "Emerging" to "Superhuman (ASI)".
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2311.02462
+  - name: 'Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training'
+    author: Hubinger et al.
+    year: 2024
+    description: Anthropic research showing deceptive behaviors can persist through safety fine-tuning.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2401.05566
+  - name: The Superintelligent Will
+    author: Bostrom
+    year: 2012
+    description: Analyzes why a superintelligent agent would resist attempts to change its goals.
+    links:
+    - label: Paper
+      url: https://nickbostrom.com/superintelligentwill.pdf
+  - name: Superintelligence as a Cause or Cure for Risks of Astronomical Suffering
+    author: Sotala & Gloor
+    year: 2017
+    description: Examines both positive and negative scenarios of superintelligence emergence.
+    links:
+    - label: Paper
+      url: https://link.springer.com/article/10.1007/s10676-017-9426-0
+- title: AGI/ASI Benchmarks and Evaluation
+  type: benchmark
+  level: 3
+  columns:
+  - Benchmark
+  - Description
+  - Links
+  items:
+  - name: ARC-AGI
+    raw_name: '**ARC-AGI**'
+    description: |-
+      Abstraction and Reasoning Corpus by Francois Chollet. Tests fluid intelligence and novel problem solving - designed to be easy for humans but hard for AI.
+    links:
+    - label: GitHub
+      url: https://github.com/fchollet/ARC-AGI
+  - name: MMLU (Massive Multitask Language Understanding)
+    raw_name: '**MMLU (Massive Multitask Language Understanding)**'
+    description: 57 academic subjects testing from STEM to humanities. A standard benchmark for measuring broad knowledge.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2009.03300
+  - name: GPQA (Graduate-Level Google-Proof Q&A)
+    raw_name: '**GPQA (Graduate-Level Google-Proof Q&A)**'
+    description: Expert-crafted questions that PhD-level domain experts can answer but are resistant to search. Tests deep
+      reasoning.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2311.12022
+  - name: SWE-bench
+    raw_name: '**SWE-bench**'
+    description: Evaluates LLMs' ability to resolve real-world GitHub issues in software engineering.
+    links:
+    - label: GitHub
+      url: https://github.com/princeton-nlp/SWE-bench
+  - name: MATH / GSM8K
+    raw_name: '**MATH / GSM8K**'
+    description: Mathematical reasoning benchmarks ranging from grade school to competition math.
+    links:
+    - label: MATH
+      url: https://arxiv.org/abs/2103.03874
+    - label: GSM8K
+      url: https://arxiv.org/abs/2110.14168
+  - name: BIG-Bench
+    raw_name: '**BIG-Bench**'
+    description: Collaborative benchmark of 204+ tasks probing LLM capabilities beyond existing benchmarks.
+    links:
+    - label: GitHub
+      url: https://github.com/google/BIG-bench
+  - name: HumanEval / MBPP
+    raw_name: '**HumanEval / MBPP**'
+    description: Code generation benchmarks measuring functional correctness of synthesized programs.
+    links:
+    - label: HumanEval
+      url: https://github.com/openai/human-eval
+  - name: AgentBench
+    raw_name: '**AgentBench**'
+    description: Evaluates LLMs as autonomous agents across OS interaction, database ops, web browsing, and more.
+    links:
+    - label: GitHub
+      url: https://github.com/THUDM/AgentBench
+  - name: Humanity's Last Exam
+    raw_name: '**Humanity''s Last Exam**'
+    description: Hardest possible questions crowdsourced from domain experts worldwide. Designed to be the final exam before
+      AGI.
+    links:
+    - label: GitHub
+      url: https://github.com/centerforaisafety/hle
+  - name: METR (Model Evaluation & Threat Research)
+    raw_name: '**METR (Model Evaluation & Threat Research)**'
+    description: Evaluates frontier models for dangerous capabilities including autonomous replication and resource acquisition.
+    links:
+    - label: metr.org
+      url: https://metr.org/
+  - name: FrontierMath
+    raw_name: '**FrontierMath**'
+    description: 'Extremely challenging math benchmark: problems that take professional mathematicians hours/days.'
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2411.04872
+- title: Roadmaps, Perspectives, and Timelines
+  type: resource
+  level: 3
+  columns:
+  - Resource
+  - Description
+  - Links
+  items:
+  - name: Levels of AGI (Google DeepMind, 2023)
+    raw_name: '**Levels of AGI (Google DeepMind, 2023)**'
+    description: Proposes a framework with 6 levels from Emerging AGI to Superhuman ASI, with performance and autonomy axes.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2311.02462
+  - name: Situational Awareness (Leopold Aschenbrenner, 2024)
+    raw_name: '**Situational Awareness (Leopold Aschenbrenner, 2024)**'
+    description: Detailed 165-page analysis arguing AGI arrives by 2027, ASI shortly after, with national security implications.
+    links:
+    - label: situational-awareness.ai
+      url: https://situational-awareness.ai/
+  - name: OpenAI's Planning for AGI and Beyond (2023)
+    raw_name: '**OpenAI''s Planning for AGI and Beyond (2023)**'
+    description: OpenAI's public statement on their approach to safely developing AGI.
+    links:
+    - label: Blog
+      url: https://openai.com/blog/planning-for-agi-and-beyond
+  - name: Anthropic Core Views on AI Safety (2023)
+    raw_name: '**Anthropic Core Views on AI Safety (2023)**'
+    description: Anthropic's public position on AI safety risks and their research agenda.
+    links:
+    - label: Blog
+      url: https://www.anthropic.com/news/core-views-on-ai-safety
+  - name: International AI Safety Report (2025)
+    raw_name: '**International AI Safety Report (2025)**'
+    description: Report from the AI Seoul Summit on the state of AI safety science.
+    links:
+    - label: aisafety.gov
+      url: https://www.aisafety.gov/
+  - name: Metaculus AGI Forecasts
+    raw_name: '**Metaculus AGI Forecasts**'
+    description: Community prediction platform tracking forecasted timelines for AGI/ASI milestones.
+    links:
+    - label: metaculus.com
+      url: https://www.metaculus.com/questions/?search=AGI
+  - name: AI Impacts
+    raw_name: '**AI Impacts**'
+    description: |-
+      Research organization analyzing evidence on AI timelines, risks, and impacts. Their 2024 survey of 2,778 AI researchers forecasts 50% chance of HLMI (Human-Level Machine Intelligence) by 2049.
+    links:
+    - label: aiimpacts.org
+      url: https://aiimpacts.org/
+    - label: 2024 Survey
+      url: https://arxiv.org/abs/2401.02843
+  - name: LessWrong / Alignment Forum
+    raw_name: '**LessWrong / Alignment Forum**'
+    description: Community discussion hub for AI alignment research, ASI forecasting, and safety strategies.
+    links:
+    - label: lesswrong.com
+      url: https://www.lesswrong.com/
+    - label: alignmentforum.org
+      url: https://www.alignmentforum.org/
+  - name: The Pause Letter (Future of Life Institute, 2023)
+    raw_name: '**The Pause Letter (Future of Life Institute, 2023)**'
+    description: Open letter calling for a 6-month pause on training AI systems more powerful than GPT-4. Signed by 33,000+.
+    links:
+    - label: futureoflife.org
+      url: https://futureoflife.org/open-letter/pause-giant-ai-experiments/
+  - name: Statement on AI Risk (CAIS, 2023)
+    raw_name: '**Statement on AI Risk (CAIS, 2023)**'
+    description: |-
+      One-sentence statement: "Mitigating the risk of extinction from AI should be a global priority." Signed by Hinton, Bengio, and hundreds of researchers.
+    links:
+    - label: safe.ai
+      url: https://www.safe.ai/work/statement-on-ai-risk
+  - name: Stanford AI Index Report (Annual)
+    raw_name: '**Stanford AI Index Report (Annual)**'
+    description: |-
+      The most comprehensive annual report on AI progress: compute trends, investment data, benchmark saturation, safety-capability gap, and global policy landscape. Essential reading.
+    links:
+    - label: aiindex.stanford.edu
+      url: https://aiindex.stanford.edu/report/
+  - name: 'Epoch AI: Trends in Machine Learning'
+    raw_name: '**Epoch AI: Trends in Machine Learning**'
+    description: |-
+      Rigorous data on training compute, dataset sizes, hardware efficiency, and cost curves for frontier models. The primary source for quantitative AGI timelines.
+    links:
+    - label: epochai.org
+      url: https://epochai.org/
+- title: Neuroscience-Inspired Approaches to AGI
+  type: resource
+  level: 3
+  description: |-
+    A growing body of research argues that understanding biological intelligence is essential to building artificial general intelligence. These resources bridge neuroscience and AI architecture design.
+  columns:
+  - Resource
+  - Description
+  - Links
+  items:
+  - name: Numenta (Jeff Hawkins)
+    raw_name: '**Numenta (Jeff Hawkins)**'
+    description: |-
+      Neuroscience-first approach to AGI based on cortical columns and the Thousand Brains Theory. Building machine intelligence that works on principles of the neocortex.
+    links:
+    - label: numenta.com
+      url: https://numenta.com/
+  - name: 'NeuroAI: A Field Born from the Intersection of Neuroscience, Cognitive Science, and AI'
+    raw_name: '**NeuroAI: A Field Born from the Intersection of Neuroscience, Cognitive Science, and AI**'
+    description: |-
+      Research direction applying neuroscience insights (memory consolidation, predictive coding, attention) to build more capable and general AI systems.
+    links:
+    - label: Nature
+      url: https://www.nature.com/articles/s41467-024-48748-8
+- title: State-Space Models & Non-Transformer Architectures
+  type: model
+  level: 4
+  parent_heading: Alternative Architectures & Paths to AGI
+  parent_description: |-
+    The current "Transformer + Scaling" paradigm dominates, but it may not be the only -- or even the best -- path to AGI. These alternative approaches address fundamental limitations: the quadratic scaling of attention, the energy costs of dense computation, and the architectural gap between silicon and biological intelligence.
+  description: |-
+    These architectures process sequences with linear (not quadratic) complexity, solving the memory and compute bottlenecks that limit Transformer context windows. If AGI requires reasoning over lifelong context, these models may be essential.
+  columns:
+  - Model / Architecture
+  - Description
+  - Links
+  items:
+  - name: Mamba** (Gu & Dao, 2023)
+    raw_name: '**Mamba** (Gu & Dao, 2023)'
+    description: |-
+      Selective State Space Model with input-dependent selection. Linear-time sequence modeling matching or exceeding Transformer quality at scale, with 5x higher throughput on long sequences. The leading Transformer alternative.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2312.00752
+    - label: Code
+      url: https://github.com/state-spaces/mamba
+  - name: Mamba-2** (Dao & Gu, 2024)
+    raw_name: '**Mamba-2** (Dao & Gu, 2024)'
+    description: |-
+      Unifies state space models with structured attention variants via State Space Duality (SSD). 2-8x faster than Mamba while maintaining quality.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2405.21060
+  - name: RWKV** (Peng et al., 2023)
+    raw_name: '**RWKV** (Peng et al., 2023)'
+    description: |-
+      "Reinventing RNNs for the Transformer Era." Recurrent architecture achieving Transformer-level performance with O(n) complexity and constant memory during inference. Open-source (14B+ parameters).
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.13048
+    - label: GitHub
+      url: https://github.com/BlinkDL/RWKV-LM
+  - name: Jamba** (AI21 Labs, 2024)
+    raw_name: '**Jamba** (AI21 Labs, 2024)'
+    description: |-
+      Production hybrid: interleaves Mamba layers with Transformer attention layers plus MoE. 256K context, fits on a single 80GB GPU despite 52B total parameters. Proves hybrid architectures work at scale.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2403.19887
+  - name: xLSTM** (Hochreiter et al., 2024)
+    raw_name: '**xLSTM** (Hochreiter et al., 2024)'
+    description: |-
+      Extended Long Short-Term Memory from the original LSTM inventor. Exponential gating and matrix memory enable competitive performance with Transformers and SSMs.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2405.04517
+- title: Neuromorphic Computing
+  type: platform
+  level: 4
+  parent_heading: Alternative Architectures & Paths to AGI
+  parent_description: |-
+    The current "Transformer + Scaling" paradigm dominates, but it may not be the only -- or even the best -- path to AGI. These alternative approaches address fundamental limitations: the quadratic scaling of attention, the energy costs of dense computation, and the architectural gap between silicon and biological intelligence.
+  description: |-
+    Brain-inspired hardware that uses spiking neural networks and event-driven processing. Neuromorphic chips consume 100-1000x less energy than GPUs for certain AI tasks -- potentially solving the energy constraint identified in the [Key Metrics](#state-of-the-field-key-metrics-2025-2026) table.
+  columns:
+  - Platform
+  - Description
+  - Links
+  items:
+  - name: Intel Loihi 2
+    raw_name: '**Intel Loihi 2**'
+    description: |-
+      Intel's neuromorphic research chip with 1M neurons and 120M synapses per chip. Programmable spiking neural networks with on-chip learning. Lava open-source framework for neuromorphic development.
+    links:
+    - label: intel.com/loihi
+      url: https://www.intel.com/content/www/us/en/research/neuromorphic-computing.html
+    - label: Lava
+      url: https://github.com/lava-nc/lava
+  - name: BrainChip Akida
+    raw_name: '**BrainChip Akida**'
+    description: |-
+      Commercial neuromorphic processor for edge AI. Event-based processing consuming <1W. Deployed in industrial and automotive applications. One of the few neuromorphic chips available for commercial use.
+    links:
+    - label: brainchip.com
+      url: https://brainchip.com/
+  - name: SpiNNaker 2** (University of Manchester)
+    raw_name: '**SpiNNaker 2** (University of Manchester)'
+    description: |-
+      Million-core neuromorphic supercomputer designed to simulate a billion neurons in real-time. Built for computational neuroscience and brain-scale neural network simulation.
+    links:
+    - label: spinnaker.io
+      url: https://spinnakermanchester.io/
+- title: Decentralized AI Compute
+  type: network
+  level: 4
+  parent_heading: Alternative Architectures & Paths to AGI
+  parent_description: |-
+    The current "Transformer + Scaling" paradigm dominates, but it may not be the only -- or even the best -- path to AGI. These alternative approaches address fundamental limitations: the quadratic scaling of attention, the energy costs of dense computation, and the architectural gap between silicon and biological intelligence.
+  description: |-
+    If AGI requires 10^28+ FLOP training runs, centralized infrastructure may not scale fast enough. Decentralized networks distribute training and inference across the globe, potentially democratizing access to AGI-scale compute.
+  columns:
+  - Network
+  - Description
+  - Links
+  items:
+  - name: Together AI
+    raw_name: '**Together AI**'
+    description: |-
+      Decentralized cloud for running and training open-source AI. Together Inference Engine delivers high-throughput serving; Together GPU Cluster enables distributed training across geographies.
+    links:
+    - label: together.ai
+      url: https://www.together.ai/
+  - name: Gensyn
+    raw_name: '**Gensyn**'
+    description: |-
+      Decentralized ML compute protocol. Verification layer ensures honest compute via probabilistic proofs -- solving the trust problem in distributed training. Backed by a16z.
+    links:
+    - label: gensyn.ai
+      url: https://www.gensyn.ai/
+  - name: Bittensor
+    raw_name: '**Bittensor**'
+    description: |-
+      Decentralized AI network with TAO token incentives. Miners contribute ML compute (training, inference); validators ensure quality. 32+ specialized subnets for different AI tasks.
+    links:
+    - label: bittensor.com
+      url: https://bittensor.com/
+    - label: GitHub
+      url: https://github.com/opentensor/bittensor
+  - name: Prime Intellect
+    raw_name: '**Prime Intellect**'
+    description: |-
+      Decentralized training infrastructure for frontier models. INTELLECT-2 demonstrated training a 32B-parameter model across globally distributed GPUs. Open-source.
+    links:
+    - label: primeintellect.ai
+      url: https://www.primeintellect.ai/
+- title: Recursive Self-Improvement & the Path to ASI
+  type: paper
+  level: 3
+  description: |-
+    The core mechanism theorized to trigger an **intelligence explosion**: an AI system that can improve its own design, creating a more capable version that improves itself further, in a feedback loop surpassing human intelligence. This is the bridge from AGI to ASI -- and the most critical unsolved problem in AI safety.
+  pre_table_text: |-
+    **Why this matters:** If a system achieves even modest self-improvement capability, the gap between AGI and ASI may close in weeks or months rather than decades. Understanding and controlling this process is the central challenge of AI alignment.
+  columns:
+  - Concept / Paper
+  - Description
+  - Links
+  items:
+  - name: '**Intelligence Explosion (I.J. Good, 1965)**'
+    description: |-
+      The original formulation: "an ultraintelligent machine could design even better machines; there would then unquestionably be an 'intelligence explosion.'"
+    links:
+    - label: Paper
+      url: https://exhibits.stanford.edu/feigenbaum/catalog/gz033kf2254
+  - name: '**Weak-to-Strong Generalization** (Burns et al., OpenAI, 2023)'
+    description: |-
+      GPT-2 supervising GPT-4 as a proxy for "human supervising superintelligence." Shows weaker models can elicit most of the stronger model's capabilities -- a key mechanism for scalable oversight.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2312.09390
+  - name: '**Self-Rewarding Language Models** (Yuan et al., Meta, 2024)'
+    description: |-
+      Models generate and evaluate their own preference data for iterative self-improvement via LLM-as-a-Judge, creating a self-improvement loop without human feedback.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2401.10020
+  - name: '**The AI Scientist** (Sakana AI, 2024)'
+    description: |-
+      Fully autonomous research pipeline -- idea generation, experiment design, execution, and paper writing. A prototype for AI systems that accelerate their own research.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2408.06292
+  - name: '**Constitutional AI** (Bai et al., Anthropic, 2022)'
+    description: |-
+      AI-generated critiques from a set of principles (a "constitution") used to train AI without human feedback at each step -- a form of automated alignment that scales with model capability.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2212.08073
+  - name: '**Scalable Oversight via Debate** (Irving et al., 2018)'
+    description: |-
+      Two AI agents debate each other while a human judge adjudicates, allowing oversight of superhuman AI through adversarial decomposition.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/1805.00899
+  - name: '**Iterated Distillation and Amplification (IDA)** (Christiano, 2018)'
+    description: |-
+      Bootstrapping alignment: a slow but safe AI is "amplified" to solve harder problems, then "distilled" into a faster model, iteratively approaching superintelligent capability while maintaining alignment.
+    links:
+    - label: Blog
+      url: https://ai-alignment.com/iterated-distillation-and-amplification-157debfd1616
+  - name: '**Reward Hacking & Specification Gaming**'
+    description: |-
+      Comprehensive collection of examples where AI systems find unintended shortcuts -- a critical failure mode when self-improving systems optimize misspecified objectives.
+    links:
+    - label: Collection
+      url: https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/
+    - label: GitHub
+      url: https://github.com/deepmind/specification_gaming

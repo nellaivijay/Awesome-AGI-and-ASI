@@ -1,0 +1,223 @@
+section:
+  title: Safety, Alignment and Governance
+  description: |-
+    The most critical section. Ensuring AI remains safe, aligned with human values, and under meaningful control is the defining challenge as systems grow more capable.
+  badges:
+  - alt: Alignment
+    path: Alignment-RLHF_DPO-red?style=flat-square
+  - alt: Safety
+    path: Safety-Red_Teaming-orange?style=flat-square
+  - alt: Governance
+    path: Governance-Policy_&_Ethics-blue?style=flat-square
+  - alt: Interpretability
+    path: Interpretability-Mechanistic-purple?style=flat-square
+  - alt: Detection
+    path: Detection-AI_Text-green?style=flat-square
+subsections:
+- title: Safety and Alignment
+  type: tool
+  level: 3
+  columns:
+  - Topic
+  - Description
+  - Links
+  items:
+  - name: LLM Hallucination Survey
+    raw_name: LLM Hallucination Survey
+    description: Comprehensive survey on detecting, explaining, and mitigating hallucinations in LLMs.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2309.06794v1
+    - label: Code
+      url: https://github.com/hongbinye/Cognitive-Mirage-Hallucinations-in-LLMs
+  - name: Hallucination Detection
+    raw_name: Hallucination Detection
+    description: Survey on hallucination in LLMs covering detection methods and mitigation strategies.
+    links:
+    - label: Paper
+      url: https://www.zhuanzhi.ai/paper/61ebe9c5007cf1373b900452ad52f0ae
+    - label: Code
+      url: https://github.com/HillZhang1999/llm-hallucination-survey
+  - name: LLM Attacks
+    raw_name: LLM Attacks
+    description: Universal and transferable adversarial attacks on aligned language models (CMU research).
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2307.15043
+    - label: Code
+      url: https://github.com/llm-attacks/llm-attacks
+  - name: RLHF
+    raw_name: RLHF
+    description: Reinforcement Learning from Human Feedback - the key technique behind ChatGPT's alignment.
+    links:
+    - label: Code Example
+      url: https://github.com/HarderThenHarder/transformers_tasks/tree/main/RLHF
+  - name: DPO
+    raw_name: DPO
+    description: Direct Preference Optimization - an alternative to RLHF that trains the LM directly as a reward model.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.18290
+    - label: Code
+      url: https://github.com/eric-mitchell/direct-preference-optimization
+- title: Scalable Oversight & Automated Alignment
+  type: approach
+  level: 3
+  description: |-
+    As AI systems approach and exceed human-level capability, humans can no longer directly evaluate their outputs. These techniques aim to maintain meaningful oversight over superhuman systems -- the defining technical challenge of the ASI transition.
+  columns:
+  - Approach
+  - Description
+  - Links
+  items:
+  - name: Weak-to-Strong Generalization
+    raw_name: '**Weak-to-Strong Generalization**'
+    description: |-
+      OpenAI's framework for studying how weak supervisors (humans) can elicit capabilities from stronger models. GPT-2 supervising GPT-4 as proxy for the superintelligence alignment problem.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2312.09390
+  - name: Constitutional AI (CAI)
+    raw_name: '**Constitutional AI (CAI)**'
+    description: |-
+      Anthropic's method for training AI using AI-generated feedback based on a set of principles, reducing dependence on human labelers while maintaining alignment.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2212.08073
+  - name: Debate
+    raw_name: '**Debate**'
+    description: |-
+      Two AI agents argue opposing sides; a human judge evaluates. Even if an AI is superhuman, the debate format decomposes complex claims into human-verifiable steps.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/1805.00899
+  - name: Recursive Reward Modeling
+    raw_name: '**Recursive Reward Modeling**'
+    description: |-
+      Humans train AI to assist with evaluation, which then assists with training the next model -- bootstrapping oversight. Core technique for Anthropic and OpenAI alignment teams.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/1811.07871
+  - name: AI Control
+    raw_name: '**AI Control**'
+    description: |-
+      Redwood Research's framework for maintaining safety even against models actively trying to subvert controls. Evaluates security against intentional subversion.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2312.06942
+  - name: Cooperative AI
+    raw_name: '**Cooperative AI**'
+    description: |-
+      Research program at DeepMind focused on AI that cooperates with humans and other AI systems -- critical for multi-agent superintelligence scenarios.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2012.08630
+- title: Mechanistic Interpretability
+  type: resource
+  level: 3
+  description: |-
+    Understanding *how* neural networks actually compute internally. If we can reverse-engineer the algorithms learned by frontier models, we can detect dangerous capabilities, verify alignment, and build safer systems. This is arguably the most important field for AGI safety.
+  columns:
+  - Resource
+  - Description
+  - Links
+  items:
+  - name: Towards Monosemanticity** (Anthropic, 2023)
+    raw_name: '**Towards Monosemanticity** (Anthropic, 2023)'
+    description: 'Landmark result: sparse autoencoders decompose polysemantic neurons into millions of interpretable features
+      in Claude.'
+    links:
+    - label: Blog
+      url: https://transformer-circuits.pub/2023/monosemantic-features/
+  - name: Scaling Monosemanticity** (Anthropic, 2024)
+    raw_name: '**Scaling Monosemanticity** (Anthropic, 2024)'
+    description: |-
+      Extracted 34M interpretable features from Claude 3 Sonnet, including safety-relevant concepts (deception, power-seeking, "I am an AI assistant").
+    links:
+    - label: Blog
+      url: https://transformer-circuits.pub/2024/scaling-monosemanticity/
+  - name: Representation Engineering** (Zou et al., 2023)
+    raw_name: '**Representation Engineering** (Zou et al., 2023)'
+    description: |-
+      Identifies and steers high-level concepts (honesty, power-seeking, emotion) directly in neural representations. A practical tool for alignment.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2310.01405
+  - name: TransformerLens
+    raw_name: '**TransformerLens**'
+    description: |-
+      Neel Nanda's open-source library for mechanistic interpretability research on GPT-2 style models. The standard tool for mech interp research.
+    links:
+    - label: GitHub
+      url: https://github.com/TransformerLensOrg/TransformerLens
+  - name: SAE Bench
+    raw_name: '**SAE Bench**'
+    description: Standardized benchmark for evaluating sparse autoencoder quality -- enabling reproducible interpretability
+      research.
+    links:
+    - label: GitHub
+      url: https://github.com/adamkarvonen/SAEBench
+  - name: Transformer Circuits Thread** (Anthropic)
+    raw_name: '**Transformer Circuits Thread** (Anthropic)'
+    description: |-
+      Anthropic's ongoing research thread on understanding transformer internals: induction heads, superposition, circuits, and feature visualization.
+    links:
+    - label: Blog
+      url: https://transformer-circuits.pub/
+- title: AI-Generated Text Detection
+  type: tool_method
+  level: 3
+  columns:
+  - Tool/Method
+  - Description
+  - Links
+  items:
+  - name: DetectGPT
+    raw_name: DetectGPT
+    description: Stanford method using probability curvature to detect LLM-generated text.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2301.11305
+    - label: Code
+      url: https://ericmitchell.ai/detectgpt/
+  - name: Detecting LLM-Generated-Text
+    raw_name: Detecting LLM-Generated-Text
+    description: Comprehensive survey on the science of LLM-generated text detection.
+    links:
+    - label: Paper
+      url: https://github.com/datamllab/The-Science-of-LLM-generated-Text-Detection
+  - name: GPTZero
+    raw_name: GPTZero
+    description: AI detection model designed specifically for educators.
+    links:
+    - label: GPTZero
+      url: https://gptzero.me/
+- title: AI Governance & Planetary-Scale Challenges
+  type: resource
+  level: 3
+  columns:
+  - Resource
+  - Description
+  - Links
+  items:
+  - name: Climate Change AI
+    raw_name: '**Climate Change AI**'
+    description: |-
+      Global non-profit catalyzing impactful work at the intersection of climate change and machine learning. Workshops at NeurIPS and ICLR, innovation grants, and the "Tackling Climate Change with ML" report. Co-founded by Priya Donti (MIT EECS).
+    links:
+    - label: climatechange.ai
+      url: https://www.climatechange.ai/
+  - name: Global Algorithmic Institute
+    raw_name: '**Global Algorithmic Institute**'
+    description: |-
+      Research institute focused on governance frameworks for algorithmic systems, AI accountability, and international AI policy coordination.
+    links:
+    - label: globalalgorithmicinstitute.org
+      url: https://globalalgorithmicinstitute.org/
+  - name: AI Leadership Institute
+    raw_name: '**AI Leadership Institute**'
+    description: |-
+      Organization building responsible AI leadership capacity across industries, focused on ethical AI deployment and trust frameworks.
+    links:
+    - label: aileadershipinstitute.com
+      url: https://www.aileadershipinstitute.com/

@@ -1,0 +1,200 @@
+section:
+  title: Physical AI & Embodied Intelligence
+  description: |-
+    AGI cannot exist only in text -- it must understand and act in the physical world. **Physical AI** bridges foundation models with embodiment: humanoid robots, manipulation, navigation, and physics simulation. Moravec's Paradox -- sensorimotor skills are harder than abstract reasoning -- remains one of the deepest unsolved AGI challenges.
+  badges:
+  - alt: Robotics
+    path: Robotics-Humanoid-red?style=flat-square
+  - alt: VLA
+    path: VLA-Vision--Language--Action-blue?style=flat-square
+  - alt: Simulation
+    path: Simulation-Isaac_MuJoCo-green?style=flat-square
+  - alt: Embodied
+    path: Embodied_AI-Physical_Intelligence-purple?style=flat-square
+subsections:
+- title: Humanoid Robotics & AGI Hardware
+  type: company
+  level: 3
+  description: |-
+    The race to build general-purpose humanoid robots capable of operating in unstructured human environments. These platforms are the physical embodiment layer for AGI.
+  columns:
+  - Company
+  - Description
+  - Links
+  items:
+  - name: Figure AI
+    raw_name: '**Figure AI**'
+    description: |-
+      Humanoid robots with advanced AI. Partnered with OpenAI and Microsoft for embodied AI. Figure 02 demonstrates autonomous manipulation, language-guided task execution, and learning from human feedback. Raised $2.6B+.
+    links:
+    - label: figure.ai
+      url: https://www.figure.ai/
+  - name: Tesla Optimus
+    raw_name: '**Tesla Optimus**'
+    description: |-
+      General-purpose humanoid robot leveraging Tesla's massive autonomous driving AI stack (FSD neural nets, Dojo supercomputer). Targeting manufacturing and consumer deployment at scale.
+    links:
+    - label: tesla.com
+      url: https://www.tesla.com/
+  - name: Boston Dynamics
+    raw_name: '**Boston Dynamics**'
+    description: |-
+      Pioneers of advanced locomotion. Atlas (humanoid) and Spot (quadruped) set the standard for physical capability, agility, and dexterity. Now Hyundai-owned, pivoting to AI-first control.
+    links:
+    - label: bostondynamics.com
+      url: https://www.bostondynamics.com/
+  - name: 1X Technologies
+    raw_name: '**1X Technologies**'
+    description: |-
+      NEO humanoid robot with human-like form factor. Backed by OpenAI. Focused on safe, embodied AI for real-world deployment in homes and workplaces.
+    links:
+    - label: 1x.tech
+      url: https://www.1x.tech/
+  - name: Unitree Robotics
+    raw_name: '**Unitree Robotics**'
+    description: |-
+      Democratizing humanoid robotics with affordable platforms (G1, H1 series). Enables broad research access to embodied AI experimentation.
+    links:
+    - label: unitree.com
+      url: https://www.unitree.com/
+  - name: Sanctuary AI
+    raw_name: '**Sanctuary AI**'
+    description: |-
+      Phoenix humanoid robot powered by "Carbon" -- a proprietary AI system designed for general-purpose task learning and autonomous execution.
+    links:
+    - label: sanctuary.ai
+      url: https://www.sanctuary.ai/
+  - name: Agility Robotics
+    raw_name: '**Agility Robotics**'
+    description: Digit bipedal robot designed for logistics and warehouse automation. Real-world deployment partner with Amazon.
+    links:
+    - label: agilityrobotics.com
+      url: https://www.agilityrobotics.com/
+  - name: Apptronik
+    raw_name: '**Apptronik**'
+    description: |-
+      Apollo full-size humanoid robot for industrial applications. Emphasis on safe human-robot collaboration. Mercedes-Benz partnership.
+    links:
+    - label: apptronik.com
+      url: https://www.apptronik.com/
+- title: Robot Foundation Models (Vision-Language-Action)
+  type: model
+  level: 3
+  description: |-
+    The frontier of embodied AI research: models that take visual observations and language commands as input and directly output robot motor actions. VLA models represent the convergence of foundation models and physical intelligence.
+  columns:
+  - Model
+  - Org
+  - Year
+  - Description
+  - Links
+  items:
+  - name: Gemini Robotics 1.5
+    raw_name: '**Gemini Robotics 1.5**'
+    org: Google DeepMind
+    year: 2025
+    description: |-
+      Agentic VLA model that turns visual information and language instructions into motor commands. Generality across novel situations, dexterity (origami, food prep), agentic tool-use, and thinking before acting. Supports multiple embodiments (ALOHA, Franka, Apptronik Apollo). Dual approach with Robotics-ER 1.5 for embodied reasoning.
+    links:
+    - label: Site
+      url: https://deepmind.google/models/gemini-robotics/
+    - label: Report
+      url: https://deepmind.google/models/gemini-robotics/gemini-robotics/
+  - name: pi0
+    raw_name: '**pi0**'
+    org: Physical Intelligence
+    year: 2024
+    description: |-
+      VLA flow model for general robot control. Novel flow matching architecture on top of pre-trained VLM. Trained on diverse dexterous tasks (laundry folding, table cleaning, box assembly) across single-arm, dual-arm, and mobile manipulators. Open-sourced weights.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2410.24164
+    - label: Site
+      url: https://www.physicalintelligence.company/
+  - name: RT-2
+    raw_name: '**RT-2**'
+    org: Google DeepMind
+    year: 2023
+    description: |-
+      Vision-Language-Action model that transfers web-scale knowledge to robotic control. Expresses actions as text tokens, enabling emergent reasoning (pick up the "improvised hammer" -> picks rock). 6k evaluation trials.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2307.15818
+  - name: PaLM-E
+    raw_name: '**PaLM-E**'
+    org: Google
+    year: 2023
+    description: |-
+      562B-parameter embodied multimodal language model. Directly incorporates continuous sensor modalities into LLMs. Positive transfer across internet-scale language, vision, and robotics domains.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2303.03378
+  - name: Open X-Embodiment / RT-X
+    raw_name: '**Open X-Embodiment / RT-X**'
+    org: 21 Institutions
+    year: 2023
+    description: |-
+      Largest robotics dataset: 22 robots, 527 skills, 160k+ tasks from 21 institutions. RT-X model shows positive transfer across robot morphologies. The "ImageNet moment" for robotics.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2310.08864
+  - name: OpenVLA
+    raw_name: '**OpenVLA**'
+    org: Stanford / UC Berkeley
+    year: 2024
+    description: |-
+      Open-source 7B-parameter VLA. Democratizes embodied AI research -- matches proprietary models on manipulation benchmarks. Fine-tunable for new robots and tasks.
+    links:
+    - label: GitHub
+      url: https://github.com/openvla/openvla
+  - name: NVIDIA GR00T
+    raw_name: '**NVIDIA GR00T**'
+    org: NVIDIA
+    year: 2024
+    description: |-
+      Foundation model for humanoid robots. Multimodal inputs (text, video, demonstration) to robot actions. Part of NVIDIA's Physical AI platform alongside Isaac and Cosmos.
+    links:
+    - label: nvidia.com
+      url: https://developer.nvidia.com/isaac
+- title: Simulation & Infrastructure for Physical AI
+  type: platform
+  level: 3
+  description: |-
+    Training embodied AI requires massive simulation before real-world deployment. These platforms enable sim-to-real transfer, digital twins, and scalable robot learning.
+  columns:
+  - Platform
+  - Description
+  - Links
+  items:
+  - name: NVIDIA Isaac Sim / Isaac Lab
+    raw_name: '**NVIDIA Isaac Sim / Isaac Lab**'
+    description: |-
+      Production-grade robotics simulation platform with photorealistic rendering, physics accuracy, and domain randomization. Isaac Lab provides GPU-accelerated RL environments for robot learning at scale.
+    links:
+    - label: Developer
+      url: https://developer.nvidia.com/isaac/
+    - label: GitHub
+      url: https://github.com/isaac-sim/
+  - name: NVIDIA Omniverse
+    raw_name: '**NVIDIA Omniverse**'
+    description: |-
+      Collaborative 3D simulation platform for building digital twins and physics-based robotics simulation. Foundation for NVIDIA's Physical AI ecosystem.
+    links:
+    - label: nvidia.com/omniverse
+      url: https://www.nvidia.com/en-us/omniverse/
+  - name: MuJoCo
+    raw_name: '**MuJoCo**'
+    description: |-
+      Google DeepMind's open-source physics engine optimized for robotics and biomechanics. Fast, accurate contact dynamics. The standard tool for embodied AI research and RL benchmarking.
+    links:
+    - label: mujoco.org
+      url: https://mujoco.org/
+    - label: GitHub
+      url: https://github.com/google-deepmind/mujoco
+  - name: Genesis
+    raw_name: '**Genesis**'
+    description: |-
+      Next-generation open-source physics engine for embodied AI. Differentiable simulation enabling gradient-based learning for physical systems.
+    links:
+    - label: GitHub
+      url: https://github.com/Genesis-Embodied-AI/Genesis

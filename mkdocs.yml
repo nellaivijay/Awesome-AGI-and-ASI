@@ -47,6 +47,17 @@ plugins:
       fallback_to_build_date: true
   - social:
       cards_layout: default
+  - rss:
+      match_path: ".*"
+      date_from_meta:
+        as_creation: date.created
+        as_update: date.updated
+      categories:
+        - tags
+      comments_path: "#__comments"
+      image: https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/logo.png
+      pretty_print: true
+      length: 250
   - meta
   - tags
 

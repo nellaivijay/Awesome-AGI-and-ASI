@@ -1,0 +1,57 @@
+name: Regenerate from YAML data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/*.yaml'
+      - 'templates/*.md'
+      - 'scripts/yaml_to_readme.py'
+      - 'scripts/yaml_to_docs.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Regenerate README.md from YAML data
+        run: python scripts/yaml_to_readme.py
+
+      - name: Regenerate docs pages from YAML data
+        run: python scripts/yaml_to_docs.py
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push regenerated files
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md docs/
+          git commit -m "Auto-regenerate README and docs from YAML data
+
+          Triggered by changes to data/*.yaml or templates/*.md
+
+          Generated with [Devin](https://cli.devin.ai/docs)
+
+          Co-Authored-By: Devin <158243242+devin-ai-integration[bot]@users.noreply.github.com>"
+          git push

@@ -158,7 +158,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 ### Key Organizations Pursuing or Studying AGI/ASI
 
 | Organization | Focus | Links |
-|-------------|-------|-------|
+|--------------|-------|-------|
 | **Safe Superintelligence Inc. (SSI)** | Founded by Ilya Sutskever (ex-OpenAI) in 2024. Focused solely on building safe superintelligence, avoiding distraction by product cycles. Valued at $30B+ (2025). | [ssi.inc](https://ssi.inc/) |
 | **OpenAI** | Building AGI that benefits all of humanity. Created GPT-4, o1, o3 and pursues the path toward superintelligence with safety research (Superalignment team). | [openai.com](https://openai.com/) |
 | **Anthropic** | AI safety company building reliable, interpretable, and steerable AI (Claude). Founded by ex-OpenAI researchers focused on Constitutional AI and alignment. | [anthropic.com](https://www.anthropic.com/) |
@@ -293,7 +293,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 > These architectures process sequences with linear (not quadratic) complexity, solving the memory and compute bottlenecks that limit Transformer context windows. If AGI requires reasoning over lifelong context, these models may be essential.
 
 | Model / Architecture | Description | Links |
-|---------------------|-------------|-------|
+|----------------------|-------------|-------|
 | **Mamba** (Gu & Dao, 2023) | Selective State Space Model with input-dependent selection. Linear-time sequence modeling matching or exceeding Transformer quality at scale, with 5x higher throughput on long sequences. The leading Transformer alternative. | [Paper](https://arxiv.org/abs/2312.00752), [Code](https://github.com/state-spaces/mamba) |
 | **Mamba-2** (Dao & Gu, 2024) | Unifies state space models with structured attention variants via State Space Duality (SSD). 2-8x faster than Mamba while maintaining quality. | [Paper](https://arxiv.org/abs/2405.21060) |
 | **RWKV** (Peng et al., 2023) | "Reinventing RNNs for the Transformer Era." Recurrent architecture achieving Transformer-level performance with O(n) complexity and constant memory during inference. Open-source (14B+ parameters). | [Paper](https://arxiv.org/abs/2305.13048), [GitHub](https://github.com/BlinkDL/RWKV-LM) |
@@ -771,7 +771,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 > The AGI race is ultimately constrained by physics: energy, cooling, and chip fabrication. As training runs scale from gigawatt-hours to hundreds of gigawatt-hours, the physical infrastructure becomes as important as the algorithms.
 
 | Challenge | Current State | Links |
-|-----------|--------------|-------|
+|-----------|---------------|-------|
 | **Gigawatt-scale data centers** | Microsoft, Meta, Google, Amazon, and xAI are all building or planning 1-5 GW data centers. xAI's Memphis "Colossus" cluster: 100k H100s. Microsoft's $100B Stargate project with OpenAI. | Industry announcements |
 | **Nuclear-powered AI** | Microsoft restarted Three Mile Island Unit 1 for AI power. Amazon, Google, and Oracle securing nuclear power for data centers. SMR (Small Modular Reactor) partnerships proliferating. | [News](https://www.reuters.com/technology/) |
 | **The Memory Wall** | Context window expansion (4K -> 128K -> 1M -> 10M tokens) functions as "working memory" for AGI. Llama 4 Scout: 10M tokens. Gemini 1.5: 2M. But attention scales quadratically -- memory-efficient architectures (Infini-Attention, Mamba, RWKV) are essential. | See [Reasoning Papers](#reasoning-scaling--architecture-papers) |

@@ -1,0 +1,113 @@
+section:
+  title: Prompt Engineering
+  description: |-
+    The art and science of communicating with LLMs. These techniques transform how models reason, from simple chain-of-thought to sophisticated graph-structured exploration of solution spaces.
+  badges:
+  - alt: CoT
+    path: CoT-Chain_of_Thought-blue?style=flat-square
+  - alt: ToT
+    path: ToT-Tree_of_Thoughts-green?style=flat-square
+  - alt: GoT
+    path: GoT-Graph_of_Thoughts-purple?style=flat-square
+  - alt: Reasoning
+    path: Reasoning-Step_by_Step-orange?style=flat-square
+subsections:
+- title: Prompt Engineering
+  type: technique
+  level: 3
+  columns:
+  - Technique
+  - Description
+  - Paper
+  items:
+  - name: CoT (Chain-of-Thought)
+    raw_name: CoT (Chain-of-Thought)
+    description: Prompting that elicits step-by-step reasoning in LLMs for complex problem solving.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2201.11903
+  - name: CoT-SC (Self-Consistency)
+    raw_name: CoT-SC (Self-Consistency)
+    description: Samples multiple reasoning paths and takes the majority vote for improved chain-of-thought.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2203.11171
+  - name: ToT (Tree of Thoughts)
+    raw_name: ToT (Tree of Thoughts)
+    description: Enables deliberate problem solving via tree-structured exploration of reasoning paths.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.10601
+  - name: GoT (Graph of Thoughts)
+    raw_name: GoT (Graph of Thoughts)
+    description: Generalizes chain/tree of thought into arbitrary graph structures for more flexible reasoning.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2308.09687
+  - name: SoT (Skeleton-of-Thought)
+    raw_name: SoT (Skeleton-of-Thought)
+    description: Enables LLMs to do parallel decoding by first generating a skeleton then filling in details.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2307.15337
+  - name: PoT (Program of Thoughts)
+    raw_name: PoT (Program of Thoughts)
+    description: Disentangles computation from reasoning by generating programs for numerical reasoning tasks.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2211.12588
+  - name: AoT (Algorithm of Thoughts)
+    raw_name: AoT (Algorithm of Thoughts)
+    description: Enhances exploration of ideas in LLMs using algorithm-inspired prompting strategies.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2308.10379
+  - name: Cue-CoT
+    raw_name: Cue-CoT
+    description: Chain-of-thought prompting for responding to in-depth dialogue questions.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.11792
+    - label: Code
+      url: https://github.com/ruleGreen/Cue-CoT
+- title: Long Context and Positional Encoding
+  type: tool
+  level: 3
+  columns:
+  - Method
+  - Description
+  - Links
+  items:
+  - name: RoPE (Rotary Position Embedding)
+    raw_name: RoPE (Rotary Position Embedding)
+    description: Rotary position encoding widely used in modern LLMs for handling positional information.
+  - name: LongRoPE
+    raw_name: LongRoPE
+    description: Extends LLM context windows beyond 2 million tokens.
+    links:
+    - label: Paper
+      url: https://arxiv.org/pdf/2402.13753.pdf
+  - name: RecurrentGPT
+    raw_name: RecurrentGPT
+    description: Interactive ultra-long text generation using recurrent prompting mechanisms.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2305.13304
+    - label: Code
+      url: https://github.com/aiwaves-cn/RecurrentGPT
+  - name: MEGALODON
+    raw_name: MEGALODON
+    description: Efficient LLM pretraining and inference with unlimited context length.
+    links:
+    - label: Paper
+      url: https://arxiv.org/pdf/2404.08801.pdf
+    - label: Code
+      url: https://github.com/XuezheMax/megalodon
+  - name: CLongEval
+    raw_name: CLongEval
+    description: Chinese benchmark for evaluating long-context LLMs.
+    links:
+    - label: Paper
+      url: https://arxiv.org/pdf/2403.03514
+    - label: Code
+      url: https://github.com/zexuanqiu/CLongEval

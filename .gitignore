@@ -4,3 +4,10 @@ queue/
 # MkDocs build output
 site/
 .cache/
+
+# Python
+__pycache__/
+*.pyc
+
+# Backups
+*.orig

@@ -1,0 +1,264 @@
+section:
+  title: Top Conferences
+  description: |-
+    Where the AGI community gathers. From peer-reviewed academic venues publishing foundational research to government-level safety summits and industry developer conferences shaping the future of AI.
+  badges:
+  - alt: Academic
+    path: Academic-NeurIPS_ICML_ICLR-blue?style=flat-square
+  - alt: AGI Specific
+    path: AGI_Specific-AGI_Conference_ARC_Prize-purple?style=flat-square
+  - alt: Safety
+    path: Safety-Bletchley_Seoul_Paris-red?style=flat-square
+  - alt: Industry
+    path: Industry-GTC_Google_I/O_DevDay-green?style=flat-square
+subsections:
+- title: Top-Tier AI/ML Academic Conferences
+  type: conference_full
+  level: 3
+  description: |-
+    Premier peer-reviewed venues where foundational AGI research is published -- LLM architectures, scaling laws, alignment methods, and agent frameworks.
+  columns:
+  - Conference
+  - Full Name
+  - When
+  - Website
+  - AGI Relevance
+  items:
+  - name: NeurIPS
+    raw_name: '**NeurIPS**'
+    full_name: Neural Information Processing Systems
+    when: Dec, Annual
+    url: https://neurips.cc
+    website_label: neurips.cc
+    relevance: |-
+      The single most important ML conference. Foundational LLM papers, RLHF, scaling research, 50+ safety/alignment workshops. 16k+ attendees.
+  - name: ICML
+    raw_name: '**ICML**'
+    full_name: International Conference on Machine Learning
+    when: Jul, Annual
+    url: https://icml.cc
+    website_label: icml.cc
+    relevance: Core ML theory, LLM training methodology, RL for agents, scaling laws, and alignment research. 10-14k attendees.
+  - name: ICLR
+    raw_name: '**ICLR**'
+    full_name: International Conference on Learning Representations
+    when: Apr-May, Annual
+    url: https://iclr.cc
+    website_label: iclr.cc
+    relevance: |-
+      Home of transformer architecture research. Attention mechanisms, emergent capabilities, reasoning, in-context learning. Uses OpenReview. 10k+ attendees.
+  - name: AAAI
+    raw_name: '**AAAI**'
+    full_name: AAAI Conference on Artificial Intelligence
+    when: Feb-Mar, Annual
+    url: https://aaai.org/conference/aaai
+    website_label: aaai.org
+    relevance: |-
+      Oldest prestigious general AI conference (since 1980). Planning, reasoning, knowledge representation, multiagent systems. 10k+ attendees.
+  - name: IJCAI
+    raw_name: '**IJCAI**'
+    full_name: International Joint Conference on AI
+    when: Aug, Annual
+    url: https://ijcai.org
+    website_label: ijcai.org
+    relevance: Oldest major international AI conference (since 1969). Knowledge representation, reasoning, AGI theoretical
+      foundations.
+  - name: ACL
+    raw_name: '**ACL**'
+    full_name: Association for Computational Linguistics
+    when: May-Aug, Annual
+    url: https://www.aclweb.org
+    website_label: aclweb.org
+    relevance: |-
+      Premier NLP conference. LLM alignment, instruction tuning, RLHF, multilingual LLMs, commonsense reasoning. 5-8k attendees.
+  - name: EMNLP
+    raw_name: '**EMNLP**'
+    full_name: Empirical Methods in NLP
+    when: Oct-Nov, Annual
+    url: https://2024.emnlp.org
+    website_label: emnlp.org
+    relevance: LLM benchmarking, evaluation, hallucination detection, chain-of-thought research. 5-7k attendees.
+  - name: CVPR
+    raw_name: '**CVPR**'
+    full_name: Computer Vision and Pattern Recognition
+    when: Jun, Annual
+    url: https://cvpr.thecvf.com
+    website_label: cvpr.thecvf.com
+    relevance: 'Vision-language models, visual agents, world models, embodied AI. Largest vision conference: 10-15k attendees.'
+  - name: COLM
+    raw_name: '**COLM**'
+    full_name: Conference on Language Modeling
+    when: Oct, Annual (new 2024)
+    url: https://colmweb.org
+    website_label: colmweb.org
+    relevance: The only major conference dedicated exclusively to language models. LLM pretraining, alignment, and deployment.
+  - name: CoRL
+    raw_name: '**CoRL**'
+    full_name: Conference on Robot Learning
+    when: Nov, Annual
+    url: https://corl2024.org
+    website_label: corl2024.org
+    relevance: |-
+      Embodied AGI's primary venue. LLMs as robot planners, foundation models for robotics (RT-2, OpenVLA), sim-to-real transfer.
+  - name: KDD
+    raw_name: '**KDD**'
+    full_name: Knowledge Discovery and Data Mining
+    when: Aug, Annual
+    url: https://kdd.org
+    website_label: kdd.org
+    relevance: Graph neural networks, knowledge graphs for RAG, data-centric AI at scale.
+- title: AGI-Specific Conferences
+  type: conference_full
+  level: 3
+  columns:
+  - Conference
+  - Full Name
+  - When
+  - Website
+  - AGI Relevance
+  items:
+  - name: AGI Conference
+    raw_name: '**AGI Conference**'
+    full_name: International Conference on AGI
+    when: Jul-Aug, Annual (since 2008)
+    url: https://agi-conf.org
+    website_label: agi-conf.org
+    relevance: |-
+      The primary peer-reviewed academic conference dedicated to AGI. Cognitive architectures (OpenCog, NARS, SOAR), AGI benchmarks, control problem. Proceedings by Springer.
+  - name: bAGI Summit
+    raw_name: '**bAGI Summit**'
+    full_name: Beneficial AGI Summit
+    when: Feb-Mar, Annual
+    url: https://singularitynet.io
+    website_label: singularitynet.io
+    relevance: Decentralized AGI, beneficial ASI development, open-source AGI infrastructure. By SingularityNET / Ben Goertzel.
+  - name: ARC Prize
+    raw_name: '**ARC Prize**'
+    full_name: Abstraction and Reasoning Corpus Competition
+    when: Annual (launched 2024)
+    url: https://arcprize.org
+    website_label: arcprize.org
+    relevance: |-
+      Leading empirical AGI benchmark contest. $1M prize for 85% accuracy on ARC-AGI fluid reasoning test. Workshop at NeurIPS.
+- title: AI Safety & Alignment Events
+  type: conference_simple
+  level: 3
+  columns:
+  - Conference
+  - Description
+  - Website
+  items:
+  - name: AI Safety Summit Series
+    raw_name: '**AI Safety Summit Series**'
+    full_name: |-
+      Government-level summits: Bletchley Park 2023 (28 nations signed Bletchley Declaration), Seoul 2024, Paris 2025. The most consequential AI safety policy forum.
+    url: https://www.gov.uk/government/topical-events/ai-safety-summit-2023
+    website_label: gov.uk
+  - name: AIES
+    raw_name: '**AIES**'
+    full_name: |-
+      AAAI/ACM Conference on AI, Ethics, and Society. Societal impact, value alignment, governance of autonomous AI. Co-located with AAAI.
+    url: https://www.aies-conference.com
+    website_label: aies-conference.com
+  - name: FAccT
+    raw_name: '**FAccT**'
+    full_name: |-
+      ACM Conference on Fairness, Accountability, and Transparency. Bias, fairness in foundation models, accountability frameworks.
+    url: https://facctconference.org
+    website_label: facctconference.org
+  - name: SaTML
+    raw_name: '**SaTML**'
+    full_name: IEEE Secure and Trustworthy ML. Adversarial robustness, red-teaming LLMs, backdoor attacks, privacy in ML.
+    url: https://satml.org
+    website_label: satml.org
+  - name: EA Global
+    raw_name: '**EA Global**'
+    full_name: |-
+      Effective Altruism Global. Primary gathering of AI safety and existential risk researchers. Key AI safety orgs (Anthropic, ARC, MIRI, Redwood) present regularly.
+    url: https://www.eaglobal.org
+    website_label: eaglobal.org
+  - name: GPAI
+    raw_name: '**GPAI**'
+    full_name: Global Partnership on AI. 29-member international governance forum on responsible AI, data governance, future
+      of work.
+    url: https://gpai.ai
+    website_label: gpai.ai
+  - name: NeurIPS/ICML Safety Workshops
+    raw_name: '**NeurIPS/ICML Safety Workshops**'
+    full_name: |-
+      Annual satellite workshops: Safe Generative AI, Mechanistic Interpretability, Aligning AI with Human Values, Regulatable ML, AdvML-Frontiers. Bleeding edge safety research.
+    website_text: At NeurIPS (Dec) and ICML (Jul)
+- title: Industry AI Summits & Developer Conferences
+  type: conference_full
+  level: 3
+  columns:
+  - Conference
+  - Organizer
+  - When
+  - Website
+  - AGI Relevance
+  items:
+  - name: NVIDIA GTC
+    raw_name: '**NVIDIA GTC**'
+    full_name: NVIDIA
+    when: Mar, Annual
+    url: https://www.nvidia.com/gtc
+    website_label: nvidia.com/gtc
+    relevance: |-
+      The most important AI infrastructure conference. Blackwell architecture, NIM, Cosmos world models, Isaac robotics. 25k+ in-person, 300k+ virtual.
+  - name: Google I/O
+    raw_name: '**Google I/O**'
+    full_name: Google
+    when: May, Annual
+    url: https://io.google
+    website_label: io.google
+    relevance: Primary stage for Gemini announcements, DeepMind research, Project Astra (real-time multimodal agent).
+  - name: OpenAI DevDay
+    raw_name: '**OpenAI DevDay**'
+    full_name: OpenAI
+    when: Oct-Nov, Annual
+    url: https://devday.openai.com
+    website_label: devday.openai.com
+    relevance: Most-watched AI product launch. GPT-4 Turbo, Assistants API, and agent ecosystem announcements.
+  - name: Microsoft Build
+    raw_name: '**Microsoft Build**'
+    full_name: Microsoft
+    when: May, Annual
+    url: https://build.microsoft.com
+    website_label: build.microsoft.com
+    relevance: Azure AI, Copilot Studio, AutoGen/AG2 multi-agent framework, Azure OpenAI Service.
+  - name: AWS re:Invent
+    raw_name: '**AWS re:Invent**'
+    full_name: Amazon
+    when: Nov-Dec, Annual
+    url: https://reinvent.awsevents.com
+    website_label: reinvent.awsevents.com
+    relevance: Bedrock, Amazon Q, SageMaker, Trainium/Inferentia chips. 60k+ attendees.
+  - name: AI Engineer World's Fair
+    raw_name: '**AI Engineer World''s Fair**'
+    full_name: latent.space
+    when: Jun-Jul, Annual
+    url: https://www.ai.engineer
+    website_label: ai.engineer
+    relevance: Premier conference for AI engineers building with LLMs and agents. RAG, evals, agentic frameworks. 3-5k attendees.
+  - name: WAIC
+    raw_name: '**WAIC**'
+    full_name: Shanghai Gov + MIIT
+    when: Jul, Annual
+    url: https://www.worldaic.com.cn
+    website_label: worldaic.com.cn
+    relevance: China's flagship AI summit. Qwen, Ernie, Kimi announcements. Essential for understanding AGI race geopolitics.
+  - name: WEF Davos
+    raw_name: '**WEF Davos**'
+    full_name: World Economic Forum
+    when: Jan, Annual
+    url: https://www.weforum.org
+    website_label: weforum.org
+    relevance: Highest-level AGI governance discussions. World leaders and AI lab CEOs shape policy frameworks.
+  - name: AI for Good
+    raw_name: '**AI for Good**'
+    full_name: ITU / United Nations
+    when: May-Jun, Annual
+    url: https://aiforgood.itu.int
+    website_label: aiforgood.itu.int
+    relevance: UN-level AI governance. Global south's primary voice in AGI governance debate.
