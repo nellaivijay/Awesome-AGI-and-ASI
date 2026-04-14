@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Petabyte-scale data pipelines, lakehouse architecture, and MLOps infrastructure for training frontier AI models at production scale.">
+        <meta name="description" content="AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.">
       
       
         <meta name="author" content="nellaivijay">
@@ -23,6 +23,9 @@
       
         
       
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
@@ -76,7 +79,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Awesome AGI and ASI">
   <meta property="og:title" content="Data Infrastructure for AI at Scale - Awesome AGI and ASI">
-  <meta property="og:description" content="Petabyte-scale data pipelines, lakehouse architecture, and MLOps infrastructure for training frontier AI models at production scale.">
+  <meta property="og:description" content="AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.">
   
     <meta property="og:url" content="https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/">
   
@@ -86,12 +89,12 @@
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Data Infrastructure for AI at Scale - Awesome AGI and ASI">
-  <meta name="twitter:description" content="Petabyte-scale data pipelines, lakehouse architecture, and MLOps infrastructure for training frontier AI models at production scale.">
+  <meta name="twitter:description" content="AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.">
   
 
   
   
-    <meta name="keywords" content="data infrastructure, MLOps, Apache Iceberg, Spark, Delta Lake, MLflow, Ray, data pipelines, lakehouse">
+    <meta name="keywords" content="data infrastructure, AI data pipelines, feature stores, data labeling, data quality">
   
   <meta name="author" content="nellaivijay">
   <meta name="robots" content="index, follow">
@@ -102,7 +105,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Data Infrastructure for AI at Scale - Awesome AGI and ASI",
-    "description": "Petabyte-scale data pipelines, lakehouse architecture, and MLOps infrastructure for training frontier AI models at production scale.",
+    "description": "AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.",
     "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/",
     "isPartOf": {
       "@type": "WebSite",
@@ -153,7 +156,7 @@
   
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Data Infrastructure for AI at Scale - Awesome AGI and ASI" />
-<meta property="og:description" content="Petabyte-scale data pipelines, lakehouse architecture, and MLOps infrastructure for training frontier AI models at production scale." />
+<meta property="og:description" content="AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself." />
 <meta property="og:image" content="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/data-infra.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
@@ -161,7 +164,7 @@
 <meta property="og:url" content="https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="Data Infrastructure for AI at Scale - Awesome AGI and ASI" />
-<meta property="twitter:description" content="Petabyte-scale data pipelines, lakehouse architecture, and MLOps infrastructure for training frontier AI models at production scale." />
+<meta property="twitter:description" content="AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself." />
 <meta property="twitter:image" content="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/data-infra.png" />
 </head>
   
@@ -1919,27 +1922,27 @@
 <tbody>
 <tr>
 <td><a href="https://iceberg.apache.org/">Apache Iceberg</a></td>
-<td>Open table format for massive datasets. ACID, time travel, schema evolution. Adopted by Netflix, Apple, Snowflake. V4 adds row-lineage.</td>
+<td>Open table format for massive analytic datasets. ACID transactions, time travel, schema evolution, and partition evolution on data lakes. The emerging standard for AI training data management (adopted by Netflix, Apple, Snowflake). V4 adds row-lineage tracking.</td>
 <td><a href="https://iceberg.apache.org/">iceberg.apache.org</a>, <a href="https://github.com/apache/iceberg">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://spark.apache.org/">Apache Spark</a></td>
-<td>Unified analytics engine for large-scale data processing. Powers ETL pipelines behind most frontier model training.</td>
+<td>Unified analytics engine for large-scale data processing. Powers the data pipelines behind most frontier model training -- ETL, feature engineering, and distributed data transformation at petabyte scale.</td>
 <td><a href="https://spark.apache.org/">spark.apache.org</a>, <a href="https://github.com/apache/spark">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://delta.io/">Delta Lake</a></td>
-<td>ACID transactions on data lakes. Delta UniForm provides Iceberg/Hudi interop. Originally Databricks.</td>
+<td>Open-source storage layer providing ACID transactions on data lakes. Originally Databricks; now open ecosystem. Delta UniForm provides interoperability with Iceberg and Hudi.</td>
 <td><a href="https://delta.io/">delta.io</a>, <a href="https://github.com/delta-io/delta">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://greenplum.org/">Greenplum</a></td>
-<td>MPP database for large-scale analytics. PostgreSQL-based, purpose-built for petabyte-scale queries.</td>
+<td>Massively Parallel Processing (MPP) database for large-scale analytics and AI workloads. Open-source, PostgreSQL-based, purpose-built for analytical queries across petabytes. Used in enterprise AI pipelines for feature computation and data preparation.</td>
 <td><a href="https://greenplum.org/">greenplum.org</a>, <a href="https://github.com/greenplum-db/gpdb">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://duckdb.org/">DuckDB</a></td>
-<td>In-process analytical DB. Fast OLAP on local data. Used for dataset analysis and ML prototyping.</td>
+<td>In-process analytical database that runs anywhere. Blazing-fast OLAP queries on local data. Increasingly used for dataset analysis, feature engineering, and rapid prototyping in ML workflows.</td>
 <td><a href="https://duckdb.org/">duckdb.org</a>, <a href="https://github.com/duckdb/duckdb">GitHub</a></td>
 </tr>
 </tbody>
@@ -1956,37 +1959,36 @@
 <tbody>
 <tr>
 <td><a href="https://mlflow.org/">MLflow</a></td>
-<td>Open-source ML lifecycle platform: experiment tracking, model registry, deployment, eval. 20k+ stars.</td>
+<td>Open-source platform for the complete ML lifecycle: experiment tracking, model registry, deployment, and model evaluation. The standard MLOps platform. 20k+ stars.</td>
 <td><a href="https://mlflow.org/">mlflow.org</a>, <a href="https://github.com/mlflow/mlflow">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://wandb.ai/">Weights &amp; Biases (W&amp;B)</a></td>
-<td>ML experiment tracking and model management. Used by OpenAI, DeepMind, and most frontier labs.</td>
+<td>ML experiment tracking, dataset versioning, and model management. Used by OpenAI, DeepMind, and most frontier labs for training runs.</td>
 <td><a href="https://wandb.ai/">wandb.ai</a></td>
 </tr>
 <tr>
 <td><a href="https://www.kubeflow.org/">KubeFlow</a></td>
-<td>ML toolkit for Kubernetes: training pipelines, hyperparameter tuning, serving, notebooks.</td>
+<td>ML toolkit for Kubernetes. Manages ML workflows: training pipelines, hyperparameter tuning, model serving, and notebook environments on Kubernetes clusters.</td>
 <td><a href="https://www.kubeflow.org/">kubeflow.org</a>, <a href="https://github.com/kubeflow/kubeflow">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://www.ray.io/">Ray</a></td>
-<td>Unified AI scaling framework. Train, Serve, Data. Used by OpenAI, Uber, Spotify.</td>
+<td>Unified framework for scaling AI applications. Ray Train for distributed training, Ray Serve for inference, Ray Data for preprocessing. Powers Anyscale and used by OpenAI, Uber, and Spotify.</td>
 <td><a href="https://www.ray.io/">ray.io</a>, <a href="https://github.com/ray-project/ray">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://feast.dev/">Feast</a></td>
-<td>Open-source feature store bridging offline training and online inference.</td>
+<td>Open-source feature store for ML. Bridges the gap between training and serving by providing consistent access to feature data across offline training and online inference.</td>
 <td><a href="https://feast.dev/">feast.dev</a>, <a href="https://github.com/feast-dev/feast">GitHub</a></td>
 </tr>
 <tr>
 <td><a href="https://labelstud.io/">Label Studio</a></td>
-<td>Open-source data labeling for text, image, audio, video. Critical for RLHF/SFT data. 20k+ stars.</td>
+<td>Open-source data labeling platform for text, image, audio, video, and multi-modal tasks. Critical infrastructure for creating the human-annotated data that drives RLHF and supervised fine-tuning. 20k+ stars.</td>
 <td><a href="https://labelstud.io/">labelstud.io</a>, <a href="https://github.com/HumanSignal/label-studio">GitHub</a></td>
 </tr>
 </tbody>
 </table>
-<hr />
 
 
 
@@ -2009,7 +2011,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 13, 2026 18:46:36 UTC"><span class="timeago" datetime="2026-04-13T18:46:36+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 13, 2026 18:46:36 UTC">2026-04-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 14, 2026 12:36:21 UTC"><span class="timeago" datetime="2026-04-14T12:36:21+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 14, 2026 12:36:21 UTC">2026-04-14</span>
   </span>
 
     

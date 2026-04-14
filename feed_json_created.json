@@ -1,0 +1,302 @@
+{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "Awesome AGI and ASI",
+    "home_page_url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/",
+    "feed_url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_json_created.json",
+    "description": "The most comprehensive, curated collection of resources on Artificial General Intelligence (AGI) and Artificial Superintelligence (ASI) -- covering frameworks, agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, and tools for builders and researchers shaping the future of intelligence.",
+    "icon": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/logo.png",
+    "authors": [
+        {
+            "name": "nellaivijay"
+        }
+    ],
+    "language": "en",
+    "items": [
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/category/announcement/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/category/announcement/",
+            "title": "Announcement",
+            "content_html": "<h1>Announcement</h1>",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/blog/category/announcement.png",
+            "date_modified": "2026-04-14T12:36:54.281046+00:00",
+            "date_published": "2026-04-14T12:36:54.281041+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/archive/2026/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/archive/2026/",
+            "title": "2026",
+            "content_html": "<h1>2026</h1>",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/blog/archive/2026.png",
+            "date_modified": "2026-04-14T12:36:54.275744+00:00",
+            "date_published": "2026-04-14T12:36:54.275740+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/compute-hardware/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/compute-hardware/",
+            "title": "Compute, Hardware & Quantization",
+            "content_html": "AI compute infrastructure, custom silicon, quantization tools, neuromorphic chips, and decentralized compute networks powering the path to AGI and ASI.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/compute-hardware.png",
+            "date_modified": "2026-04-13T18:46:36+00:00",
+            "date_published": "2026-04-13T18:10:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/understand/benchmarks/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/understand/benchmarks/",
+            "title": "AGI Benchmarks & Evals",
+            "content_html": "Post-Turing AGI benchmarks and evaluation frameworks tracking the path from narrow AI to general intelligence -- ARC-AGI, SWE-bench, GAIA, GPQA, and more.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/understand/benchmarks.png",
+            "date_modified": "2026-04-13T18:46:36+00:00",
+            "date_published": "2026-04-13T18:10:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/devops-guide/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/devops-guide/",
+            "title": "DevOps Guide",
+            "content_html": "Developer and DevOps guide for the Awesome AGI and ASI site -- GitHub Actions CI/CD, MkDocs Material configuration, SEO setup, and local development.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/devops-guide.png",
+            "date_modified": "2026-04-13T17:36:54+00:00",
+            "date_published": "2026-04-13T17:36:54+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/",
+            "title": "Home",
+            "content_html": "The most comprehensive curated collection of AGI and ASI resources -- frameworks, agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, and tools for AI builders.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/index.png",
+            "date_modified": "2026-04-13T18:10:27+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/contributing/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/contributing/",
+            "title": "Contributing",
+            "content_html": "Guidelines for contributing resources to the Awesome AGI and ASI repository, including formatting standards and submission process.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/contributing.png",
+            "date_modified": "2026-04-13T17:26:12+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/",
+            "title": "Blog",
+            "content_html": "Updates, deep dives, and commentary on the journey from AI to AGI to ASI -- the Awesome AGI and ASI blog.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/blog.png",
+            "date_modified": "2026-04-13T17:26:12+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/2026/04/12/welcome-to-awesome-agi-and-asi/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/2026/04/12/welcome-to-awesome-agi-and-asi/",
+            "title": "Welcome to Awesome AGI and ASI",
+            "content_html": "<h1>Welcome to Awesome AGI and ASI</h1>\n<p>The most comprehensive, curated collection of resources on the journey from AI to AGI to ASI is now available as a website with full-text search, clean navigation, and a minimal reading experience.</p>",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/blog/2026/04/12/welcome-to-awesome-agi-and-asi.png",
+            "date_modified": "2026-04-13T14:48:27+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/agents/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/agents/",
+            "title": "Agents",
+            "content_html": "Autonomous AI systems that perceive, reason, and act in the world. These agents represent the closest things we have to AGI-like behavior in narrow domains -- writing code, conducting research, operating computers, and navigating virtual worlds.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/build/agents.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/frameworks/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/frameworks/",
+            "title": "Frameworks and Platforms",
+            "content_html": "The infrastructure powering the next generation of autonomous AI. These frameworks let you build, orchestrate, and deploy AI agents that can reason, browse, code, and collaborate -- from single-agent tools to multi-agent orchestration platforms.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/build/frameworks.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/paper-to-code/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/paper-to-code/",
+            "title": "Paper-to-Code Automation",
+            "content_html": "The leap from research paper to working implementation is one of the biggest bottlenecks in AI progress. These tools automate the translation of academic papers into production-ready code repositories -- accelerating the research-to-engineering pipeline and democratizing access to frontier techniques.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/build/paper-to-code.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/physical-ai/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/physical-ai/",
+            "title": "Physical AI & Embodied Intelligence",
+            "content_html": "AGI cannot exist only in text -- it must understand and act in the physical world. **Physical AI** bridges foundation models with embodiment: humanoid robots, manipulation, navigation, and physics simulation. Moravec's Paradox -- sensorimotor skills are harder than abstract reasoning -- remains one of the deepest unsolved AGI challenges.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/build/physical-ai.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/",
+            "title": "Data Infrastructure for AI at Scale",
+            "content_html": "AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/data-infra.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/deployment/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/deployment/",
+            "title": "LLM Deployment and Serving",
+            "content_html": "Getting models from research to production. High-performance inference engines, serving frameworks, and optimization tools that make LLMs fast, cost-efficient, and scalable.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/deployment.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/distributed-training/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/distributed-training/",
+            "title": "Distributed Training Frameworks",
+            "content_html": "Training frontier models requires distributing computation across thousands of GPUs. These frameworks handle the parallelism, memory optimization, and communication needed to train models with billions (or trillions) of parameters.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/distributed-training.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/fine-tuning/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/fine-tuning/",
+            "title": "LLM Fine-Tuning Techniques",
+            "content_html": "Making foundation models your own. Fine-tuning adapts pre-trained LLMs to specific tasks, domains, or behaviors -- from lightweight LoRA adapters that train in hours on a single GPU to full alignment techniques like DPO that shape model values.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/fine-tuning.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/llm-frameworks/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/llm-frameworks/",
+            "title": "LLM Application Frameworks",
+            "content_html": "The developer toolkits for building production LLM applications. From orchestration chains to observability platforms, these frameworks are the backbone of every AI product shipping today.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/llm-frameworks.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/prompt-engineering/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/prompt-engineering/",
+            "title": "Prompt Engineering",
+            "content_html": "The art and science of communicating with LLMs. These techniques transform how models reason, from simple chain-of-thought to sophisticated graph-structured exploration of solution spaces.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/prompt-engineering.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/rag-vector-db/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/rag-vector-db/",
+            "title": "RAG and Vector Databases",
+            "content_html": "RAG grounds LLMs in real-world data, eliminating hallucinations and enabling knowledge-intensive applications. Full RAG stack: vector storage, retrieval engines, graph RAG, document parsing, and embedding models.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/rag-vector-db.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/research/conferences/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/research/conferences/",
+            "title": "Top Conferences",
+            "content_html": "Where the AGI community gathers. From peer-reviewed academic venues publishing foundational research to government-level safety summits and industry developer conferences shaping the future of AI.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/research/conferences.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/research/papers-blogs/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/research/papers-blogs/",
+            "title": "Papers, Blogs, Courses and Lectures",
+            "content_html": "The research frontier -- cutting-edge papers on capabilities, reasoning, agents, alignment, and interpretability defining the path from LLMs to AGI.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/research/papers-blogs.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/research/tutorials/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/research/tutorials/",
+            "title": "Tutorials and Guides",
+            "content_html": "Hands-on learning resources to go from understanding AI concepts to building production systems. Courses, documentation, and curated collections for every skill level.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/research/tutorials.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/safety/safety-alignment/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/safety/safety-alignment/",
+            "title": "Safety, Alignment and Governance",
+            "content_html": "The most critical section. Ensuring AI remains safe, aligned with human values, and under meaningful control is the defining challenge as systems grow more capable.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/safety/safety-alignment.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/understand/ai-agi-asi/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/understand/ai-agi-asi/",
+            "title": "Understanding AI, AGI, and ASI",
+            "content_html": "Learn the differences between Artificial Intelligence, Artificial General Intelligence, and Superintelligence -- capabilities, comparison table, DeepMind AGI levels, and future implications.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/understand/ai-agi-asi.png",
+            "date_modified": "2026-04-13T17:26:12+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/understand/asi-research/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/understand/asi-research/",
+            "title": "ASI and Superintelligence Research",
+            "content_html": "The long game. This section tracks the organizations racing toward AGI/ASI, the books that frame the debate, the seminal papers that define the field, the benchmarks that measure progress, and the roadmaps that predict when -- and how -- we get there.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/understand/asi-research.png",
+            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        }
+    ]
+}

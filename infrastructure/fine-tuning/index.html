@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Adapt pre-trained LLMs to specific tasks and domains using LoRA, QLoRA, DPO, RLHF, and other parameter-efficient fine-tuning techniques.">
+        <meta name="description" content="Making foundation models your own. Fine-tuning adapts pre-trained LLMs to specific tasks, domains, or behaviors -- from lightweight LoRA adapters that train in hours on a single GPU to full alignment techniques like DPO that shape model values.">
       
       
         <meta name="author" content="nellaivijay">
@@ -23,6 +23,9 @@
       
         
       
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
@@ -76,7 +79,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Awesome AGI and ASI">
   <meta property="og:title" content="LLM Fine-Tuning Techniques - Awesome AGI and ASI">
-  <meta property="og:description" content="Adapt pre-trained LLMs to specific tasks and domains using LoRA, QLoRA, DPO, RLHF, and other parameter-efficient fine-tuning techniques.">
+  <meta property="og:description" content="Making foundation models your own. Fine-tuning adapts pre-trained LLMs to specific tasks, domains, or behaviors -- from lightweight LoRA adapters that train in hours on a single GPU to full alignment techniques like DPO that shape model values.">
   
     <meta property="og:url" content="https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/fine-tuning/">
   
@@ -86,12 +89,12 @@
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="LLM Fine-Tuning Techniques - Awesome AGI and ASI">
-  <meta name="twitter:description" content="Adapt pre-trained LLMs to specific tasks and domains using LoRA, QLoRA, DPO, RLHF, and other parameter-efficient fine-tuning techniques.">
+  <meta name="twitter:description" content="Making foundation models your own. Fine-tuning adapts pre-trained LLMs to specific tasks, domains, or behaviors -- from lightweight LoRA adapters that train in hours on a single GPU to full alignment techniques like DPO that shape model values.">
   
 
   
   
-    <meta name="keywords" content="LLM fine-tuning, LoRA, QLoRA, RLHF, DPO, PEFT, instruction tuning, alignment, adapter methods">
+    <meta name="keywords" content="LLM fine-tuning, LoRA, QLoRA, RLHF, DPO, parameter-efficient fine-tuning, PEFT">
   
   <meta name="author" content="nellaivijay">
   <meta name="robots" content="index, follow">
@@ -102,7 +105,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "LLM Fine-Tuning Techniques - Awesome AGI and ASI",
-    "description": "Adapt pre-trained LLMs to specific tasks and domains using LoRA, QLoRA, DPO, RLHF, and other parameter-efficient fine-tuning techniques.",
+    "description": "Making foundation models your own. Fine-tuning adapts pre-trained LLMs to specific tasks, domains, or behaviors -- from lightweight LoRA adapters that train in hours on a single GPU to full alignment techniques like DPO that shape model values.",
     "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/fine-tuning/",
     "isPartOf": {
       "@type": "WebSite",
@@ -153,7 +156,7 @@
   
 <meta property="og:type" content="website" />
 <meta property="og:title" content="LLM Fine-Tuning Techniques - Awesome AGI and ASI" />
-<meta property="og:description" content="Adapt pre-trained LLMs to specific tasks and domains using LoRA, QLoRA, DPO, RLHF, and other parameter-efficient fine-tuning techniques." />
+<meta property="og:description" content="Making foundation models your own. Fine-tuning adapts pre-trained LLMs to specific tasks, domains, or behaviors -- from lightweight LoRA adapters that train in hours on a single GPU to full alignment techniques like DPO that shape model values." />
 <meta property="og:image" content="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/fine-tuning.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
@@ -161,7 +164,7 @@
 <meta property="og:url" content="https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/fine-tuning/" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content="LLM Fine-Tuning Techniques - Awesome AGI and ASI" />
-<meta property="twitter:description" content="Adapt pre-trained LLMs to specific tasks and domains using LoRA, QLoRA, DPO, RLHF, and other parameter-efficient fine-tuning techniques." />
+<meta property="twitter:description" content="Making foundation models your own. Fine-tuning adapts pre-trained LLMs to specific tasks, domains, or behaviors -- from lightweight LoRA adapters that train in hours on a single GPU to full alignment techniques like DPO that shape model values." />
 <meta property="twitter:image" content="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/fine-tuning.png" />
 </head>
   
@@ -1920,61 +1923,61 @@
 <tbody>
 <tr>
 <td>LoRA</td>
-<td>Low-Rank Adaptation: trainable low-rank matrices in attention layers, frozen pretrained weights. Rank 4-16 typical.</td>
+<td>Low-Rank Adaptation of Large Language Models. Adds trainable low-rank matrices to attention layers while freezing pretrained weights. Rank 4-16 is typically sufficient.</td>
 <td><a href="https://arxiv.org/pdf/2106.09685.pdf">Paper</a></td>
 <td><a href="https://github.com/microsoft/LoRA">Code</a></td>
 </tr>
 <tr>
 <td>LoRA+</td>
-<td>Different learning rates for A and B matrices (B gets 16x higher LR). ~2% accuracy gain, 2x faster.</td>
+<td>Introduces different learning rates for matrices A and B (B gets 16x higher LR), yielding ~2% accuracy improvement and 2x faster training.</td>
 <td><a href="https://arxiv.org/abs/2402.12354">Paper</a></td>
 <td>-</td>
 </tr>
 <tr>
 <td>AdaLoRA</td>
-<td>Adaptive budget allocation via SVD-based importance scoring for LoRA parameters.</td>
+<td>Adaptive budget allocation for LoRA - dynamically allocates parameter budget based on importance scoring via SVD parameterization.</td>
 <td><a href="https://arxiv.org/abs/2303.10512">Paper</a></td>
 <td><a href="https://github.com/QingruZhang/AdaLoRA">Code</a></td>
 </tr>
 <tr>
 <td>QLoRA</td>
-<td>4-bit quantized model + trainable LoRA adapters. NormalFloat, double quantization, paged optimizers.</td>
+<td>Quantizes pretrained model to 4-bit, then adds trainable low-rank adapters. Uses 4-bit NormalFloat, double quantization, and paged optimizers.</td>
 <td><a href="https://arxiv.org/abs/2305.14314">Paper</a></td>
 <td><a href="https://github.com/artidoro/qlora">Code</a></td>
 </tr>
 <tr>
 <td>DoRA</td>
-<td>Weight-Decomposed LoRA: separate magnitude and direction fine-tuning. By NVIDIA.</td>
+<td>Weight-Decomposed Low-Rank Adaptation. Decomposes pretrained weights into magnitude and direction, then fine-tunes separately. By NVIDIA.</td>
 <td><a href="https://arxiv.org/pdf/2402.09353.pdf">Paper</a></td>
 <td><a href="https://github.com/catid/dora">Code</a></td>
 </tr>
 <tr>
 <td>PiSSA</td>
-<td>SVD-based LoRA initialization for significantly better fine-tuning.</td>
+<td>Principal Singular Values and Singular Vectors Adaptation. Modifies LoRA initialization using SVD for significantly better fine-tuning.</td>
 <td><a href="https://arxiv.org/abs/2404.02948">Paper</a></td>
 <td><a href="https://github.com/GraphPKU/PiSSA">Code</a></td>
 </tr>
 <tr>
 <td>MOELoRA</td>
-<td>Combines MoE with LoRA for multi-task PEFT, especially medical applications.</td>
+<td>Combines Mixture of Experts (MOE) with LoRA for multi-task parameter-efficient fine-tuning, especially for medical applications.</td>
 <td><a href="https://arxiv.org/abs/2310.18339">Paper</a></td>
 <td><a href="https://github.com/liuqidong07/MOELoRA-peft">Code</a></td>
 </tr>
 <tr>
 <td>LoRA-FA</td>
-<td>Freezes matrix A after init; trains only B. Halves param count, comparable performance.</td>
+<td>Freezes matrix A after initialization (as random projection), trains only matrix B. Halves parameter count with comparable performance.</td>
 <td><a href="https://arxiv.org/abs/2308.03303">Paper</a></td>
 <td>-</td>
 </tr>
 <tr>
 <td>LoRA-drop</td>
-<td>Determines which layers need LoRA fine-tuning based on output evaluation.</td>
+<td>Algorithm to determine which layers need LoRA fine-tuning and which don't, based on output evaluation.</td>
 <td><a href="https://arxiv.org/abs/2402.07721">Paper</a></td>
 <td>-</td>
 </tr>
 <tr>
 <td>Delta-LoRA</td>
-<td>Updates base W using gradient of AB difference, controlled by lambda hyperparameter.</td>
+<td>Updates the base weight matrix W using the gradient of AB (difference between consecutive timesteps), controlled by hyperparameter lambda.</td>
 <td><a href="https://arxiv.org/abs/2309.02411">Paper</a></td>
 <td>-</td>
 </tr>
@@ -1993,61 +1996,60 @@
 <tbody>
 <tr>
 <td><a href="https://github.com/huggingface/peft">PEFT</a></td>
-<td>HuggingFace library for multiple parameter-efficient fine-tuning methods.</td>
+<td>HuggingFace library implementing multiple parameter-efficient fine-tuning methods.</td>
 <td>-</td>
 <td><a href="https://github.com/huggingface/peft">Code</a></td>
 </tr>
 <tr>
 <td>Instruction Tuning</td>
-<td>Fine-tuning on (instruction, output) pairs for better controllability.</td>
+<td>Fine-tuning LLMs on (instruction, output) pairs to improve instruction-following and controllability.</td>
 <td><a href="https://arxiv.org/abs/2308.10792">Paper</a></td>
 <td><a href="https://github.com/xiaoya-li/Instruction-Tuning-Survey">Code</a></td>
 </tr>
 <tr>
 <td>Prefix Tuning</td>
-<td>Trainable continuous prefixes at each layer; LM stays frozen.</td>
+<td>Adds trainable continuous prefixes to each layer while keeping the LM frozen. Task-specific virtual tokens (soft prompts).</td>
 <td><a href="https://arxiv.org/abs/2101.00190">Paper</a></td>
 <td><a href="https://github.com/huggingface/peft">Code</a></td>
 </tr>
 <tr>
 <td>Prompt Tuning</td>
-<td>Soft prompt tokens at input layer only. Simplified Prefix Tuning.</td>
+<td>Simplified version of Prefix Tuning. Adds soft prompt tokens only at the input layer.</td>
 <td><a href="https://arxiv.org/abs/2104.08691">Paper</a></td>
 <td><a href="https://github.com/huggingface/peft">Code</a></td>
 </tr>
 <tr>
 <td>P-Tuning</td>
-<td>Learnable prompt embeddings via MLP+LSTM. GPT surpassed BERT on SuperGLUE.</td>
+<td>Converts prompts into learnable embeddings processed by MLP+LSTM. Enabled GPT to surpass BERT on SuperGLUE.</td>
 <td><a href="https://arxiv.org/abs/2103.10385">Paper</a></td>
 <td><a href="https://github.com/huggingface/peft">Code</a></td>
 </tr>
 <tr>
 <td>P-Tuning v2</td>
-<td>Prompt tokens at every layer, not just input. Task-specific prompt lengths.</td>
+<td>Adds prompt tokens at every layer (not just input). Removes reparameterization encoder, uses task-specific prompt lengths.</td>
 <td><a href="https://arxiv.org/abs/2110.07602">Paper</a></td>
 <td><a href="https://github.com/THUDM/P-tuning-v2">Code</a></td>
 </tr>
 <tr>
 <td>Adapter Tuning</td>
-<td>Small adapter modules in each Transformer layer. ~3.6% added params.</td>
+<td>Inserts small adapter modules into each Transformer layer. Only trains adapters and LayerNorm (~3.6% added params).</td>
 <td><a href="https://arxiv.org/abs/1902.00751">Paper</a></td>
 <td><a href="https://github.com/google-research/adapter-bert">Code</a></td>
 </tr>
 <tr>
 <td>BitFit</td>
-<td>Sparse fine-tuning: only updates bias parameters.</td>
+<td>Sparse fine-tuning method that only updates bias parameters.</td>
 <td><a href="https://arxiv.org/abs/2106.10199">Paper</a></td>
 <td><a href="https://github.com/benzakenelad/BitFit">Code</a></td>
 </tr>
 <tr>
 <td>DPO</td>
-<td>Direct Preference Optimization: trains LM directly as reward model, no separate RM needed.</td>
+<td>Direct Preference Optimization - trains the language model directly as a reward model, eliminating the need for separate reward model training in RLHF.</td>
 <td><a href="https://arxiv.org/abs/2305.18290">Paper</a></td>
 <td><a href="https://github.com/eric-mitchell/direct-preference-optimization">Code</a></td>
 </tr>
 </tbody>
 </table>
-<hr />
 
 
 
@@ -2070,7 +2072,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 13, 2026 18:46:36 UTC"><span class="timeago" datetime="2026-04-13T18:46:36+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 13, 2026 18:46:36 UTC">2026-04-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 14, 2026 12:36:21 UTC"><span class="timeago" datetime="2026-04-14T12:36:21+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 14, 2026 12:36:21 UTC">2026-04-14</span>
   </span>
 
     
