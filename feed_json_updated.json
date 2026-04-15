@@ -18,8 +18,8 @@
             "title": "Announcement",
             "content_html": "<h1>Announcement</h1>",
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/blog/category/announcement.png",
-            "date_modified": "2026-04-15T07:55:23.827482+00:00",
-            "date_published": "2026-04-15T07:55:23.827477+00:00",
+            "date_modified": "2026-04-15T16:02:15.829604+00:00",
+            "date_published": "2026-04-15T16:02:15.829600+00:00",
             "authors": [],
             "tags": []
         },
@@ -29,8 +29,19 @@
             "title": "2026",
             "content_html": "<h1>2026</h1>",
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/blog/archive/2026.png",
-            "date_modified": "2026-04-15T07:55:23.820830+00:00",
-            "date_published": "2026-04-15T07:55:23.820826+00:00",
+            "date_modified": "2026-04-15T16:02:15.824645+00:00",
+            "date_published": "2026-04-15T16:02:15.824641+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/contributing/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/contributing/",
+            "title": "Contributing",
+            "content_html": "Comprehensive guidelines for contributing resources to the Awesome AGI and ASI repository, including formatting standards, submission process, and community curation guidelines.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/contributing.png",
+            "date_modified": "2026-04-15T16:01:40+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
             "authors": [],
             "tags": []
         },
@@ -251,17 +262,6 @@
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/devops-guide.png",
             "date_modified": "2026-04-13T17:36:54+00:00",
             "date_published": "2026-04-13T17:36:54+00:00",
-            "authors": [],
-            "tags": []
-        },
-        {
-            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/contributing/",
-            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/contributing/",
-            "title": "Contributing",
-            "content_html": "Guidelines for contributing resources to the Awesome AGI and ASI repository, including formatting standards and submission process.",
-            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/contributing.png",
-            "date_modified": "2026-04-13T17:26:12+00:00",
-            "date_published": "2026-04-13T14:48:27+00:00",
             "authors": [],
             "tags": []
         },
