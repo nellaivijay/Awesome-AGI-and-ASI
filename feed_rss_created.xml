@@ -3,7 +3,7 @@
   <channel>
     
     <title>Awesome AGI and ASI</title>
-    <description>The most comprehensive, curated collection of resources on Artificial General Intelligence (AGI) and Artificial Superintelligence (ASI) -- covering frameworks, agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, and tools for builders and researchers shaping the future of intelligence.</description>
+    <description>The most comprehensive, curated collection of resources on Artificial General Intelligence (AGI) and Artificial Superintelligence (ASI) -- updated April 2026. Covers GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, frontier models, JEPA architectures, AI agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools, and emerging security threats for builders and researchers shaping the future of intelligence.</description>
     <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/</link>
     <atom:link href="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_created.xml" rel="self" type="application/rss+xml" />
 
@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Wed, 15 Apr 2026 16:02:14 -0000</pubDate>
-    <lastBuildDate>Wed, 15 Apr 2026 16:02:14 -0000</lastBuildDate>
+    <pubDate>Thu, 16 Apr 2026 01:34:30 -0000</pubDate>
+    <lastBuildDate>Thu, 16 Apr 2026 01:34:30 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -41,7 +41,7 @@
       
       <description>&lt;h1&gt;Announcement&lt;/h1&gt;</description>
       <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/category/announcement/</link>
-      <pubDate>Wed, 15 Apr 2026 16:02:15 +0000</pubDate>
+      <pubDate>Thu, 16 Apr 2026 01:34:30 +0000</pubDate>
       <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_created.xml">Awesome AGI and ASI</source>
       <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/category/announcement/#__comments</comments>
       <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/category/announcement/</guid>
@@ -60,7 +60,7 @@
       
       <description>&lt;h1&gt;2026&lt;/h1&gt;</description>
       <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/archive/2026/</link>
-      <pubDate>Wed, 15 Apr 2026 16:02:15 +0000</pubDate>
+      <pubDate>Thu, 16 Apr 2026 01:34:30 +0000</pubDate>
       <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_created.xml">Awesome AGI and ASI</source>
       <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/archive/2026/#__comments</comments>
       <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/archive/2026/</guid>
@@ -134,14 +134,14 @@
       
         
       
-      <description>The most comprehensive curated collection of AGI and ASI resources -- frameworks, agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, and tools for AI builders.</description>
+      <description>The most comprehensive curated collection of AGI and ASI resources updated April 2026 -- frameworks, agents, GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, JEPA models, frontier AI, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools, and emerging security threats for AI builders.</description>
       <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/</link>
       <pubDate>Mon, 13 Apr 2026 14:48:27 +0000</pubDate>
       <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_created.xml">Awesome AGI and ASI</source>
       <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/#__comments</comments>
       <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/</guid>
       
-      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/index.png" type="image/png" length="31778" />
+      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/index.png" type="image/png" length="33976" />
       
     </item>
     

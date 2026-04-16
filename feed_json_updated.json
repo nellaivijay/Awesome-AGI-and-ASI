@@ -3,7 +3,7 @@
     "title": "Awesome AGI and ASI",
     "home_page_url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/",
     "feed_url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_json_updated.json",
-    "description": "The most comprehensive, curated collection of resources on Artificial General Intelligence (AGI) and Artificial Superintelligence (ASI) -- covering frameworks, agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, and tools for builders and researchers shaping the future of intelligence.",
+    "description": "The most comprehensive, curated collection of resources on Artificial General Intelligence (AGI) and Artificial Superintelligence (ASI) -- updated April 2026. Covers GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, frontier models, JEPA architectures, AI agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools, and emerging security threats for builders and researchers shaping the future of intelligence.",
     "icon": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/logo.png",
     "authors": [
         {
@@ -18,8 +18,8 @@
             "title": "Announcement",
             "content_html": "<h1>Announcement</h1>",
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/blog/category/announcement.png",
-            "date_modified": "2026-04-15T16:02:15.829604+00:00",
-            "date_published": "2026-04-15T16:02:15.829600+00:00",
+            "date_modified": "2026-04-16T01:34:30.978019+00:00",
+            "date_published": "2026-04-16T01:34:30.978014+00:00",
             "authors": [],
             "tags": []
         },
@@ -29,18 +29,18 @@
             "title": "2026",
             "content_html": "<h1>2026</h1>",
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/blog/archive/2026.png",
-            "date_modified": "2026-04-15T16:02:15.824645+00:00",
-            "date_published": "2026-04-15T16:02:15.824641+00:00",
+            "date_modified": "2026-04-16T01:34:30.972577+00:00",
+            "date_published": "2026-04-16T01:34:30.972572+00:00",
             "authors": [],
             "tags": []
         },
         {
-            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/contributing/",
-            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/contributing/",
-            "title": "Contributing",
-            "content_html": "Comprehensive guidelines for contributing resources to the Awesome AGI and ASI repository, including formatting standards, submission process, and community curation guidelines.",
-            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/contributing.png",
-            "date_modified": "2026-04-15T16:01:40+00:00",
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/",
+            "title": "Home",
+            "content_html": "The most comprehensive curated collection of AGI and ASI resources updated April 2026 -- frameworks, agents, GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, JEPA models, frontier AI, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools, and emerging security threats for AI builders.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/index.png",
+            "date_modified": "2026-04-16T01:33:42+00:00",
             "date_published": "2026-04-13T14:48:27+00:00",
             "authors": [],
             "tags": []
@@ -51,7 +51,51 @@
             "title": "Agents",
             "content_html": "Autonomous AI systems that perceive, reason, and act in the world. These agents represent the closest things we have to AGI-like behavior in narrow domains -- writing code, conducting research, operating computers, and navigating virtual worlds.",
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/build/agents.png",
-            "date_modified": "2026-04-14T12:36:21+00:00",
+            "date_modified": "2026-04-16T01:33:42+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/",
+            "title": "Data Infrastructure for AI at Scale",
+            "content_html": "AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/data-infra.png",
+            "date_modified": "2026-04-16T01:33:42+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/deployment/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/deployment/",
+            "title": "LLM Deployment and Serving",
+            "content_html": "Getting models from research to production. High-performance inference engines, serving frameworks, and optimization tools that make LLMs fast, cost-efficient, and scalable.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/deployment.png",
+            "date_modified": "2026-04-16T01:33:42+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/safety/safety-alignment/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/safety/safety-alignment/",
+            "title": "Safety, Alignment and Governance",
+            "content_html": "The most critical section. Ensuring AI remains safe, aligned with human values, and under meaningful control is the defining challenge as systems grow more capable.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/safety/safety-alignment.png",
+            "date_modified": "2026-04-16T01:33:42+00:00",
+            "date_published": "2026-04-13T14:48:27+00:00",
+            "authors": [],
+            "tags": []
+        },
+        {
+            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/contributing/",
+            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/contributing/",
+            "title": "Contributing",
+            "content_html": "Comprehensive guidelines for contributing resources to the Awesome AGI and ASI repository, including formatting standards, submission process, and community curation guidelines.",
+            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/contributing.png",
+            "date_modified": "2026-04-15T16:01:40+00:00",
             "date_published": "2026-04-13T14:48:27+00:00",
             "authors": [],
             "tags": []
@@ -84,28 +128,6 @@
             "title": "Physical AI & Embodied Intelligence",
             "content_html": "AGI cannot exist only in text -- it must understand and act in the physical world. **Physical AI** bridges foundation models with embodiment: humanoid robots, manipulation, navigation, and physics simulation. Moravec's Paradox -- sensorimotor skills are harder than abstract reasoning -- remains one of the deepest unsolved AGI challenges.",
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/build/physical-ai.png",
-            "date_modified": "2026-04-14T12:36:21+00:00",
-            "date_published": "2026-04-13T14:48:27+00:00",
-            "authors": [],
-            "tags": []
-        },
-        {
-            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/",
-            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/",
-            "title": "Data Infrastructure for AI at Scale",
-            "content_html": "AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.",
-            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/data-infra.png",
-            "date_modified": "2026-04-14T12:36:21+00:00",
-            "date_published": "2026-04-13T14:48:27+00:00",
-            "authors": [],
-            "tags": []
-        },
-        {
-            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/deployment/",
-            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/deployment/",
-            "title": "LLM Deployment and Serving",
-            "content_html": "Getting models from research to production. High-performance inference engines, serving frameworks, and optimization tools that make LLMs fast, cost-efficient, and scalable.",
-            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/deployment.png",
             "date_modified": "2026-04-14T12:36:21+00:00",
             "date_published": "2026-04-13T14:48:27+00:00",
             "authors": [],
@@ -200,17 +222,6 @@
             "tags": []
         },
         {
-            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/safety/safety-alignment/",
-            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/safety/safety-alignment/",
-            "title": "Safety, Alignment and Governance",
-            "content_html": "The most critical section. Ensuring AI remains safe, aligned with human values, and under meaningful control is the defining challenge as systems grow more capable.",
-            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/safety/safety-alignment.png",
-            "date_modified": "2026-04-14T12:36:21+00:00",
-            "date_published": "2026-04-13T14:48:27+00:00",
-            "authors": [],
-            "tags": []
-        },
-        {
             "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/understand/asi-research/",
             "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/understand/asi-research/",
             "title": "ASI and Superintelligence Research",
@@ -240,17 +251,6 @@
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/understand/benchmarks.png",
             "date_modified": "2026-04-13T18:46:36+00:00",
             "date_published": "2026-04-13T18:10:27+00:00",
-            "authors": [],
-            "tags": []
-        },
-        {
-            "id": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/",
-            "url": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/",
-            "title": "Home",
-            "content_html": "The most comprehensive curated collection of AGI and ASI resources -- frameworks, agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, and tools for AI builders.",
-            "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/index.png",
-            "date_modified": "2026-04-13T18:10:27+00:00",
-            "date_published": "2026-04-13T14:48:27+00:00",
             "authors": [],
             "tags": []
         },

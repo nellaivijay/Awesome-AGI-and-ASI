@@ -3,7 +3,7 @@
   <channel>
     
     <title>Awesome AGI and ASI</title>
-    <description>The most comprehensive, curated collection of resources on Artificial General Intelligence (AGI) and Artificial Superintelligence (ASI) -- covering frameworks, agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, and tools for builders and researchers shaping the future of intelligence.</description>
+    <description>The most comprehensive, curated collection of resources on Artificial General Intelligence (AGI) and Artificial Superintelligence (ASI) -- updated April 2026. Covers GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, frontier models, JEPA architectures, AI agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools, and emerging security threats for builders and researchers shaping the future of intelligence.</description>
     <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/</link>
     <atom:link href="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml" rel="self" type="application/rss+xml" />
 
@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Wed, 15 Apr 2026 16:02:14 -0000</pubDate>
-    <lastBuildDate>Wed, 15 Apr 2026 16:02:14 -0000</lastBuildDate>
+    <pubDate>Thu, 16 Apr 2026 01:34:30 -0000</pubDate>
+    <lastBuildDate>Thu, 16 Apr 2026 01:34:30 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -41,7 +41,7 @@
       
       <description>&lt;h1&gt;Announcement&lt;/h1&gt;</description>
       <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/category/announcement/</link>
-      <pubDate>Wed, 15 Apr 2026 16:02:15 +0000</pubDate>
+      <pubDate>Thu, 16 Apr 2026 01:34:30 +0000</pubDate>
       <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI and ASI</source>
       <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/category/announcement/#__comments</comments>
       <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/category/announcement/</guid>
@@ -60,12 +60,107 @@
       
       <description>&lt;h1&gt;2026&lt;/h1&gt;</description>
       <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/archive/2026/</link>
-      <pubDate>Wed, 15 Apr 2026 16:02:15 +0000</pubDate>
+      <pubDate>Thu, 16 Apr 2026 01:34:30 +0000</pubDate>
       <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI and ASI</source>
       <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/archive/2026/#__comments</comments>
       <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/archive/2026/</guid>
       
       <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/blog/archive/2026.png" type="image/png" length="31690" />
+      
+    </item>
+    
+    <item>
+      <title>Home</title>
+      
+      
+      
+      
+        
+      
+      <description>The most comprehensive curated collection of AGI and ASI resources updated April 2026 -- frameworks, agents, GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, JEPA models, frontier AI, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools, and emerging security threats for AI builders.</description>
+      <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/</link>
+      <pubDate>Thu, 16 Apr 2026 01:33:42 +0000</pubDate>
+      <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI and ASI</source>
+      <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/#__comments</comments>
+      <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/</guid>
+      
+      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/index.png" type="image/png" length="33976" />
+      
+    </item>
+    
+    <item>
+      <title>Agents</title>
+      
+      
+      
+      
+        
+      
+      <description>Autonomous AI systems that perceive, reason, and act in the world. These agents represent the closest things we have to AGI-like behavior in narrow domains -- writing code, conducting research, operating computers, and navigating virtual worlds.</description>
+      <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/agents/</link>
+      <pubDate>Thu, 16 Apr 2026 01:33:42 +0000</pubDate>
+      <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI and ASI</source>
+      <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/agents/#__comments</comments>
+      <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/agents/</guid>
+      
+      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/build/agents.png" type="image/png" length="34401" />
+      
+    </item>
+    
+    <item>
+      <title>Data Infrastructure for AI at Scale</title>
+      
+      
+      
+      
+        
+      
+      <description>AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.</description>
+      <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/</link>
+      <pubDate>Thu, 16 Apr 2026 01:33:42 +0000</pubDate>
+      <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI and ASI</source>
+      <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/#__comments</comments>
+      <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/</guid>
+      
+      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/data-infra.png" type="image/png" length="47790" />
+      
+    </item>
+    
+    <item>
+      <title>LLM Deployment and Serving</title>
+      
+      
+      
+      
+        
+      
+      <description>Getting models from research to production. High-performance inference engines, serving frameworks, and optimization tools that make LLMs fast, cost-efficient, and scalable.</description>
+      <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/deployment/</link>
+      <pubDate>Thu, 16 Apr 2026 01:33:42 +0000</pubDate>
+      <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI and ASI</source>
+      <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/deployment/#__comments</comments>
+      <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/deployment/</guid>
+      
+      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/deployment.png" type="image/png" length="48113" />
+      
+    </item>
+    
+    <item>
+      <title>Safety, Alignment and Governance</title>
+      
+      
+      
+      
+        
+      
+      <description>The most critical section. Ensuring AI remains safe, aligned with human values, and under meaningful control is the defining challenge as systems grow more capable.</description>
+      <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/safety/safety-alignment/</link>
+      <pubDate>Thu, 16 Apr 2026 01:33:42 +0000</pubDate>
+      <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI and ASI</source>
+      <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/safety/safety-alignment/#__comments</comments>
+      <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/safety/safety-alignment/</guid>
+      
+      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/safety/safety-alignment.png" type="image/png" length="50773" />
       
     </item>
     
@@ -85,25 +180,6 @@
       <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/contributing/</guid>
       
       <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/contributing.png" type="image/png" length="37190" />
-      
-    </item>
-    
-    <item>
-      <title>Agents</title>
-      
-      
-      
-      
-        
-      
-      <description>Autonomous AI systems that perceive, reason, and act in the world. These agents represent the closest things we have to AGI-like behavior in narrow domains -- writing code, conducting research, operating computers, and navigating virtual worlds.</description>
-      <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/agents/</link>
-      <pubDate>Tue, 14 Apr 2026 12:36:21 +0000</pubDate>
-      <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI and ASI</source>
-      <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/agents/#__comments</comments>
-      <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/agents/</guid>
-      
-      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/build/agents.png" type="image/png" length="34401" />
       
     </item>
     
@@ -161,44 +237,6 @@
       <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/build/physical-ai/</guid>
       
       <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/build/physical-ai.png" type="image/png" length="53790" />
-      
-    </item>
-    
-    <item>
-      <title>Data Infrastructure for AI at Scale</title>
-      
-      
-      
-      
-        
-      
-      <description>AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.</description>
-      <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/</link>
-      <pubDate>Tue, 14 Apr 2026 12:36:21 +0000</pubDate>
-      <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI and ASI</source>
-      <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/#__comments</comments>
-      <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/data-infra/</guid>
-      
-      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/data-infra.png" type="image/png" length="47790" />
-      
-    </item>
-    
-    <item>
-      <title>LLM Deployment and Serving</title>
-      
-      
-      
-      
-        
-      
-      <description>Getting models from research to production. High-performance inference engines, serving frameworks, and optimization tools that make LLMs fast, cost-efficient, and scalable.</description>
-      <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/deployment/</link>
-      <pubDate>Tue, 14 Apr 2026 12:36:21 +0000</pubDate>
-      <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI and ASI</source>
-      <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/deployment/#__comments</comments>
-      <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/infrastructure/deployment/</guid>
-      
-      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/deployment.png" type="image/png" length="48113" />
       
     </item>
     
@@ -355,25 +393,6 @@
     </item>
     
     <item>
-      <title>Safety, Alignment and Governance</title>
-      
-      
-      
-      
-        
-      
-      <description>The most critical section. Ensuring AI remains safe, aligned with human values, and under meaningful control is the defining challenge as systems grow more capable.</description>
-      <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/safety/safety-alignment/</link>
-      <pubDate>Tue, 14 Apr 2026 12:36:21 +0000</pubDate>
-      <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI and ASI</source>
-      <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/safety/safety-alignment/#__comments</comments>
-      <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/safety/safety-alignment/</guid>
-      
-      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/safety/safety-alignment.png" type="image/png" length="50773" />
-      
-    </item>
-    
-    <item>
       <title>ASI and Superintelligence Research</title>
       
       
@@ -427,25 +446,6 @@
       <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/understand/benchmarks/</guid>
       
       <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/understand/benchmarks.png" type="image/png" length="50974" />
-      
-    </item>
-    
-    <item>
-      <title>Home</title>
-      
-      
-      
-      
-        
-      
-      <description>The most comprehensive curated collection of AGI and ASI resources -- frameworks, agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, and tools for AI builders.</description>
-      <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/</link>
-      <pubDate>Mon, 13 Apr 2026 18:10:27 +0000</pubDate>
-      <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI and ASI</source>
-      <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/#__comments</comments>
-      <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/</guid>
-      
-      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/index.png" type="image/png" length="31778" />
       
     </item>
     
