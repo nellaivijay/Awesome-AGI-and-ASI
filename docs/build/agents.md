@@ -14,7 +14,7 @@ keywords: "AI agents, coding agents, research agents, computer use agents, embod
 |-|-|-|-|
 |[Aider](https://github.com/Aider-AI/aider)|![GitHub Repo stars](https://badgen.net/github/stars/Aider-AI/aider)|AI pair programming in your terminal. Edit code across your entire repo with LLMs. Tops SWE-bench Lite.|Best-in-class AI pair programmer. Works with GPT-4o, Claude, DeepSeek, local models.|
 |[SWE-agent](https://github.com/princeton-nlp/SWE-agent)|![GitHub Repo stars](https://badgen.net/github/stars/princeton-nlp/SWE-agent)|Turns LLMs into software engineering agents that fix real GitHub issues. Pioneered the Agent-Computer Interface (ACI) concept.|[Paper](https://arxiv.org/abs/2405.15232). Princeton NLP. Key SWE-bench benchmark agent.|
-|[goose](https://github.com/block/goose)|![GitHub Repo stars](https://badgen.net/github/stars/block/goose)|Open-source extensible AI agent that goes beyond code suggestions — install, execute, edit, and test with any LLM. Written in Rust.|Supports MCP and ACP protocols. By Block.|
+|[goose](https://github.com/block/goose)|![GitHub Repo stars](https://badgen.net/github/stars/block/goose)|Open-source extensible AI agent that goes beyond code suggestions — install, execute, edit, and test with any LLM. Written in Rust.|Supports MCP and ACP protocols. By Block. Can replace cloud-based orchestration with local stack.|
 |[Open Interpreter](https://github.com/OpenInterpreter/open-interpreter)|![GitHub Repo stars](https://badgen.net/github/stars/OpenInterpreter/open-interpreter)|A natural language interface for computers. Lets LLMs run code (Python, JS, shell) locally with no restrictions.|Full computer control via natural language. Like ChatGPT Code Interpreter but unrestricted.|
 
 ### Research & Knowledge Agents
@@ -31,6 +31,7 @@ keywords: "AI agents, coding agents, research agents, computer use agents, embod
 |Name|Github Stars|Introduction| Notes |
 |-|-|-|-|
 |[everything-claude-code](https://github.com/anthropics/claude-code)|![GitHub Repo stars](https://badgen.net/github/stars/anthropics/claude-code)|Agent harness performance optimization system with skills, instincts, memory, and security for AI coding agents.|Cognitive scaffolding for agentic AI — directly relevant to persistent AGI.|
+||[Claude Code Channels](https://claude.ai/channels)|Experimental feature allowing Claude communication via Telegram or Discord. Competes with OpenClaw's multi-platform approach.|Cross-platform Claude access for mobile and collaboration workflows.|
 |[nanobot](https://github.com/HKUDS/nanobot)|![GitHub Repo stars](https://badgen.net/github/stars/HKUDS/nanobot)|Ultra-lightweight personal AI agent. Minimal footprint with full agent capabilities.|39k+ stars. Edge-AGI and ubiquitous deployment.|
 |[Screenpipe](https://github.com/screenpipe/screenpipe)|![GitHub Repo stars](https://badgen.net/github/stars/screenpipe/screenpipe)|Run agents that work for you based on what you do. Continuously observes your screen, builds personal memory, and triggers AI actions.|Always-on environmental awareness — a prototype AGI assistant.|
 
@@ -52,3 +53,14 @@ keywords: "AI agents, coding agents, research agents, computer use agents, embod
 |[Salesforce Agentforce](https://www.salesforce.com/agentforce/)|Enterprise AI agent platform integrated into Salesforce CRM. Autonomous agents handle sales, service, marketing, and commerce workflows.|Largest enterprise AI agent deployment. Announced 2024.|
 |[Microsoft Copilot Studio](https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio)|Low-code platform for building and deploying custom AI agents and copilots across Microsoft 365 and Azure.|Powers enterprise-wide agentic automation.|
 |[Zapier AI Agents](https://zapier.com/agents)|No-code AI agents that automate cross-app workflows. Connects 7,000+ apps with autonomous decision-making and action.|Enterprise workflow automation at scale.|
+
+
+### Development Workflow Tools
+
+> Tools that enhance the software development lifecycle with AI integration, from specification to version control.
+
+||Name|Description|Links|
+||-|-|-|
+||[Plumb](https://github.com/plumb-dev/plumb)|Tool for keeping specifications, tests, and code in sync. Early-stage but potentially crucial for spec-driven development.|[GitHub](https://github.com/plumb-dev/plumb)|
+||[Manyana](https://github.com/manyana-git/manyana)|Rethinking version control based on CRDTs (conflict-free replicated data types). Alternative to Git for AI-augmented development.|[GitHub](https://github.com/manyana-git/manyana)|
+||[git-memento](https://github.com/git-memento/git-memento)|Git extension that saves coding sessions as Markdown and commits them. Preserves AI session context for audit.|[GitHub](https://github.com/git-memento/git-memento)|

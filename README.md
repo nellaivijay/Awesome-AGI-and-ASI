@@ -11,9 +11,20 @@
 ![Conferences](https://img.shields.io/badge/Conferences-Academic_&_Industry-teal)
 ![Updated](https://img.shields.io/badge/Updated-April_2026-brightgreen)
 
+<!-- Metadata for SEO and GitHub Discoverability -->
+**Topics**: `artificial-intelligence` `artificial-general-intelligence` `agi` `artificial-superintelligence` `asi` `machine-learning` `deep-learning` `large-language-models` `llm` `ai-agents` `ai-safety` `ai-alignment` `frontier-models` `gpt-5-4` `gemini-3-1` `claude-opus-4-6` `jepa` `rag` `mlops` `ai-development` `2026-ai-trends`
+
+**Keywords**: AGI, ASI, artificial general intelligence, artificial superintelligence, GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, JEPA, frontier models, AI agents, LLM, RAG, AI safety, alignment, AI security threats, software development AI impact, 2026 AI trends, hybrid architectures, local AI, AI development tools
+
+**Updated**: April 2026 | **Latest Models**: GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, Kimi K2.5, LeWorldModel, Nemotron 3 Super | **New Tools**: Cursor Composer 2, OpenAI Frontier, Claude Code Channels, Opencode
+
+<!-- End Metadata -->
+
 > *"The development of full artificial intelligence could spell the end of the human race... or it could be the best thing ever to happen to humanity."* -- Stephen Hawking
 
-The most comprehensive, curated collection of resources on the journey from **AI** to **AGI** to **ASI** -- covering frameworks, agents, research papers, safety & alignment, books, benchmarks, conferences, and tools for builders and researchers shaping the future of intelligence.
+The most comprehensive, curated collection of resources on the journey from **AI** to **AGI** to **ASI** -- updated April 2026 with the latest frontier models, development tools, security threats, and AI's impact on software development. Covers frameworks, agents, research papers, safety & alignment, books, benchmarks, conferences, and tools for builders and researchers shaping the future of intelligence.
+
+👉 **[Quick Navigation Guide](QUICK_NAVIGATION.md)** - Find resources by role, topic, or trending area
 
 ## 🚀 Quick Navigation
 
@@ -162,7 +173,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |-------|------|-------------|----------------|-----------------|
 | 0 | **No AI** | Narrow software with no AI capability | Calculator, basic scripts | GOFAI rule systems |
 | 1 | **Emerging** | Equal to or somewhat better than an unskilled human | **Most current LLMs** | ChatGPT, Llama 3, Gemma, Mistral |
-| 2 | **Competent** | At least 50th percentile of skilled adults | **Frontier models on select tasks** | GPT-4, Gemini 2.5 Pro, Claude 3.5 (coding, writing, analysis) |
+| 2 | **Competent** | At least 50th percentile of skilled adults | **Frontier models on select tasks** | GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6 (coding, writing, analysis) - superseding GPT-4, Gemini 2.5, Claude 3.5 |
 | 3 | **Expert** | At least 90th percentile of skilled adults | **Narrow domains only** | AlphaFold (protein structure), o1/R1 (math competitions), Devin/OpenHands (SWE-bench) |
 | 4 | **Virtuoso** | At least 99th percentile of skilled adults | **Not yet achieved across general tasks** | -- |
 | 5 | **Superhuman (ASI)** | Outperforms 100% of humans in all tasks | **Theoretical** -- the ASI threshold | See [Recursive Self-Improvement](#recursive-self-improvement--the-path-to-asi) |

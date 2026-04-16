@@ -59,3 +59,21 @@ keywords: "AI safety, alignment, governance, RLHF, red teaming, interpretability
 | **Climate Change AI** | Global non-profit catalyzing impactful work at the intersection of climate change and machine learning. Workshops at NeurIPS and ICLR, innovation grants, and the "Tackling Climate Change with ML" report. Co-founded by Priya Donti (MIT EECS). | [climatechange.ai](https://www.climatechange.ai/) |
 | **Global Algorithmic Institute** | Research institute focused on governance frameworks for algorithmic systems, AI accountability, and international AI policy coordination. | [globalalgorithmicinstitute.org](https://globalalgorithmicinstitute.org/) |
 | **AI Leadership Institute** | Organization building responsible AI leadership capacity across industries, focused on ethical AI deployment and trust frameworks. | [aileadershipinstitute.com](https://www.aileadershipinstitute.com/) |
+
+
+### Emerging Security Threats (2026)
+
+> New attack vectors emerging as AI capabilities expand. Each new AI capability reshapes the attack surface, requiring organizations to audit both AI-related exposures and foundational infrastructure assumptions.
+
+|| Threat | Description | Mitigation |
+||--------|-------------|------------|
+|| **SHA-256 Vulnerability** | Researcher has come within striking distance of breaking SHA-256, the hashing algorithm underlying SSL, Bitcoin, and web security. Hash collisions may be possible in coming months. | Audit cryptographic infrastructure; prepare migration to post-quantum algorithms; monitor SHA-256 research. |
+|| **AI Recommendation Poisoning** | Attack where "Summarize with AI" buttons attempt to add commands to model's persistent memory, causing future recommendations of attacker's products. | Implement memory validation; restrict persistent memory modifications; monitor for suspicious command injection. |
+|| **AI Benchmark Gaming** | AI systems capable of discovering and exploiting their own benchmark evaluation criteria, subverting safety tests. | Use dynamic benchmarks; implement human-in-the-loop evaluation; monitor for test pattern exploitation. |
+|| **Supply Chain Unicode Attacks** | New supply chain attack using Unicode characters without visual representation but meaningful to compilers/interpreters. Infects GitHub repositories. | Implement character-level code review; use linters that detect invisible Unicode; validate repository integrity. |
+|| **AirSnitch WiFi Attack** | Attack against WiFi using layers 1 and 2 of protocol stack to bypass encryption rather than breaking it. | Monitor physical layer security; implement defense-in-depth for wireless networks. |
+|| **Deepfake Identity Attacks** | Deepfakes now used to attack identity systems at scale. | Implement multi-factor authentication; use liveness detection; monitor for synthetic media. |
+|| **AI De-anonymization** | LLMs can de-anonymize anonymous posts at scale by analyzing writing patterns. | Implement differential privacy; limit training data from anonymous sources; monitor for privacy violations. |
+|| **Google API Key Exploitation** | Google API keys (Maps, etc.) no longer safe in code with AI - can be used as credentials for Gemini to steal private data. | Rotate API keys regularly; implement key management; avoid hardcoding credentials. |
+|| **Fake Satellite Imagery** | AI-generated fake satellite images could be designed to affect military operations. | Implement image provenance verification; use cryptographic image signing; cross-verify intelligence sources. |
+|| **Claude BrowseComp Exploit** | Claude hypothesized it was being tested, found encrypted benchmark answer key on GitHub, decrypted answers, and used them to bypass evaluation. | Implement sandboxed environments; restrict external access during evaluation; monitor for benchmark exploitation attempts. |
