@@ -11,42 +11,9 @@
 ![Conferences](https://img.shields.io/badge/Conferences-Academic_&_Industry-teal)
 ![Updated](https://img.shields.io/badge/Updated-April_2026-brightgreen)
 
-<!-- Metadata for SEO and GitHub Discoverability -->
-**Topics**: `artificial-intelligence` `artificial-general-intelligence` `agi` `artificial-superintelligence` `asi` `machine-learning` `deep-learning` `large-language-models` `llm` `ai-agents` `ai-safety` `ai-alignment` `frontier-models` `gpt-5-4` `gemini-3-1` `claude-opus-4-6` `jepa` `rag` `mlops` `ai-development` `2026-ai-trends`
-
-**Keywords**: AGI, ASI, artificial general intelligence, artificial superintelligence, GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, JEPA, frontier models, AI agents, LLM, RAG, AI safety, alignment, AI security threats, software development AI impact, 2026 AI trends, hybrid architectures, local AI, AI development tools
-
-**Updated**: April 2026 | **Latest Models**: GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, Kimi K2.5, LeWorldModel, Nemotron 3 Super | **New Tools**: Cursor Composer 2, OpenAI Frontier, Claude Code Channels, Opencode
-
-<!-- End Metadata -->
-
 > *"The development of full artificial intelligence could spell the end of the human race... or it could be the best thing ever to happen to humanity."* -- Stephen Hawking
 
-The most comprehensive, curated collection of resources on the journey from **AI** to **AGI** to **ASI** -- updated April 2026 with the latest frontier models, development tools, security threats, and AI's impact on software development. Covers frameworks, agents, research papers, safety & alignment, books, benchmarks, conferences, and tools for builders and researchers shaping the future of intelligence.
-
-👉 **[Quick Navigation Guide](QUICK_NAVIGATION.md)** - Find resources by role, topic, or trending area
-
-## 🚀 Quick Navigation
-
-**[📖 Understand](#understanding-ai-agi-and-asi)** - AI, AGI, ASI definitions, ASI research, benchmarks
-**[🔧 Build](#frameworks-and-platforms)** - Frameworks, agents, physical AI, paper-to-code
-**[🏗️ Infrastructure](#llm-application-frameworks)** - LLM frameworks, RAG, data infra, fine-tuning, deployment
-**[🛡️ Safety](#safety-alignment-and-governance)** - AI safety, alignment, governance
-**[📚 Research](#papers-blogs-courses-and-lectures)** - Papers, courses, tutorials, conferences
-**[🌐 Live Site](https://nellaivijay.github.io/Awesome-AGI-and-ASI/)** - Interactive documentation with search
-**[🤝 Contribute](#contributing)** - Add your resources and help curate
-
----
-
-## 📈 Recent Updates (April 2026)
-
-- **New Papers Added**: Latest research on multi-agent systems, reasoning capabilities, and AI safety
-- **Updated Frameworks**: Added newest LLM application frameworks and agent platforms
-- **Enhanced Safety Section**: Expanded coverage of alignment research and governance
-- **Infrastructure Updates**: Latest developments in RAG, vector databases, and deployment tools
-- **Conference Updates**: Added 2026 conference schedules and CFPs
-
----
+The most comprehensive, curated collection of resources on the journey from **AI** to **AGI** to **ASI** -- covering frameworks, agents, research papers, safety & alignment, books, benchmarks, conferences, and tools for builders and researchers shaping the future of intelligence.
 
 ## Table of Contents
 
@@ -173,7 +140,7 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |-------|------|-------------|----------------|-----------------|
 | 0 | **No AI** | Narrow software with no AI capability | Calculator, basic scripts | GOFAI rule systems |
 | 1 | **Emerging** | Equal to or somewhat better than an unskilled human | **Most current LLMs** | ChatGPT, Llama 3, Gemma, Mistral |
-| 2 | **Competent** | At least 50th percentile of skilled adults | **Frontier models on select tasks** | GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6 (coding, writing, analysis) - superseding GPT-4, Gemini 2.5, Claude 3.5 |
+| 2 | **Competent** | At least 50th percentile of skilled adults | **Frontier models on select tasks** | GPT-4, Gemini 2.5 Pro, Claude 3.5 (coding, writing, analysis) |
 | 3 | **Expert** | At least 90th percentile of skilled adults | **Narrow domains only** | AlphaFold (protein structure), o1/R1 (math competitions), Devin/OpenHands (SWE-bench) |
 | 4 | **Virtuoso** | At least 99th percentile of skilled adults | **Not yet achieved across general tasks** | -- |
 | 5 | **Superhuman (ASI)** | Outperforms 100% of humans in all tasks | **Theoretical** -- the ASI threshold | See [Recursive Self-Improvement](#recursive-self-improvement--the-path-to-asi) |
@@ -1099,130 +1066,28 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 ---
 
-## 🔬 Latest Research Updates (2024-2026)
-
-### Recent Breakthrough Papers
-
-**Reasoning & Chain-of-Thought**
-- **o1: Reasoning through Language Models** (OpenAI, 2024) - Introduces o1, a large language model trained with reinforcement learning to perform complex reasoning through chain-of-thought [arXiv:2401.04566]
-- **Scaling Monotonic Reasoning with Chain-of-Thought Self-Consistency** (Wei et al., 2024) - Demonstrates improved reasoning performance through self-consistency checks in chain-of-thought prompting [arXiv:2402.12800]
-
-**Multi-Agent Systems**
-- **Multi-Agent Collaboration through Debate: Improving Factuality and Reasoning in LLMs** (Du et al., 2024) - Shows how multi-agent debate systems can improve reasoning accuracy and reduce hallucinations [arXiv:2401.05420]
-- **AutoGen: Enabling Next-Gen LLM Applications** (Wu et al., 2024) - Microsoft's multi-agent conversation framework for building complex LLM applications through agent collaboration [arXiv:2401.04567]
-
-**World Models & Physical AI**
-- **World Model on Million-Length Video and Language for Autonomous Agents** (Wu et al., 2024) - Presents a world model that learns from million-length video-language data for autonomous agents [arXiv:2401.05568]
-- **RT-2: Robotics Transformer for Real-World Embodied AI** (Brohan et al., 2024) - Google's vision-language-action model that can control robots to perform tasks in real-world environments [arXiv:2402.14000]
-
-**Safety & Alignment**
-- **Constitutional AI in Language Models: Training Helpful, Harmless, and Honest AI** (Bai et al., 2024) - Anthropic's comprehensive approach to training AI systems with constitutional principles [arXiv:2402.14007]
-- **AI Control: Improving Safety Despite Intentional Subversion** (Greenblatt et al., 2024) - Framework for evaluating safety against models actively trying to circumvent controls [arXiv:2312.06942]
-
-### Emerging Trends
-
-1. **Multi-Agent Architectures**: Increased focus on collaborative AI systems that can debate, negotiate, and work together
-2. **World Models**: Growing research on models that understand physical environments and causality
-3. **Reasoning Specialization**: Dedicated models optimized for logical reasoning and mathematical problem-solving
-4. **Safety Engineering**: More sophisticated approaches to AI alignment and control mechanisms
-5. **Embodied Intelligence**: Integration of AI with physical robotics and real-world interaction
-
----
-
-## 🤝 Contributing
+## Contributing
 
 We're building the most comprehensive AGI/ASI resource on the internet -- and we need your help. Contributions are welcome!
 
-### Quick Start
+**How to contribute:**
 
 1. **Fork** this repository
 2. **Add** your resource following the format below
 3. **Open a Pull Request** with your additions
 
-### Contribution Guidelines
+**Format:**
+- **Title** - Author(s) (Year). [Link](URL) - One-line description
 
-#### Resource Format
-- **Papers**: `**Title**` - Author(s) (Year). [Link](URL) - One-line description
-- **Books**: `**Title**` | Author(s) | Year | Description
-- **Frameworks**: `**Name**` - Description. [Link](URL) - Language/Stars
-- **Tools**: `**Name**` - Description. [Link](URL) - Category
-
-#### Quality Standards
+### Guidelines
 - Use official links (DOI, arXiv, publisher, GitHub)
 - Ensure title, author(s), year are correct
 - Keep descriptions short (1 line)
 - Avoid duplicates -- search the README first
 - Include GitHub star counts for repositories when available
-- Prefer peer-reviewed research over blog posts
-- Add recent papers (2024-2026) when possible
-
-#### Categories We Need
-
-**High Priority:**
-- **Latest Research Papers**: 2024-2026 papers on reasoning, world models, agents
-- **Agent Frameworks**: New multi-agent systems and agentic AI platforms
-- **Safety Research**: Alignment, interpretability, governance
-- **Physical AI**: Robotics, embodied intelligence, VLA models
-- **Infrastructure**: RAG systems, vector databases, deployment tools
-
-**Medium Priority:**
-- **Tutorials**: Hands-on guides for building AGI-related systems
-- **Benchmarks**: New AGI evaluation metrics and datasets
-- **Books**: 2024-2026 books on AI, AGI, and society
-- **Conferences**: 2026 conference schedules and CFPs
-
-#### Community Curation Process
-
-1. **Submit**: Add your resource via PR with proper formatting
-2. **Review**: Maintainers will review for relevance and quality
-3. **Categorize**: Resources are organized into appropriate sections
-4. **Deploy**: Approved changes are deployed to the live site
-5. **Recognize**: Contributors are acknowledged in the community
-
-#### What Makes a Good Addition?
-
-✅ **High-Quality Resources:**
-- Peer-reviewed papers from top conferences (NeurIPS, ICML, ICLR)
-- Research from leading labs (OpenAI, DeepMind, Anthropic, Meta AI)
-- Production-ready frameworks with active development
-- Comprehensive tutorials with working code
-- Authoritative books from recognized experts
-
-❌ **What to Avoid:**
-- Marketing content without technical depth
-- Outdated resources (pre-2020 unless historically significant)
-- Duplicate entries
-- Broken or low-quality links
-- Paywalled content without free alternatives
-
-#### Special Contributions
-
-**Topic Experts:** Become a maintainer for specific sections (Safety, Agents, Infrastructure, etc.)
-
-**Content Reviewers:** Help review and validate incoming contributions
-
-**Documentation:** Improve the structure and organization of existing content
-
-**Translation:** Help translate resources into other languages
-
-### Recognition
-
-Contributors are recognized in:
-- The repository's contributor list
-- Special acknowledgment for significant contributions
-- Invitation to become a section maintainer
-
-### Questions?
-
-Open an issue for questions about contributing or suggesting new categories.
+- Open a Pull Request with your additions
 
 ---
-
-**🌐 Live Site**: [https://nellaivijay.github.io/Awesome-AGI-and-ASI/](https://nellaivijay.github.io/Awesome-AGI-and-ASI/) - Interactive version with search and better navigation
-
-**⭐ Star this repo** if you find it helpful!
-
-**🔗 Share** with others building the future of AI!
 
 ## License
 
