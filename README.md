@@ -180,6 +180,38 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 > **Source:** [Levels of AGI: Operationalizing Progress on the Path to AGI](https://arxiv.org/abs/2311.02462) -- Morris et al., Google DeepMind (2023)
 
+### Google DeepMind's Cognitive Framework for AGI Measurement (2026)
+
+> A new cognitive taxonomy for measuring AGI progress based on decades of research in psychology, neuroscience, and cognitive science.
+
+Google DeepMind's 2026 framework introduces a scientific foundation for understanding AI systems' cognitive capabilities through a **cognitive taxonomy** of 10 key abilities essential for general intelligence:
+
+| Cognitive Ability | Description |
+|-------------------|-------------|
+| **Perception** | Extracting and processing sensory information from the environment |
+| **Generation** | Producing outputs such as text, speech, and actions |
+| **Attention** | Focusing cognitive resources on what matters |
+| **Learning** | Acquiring new knowledge through experience and instruction |
+| **Memory** | Storing and retrieving information over time |
+| **Reasoning** | Drawing valid conclusions through logical inference |
+| **Metacognition** | Knowledge and monitoring of one's own cognitive processes |
+| **Executive functions** | Planning, inhibition, and cognitive flexibility |
+| **Problem solving** | Finding effective solutions to domain-specific problems |
+| **Social cognition** | Processing and interpreting social information and responding appropriately in social situations |
+
+**Three-Stage Evaluation Protocol:**
+1. Evaluate AI systems across a broad suite of cognitive tasks covering each ability, using held-out test sets to prevent data contamination
+2. Collect human baselines for the same tasks from a demographically representative sample of adults
+3. Map each AI system's performance relative to the distribution of human performance in each ability
+
+**Kaggle Hackathon (2026):**
+- **Focus**: Building evaluations for 5 cognitive abilities with the largest evaluation gap: learning, metacognition, attention, executive functions, and social cognition
+- **Prize Pool**: $200,000 total ($10,000 awards for top two submissions in each of 5 tracks, $25,000 grand prizes for 4 best overall submissions)
+- **Platform**: Kaggle's Community Benchmarks platform for testing against frontier models
+- **Timeline**: Submissions open March 17 - April 16, 2026; results announced June 1, 2026
+
+> **Source:** [Measuring Progress Toward AGI: A Cognitive Taxonomy](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/measuring-agi-cognitive-framework/) -- Google DeepMind (2026) | [Kaggle Hackathon](https://www.kaggle.com/)
+
 ---
 
 ## ASI and Superintelligence Research
@@ -290,12 +322,14 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | **Humanity's Last Exam** | Hardest possible questions crowdsourced from domain experts worldwide. Designed to be the final exam before AGI. | [GitHub](https://github.com/centerforaisafety/hle) |
 | **METR (Model Evaluation & Threat Research)** | Evaluates frontier models for dangerous capabilities including autonomous replication and resource acquisition. | [metr.org](https://metr.org/) |
 | **FrontierMath** | Extremely challenging math benchmark: problems that take professional mathematicians hours/days. | [Paper](https://arxiv.org/abs/2411.04872) |
+| **Google DeepMind Cognitive Taxonomy** | Framework for measuring AGI progress through 10 cognitive abilities (perception, learning, reasoning, metacognition, etc.) with three-stage evaluation protocol against human baselines. | [Blog](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/measuring-agi-cognitive-framework/) |
 
 ### Roadmaps, Perspectives, and Timelines
 
 | Resource | Description | Links |
 |----------|-------------|-------|
 | **Levels of AGI (Google DeepMind, 2023)** | Proposes a framework with 6 levels from Emerging AGI to Superhuman ASI, with performance and autonomy axes. | [Paper](https://arxiv.org/abs/2311.02462) |
+| **Cognitive Taxonomy for AGI Measurement (Google DeepMind, 2026)** | Framework with 10 cognitive abilities (perception, learning, reasoning, metacognition, etc.) and three-stage evaluation protocol for measuring AGI progress against human baselines. Includes Kaggle hackathon with $200K prize pool. | [Blog](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/measuring-agi-cognitive-framework/) |
 | **Situational Awareness (Leopold Aschenbrenner, 2024)** | Detailed 165-page analysis arguing AGI arrives by 2027, ASI shortly after, with national security implications. | [situational-awareness.ai](https://situational-awareness.ai/) |
 | **OpenAI's Planning for AGI and Beyond (2023)** | OpenAI's public statement on their approach to safely developing AGI. | [Blog](https://openai.com/blog/planning-for-agi-and-beyond) |
 | **Anthropic Core Views on AI Safety (2023)** | Anthropic's public position on AI safety risks and their research agenda. | [Blog](https://www.anthropic.com/news/core-views-on-ai-safety) |
