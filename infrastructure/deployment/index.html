@@ -2302,12 +2302,131 @@
       const tables = document.querySelectorAll('table');
       tables.forEach(table => {
         const rows = table.querySelectorAll('tbody tr');
+        let visibleCount = 0;
         rows.forEach(row => {
           const text = row.textContent.toLowerCase();
-          row.style.display = text.includes(filter) ? '' : 'none';
+          const isVisible = text.includes(filter);
+          row.style.display = isVisible ? '' : 'none';
+          if (isVisible) visibleCount++;
         });
+
+        // Show/hide empty table message
+        const tableWrap = table.closest('.md-typeset__scrollwrap');
+        let emptyMsg = tableWrap.querySelector('.no-results');
+        if (visibleCount === 0) {
+          if (!emptyMsg) {
+            emptyMsg = document.createElement('div');
+            emptyMsg.className = 'no-results';
+            emptyMsg.textContent = 'No results found for your search.';
+            emptyMsg.style.cssText = 'padding: 2rem; text-align: center; color: #666; font-style: italic;';
+            tableWrap.appendChild(emptyMsg);
+          }
+          emptyMsg.style.display = 'block';
+        } else if (emptyMsg) {
+          emptyMsg.style.display = 'none';
+        }
       });
     });
+  }
+
+  // ── Collapsible Sections ──
+  const headings = document.querySelectorAll('.md-typeset h3');
+  headings.forEach(heading => {
+    const button = document.createElement('button');
+    button.className = 'collapse-toggle';
+    button.innerHTML = '−';
+    button.style.cssText = 'float: right; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #667eea; padding: 0; width: 30px; height: 30px; border-radius: 50%; transition: all 0.2s;';
+    button.title = 'Toggle section';
+
+    heading.appendChild(button);
+
+    let isCollapsed = false;
+    const nextElement = heading.nextElementSibling;
+
+    button.addEventListener('click', function() {
+      isCollapsed = !isCollapsed;
+      if (isCollapsed) {
+        if (nextElement) nextElement.style.display = 'none';
+        button.innerHTML = '+';
+        button.style.background = '#f0f0f0';
+      } else {
+        if (nextElement) nextElement.style.display = '';
+        button.innerHTML = '−';
+        button.style.background = 'none';
+      }
+    });
+
+    button.addEventListener('mouseover', function() {
+      if (!isCollapsed) {
+        button.style.background = '#f0f0f0';
+      }
+    });
+
+    button.addEventListener('mouseout', function() {
+      if (!isCollapsed) {
+        button.style.background = 'none';
+      }
+    });
+  });
+
+  // ── Auto-add Filter UI to pages with tables ──
+  const tables = document.querySelectorAll('table');
+  if (tables.length > 0) {
+    const firstTable = tables[0];
+    const tableWrap = firstTable.closest('.md-typeset__scrollwrap');
+    if (tableWrap && !document.getElementById('table-filter')) {
+      const filterDiv = document.createElement('div');
+      filterDiv.id = 'table-filter';
+      filterDiv.innerHTML = `
+        <label>🔍 Search and Filter Resources</label>
+        <input type="text" id="searchInput" placeholder="Search by name, author, year, or description...">
+        <div class="filter-options">
+          <div class="filter-option">
+            <span>Quick filters:</span>
+            <button class="filter-btn" data-filter="2025">2025</button>
+            <button class="filter-btn" data-filter="2024">2024</button>
+            <button class="filter-btn" data-filter="2023">2023</button>
+            <button class="filter-btn" data-filter="reset">Reset</button>
+          </div>
+        </div>
+      `;
+      tableWrap.parentNode.insertBefore(filterDiv, tableWrap);
+
+      // Add filter button styles
+      const style = document.createElement('style');
+      style.textContent = `
+        .filter-btn {
+          padding: 4px 12px;
+          background: rgba(255,255,255,0.2);
+          border: 1px solid rgba(255,255,255,0.3);
+          border-radius: 4px;
+          color: white;
+          cursor: pointer;
+          font-size: 0.8rem;
+          transition: all 0.2s;
+        }
+        .filter-btn:hover {
+          background: rgba(255,255,255,0.3);
+          transform: translateY(-1px);
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Add filter button functionality
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const filter = this.dataset.filter;
+          const searchInput = document.getElementById('searchInput');
+          if (filter === 'reset') {
+            searchInput.value = '';
+            searchInput.dispatchEvent(new Event('keyup'));
+          } else {
+            searchInput.value = filter;
+            searchInput.dispatchEvent(new Event('keyup'));
+          }
+        });
+      });
+    }
   }
 
   // ── Resource Feedback ──

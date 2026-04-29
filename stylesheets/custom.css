@@ -125,33 +125,84 @@
 
 /* ── Body content ── */
 .md-typeset {
-  font-size: 0.76rem;
-  line-height: 1.65;
+  font-size: 0.8rem;
+  line-height: 1.75;
 }
 
 .md-content {
-  max-width: 960px;
+  max-width: 1200px;
+}
+
+/* ── Section dividers ── */
+.md-typeset h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #667eea;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.md-typeset h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ── Better spacing between sections ── */
+.md-typeset h3 + table,
+.md-typeset h3 + .md-typeset__scrollwrap {
+  margin-top: 1rem;
 }
 
 /* ── Tables: scrollable wrapper for wide content ── */
 .md-typeset__scrollwrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .md-typeset table:not([class]) {
-  font-size: 0.74rem;
-  border: 1px solid #e8e8e8;
-  border-collapse: collapse;
+  font-size: 0.85rem;
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0;
   display: table;
-  table-layout: fixed;
+  table-layout: auto;
   width: 100%;
+  background: white;
+}
+
+.md-typeset table:not([class]) thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .md-typeset table:not([class]) th {
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
   font-weight: 600;
   white-space: normal;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid #555;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.md-typeset table:not([class]) th:first-child {
+  border-radius: 8px 0 0 0;
+}
+
+.md-typeset table:not([class]) th:last-child {
+  border-radius: 0 8px 0 0;
 }
 
 .md-typeset table:not([class]) td {
@@ -159,17 +210,89 @@
   overflow-wrap: break-word;
   word-break: normal;
   hyphens: auto;
+  padding: 1rem;
+  border-bottom: 1px solid #e8e8e8;
+  transition: background-color 0.2s;
 }
 
-/* Name/title columns: compact, no excessive wrapping */
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: #f8f9ff;
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(even):hover {
+  background-color: #f0f2ff;
+}
+
+.md-typeset table:not([class]) tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.md-typeset table:not([class]) tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 8px;
+}
+
+.md-typeset table:not([class]) tbody tr:last-child td:last-child {
+  border-radius: 0 0 8px 0;
+}
+
+/* Name/title columns: better styling */
 .md-typeset table:not([class]) td:first-child {
-  min-width: 80px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #1a73e8;
+  min-width: 150px;
 }
 
-/* Description columns: get the remaining space */
+.md-typeset table:not([class]) td:first-child a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.md-typeset table:not([class]) td:first-child a:hover {
+  text-decoration: underline;
+}
+
+/* Year columns: centered and highlighted */
+.md-typeset table:not([class]) td:nth-child(3) {
+  text-align: center;
+  font-weight: 500;
+  color: #666;
+  min-width: 60px;
+}
+
+/* Description columns: better spacing */
+.md-typeset table:not([class]) td:nth-child(4) {
+  min-width: 300px;
+  line-height: 1.6;
+}
+
+/* Links columns: better button styling */
 .md-typeset table:not([class]) td:last-child {
-  min-width: 200px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.md-typeset table:not([class]) td:last-child a {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #1a73e8;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  margin: 2px;
+}
+
+.md-typeset table:not([class]) td:last-child a:hover {
+  background: #1557b0;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(26, 115, 232, 0.3);
 }
 
 /* ── Subtle sidebar ── */
@@ -293,23 +416,66 @@
 
 /* ── Table filter input ── */
 #table-filter {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+#table-filter label {
+  display: block;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 #searchInput {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  transition: border-color 0.2s;
+  padding: 12px 16px;
+  margin: 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 #searchInput:focus {
   outline: none;
-  border-color: #1a73e8;
-  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transform: translateY(-1px);
+}
+
+#searchInput::placeholder {
+  color: #999;
+}
+
+/* ── Advanced filter options ── */
+.filter-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 0.85rem;
+}
+
+.filter-option select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: white;
+  color: #333;
 }
 
 /* ============================================
@@ -346,20 +512,26 @@
 
   /* Tables: horizontal scroll with momentum */
   .md-typeset__scrollwrap {
-    margin: 0 -0.6rem;
-    padding: 0 0.6rem;
+    margin: 1rem 0;
+    padding: 0;
+    border-radius: 8px;
   }
 
   .md-typeset table:not([class]) {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     table-layout: auto;
-    min-width: 500px;
+    min-width: 600px;
   }
 
   .md-typeset table:not([class]) th,
   .md-typeset table:not([class]) td {
-    padding: 0.4rem 0.5rem;
+    padding: 0.75rem 0.5rem;
     line-height: 1.4;
+  }
+
+  .md-typeset table:not([class]) th {
+    font-size: 0.8rem;
+    padding: 0.75rem 0.5rem;
   }
 
   /* Scroll hint: subtle gradient fade on the right edge */
