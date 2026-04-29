@@ -18,8 +18,8 @@
             "title": "Announcement",
             "content_html": "<h1>Announcement</h1>",
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/blog/category/announcement.png",
-            "date_modified": "2026-04-29T08:25:21.048376+00:00",
-            "date_published": "2026-04-29T08:25:21.048371+00:00",
+            "date_modified": "2026-04-29T23:21:47.176236+00:00",
+            "date_published": "2026-04-29T23:21:47.176231+00:00",
             "authors": [],
             "tags": []
         },
@@ -29,8 +29,8 @@
             "title": "2026",
             "content_html": "<h1>2026</h1>",
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/blog/archive/2026.png",
-            "date_modified": "2026-04-29T08:25:21.042148+00:00",
-            "date_published": "2026-04-29T08:25:21.042143+00:00",
+            "date_modified": "2026-04-29T23:21:47.170400+00:00",
+            "date_published": "2026-04-29T23:21:47.170395+00:00",
             "authors": [],
             "tags": []
         },
@@ -117,7 +117,7 @@
             "title": "Agents",
             "content_html": "Autonomous AI systems that perceive, reason, and act in the world. These agents represent the closest things we have to AGI-like behavior in narrow domains -- writing code, conducting research, operating computers, and navigating virtual worlds.",
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/build/agents.png",
-            "date_modified": "2026-04-18T00:34:23+00:00",
+            "date_modified": "2026-04-14T12:36:21+00:00",
             "date_published": "2026-04-13T14:48:27+00:00",
             "authors": [],
             "tags": []
@@ -161,7 +161,7 @@
             "title": "Data Infrastructure for AI at Scale",
             "content_html": "AGI systems are fundamentally bound by their data layers. Training frontier models requires petabyte-scale data pipelines, and deploying them requires infrastructure that can serve millions of requests with sub-second latency. The SRE and data engineering challenges behind superintelligence are as hard as the ML itself.",
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/data-infra.png",
-            "date_modified": "2026-04-18T00:34:23+00:00",
+            "date_modified": "2026-04-14T12:36:21+00:00",
             "date_published": "2026-04-13T14:48:27+00:00",
             "authors": [],
             "tags": []
@@ -172,7 +172,7 @@
             "title": "LLM Deployment and Serving",
             "content_html": "Getting models from research to production. High-performance inference engines, serving frameworks, and optimization tools that make LLMs fast, cost-efficient, and scalable.",
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/infrastructure/deployment.png",
-            "date_modified": "2026-04-18T00:34:23+00:00",
+            "date_modified": "2026-04-14T12:36:21+00:00",
             "date_published": "2026-04-13T14:48:27+00:00",
             "authors": [],
             "tags": []
@@ -271,7 +271,7 @@
             "title": "Safety, Alignment and Governance",
             "content_html": "The most critical section. Ensuring AI remains safe, aligned with human values, and under meaningful control is the defining challenge as systems grow more capable.",
             "image": "https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/safety/safety-alignment.png",
-            "date_modified": "2026-04-18T00:34:23+00:00",
+            "date_modified": "2026-04-14T12:36:21+00:00",
             "date_published": "2026-04-13T14:48:27+00:00",
             "authors": [],
             "tags": []
