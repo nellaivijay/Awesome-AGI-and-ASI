@@ -49,9 +49,5 @@ jobs:
           git add README.md docs/
           git commit -m "Auto-regenerate README and docs from YAML data
 
-          Triggered by changes to data/*.yaml or templates/*.md
-
-          Generated with [Devin](https://cli.devin.ai/docs)
-
-          Co-Authored-By: Devin <158243242+devin-ai-integration[bot]@users.noreply.github.com>"
+          Triggered by changes to data/*.yaml or templates/*.md"
           git push
