@@ -2532,6 +2532,8 @@
   if (searchInput) {
     searchInput.addEventListener('keyup', function() {
       const filter = this.value.toLowerCase();
+      
+      // Filter tables
       const tables = document.querySelectorAll('table');
       tables.forEach(table => {
         const rows = table.querySelectorAll('tbody tr');
@@ -2551,13 +2553,49 @@
             emptyMsg = document.createElement('div');
             emptyMsg.className = 'no-results';
             emptyMsg.textContent = 'No results found for your search.';
-            emptyMsg.style.cssText = 'padding: 2rem; text-align: center; color: #666; font-style: italic;';
+            emptyMsg.style.cssText = 'padding: 2rem; text-align: center; color: var(--cyber-text-secondary); font-style: italic;';
             tableWrap.appendChild(emptyMsg);
           }
           emptyMsg.style.display = 'block';
         } else if (emptyMsg) {
           emptyMsg.style.display = 'none';
         }
+      });
+
+      // Filter list items
+      const lists = document.querySelectorAll('.md-typeset ul, .md-typeset ol');
+      lists.forEach(list => {
+        const items = list.querySelectorAll('li');
+        let visibleCount = 0;
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          const isVisible = text.includes(filter);
+          item.style.display = isVisible ? '' : 'none';
+          if (isVisible) visibleCount++;
+        });
+
+        // Show/hide empty list message
+        let emptyMsg = list.querySelector('.no-results');
+        if (visibleCount === 0) {
+          if (!emptyMsg) {
+            emptyMsg = document.createElement('li');
+            emptyMsg.className = 'no-results';
+            emptyMsg.textContent = 'No results found for your search.';
+            emptyMsg.style.cssText = 'padding: 1rem; text-align: center; color: var(--cyber-text-secondary); font-style: italic;';
+            list.appendChild(emptyMsg);
+          }
+          emptyMsg.style.display = 'list-item';
+        } else if (emptyMsg) {
+          emptyMsg.style.display = 'none';
+        }
+      });
+
+      // Filter resource cards
+      const cards = document.querySelectorAll('.resource-card');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const isVisible = text.includes(filter);
+        card.style.display = isVisible ? '' : 'none';
       });
     });
   }
