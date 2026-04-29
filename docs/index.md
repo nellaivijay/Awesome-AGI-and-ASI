@@ -2,6 +2,12 @@
 description: "The most comprehensive curated collection of AGI and ASI resources updated April 2026 -- frameworks, agents, GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, JEPA models, frontier AI, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools, and emerging security threats for AI builders."
 keywords: "AGI, ASI, artificial general intelligence, artificial superintelligence, AI resources, GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, JEPA, frontier models, AI agents, LLM, machine learning, AI safety, alignment, AI development tools, 2026 AI trends, AI security threats, software development AI impact"
 ---
+
+<div class="hero-section">
+  <h1>🤖 Awesome AGI & ASI</h1>
+  <p>The frontier of artificial intelligence research — from AI to AGI to ASI. Curated resources for builders and researchers shaping the future of intelligence.</p>
+</div>
+
 # Awesome AGI and ASI Resources [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 ![AGI](https://img.shields.io/badge/AGI-Artificial_General_Intelligence-blue)

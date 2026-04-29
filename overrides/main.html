@@ -3,6 +3,11 @@
 {% block extrahead %}
 {% if page %}
 
+  {# ── Google Fonts ── #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   {# ── Page description: per-page meta > site description ── #}
   {% if page.meta and page.meta.description %}
     {% set page_desc = page.meta.description %}
@@ -358,6 +363,37 @@
   if (existingFeedback) {
     feedbackBtns.forEach(btn => btn.disabled = true);
   }
+
+  // ── Copy to Clipboard for Repo Links ──
+  const repoLinks = document.querySelectorAll('a[href*="github.com"]');
+  repoLinks.forEach(link => {
+    if (link.href.includes('github.com/')) {
+      const copyIcon = document.createElement('span');
+      copyIcon.innerHTML = '📋';
+      copyIcon.style.cssText = 'margin-left: 4px; cursor: pointer; opacity: 0.7; transition: opacity 0.2s;';
+      copyIcon.title = 'Copy repository URL';
+      
+      copyIcon.addEventListener('click', function(e) {
+        e.preventDefault();
+        navigator.clipboard.writeText(link.href).then(() => {
+          copyIcon.innerHTML = '✅';
+          setTimeout(() => {
+            copyIcon.innerHTML = '📋';
+          }, 2000);
+        });
+      });
+      
+      copyIcon.addEventListener('mouseover', function() {
+        copyIcon.style.opacity = '1';
+      });
+      
+      copyIcon.addEventListener('mouseout', function() {
+        copyIcon.style.opacity = '0.7';
+      });
+      
+      link.parentNode.appendChild(copyIcon);
+    }
+  });
 </script>
 
 {% endblock %}

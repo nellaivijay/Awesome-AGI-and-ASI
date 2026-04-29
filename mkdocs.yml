@@ -15,15 +15,7 @@ theme:
   name: material
   language: en
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: white
-      accent: blue
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       primary: black
       accent: blue
       toggle:
@@ -31,7 +23,8 @@ theme:
         name: Switch to light mode
   font:
     text: Inter
-    code: Roboto Mono
+    code: JetBrains Mono
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.tabs.sticky
