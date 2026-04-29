@@ -38,6 +38,21 @@
   <meta name="author" content="{{ config.site_author | default('nellaivijay', true) }}">
   <meta name="robots" content="index, follow">
 
+  {# ── Analytics (placeholder - add your tracking ID here) ── #}
+  {#
+  <script async defer data-website-id="YOUR-WEBSITE-ID"
+          src="https://analytics.umami.is/script.js"></script>
+
+  <!-- Google Analytics (alternative) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  #}
+
   {# ── JSON-LD Structured Data ── #}
   <script type="application/ld+json">
   {
@@ -91,4 +106,155 @@
   {% endif %}
 
 {% endif %}
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+<!-- ── Reading Progress Bar ── -->
+<div class="reading-progress" id="reading-progress"></div>
+
+<!-- ── Back to Top Button ── -->
+<button id="back-to-top" class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
+  ↑
+</button>
+
+<script>
+  // ── Reading Progress Bar ──
+  window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const progressBar = document.getElementById('reading-progress');
+    if (progressBar) {
+      progressBar.style.width = scrolled + '%';
+    }
+  });
+
+  // ── Back to Top Button ──
+  window.onscroll = function() {
+    const btn = document.getElementById('back-to-top');
+    if (btn) {
+      btn.style.display = document.body.scrollTop > 200 || document.documentElement.scrollTop > 200 ? 'block' : 'none';
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  // ── Keyboard Shortcuts ──
+  document.addEventListener('keydown', function(e) {
+    // Ctrl/Cmd + K for search
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      const searchInput = document.querySelector('.md-search__input');
+      if (searchInput) searchInput.focus();
+    }
+    // Escape to close search
+    if (e.key === 'Escape') {
+      const searchForm = document.querySelector('.md-search__form');
+      if (searchForm) searchForm.classList.remove('md-search__form--active');
+    }
+  });
+
+  // ── Lazy Load Images ──
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img[data-src]');
+    if (images.length > 0) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            observer.unobserve(img);
+          }
+        });
+      });
+      images.forEach(img => observer.observe(img));
+    }
+  });
+
+  // ── Swipe Gestures for Mobile Navigation ──
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  document.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        // Swipe left - next page
+        const nextLink = document.querySelector('.md-footer__link--next');
+        if (nextLink) nextLink.click();
+      } else {
+        // Swipe right - previous page
+        const prevLink = document.querySelector('.md-footer__link--prev');
+        if (prevLink) prevLink.click();
+      }
+    }
+  }
+
+  // ── Table Filter ──
+  const searchInput = document.getElementById('searchInput');
+  if (searchInput) {
+    searchInput.addEventListener('keyup', function() {
+      const filter = this.value.toLowerCase();
+      const tables = document.querySelectorAll('table');
+      tables.forEach(table => {
+        const rows = table.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          row.style.display = text.includes(filter) ? '' : 'none';
+        });
+      });
+    });
+  }
+
+  // ── Resource Feedback ──
+  const feedbackBtns = document.querySelectorAll('.feedback-btn');
+  feedbackBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const rating = this.dataset.rating;
+      // Store feedback (in production, send to server)
+      localStorage.setItem('resource_feedback_' + window.location.pathname, rating);
+      alert('Thank you for your feedback!');
+      // Disable buttons after feedback
+      feedbackBtns.forEach(b => b.disabled = true);
+    });
+  });
+
+  // Check for existing feedback
+  const existingFeedback = localStorage.getItem('resource_feedback_' + window.location.pathname);
+  if (existingFeedback) {
+    feedbackBtns.forEach(btn => btn.disabled = true);
+  }
+</script>
+
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+
+{% if page.meta and page.meta.related %}
+<div class="related-resources">
+  <h3>Related Resources</h3>
+  <ul>
+    {% for related in page.meta.related %}
+    <li><a href="{{ related }}.md">{{ related | replace('-', ' ') | title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
 {% endblock %}

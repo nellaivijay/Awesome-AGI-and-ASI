@@ -15,7 +15,20 @@ theme:
   name: material
   language: en
   palette:
-    scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   font:
     text: Inter
     code: Roboto Mono
@@ -27,10 +40,15 @@ theme:
     - navigation.indexes
     - navigation.instant
     - navigation.instant.progress
+    - navigation.expand
+    - navigation.trail
     - search.suggest
     - search.highlight
     - content.tabs.link
     - toc.integrate
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
   icon:
     repo: fontawesome/brands/github
   custom_dir: overrides
@@ -60,7 +78,8 @@ plugins:
       pretty_print: true
       length: 250
   - meta
-  - tags
+  - tags:
+      tags_file: tags.md
 
 extra_css:
   - stylesheets/custom.css
@@ -75,7 +94,15 @@ markdown_extensions:
   - tables
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.highlight_fence
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - attr_list
   - md_in_html
   - meta
