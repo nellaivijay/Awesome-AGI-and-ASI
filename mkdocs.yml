@@ -78,8 +78,6 @@ plugins:
       pretty_print: true
       length: 250
   - meta
-  - tags:
-      tags_file: tags.md
 
 extra_css:
   - stylesheets/custom.css

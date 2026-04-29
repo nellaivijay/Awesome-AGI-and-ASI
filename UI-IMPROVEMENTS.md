@@ -31,12 +31,12 @@ This document describes all the UI/UX improvements implemented for the Awesome A
   - SEO-friendly structured data
 
 ### 4. Enhanced Search with Tags
-- **Location**: `mkdocs.yml` (plugins), `docs/tags.md`
-- **Description**: Tag-based content organization and search
+- **Location**: `mkdocs.yml` (plugins - meta plugin)
+- **Description**: Tag-based content organization and search via meta plugin
 - **Features**:
-  - Tag pages auto-generated
-  - Tag cloud display
-  - Search by tags
+  - Tag support via frontmatter metadata
+  - Search optimization
+  - RSS feed integration with tags
 
 ### 5. Navigation Expansion
 - **Location**: `mkdocs.yml` (theme.features)
@@ -203,8 +203,7 @@ theme:
     - content.action.view
 
 plugins:
-  - tags:
-      tags_file: tags.md
+  - meta
 
 markdown_extensions:
   - pymdownx.superfences:
@@ -227,7 +226,6 @@ The override file includes all JavaScript functionality and HTML elements for in
 ### requirements.txt
 Added dependencies:
 - mkdocs-meta-descriptions-plugin>=2.0
-- mkdocs-tags-plugin>=0.4
 - pymdown-extensions>=10.0
 - pyyaml>=6.0
 
@@ -282,7 +280,7 @@ related:
 ```
 
 ### Adding Tags
-Add tags to page frontmatter:
+Add tags to page frontmatter (supported by meta plugin):
 ```yaml
 ---
 tags:
@@ -349,7 +347,6 @@ Potential improvements for future iterations:
 - [x] Dark mode toggle works correctly
 - [x] Color-coded sections display properly
 - [x] Breadcrumb navigation shows correct path
-- [x] Tag pages generate correctly
 - [x] Navigation expands by default
 - [x] Card layout displays correctly
 - [x] Table filter functions properly
