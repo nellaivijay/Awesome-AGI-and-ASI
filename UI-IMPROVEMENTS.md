@@ -210,7 +210,6 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.highlight_fence
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
