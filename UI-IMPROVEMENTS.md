@@ -2,25 +2,50 @@
 
 This document describes all the UI/UX improvements implemented for the Awesome AGI and ASI documentation site.
 
+## 🎨 **CYBERNETIC RESEARCH THEME (2026)**
+
+The site has been completely transformed with a "Modern Cybernetic Research" aesthetic - a dark-mode-first design inspired by frontier AI research portals.
+
+### **Design Philosophy**
+- **Aesthetic**: Modern cybernetic research interface
+- **Colors**: Deep midnight background with electric blue and purple accents
+- **Typography**: Inter for readability, JetBrains Mono for technical content
+- **Effects**: Glassmorphism, neon glows, gradient transitions
+
+### **Color Palette**
+```css
+--cyber-bg: #0d1117              /* Deep midnight background */
+--cyber-bg-secondary: #161b22    /* Secondary background */
+--cyber-bg-tertiary: #21262d     /* Tertiary background */
+--cyber-accent-blue: #58a6ff     /* Electric blue accent */
+--cyber-accent-purple: #bc8cff    /* Purple glow accent */
+--cyber-accent-green: #3fb950    /* Green for success */
+--cyber-accent-orange: #d29922   /* Orange for warnings */
+--cyber-accent-red: #f85149      /* Red for errors */
+--cyber-text-primary: #c9d1d9     /* Primary text */
+--cyber-text-secondary: #8b949e   /* Secondary text */
+--cyber-border: #30363d          /* Border color */
+```
+
 ## Implemented Features
 
-### 1. Dark Mode Support
-- **Location**: `mkdocs.yml` (theme.palette)
-- **Description**: Automatic dark/light mode switching based on system preference with manual toggle
+### 1. Cybernetic Dark Mode (Default)
+- **Location**: `mkdocs.yml` (theme.palette), `docs/stylesheets/custom.css`
+- **Description**: Dark-mode-first design with cybernetic color scheme
 - **Features**:
-  - Respects system color scheme preference
-  - Manual toggle button in header
-  - Smooth transitions between modes
+  - Deep midnight background (#0d1117)
+  - Electric blue (#58a6ff) and purple (#bc8cff) accents
+  - Manual toggle to light mode available
+  - Glassmorphism effects on header and UI elements
+  - Neon glow effects on interactive elements
 
 ### 2. Color-Coded Sections
 - **Location**: `docs/stylesheets/custom.css`
-- **Description**: Visual differentiation of content sections with color-coded borders
+- **Description**: Visual differentiation of content sections with cybernetic gradient accents
 - **Colors**:
-  - Understand: Blue (#1a73e8)
-  - Build: Green (#34a853)
-  - Infrastructure: Yellow (#fbbc04)
-  - Safety: Red (#ea4335)
-  - Research: Purple (#9334e6)
+  - Headings: Electric blue and purple gradients
+  - Borders: Cybernetic border colors with glow effects
+  - Hover states: Enhanced with neon glow
 
 ### 3. Breadcrumb Navigation
 - **Location**: `mkdocs.yml` (theme.features)
@@ -205,12 +230,70 @@ This document describes all the UI/UX improvements implemented for the Awesome A
 - **Location**: `docs/stylesheets/custom.css`
 - **Description**: Improved text readability and hierarchy
 - **Features**:
-  - Larger base font size (0.8rem)
-  - Better line height (1.75)
+  - Larger base font size (0.9rem)
+  - Better line height (1.8)
   - Wider content area (1200px max)
   - Gradient section dividers
-  - Enhanced heading styling
+  - Enhanced heading styling with text shadows
   - Better spacing between sections
+  - Inter font for body, JetBrains Mono for code
+
+### 23. Glassmorphism Effects
+- **Location**: `docs/stylesheets/custom.css`
+- **Description**: Frosted glass effects on header and UI elements
+- **Features**:
+  - Backdrop blur on header
+  - Semi-transparent backgrounds
+  - Gradient overlays
+  - Modern depth perception
+
+### 24. Neon Glow Effects
+- **Location**: `docs/stylesheets/custom.css`
+- **Description**: Glowing effects on interactive elements
+- **Features**:
+  - Text shadows on headings
+  - Box shadows on hover
+  - Border glow effects
+  - Gradient underlines on links
+
+### 25. Custom Scrollbar
+- **Location**: `docs/stylesheets/custom.css`
+- **Description**: Custom scrollbar styling to match cybernetic theme
+- **Features**:
+  - Dark scrollbar track
+  - Accent color on hover
+  - Rounded scrollbar thumb
+  - Consistent with color scheme
+
+### 26. Copy-to-Clipboard for Repos
+- **Location**: `overrides/main.html`
+- **Description**: Quick copy functionality for GitHub repository links
+- **Features**:
+  - Auto-generated copy icons next to repo links
+  - One-click URL copying
+  - Visual feedback (checkmark)
+  - Hover effects
+
+### 27. Hero Section
+- **Location**: `docs/index.md`, `docs/stylesheets/custom.css`
+- **Description**: Cybernetic hero section with glassmorphism
+- **Features**:
+  - Gradient text styling
+  - Glassmorphism background
+  - Centered layout
+  - Emoji integration
+  - Cybernetic border and glow
+
+### 28. Color-Coded Badges
+- **Location**: `docs/stylesheets/custom.css`
+- **Description**: Cybernetic badges for content categorization
+- **Features**:
+  - [Research] - Blue with glow
+  - [Code] - Green with glow
+  - [Safety] - Red with glow
+  - [Theory] - Purple with glow
+  - Pill-shaped design
+  - Uppercase text
 
 ## Configuration Files
 
