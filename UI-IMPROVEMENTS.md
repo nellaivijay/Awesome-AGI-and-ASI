@@ -55,14 +55,17 @@ This document describes all the UI/UX improvements implemented for the Awesome A
   - Subtle shadows
   - Consistent spacing
 
-### 7. Table Filter
+### 7. Advanced Table Filter
 - **Location**: `overrides/main.html`, `docs/stylesheets/custom.css`
-- **Description**: Real-time filtering for data tables
+- **Description**: Real-time filtering with auto-generated UI
 - **Features**:
-  - Instant search filtering
+  - Auto-generated filter interface on pages with tables
+  - Instant search filtering across all columns
+  - Quick filter buttons for years (2023, 2024, 2025)
+  - "No results" messaging
+  - Beautiful gradient filter container
   - Case-insensitive matching
-  - Highlighted focus state
-  - Mobile-optimized input
+  - Mobile-optimized interface
 
 ### 8. Back to Top Button
 - **Location**: `overrides/main.html`, `docs/stylesheets/custom.css`
@@ -174,6 +177,40 @@ This document describes all the UI/UX improvements implemented for the Awesome A
   - Language-specific classes
   - Custom fence support (Mermaid)
   - Improved syntax highlighting
+
+### 20. Advanced Table Design
+- **Location**: `docs/stylesheets/custom.css`
+- **Description**: Modern table styling with enhanced UX
+- **Features**:
+  - Beautiful gradient headers (purple/violet theme)
+  - Sticky headers that stay visible while scrolling
+  - Alternating row colors for readability
+  - Hover effects with smooth transitions
+  - Rounded corners and modern shadows
+  - Enhanced link buttons with animations
+  - Better spacing and typography
+  - Responsive design for mobile
+
+### 21. Collapsible Sections
+- **Location**: `overrides/main.html`
+- **Description**: Toggle functionality for content sections
+- **Features**:
+  - Auto-generated collapse buttons on headings
+  - Smooth expand/collapse animations
+  - Visual feedback on hover
+  - Section state persistence during session
+  - Intuitive +/- indicators
+
+### 22. Enhanced Typography
+- **Location**: `docs/stylesheets/custom.css`
+- **Description**: Improved text readability and hierarchy
+- **Features**:
+  - Larger base font size (0.8rem)
+  - Better line height (1.75)
+  - Wider content area (1200px max)
+  - Gradient section dividers
+  - Enhanced heading styling
+  - Better spacing between sections
 
 ## Configuration Files
 
