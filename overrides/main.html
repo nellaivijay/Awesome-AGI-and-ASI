@@ -390,8 +390,8 @@
       <h2>📝 What would you like to submit?</h2>
       <div class="template-options">
         <div class="template-option" onclick="selectTemplate('resource')">
-          <h3>📚 Resource</h3>
-          <p>Suggest a paper, framework, tool, or resource</p>
+          <h3>📚 Add/Update Resources</h3>
+          <p>Add or update papers, frameworks, tools, or resources</p>
         </div>
         <div class="template-option" onclick="selectTemplate('bug')">
           <h3>🐛 Bug Report</h3>
@@ -406,48 +406,181 @@
     
     <!-- Step 2: Form Based on Template -->
     <div class="submission-step" id="step2">
-      <h2 id="formTitle">Submit Resource</h2>
+      <h2 id="formTitle">📚 Add/Update Resources</h2>
       <form id="submissionForm">
         <!-- Resource Form -->
         <div id="resourceForm" class="template-form">
+          <!-- Update vs New Selection -->
           <div class="form-group">
-            <label for="resourceTitle">Resource Title *</label>
-            <input type="text" id="resourceTitle" required placeholder="e.g., Attention Is All You Need">
+            <label>Action Type *</label>
+            <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="radio" name="actionType" value="new" checked onchange="toggleUpdateMode()">
+                <span>Add new resource</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="radio" name="actionType" value="update" onchange="toggleUpdateMode()">
+                <span>Update existing resource</span>
+              </label>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="resourceUrl">Resource URL *</label>
-            <input type="url" id="resourceUrl" required placeholder="https://arxiv.org/abs/1706.03762">
-          </div>
+
+          <!-- Resource Type Selection -->
           <div class="form-group">
             <label for="resourceType">Resource Type *</label>
-            <select id="resourceType" required>
+            <select id="resourceType" required onchange="updateResourceForm()">
               <option value="">Select type...</option>
-              <option value="Research Paper">Research Paper</option>
-              <option value="Framework/Library">Framework/Library</option>
-              <option value="Tool/Platform">Tool/Platform</option>
-              <option value="Book/Publication">Book/Publication</option>
-              <option value="Course/Lecture">Course/Lecture</option>
-              <option value="Dataset">Dataset</option>
-              <option value="Other">Other</option>
+              <option value="paper">📄 Research Paper/Blog</option>
+              <option value="framework">⚙️ Framework/Tool</option>
+              <option value="book">📚 Book/Publication</option>
+              <option value="course">🎓 Course/Lecture</option>
+              <option value="dataset">💾 Dataset</option>
             </select>
           </div>
+
+          <!-- Primary Category Selection -->
           <div class="form-group">
             <label for="resourceCategory">Primary Category *</label>
-            <select id="resourceCategory" required>
+            <select id="resourceCategory" required onchange="updateSubsections()">
               <option value="">Select category...</option>
-              <option value="Understand">Understand (AI/AGI/ASI concepts)</option>
-              <option value="Build">Build (Frameworks, Agents, Physical AI)</option>
-              <option value="Infrastructure">Infrastructure (LLM frameworks, RAG, deployment)</option>
-              <option value="Safety">Safety & Governance (Alignment, safety research)</option>
-              <option value="Research">Research (Papers, courses, conferences)</option>
+              <option value="understand">🧠 Understand (AI/AGI/ASI concepts)</option>
+              <option value="build">⚙️ Build (Frameworks, Agents, Physical AI)</option>
+              <option value="infrastructure">🏗️ Infrastructure (LLM frameworks, RAG, deployment)</option>
+              <option value="safety">🛡️ Safety & Governance (Alignment, safety research)</option>
+              <option value="research">📚 Research (Papers, courses, conferences)</option>
             </select>
           </div>
+
+          <!-- Subsection Selection -->
           <div class="form-group">
-            <label for="resourceDescription">Brief Description *</label>
-            <textarea id="resourceDescription" required placeholder="A 1-2 sentence description of what this resource is about..."></textarea>
+            <label for="resourceSubsection">Specific Subsection *</label>
+            <select id="resourceSubsection" required>
+              <option value="">Select category first...</option>
+            </select>
+            <small style="color: var(--cyber-text-secondary); display: block; margin-top: 0.25rem;">Choose the specific section where this resource belongs</small>
+          </div>
+
+          <!-- Common Fields -->
+          <div class="form-group">
+            <label for="resourceName">Resource Name/Title *</label>
+            <input type="text" id="resourceName" required placeholder="e.g., Attention Is All You Need">
+          </div>
+
+          <div class="form-group">
+            <label for="resourceDescription">Description *</label>
+            <textarea id="resourceDescription" required placeholder="A clear description of what this resource is about..."></textarea>
+          </div>
+
+          <!-- Paper-specific fields -->
+          <div id="paperFields" style="display: none;">
+            <div class="form-group">
+              <label for="paperAuthor">Author/Organization *</label>
+              <input type="text" id="paperAuthor" placeholder="e.g., OpenAI, Google DeepMind">
+            </div>
+            <div class="form-group">
+              <label for="paperYear">Year *</label>
+              <input type="number" id="paperYear" min="2020" max="2026" placeholder="e.g., 2024">
+            </div>
+            <!-- Multiple Links -->
+            <div class="form-group">
+              <label>Links *</label>
+              <div id="linksContainer">
+                <div class="link-group" style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                  <input type="text" class="link-label" placeholder="Label (e.g., Paper)" style="flex: 1;" required>
+                  <input type="url" class="link-url" placeholder="URL" style="flex: 2;" required>
+                  <button type="button" class="btn btn-secondary" onclick="removeLink(this)" style="padding: 0.5rem;">×</button>
+                </div>
+              </div>
+              <button type="button" class="btn btn-secondary" onclick="addLink()" style="font-size: 0.9rem; padding: 0.5rem 1rem;">+ Add Link</button>
+            </div>
+          </div>
+
+          <!-- Framework-specific fields -->
+          <div id="frameworkFields" style="display: none;">
+            <div class="form-group">
+              <label for="frameworkGithub">GitHub Repository *</label>
+              <input type="text" id="frameworkGithub" required placeholder="e.g., openai/openai-cookbook" pattern="^[a-zA-Z0-9_-]+/[a-zA-Z0-9_.-]+$">
+              <small style="color: var(--cyber-text-secondary);">Format: username/repository</small>
+            </div>
+            <div class="form-group">
+              <label for="frameworkNotes">Additional Notes</label>
+              <textarea id="frameworkNotes" placeholder="e.g., 50k+ stars. Built by OpenAI."></textarea>
+            </div>
+            <!-- Optional Framework Links -->
+            <div class="form-group">
+              <label>Additional Links (Optional)</label>
+              <div id="frameworkLinksContainer">
+                <!-- Links will be added dynamically -->
+              </div>
+              <button type="button" class="btn btn-secondary" onclick="addFrameworkLink()" style="font-size: 0.9rem; padding: 0.5rem 1rem;">+ Add Link</button>
+            </div>
+          </div>
+
+          <!-- Book-specific fields -->
+          <div id="bookFields" style="display: none;">
+            <div class="form-group">
+              <label for="bookAuthor">Author(s) *</label>
+              <input type="text" id="bookAuthor" required placeholder="e.g., Fei-Fei Li">
+            </div>
+            <div class="form-group">
+              <label for="bookYear">Year *</label>
+              <input type="number" id="bookYear" min="2020" max="2026" placeholder="e.g., 2023">
+            </div>
+            <div class="form-group">
+              <label for="bookUrl">Purchase/Info URL *</label>
+              <input type="url" id="bookUrl" required placeholder="https://...">
+            </div>
+          </div>
+
+          <!-- Course-specific fields -->
+          <div id="courseFields" style="display: none;">
+            <div class="form-group">
+              <label for="courseInstructor">Instructor/Organization *</label>
+              <input type="text" id="courseInstructor" required placeholder="e.g., Stanford, Andrew Ng">
+            </div>
+            <div class="form-group">
+              <label for="courseYear">Year *</label>
+              <input type="number" id="courseYear" min="2020" max="2026" placeholder="e.g., 2024">
+            </div>
+            <!-- Course Links -->
+            <div class="form-group">
+              <label>Links *</label>
+              <div id="courseLinksContainer">
+                <div class="link-group" style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                  <input type="text" class="course-link-label" placeholder="Label (e.g., Course)" style="flex: 1;" required>
+                  <input type="url" class="course-link-url" placeholder="URL" style="flex: 2;" required>
+                  <button type="button" class="btn btn-secondary" onclick="removeCourseLink(this)" style="padding: 0.5rem;">×</button>
+                </div>
+              </div>
+              <button type="button" class="btn btn-secondary" onclick="addCourseLink()" style="font-size: 0.9rem; padding: 0.5rem 1rem;">+ Add Link</button>
+            </div>
+          </div>
+
+          <!-- Dataset-specific fields -->
+          <div id="datasetFields" style="display: none;">
+            <div class="form-group">
+              <label for="datasetOrganization">Organization *</label>
+              <input type="text" id="datasetOrganization" required placeholder="e.g., HuggingFace, Google">
+            </div>
+            <div class="form-group">
+              <label for="datasetYear">Year *</label>
+              <input type="number" id="datasetYear" min="2020" max="2026" placeholder="e.g., 2024">
+            </div>
+            <!-- Dataset Links -->
+            <div class="form-group">
+              <label>Links *</label>
+              <div id="datasetLinksContainer">
+                <div class="link-group" style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                  <input type="text" class="dataset-link-label" placeholder="Label (e.g., Dataset)" style="flex: 1;" required>
+                  <input type="url" class="dataset-link-url" placeholder="URL" style="flex: 2;" required>
+                  <button type="button" class="btn btn-secondary" onclick="removeDatasetLink(this)" style="padding: 0.5rem;">×</button>
+                </div>
+              </div>
+              <button type="button" class="btn btn-secondary" onclick="addDatasetLink()" style="font-size: 0.9rem; padding: 0.5rem 1rem;">+ Add Link</button>
+            </div>
           </div>
         </div>
-        
+
         <!-- Bug Report Form -->
         <div id="bugForm" class="template-form" style="display: none;">
           <div class="form-group">
@@ -463,7 +596,7 @@
             <textarea id="bugSteps" placeholder="1. Go to... 2. Click on... 3. See error..."></textarea>
           </div>
         </div>
-        
+
         <!-- Suggestion Form -->
         <div id="suggestionForm" class="template-form" style="display: none;">
           <div class="form-group">
@@ -475,10 +608,10 @@
             <textarea id="suggestionDescription" required placeholder="Explain your suggestion in detail..."></textarea>
           </div>
         </div>
-        
+
         <div class="form-actions">
           <button type="button" class="btn btn-secondary" onclick="goToStep(1)">Back</button>
-          <button type="button" class="btn btn-primary" onclick="goToStep(3)">Next</button>
+          <button type="button" class="btn btn-primary" onclick="validateAndProceed()">Next</button>
         </div>
       </form>
     </div>
@@ -505,6 +638,40 @@
 // Submission Wizard State
 let selectedTemplate = null;
 let currentStep = 1;
+
+// Subsection mappings based on category
+const subsections = {
+  understand: {
+    'ai-agi-asi': 'Understanding AI, AGI, and ASI',
+    'collective-intelligence': 'Collective Intelligence',
+    'benchmarks': 'AGI Benchmarks & Evals',
+    'asi-research': 'ASI and Superintelligence Research'
+  },
+  build: {
+    'frameworks': 'Frameworks and Platforms',
+    'agents': 'Agents',
+    'physical-ai': 'Physical AI & Embodied Intelligence',
+    'paper-to-code': 'Paper-to-Code Automation'
+  },
+  infrastructure: {
+    'llm-frameworks': 'LLM Application Frameworks',
+    'rag-vector-db': 'RAG and Vector Databases',
+    'data-infra': 'Data Infrastructure for AI at Scale',
+    'fine-tuning': 'LLM Fine-Tuning Techniques',
+    'deployment': 'LLM Deployment and Serving',
+    'distributed-training': 'Distributed Training Frameworks',
+    'compute-hardware': 'Compute, Hardware & Quantization',
+    'prompt-engineering': 'Prompt Engineering'
+  },
+  safety: {
+    'safety-alignment': 'Safety, Alignment and Governance'
+  },
+  research: {
+    'papers-blogs': 'Papers, Blogs, Courses and Lectures',
+    'tutorials': 'Tutorials and Guides',
+    'conferences': 'Top Conferences'
+  }
+};
 
 // Open submission modal
 function openSubmissionModal(event) {
@@ -537,6 +704,26 @@ function resetWizard() {
   document.querySelectorAll('.template-form').forEach(form => {
     form.style.display = 'none';
   });
+  
+  // Reset resource type-specific fields
+  document.getElementById('paperFields').style.display = 'none';
+  document.getElementById('frameworkFields').style.display = 'none';
+  document.getElementById('bookFields').style.display = 'none';
+  document.getElementById('courseFields').style.display = 'none';
+  document.getElementById('datasetFields').style.display = 'none';
+  
+  // Reset links containers
+  resetLinksContainer('linksContainer');
+  resetLinksContainer('frameworkLinksContainer');
+  resetLinksContainer('courseLinksContainer');
+  resetLinksContainer('datasetLinksContainer');
+}
+
+function resetLinksContainer(containerId) {
+  const container = document.getElementById(containerId);
+  if (container) {
+    container.innerHTML = '';
+  }
 }
 
 // Select template type
@@ -556,7 +743,7 @@ function selectTemplate(template) {
   
   if (template === 'resource') {
     document.getElementById('resourceForm').style.display = 'block';
-    document.getElementById('formTitle').textContent = '📚 Submit Resource';
+    document.getElementById('formTitle').textContent = '📚 Add/Update Resources';
   } else if (template === 'bug') {
     document.getElementById('bugForm').style.display = 'block';
     document.getElementById('formTitle').textContent = '🐛 Report Bug';
@@ -567,6 +754,219 @@ function selectTemplate(template) {
   
   // Move to next step
   goToStep(2);
+}
+
+// Update form based on resource type
+function updateResourceForm() {
+  const resourceType = document.getElementById('resourceType').value;
+  
+  // Hide all type-specific fields
+  document.getElementById('paperFields').style.display = 'none';
+  document.getElementById('frameworkFields').style.display = 'none';
+  document.getElementById('bookFields').style.display = 'none';
+  document.getElementById('courseFields').style.display = 'none';
+  document.getElementById('datasetFields').style.display = 'none';
+  
+  // Show relevant fields
+  switch(resourceType) {
+    case 'paper':
+      document.getElementById('paperFields').style.display = 'block';
+      break;
+    case 'framework':
+      document.getElementById('frameworkFields').style.display = 'block';
+      break;
+    case 'book':
+      document.getElementById('bookFields').style.display = 'block';
+      break;
+    case 'course':
+      document.getElementById('courseFields').style.display = 'block';
+      break;
+    case 'dataset':
+      document.getElementById('datasetFields').style.display = 'block';
+      break;
+  }
+}
+
+// Update subsections based on category
+function updateSubsections() {
+  const category = document.getElementById('resourceCategory').value;
+  const subsectionSelect = document.getElementById('resourceSubsection');
+  
+  // Clear existing options
+  subsectionSelect.innerHTML = '<option value="">Select subsection...</option>';
+  
+  if (category && subsections[category]) {
+    Object.entries(subsections[category]).forEach(([key, value]) => {
+      const option = document.createElement('option');
+      option.value = key;
+      option.textContent = value;
+      subsectionSelect.appendChild(option);
+    });
+  }
+}
+
+// Toggle update mode
+function toggleUpdateMode() {
+  const isUpdate = document.querySelector('input[name="actionType"]:checked').value === 'update';
+  // Could add logic here to show resource search for updates
+  console.log('Update mode:', isUpdate);
+}
+
+// Link management functions
+function addLink() {
+  const container = document.getElementById('linksContainer');
+  const linkGroup = document.createElement('div');
+  linkGroup.className = 'link-group';
+  linkGroup.style.display = 'flex';
+  linkGroup.style.gap = '0.5rem';
+  linkGroup.style.marginBottom = '0.5rem';
+  linkGroup.innerHTML = `
+    <input type="text" class="link-label" placeholder="Label (e.g., Paper)" style="flex: 1;" required>
+    <input type="url" class="link-url" placeholder="URL" style="flex: 2;" required>
+    <button type="button" class="btn btn-secondary" onclick="removeLink(this)" style="padding: 0.5rem;">×</button>
+  `;
+  container.appendChild(linkGroup);
+}
+
+function removeLink(button) {
+  button.parentElement.remove();
+}
+
+function addFrameworkLink() {
+  const container = document.getElementById('frameworkLinksContainer');
+  const linkGroup = document.createElement('div');
+  linkGroup.className = 'link-group';
+  linkGroup.style.display = 'flex';
+  linkGroup.style.gap = '0.5rem';
+  linkGroup.style.marginBottom = '0.5rem';
+  linkGroup.innerHTML = `
+    <input type="text" class="framework-link-label" placeholder="Label" style="flex: 1;">
+    <input type="url" class="framework-link-url" placeholder="URL" style="flex: 2;">
+    <button type="button" class="btn btn-secondary" onclick="removeFrameworkLink(this)" style="padding: 0.5rem;">×</button>
+  `;
+  container.appendChild(linkGroup);
+}
+
+function removeFrameworkLink(button) {
+  button.parentElement.remove();
+}
+
+function addCourseLink() {
+  const container = document.getElementById('courseLinksContainer');
+  const linkGroup = document.createElement('div');
+  linkGroup.className = 'link-group';
+  linkGroup.style.display = 'flex';
+  linkGroup.style.gap = '0.5rem';
+  linkGroup.style.marginBottom = '0.5rem';
+  linkGroup.innerHTML = `
+    <input type="text" class="course-link-label" placeholder="Label (e.g., Course)" style="flex: 1;" required>
+    <input type="url" class="course-link-url" placeholder="URL" style="flex: 2;" required>
+    <button type="button" class="btn btn-secondary" onclick="removeCourseLink(this)" style="padding: 0.5rem;">×</button>
+  `;
+  container.appendChild(linkGroup);
+}
+
+function removeCourseLink(button) {
+  button.parentElement.remove();
+}
+
+function addDatasetLink() {
+  const container = document.getElementById('datasetLinksContainer');
+  const linkGroup = document.createElement('div');
+  linkGroup.className = 'link-group';
+  linkGroup.style.display = 'flex';
+  linkGroup.style.gap = '0.5rem';
+  linkGroup.style.marginBottom = '0.5rem';
+  linkGroup.innerHTML = `
+    <input type="text" class="dataset-link-label" placeholder="Label (e.g., Dataset)" style="flex: 1;" required>
+    <input type="url" class="dataset-link-url" placeholder="URL" style="flex: 2;" required>
+    <button type="button" class="btn btn-secondary" onclick="removeDatasetLink(this)" style="padding: 0.5rem;">×</button>
+  `;
+  container.appendChild(linkGroup);
+}
+
+function removeDatasetLink(button) {
+  button.parentElement.remove();
+}
+
+// Validate form before proceeding
+function validateAndProceed() {
+  if (selectedTemplate === 'resource') {
+    const resourceType = document.getElementById('resourceType').value;
+    const category = document.getElementById('resourceCategory').value;
+    const subsection = document.getElementById('resourceSubsection').value;
+    const name = document.getElementById('resourceName').value;
+    const description = document.getElementById('resourceDescription').value;
+    
+    // Common validation
+    if (!resourceType || !category || !subsection || !name || !description) {
+      alert('Please fill in all required fields');
+      return;
+    }
+    
+    // Type-specific validation
+    if (resourceType === 'paper') {
+      const author = document.getElementById('paperAuthor').value;
+      const year = document.getElementById('paperYear').value;
+      if (!author || !year) {
+        alert('Please fill in author and year for papers');
+        return;
+      }
+      // Check if at least one link exists
+      const links = document.querySelectorAll('#linksContainer .link-group');
+      if (links.length === 0) {
+        alert('Please add at least one link');
+        return;
+      }
+    } else if (resourceType === 'framework') {
+      const github = document.getElementById('frameworkGithub').value;
+      if (!github) {
+        alert('Please provide GitHub repository');
+        return;
+      }
+      // Validate GitHub format
+      const githubPattern = /^[a-zA-Z0-9_-]+\/[a-zA-Z0-9_.-]+$/;
+      if (!githubPattern.test(github)) {
+        alert('GitHub repository must be in format: username/repository');
+        return;
+      }
+    } else if (resourceType === 'book') {
+      const author = document.getElementById('bookAuthor').value;
+      const year = document.getElementById('bookYear').value;
+      const url = document.getElementById('bookUrl').value;
+      if (!author || !year || !url) {
+        alert('Please fill in all book details');
+        return;
+      }
+    } else if (resourceType === 'course') {
+      const instructor = document.getElementById('courseInstructor').value;
+      const year = document.getElementById('courseYear').value;
+      if (!instructor || !year) {
+        alert('Please fill in instructor and year for courses');
+        return;
+      }
+      const links = document.querySelectorAll('#courseLinksContainer .link-group');
+      if (links.length === 0) {
+        alert('Please add at least one link');
+        return;
+      }
+    } else if (resourceType === 'dataset') {
+      const organization = document.getElementById('datasetOrganization').value;
+      const year = document.getElementById('datasetYear').value;
+      if (!organization || !year) {
+        alert('Please fill in organization and year for datasets');
+        return;
+      }
+      const links = document.querySelectorAll('#datasetLinksContainer .link-group');
+      if (links.length === 0) {
+        alert('Please add at least one link');
+        return;
+      }
+    }
+  }
+  
+  // If validation passes, proceed to step 3
+  goToStep(3);
 }
 
 // Navigate to specific step
@@ -599,20 +999,102 @@ function goToStep(step) {
   }
 }
 
+// Collect links from container
+function collectLinks(containerId, labelClass, urlClass) {
+  const container = document.getElementById(containerId);
+  const links = [];
+  if (container) {
+    container.querySelectorAll('.link-group').forEach(group => {
+      const label = group.querySelector(`.${labelClass}`).value;
+      const url = group.querySelector(`.${urlClass}`).value;
+      if (label && url) {
+        links.push({ label, url });
+      }
+    });
+  }
+  return links;
+}
+
 // Generate review content
 function generateReview() {
   const reviewContent = document.getElementById('reviewContent');
   let html = '';
   
   if (selectedTemplate === 'resource') {
-    html = `
-      <h3>📚 Resource Submission</h3>
-      <p><strong>Title:</strong> ${document.getElementById('resourceTitle').value}</p>
-      <p><strong>URL:</strong> ${document.getElementById('resourceUrl').value}</p>
-      <p><strong>Type:</strong> ${document.getElementById('resourceType').value}</p>
-      <p><strong>Category:</strong> ${document.getElementById('resourceCategory').value}</p>
-      <p><strong>Description:</strong> ${document.getElementById('resourceDescription').value}</p>
-    `;
+    const resourceType = document.getElementById('resourceType').value;
+    const category = document.getElementById('resourceCategory').value;
+    const subsection = document.getElementById('resourceSubsection').value;
+    const name = document.getElementById('resourceName').value;
+    const description = document.getElementById('resourceDescription').value;
+    const actionType = document.querySelector('input[name="actionType"]:checked').value;
+    
+    html = `<h3>📚 ${actionType === 'update' ? 'Update' : 'Add'} Resource</h3>`;
+    html += `<p><strong>Action:</strong> ${actionType === 'update' ? 'Update existing' : 'Add new'}</p>`;
+    html += `<p><strong>Type:</strong> ${resourceType}</p>`;
+    html += `<p><strong>Category:</strong> ${category}</p>`;
+    html += `<p><strong>Subsection:</strong> ${subsection}</p>`;
+    html += `<p><strong>Name:</strong> ${name}</p>`;
+    html += `<p><strong>Description:</strong> ${description}</p>`;
+    
+    if (resourceType === 'paper') {
+      const author = document.getElementById('paperAuthor').value;
+      const year = document.getElementById('paperYear').value;
+      const links = collectLinks('linksContainer', 'link-label', 'link-url');
+      
+      html += `<p><strong>Author:</strong> ${author}</p>`;
+      html += `<p><strong>Year:</strong> ${year}</p>`;
+      html += `<p><strong>Links:</strong></p><ul>`;
+      links.forEach(link => {
+        html += `<li>${link.label}: ${link.url}</li>`;
+      });
+      html += `</ul>`;
+    } else if (resourceType === 'framework') {
+      const github = document.getElementById('frameworkGithub').value;
+      const notes = document.getElementById('frameworkNotes').value;
+      const links = collectLinks('frameworkLinksContainer', 'framework-link-label', 'framework-link-url');
+      
+      html += `<p><strong>GitHub:</strong> ${github}</p>`;
+      if (notes) html += `<p><strong>Notes:</strong> ${notes}</p>`;
+      if (links.length > 0) {
+        html += `<p><strong>Additional Links:</strong></p><ul>`;
+        links.forEach(link => {
+          html += `<li>${link.label}: ${link.url}</li>`;
+        });
+        html += `</ul>`;
+      }
+    } else if (resourceType === 'book') {
+      const author = document.getElementById('bookAuthor').value;
+      const year = document.getElementById('bookYear').value;
+      const url = document.getElementById('bookUrl').value;
+      
+      html += `<p><strong>Author:</strong> ${author}</p>`;
+      html += `<p><strong>Year:</strong> ${year}</p>`;
+      html += `<p><strong>URL:</strong> ${url}</p>`;
+    } else if (resourceType === 'course') {
+      const instructor = document.getElementById('courseInstructor').value;
+      const year = document.getElementById('courseYear').value;
+      const links = collectLinks('courseLinksContainer', 'course-link-label', 'course-link-url');
+      
+      html += `<p><strong>Instructor:</strong> ${instructor}</p>`;
+      html += `<p><strong>Year:</strong> ${year}</p>`;
+      html += `<p><strong>Links:</strong></p><ul>`;
+      links.forEach(link => {
+        html += `<li>${link.label}: ${link.url}</li>`;
+      });
+      html += `</ul>`;
+    } else if (resourceType === 'dataset') {
+      const organization = document.getElementById('datasetOrganization').value;
+      const year = document.getElementById('datasetYear').value;
+      const links = collectLinks('datasetLinksContainer', 'dataset-link-label', 'dataset-link-url');
+      
+      html += `<p><strong>Organization:</strong> ${organization}</p>`;
+      html += `<p><strong>Year:</strong> ${year}</p>`;
+      html += `<p><strong>Links:</strong></p><ul>`;
+      links.forEach(link => {
+        html += `<li>${link.label}: ${link.url}</li>`;
+      });
+      html += `</ul>`;
+    }
   } else if (selectedTemplate === 'bug') {
     html = `
       <h3>🐛 Bug Report</h3>
@@ -638,25 +1120,89 @@ function submitToGitHub() {
   let body = '';
   
   if (selectedTemplate === 'resource') {
-    title = `[Resource Suggestion] ${document.getElementById('resourceTitle').value}`;
-    body = `**Resource Title:** ${document.getElementById('resourceTitle').value}
-**Resource URL:** ${document.getElementById('resourceUrl').value}
-**Resource Type:** ${document.getElementById('resourceType').value}
-**Primary Category:** ${document.getElementById('resourceCategory').value}
-**Brief Description:** ${document.getElementById('resourceDescription').value}`;
+    const resourceType = document.getElementById('resourceType').value;
+    const category = document.getElementById('resourceCategory').value;
+    const subsection = document.getElementById('resourceSubsection').value;
+    const name = document.getElementById('resourceName').value;
+    const description = document.getElementById('resourceDescription').value;
+    const actionType = document.querySelector('input[name="actionType"]:checked').value;
+    
+    title = `[${actionType === 'update' ? 'Update' : 'Add'} ${resourceType}] ${name}`;
+    
+    body = `**Action Type:** ${actionType === 'update' ? 'Update existing' : 'Add new'}\n`;
+    body += `**Resource Type:** ${resourceType}\n`;
+    body += `**Target File:** data/${subsection}.yaml\n`;
+    body += `**Resource Name:** ${name}\n`;
+    body += `**Description:** ${description}\n`;
+    
+    if (resourceType === 'paper') {
+      const author = document.getElementById('paperAuthor').value;
+      const year = document.getElementById('paperYear').value;
+      const links = collectLinks('linksContainer', 'link-label', 'link-url');
+      
+      body += `**Author:** ${author}\n`;
+      body += `**Year:** ${year}\n`;
+      body += `**Links:**\n`;
+      links.forEach(link => {
+        body += `- ${link.label}: ${link.url}\n`;
+      });
+    } else if (resourceType === 'framework') {
+      const github = document.getElementById('frameworkGithub').value;
+      const notes = document.getElementById('frameworkNotes').value;
+      const links = collectLinks('frameworkLinksContainer', 'framework-link-label', 'framework-link-url');
+      
+      body += `**GitHub:** ${github}\n`;
+      if (notes) body += `**Notes:** ${notes}\n`;
+      if (links.length > 0) {
+        body += `**Additional Links:**\n`;
+        links.forEach(link => {
+          body += `- ${link.label}: ${link.url}\n`;
+        });
+      }
+    } else if (resourceType === 'book') {
+      const author = document.getElementById('bookAuthor').value;
+      const year = document.getElementById('bookYear').value;
+      const url = document.getElementById('bookUrl').value;
+      
+      body += `**Author:** ${author}\n`;
+      body += `**Year:** ${year}\n`;
+      body += `**URL:** ${url}\n`;
+    } else if (resourceType === 'course') {
+      const instructor = document.getElementById('courseInstructor').value;
+      const year = document.getElementById('courseYear').value;
+      const links = collectLinks('courseLinksContainer', 'course-link-label', 'course-link-url');
+      
+      body += `**Instructor:** ${instructor}\n`;
+      body += `**Year:** ${year}\n`;
+      body += `**Links:**\n`;
+      links.forEach(link => {
+        body += `- ${link.label}: ${link.url}\n`;
+      });
+    } else if (resourceType === 'dataset') {
+      const organization = document.getElementById('datasetOrganization').value;
+      const year = document.getElementById('datasetYear').value;
+      const links = collectLinks('datasetLinksContainer', 'dataset-link-label', 'dataset-link-url');
+      
+      body += `**Organization:** ${organization}\n`;
+      body += `**Year:** ${year}\n`;
+      body += `**Links:**\n`;
+      links.forEach(link => {
+        body += `- ${link.label}: ${link.url}\n`;
+      });
+    }
     
     url = `https://github.com/${document.querySelector('.md-header__title').textContent.trim()}/issues/new?template=resource-suggestion.yml`;
   } else if (selectedTemplate === 'bug') {
     title = `[Bug] ${document.getElementById('bugTitle').value}`;
-    body = `**Issue Title:** ${document.getElementById('bugTitle').value}
-**Issue Description:** ${document.getElementById('bugDescription').value}
-**Steps to Reproduce:** ${document.getElementById('bugSteps').value}`;
+    body = `**Issue Title:** ${document.getElementById('bugTitle').value}\n`;
+    body += `**Issue Description:** ${document.getElementById('bugDescription').value}\n`;
+    body += `**Steps to Reproduce:** ${document.getElementById('bugSteps').value}`;
     
     url = `https://github.com/${document.querySelector('.md-header__title').textContent.trim()}/issues/new?template=bug-report.md`;
   } else if (selectedTemplate === 'suggestion') {
     title = `[Suggestion] ${document.getElementById('suggestionTitle').value}`;
-    body = `**Suggestion Title:** ${document.getElementById('suggestionTitle').value}
-**Detailed Description:** ${document.getElementById('suggestionDescription').value}`;
+    body = `**Suggestion Title:** ${document.getElementById('suggestionTitle').value}\n`;
+    body += `**Detailed Description:** ${document.getElementById('suggestionDescription').value}`;
     
     url = `https://github.com/${document.querySelector('.md-header__title').textContent.trim()}/issues/new?template=general-suggestion.md`;
   }
