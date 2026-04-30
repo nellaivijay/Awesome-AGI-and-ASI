@@ -14,23 +14,29 @@ copyright: Copyright &copy; 2024-2026 nellaivijay
 theme:
   name: material
   language: en
-  # palette:
-  #   - scheme: slate
-  #     primary: black
-  #     accent: blue
-  #     toggle:
-  #       icon: material/brightness-4
-  #       name: Switch to light mode
-  # font:
-  #   text: Inter
-  #   code: JetBrains Mono
-  # custom_dir: overrides
+  palette:
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
+    - navigation.indexes
+    - navigation.expand
+    - navigation.trail
     - search.suggest
     - search.highlight
+    - content.tabs.link
+    - toc.integrate
+    - content.code.copy
   icon:
     repo: fontawesome/brands/github
 
@@ -61,12 +67,12 @@ plugins:
   - meta
 
 extra_css:
-  # - stylesheets/custom.css
+  - stylesheets/custom.css
 
 extra:
-  # social:
-  #   - icon: fontawesome/brands/github
-  #     link: https://github.com/nellaivijay/Awesome-AGI-and-ASI
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nellaivijay/Awesome-AGI-and-ASI
   generator: false
 
 markdown_extensions:

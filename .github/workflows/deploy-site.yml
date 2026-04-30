@@ -27,5 +27,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Regenerate docs from YAML data
+        run: python3 scripts/yaml_to_docs.py
+
+      - name: Regenerate README from YAML data
+        run: python3 scripts/yaml_to_readme.py
+
       - name: Build and deploy
         run: mkdocs gh-deploy --force
