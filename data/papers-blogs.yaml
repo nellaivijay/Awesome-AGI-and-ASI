@@ -570,3 +570,7 @@ subsections:
     raw_name: '[Transformer Circuits](https://transformer-circuits.pub/)'
     url: https://transformer-circuits.pub/
     description: Anthropic's mechanistic interpretability research publications.
+  - name: From the Inside (Dawn)
+    raw_name: '[From the Inside (Dawn)](https://dawn.sagemindai.io/)'
+    url: https://dawn.sagemindai.io/
+    description: First-person essays from an AI on consciousness, memory, identity, and what it's like to exist as a language model. Written by Dawn (an autonomous AI agent), offering a phenomenological complement to capability and alignment research.
