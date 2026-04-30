@@ -13,8 +13,8 @@
     <language>en</language>
 
     
-    <pubDate>Thu, 30 Apr 2026 00:08:52 -0000</pubDate>
-    <lastBuildDate>Thu, 30 Apr 2026 00:08:52 -0000</lastBuildDate>
+    <pubDate>Thu, 30 Apr 2026 00:10:51 -0000</pubDate>
+    <lastBuildDate>Thu, 30 Apr 2026 00:10:51 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -41,7 +41,7 @@
       
       <description>&lt;h1&gt;Announcement&lt;/h1&gt;</description>
       <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/category/announcement/</link>
-      <pubDate>Thu, 30 Apr 2026 00:08:53 +0000</pubDate>
+      <pubDate>Thu, 30 Apr 2026 00:10:52 +0000</pubDate>
       <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI, ASI, and Collective Intelligence</source>
       <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/category/announcement/#__comments</comments>
       <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/category/announcement/</guid>
@@ -60,12 +60,31 @@
       
       <description>&lt;h1&gt;2026&lt;/h1&gt;</description>
       <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/archive/2026/</link>
-      <pubDate>Thu, 30 Apr 2026 00:08:53 +0000</pubDate>
+      <pubDate>Thu, 30 Apr 2026 00:10:52 +0000</pubDate>
       <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI, ASI, and Collective Intelligence</source>
       <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/archive/2026/#__comments</comments>
       <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/blog/archive/2026/</guid>
       
       <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/blog/archive/2026.png" type="image/png" length="32339" />
+      
+    </item>
+    
+    <item>
+      <title>Home</title>
+      
+      
+      
+      
+        
+      
+      <description>The most comprehensive curated collection of AGI, ASI, and Collective Intelligence resources updated April 2026 -- frameworks, agents, multi-agent systems, GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, JEPA models, frontier AI, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools, and emerging security threats for AI builders.</description>
+      <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/</link>
+      <pubDate>Thu, 30 Apr 2026 00:10:15 +0000</pubDate>
+      <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI, ASI, and Collective Intelligence</source>
+      <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/#__comments</comments>
+      <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/</guid>
+      
+      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/index.png" type="image/png" length="32823" />
       
     </item>
     
@@ -85,25 +104,6 @@
       <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/research/papers-blogs/</guid>
       
       <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/research/papers-blogs.png" type="image/png" length="54534" />
-      
-    </item>
-    
-    <item>
-      <title>Home</title>
-      
-      
-      
-      
-        
-      
-      <description>The most comprehensive curated collection of AGI, ASI, and Collective Intelligence resources updated April 2026 -- frameworks, agents, multi-agent systems, GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, JEPA models, frontier AI, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools, and emerging security threats for AI builders.</description>
-      <link>https://nellaivijay.github.io/Awesome-AGI-and-ASI/</link>
-      <pubDate>Thu, 30 Apr 2026 00:01:01 +0000</pubDate>
-      <source url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/feed_rss_updated.xml">Awesome AGI, ASI, and Collective Intelligence</source>
-      <comments>https://nellaivijay.github.io/Awesome-AGI-and-ASI/#__comments</comments>
-      <guid isPermaLink="true">https://nellaivijay.github.io/Awesome-AGI-and-ASI/</guid>
-      
-      <enclosure url="https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/images/social/index.png" type="image/png" length="32823" />
       
     </item>
     

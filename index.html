@@ -2009,6 +2009,349 @@
   <p>The frontier of artificial intelligence research — from AI to AGI to ASI and beyond. Curated resources for builders and researchers shaping the future of intelligence.</p>
 </div>
 
+<!-- Bento Box Hero Section -->
+<div class="bento-grid">
+  <div class="bento-card bento-large" onclick="scrollToSection('understand')">
+    <div class="bento-icon">🧠</div>
+    <div class="bento-content">
+      <h3>Understand</h3>
+      <p>AI, AGI, ASI & Collective Intelligence fundamentals</p>
+      <span class="bento-badge">4 sections</span>
+    </div>
+  </div>
+
+  <div class="bento-card bento-medium" onclick="scrollToSection('build')">
+    <div class="bento-icon">⚙️</div>
+    <div class="bento-content">
+      <h3>Build</h3>
+      <p>Frameworks, Agents & Physical AI</p>
+      <span class="bento-badge">4 sections</span>
+    </div>
+  </div>
+
+  <div class="bento-card bento-medium" onclick="scrollToSection('infrastructure')">
+    <div class="bento-icon">🏗️</div>
+    <div class="bento-content">
+      <h3>Infrastructure</h3>
+      <p>LLM Frameworks, RAG & Deployment</p>
+      <span class="bento-badge">8 sections</span>
+    </div>
+  </div>
+
+  <div class="bento-card bento-small" onclick="scrollToSection('safety')">
+    <div class="bento-icon">🛡️</div>
+    <div class="bento-content">
+      <h3>Safety</h3>
+      <p>Alignment & Governance</p>
+    </div>
+  </div>
+
+  <div class="bento-card bento-small" onclick="scrollToSection('research')">
+    <div class="bento-icon">📚</div>
+    <div class="bento-content">
+      <h3>Research</h3>
+      <p>Papers & Learning</p>
+    </div>
+  </div>
+
+  <div class="bento-card bento-wide" onclick="window.open('https://github.com/nellaivijay/Awesome-AGI-and-ASI/issues/new?template=resource-suggestion.yml', '_blank')">
+    <div class="bento-icon">📚</div>
+    <div class="bento-content">
+      <h3>Suggest a Resource</h3>
+      <p>Contribute to the collection</p>
+      <span class="bento-badge bento-action">→</span>
+    </div>
+  </div>
+</div>
+
+<script>
+function scrollToSection(section) {
+  const element = document.getElementById(section);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+</script>
+
+<style>
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 180px);
+  gap: 16px;
+  margin: 2rem 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bento-card {
+  background: var(--cyber-bg-secondary);
+  border: 1px solid var(--cyber-border);
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--cyber-accent-blue), var(--cyber-accent-purple));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.bento-card:hover::before {
+  opacity: 0.1;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cyber-accent-blue);
+  box-shadow: 0 8px 25px rgba(88, 166, 255, 0.3);
+}
+
+.bento-icon {
+  font-size: 2.5rem;
+  z-index: 1;
+  min-width: 60px;
+}
+
+.bento-content {
+  z-index: 1;
+  flex: 1;
+}
+
+.bento-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cyber-text-primary);
+}
+
+.bento-content p {
+  margin: 0 0 8px 0;
+  font-size: 0.875rem;
+  color: var(--cyber-text-secondary);
+}
+
+.bento-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(88, 166, 255, 0.2);
+  color: var(--cyber-accent-blue);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.bento-action {
+  background: var(--cyber-accent-blue);
+  color: white;
+}
+
+/* Bento card sizes */
+.bento-large {
+  grid-column: span 2;
+  grid-row: span 2;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+}
+
+.bento-medium {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.bento-small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.bento-wide {
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+/* Large card specific styling */
+.bento-large .bento-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+
+.bento-large .bento-content h3 {
+  font-size: 2rem;
+}
+
+.bento-large .bento-content p {
+  font-size: 1rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .bento-card {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    min-height: 120px;
+  }
+
+  .bento-large {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .bento-large .bento-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+
+  .bento-large .bento-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .bento-wide {
+    grid-column: span 1 !important;
+  }
+}
+</style>
+
+<!-- Interactive Mind Map -->
+<div class="mindmap-section">
+  <h2>🗺️ Knowledge Map</h2>
+  <p>Visual overview of how AGI, ASI, and Collective Intelligence concepts connect</p>
+  <div class="mindmap-container">
+    <svg id="mindmap" style="width: 100%; height: 400px;"></svg>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4"></script>
+<script>
+  const mindmapData = {
+    name: "Awesome AGI, ASI & CI",
+    children: [
+      {
+        name: "🧠 Understand",
+        children: [
+          { name: "AI, AGI, ASI" },
+          { name: "Collective Intelligence" },
+          { name: "AGI Benchmarks" },
+          { name: "ASI Research" }
+        ]
+      },
+      {
+        name: "⚙️ Build",
+        children: [
+          { name: "Frameworks" },
+          { name: "Agents" },
+          { name: "Physical AI" },
+          { name: "Paper-to-Code" }
+        ]
+      },
+      {
+        name: "🏗️ Infrastructure",
+        children: [
+          { name: "LLM Frameworks" },
+          { name: "RAG & Vector DBs" },
+          { name: "Data Infrastructure" },
+          { name: "Fine-Tuning" },
+          { name: "Deployment" },
+          { name: "Distributed Training" },
+          { name: "Compute & Hardware" },
+          { name: "Prompt Engineering" }
+        ]
+      },
+      {
+        name: "🛡️ Safety",
+        children: [
+          { name: "Safety & Alignment" }
+        ]
+      },
+      {
+        name: "📚 Research",
+        children: [
+          { name: "Papers & Blogs" },
+          { name: "Tutorials" },
+          { name: "Conferences" }
+        ]
+      }
+    ]
+  };
+
+  const { Markmap, loadCSS, loadJS } = window.markmap;
+
+  Markmap.create('#mindmap', mindmapData, {
+    autoFit: true,
+    duration: 500,
+    fitRatio: 0.95,
+    pan: true,
+    zoom: true,
+    drawArrow: false,
+    color: (node) => {
+      const colors = ['#58a6ff', '#bc8cff', '#3fb950', '#f85149', '#d29922'];
+      return colors[node.depth % colors.length];
+    }
+  });
+</script>
+
+<style>
+.mindmap-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--cyber-bg-secondary);
+  border: 1px solid var(--cyber-border);
+  border-radius: 16px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mindmap-section h2 {
+  margin-top: 0;
+  color: var(--cyber-text-primary);
+}
+
+.mindmap-section p {
+  color: var(--cyber-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.mindmap-container {
+  background: var(--cyber-bg);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid var(--cyber-border);
+}
+
+@media (max-width: 768px) {
+  .mindmap-section {
+    padding: 1rem;
+    margin: 2rem 1rem;
+  }
+
+  .mindmap-container svg {
+    height: 300px !important;
+  }
+}
+</style>
+
 <h1 id="awesome-agi-asi-and-collective-intelligence-resources">Awesome AGI, ASI, and Collective Intelligence Resources <a href="https://awesome.re"><img alt="Awesome" src="https://awesome.re/badge.svg" /></a><a class="headerlink" href="#awesome-agi-asi-and-collective-intelligence-resources" title="Permanent link">&para;</a></h1>
 <p><img alt="AGI" src="https://img.shields.io/badge/AGI-Artificial_General_Intelligence-blue" />
 <img alt="ASI" src="https://img.shields.io/badge/ASI-Artificial_Superintelligence-red" />
@@ -2039,7 +2382,7 @@
 <tbody>
 <tr>
 <td></td>
-<td><strong>Understand</strong></td>
+<td><strong>Understand</strong> <a id="understand"></a></td>
 <td><a href="understand/ai-agi-asi/">AI, AGI, and ASI</a></td>
 <td>Definitions, comparison table, DeepMind's AGI levels, state of the field</td>
 </tr>
@@ -2063,7 +2406,7 @@
 </tr>
 <tr>
 <td></td>
-<td><strong>Build</strong></td>
+<td><strong>Build</strong> <a id="build"></a></td>
 <td><a href="build/frameworks/">Frameworks</a></td>
 <td>LAMs, MCP/A2A protocols, 30+ agent frameworks</td>
 </tr>
@@ -2087,7 +2430,7 @@
 </tr>
 <tr>
 <td></td>
-<td><strong>Infrastructure</strong></td>
+<td><strong>Infrastructure</strong> <a id="infrastructure"></a></td>
 <td><a href="infrastructure/llm-frameworks/">LLM Frameworks</a></td>
 <td>Orchestration, platforms, structured output, observability</td>
 </tr>
@@ -2135,13 +2478,13 @@
 </tr>
 <tr>
 <td></td>
-<td><strong>Safety</strong></td>
+<td><strong>Safety</strong> <a id="safety"></a></td>
 <td><a href="safety/safety-alignment/">Safety &amp; Alignment</a></td>
 <td>Superalignment, RLHF, DPO, interpretability, AI governance</td>
 </tr>
 <tr>
 <td></td>
-<td><strong>Research</strong></td>
+<td><strong>Research</strong> <a id="research"></a></td>
 <td><a href="research/papers-blogs/">Papers &amp; Blogs</a></td>
 <td>60+ papers on frontier models, reasoning, agents</td>
 </tr>
@@ -2181,7 +2524,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 30, 2026 00:01:01 UTC"><span class="timeago" datetime="2026-04-30T00:01:01+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 30, 2026 00:01:01 UTC">2026-04-30</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 30, 2026 00:10:15 UTC"><span class="timeago" datetime="2026-04-30T00:10:15+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 30, 2026 00:10:15 UTC">2026-04-30</span>
   </span>
 
     
