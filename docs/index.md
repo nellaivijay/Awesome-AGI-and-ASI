@@ -118,7 +118,7 @@ function scrollToSection(section) {
 .bento-card:hover {
   transform: translateY(-4px);
   border-color: var(--cyber-accent-blue);
-  box-shadow: 0 8px 25px rgba(88, 166, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
 }
 
 .bento-icon {
@@ -148,7 +148,7 @@ function scrollToSection(section) {
 .bento-badge {
   display: inline-block;
   padding: 4px 12px;
-  background: rgba(88, 166, 255, 0.2);
+  background: rgba(59, 130, 246, 0.2);
   color: var(--cyber-accent-blue);
   border-radius: 12px;
   font-size: 0.75rem;
@@ -241,73 +241,141 @@ function scrollToSection(section) {
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4"></script>
 <script>
-  const mindmapData = {
-    name: "Awesome AGI, ASI & CI",
-    children: [
-      {
-        name: "🧠 Understand",
-        children: [
-          { name: "AI, AGI, ASI" },
-          { name: "Collective Intelligence" },
-          { name: "AGI Benchmarks" },
-          { name: "ASI Research" }
-        ]
-      },
-      {
-        name: "⚙️ Build",
-        children: [
-          { name: "Frameworks" },
-          { name: "Agents" },
-          { name: "Physical AI" },
-          { name: "Paper-to-Code" }
-        ]
-      },
-      {
-        name: "🏗️ Infrastructure",
-        children: [
-          { name: "LLM Frameworks" },
-          { name: "RAG & Vector DBs" },
-          { name: "Data Infrastructure" },
-          { name: "Fine-Tuning" },
-          { name: "Deployment" },
-          { name: "Distributed Training" },
-          { name: "Compute & Hardware" },
-          { name: "Prompt Engineering" }
-        ]
-      },
-      {
-        name: "🛡️ Safety",
-        children: [
-          { name: "Safety & Alignment" }
-        ]
-      },
-      {
-        name: "📚 Research",
-        children: [
-          { name: "Papers & Blogs" },
-          { name: "Tutorials" },
-          { name: "Conferences" }
-        ]
-      }
-    ]
-  };
-
-  const { Markmap, loadCSS, loadJS } = window.markmap;
-  
-  Markmap.create('#mindmap', mindmapData, {
-    autoFit: true,
-    duration: 500,
-    fitRatio: 0.95,
-    pan: true,
-    zoom: true,
-    drawArrow: false,
-    color: (node) => {
-      const colors = ['#58a6ff', '#bc8cff', '#3fb950', '#f85149', '#d29922'];
-      return colors[node.depth % colors.length];
+// D3.js Mind Map Implementation
+const mindmapData = {
+  name: "Awesome AGI, ASI & CI",
+  children: [
+    {
+      name: "🧠 Understand",
+      children: [
+        { name: "AI, AGI, ASI" },
+        { name: "Collective Intelligence" },
+        { name: "AGI Benchmarks" },
+        { name: "ASI Research" }
+      ]
+    },
+    {
+      name: "⚙️ Build",
+      children: [
+        { name: "Frameworks" },
+        { name: "Agents" },
+        { name: "Physical AI" },
+        { name: "Paper-to-Code" }
+      ]
+    },
+    {
+      name: "🏗️ Infrastructure",
+      children: [
+        { name: "LLM Frameworks" },
+        { name: "RAG & Vector DBs" },
+        { name: "Data Infrastructure" },
+        { name: "Fine-Tuning" },
+        { name: "Deployment" },
+        { name: "Distributed Training" },
+        { name: "Compute & Hardware" },
+        { name: "Prompt Engineering" }
+      ]
+    },
+    {
+      name: "🛡️ Safety",
+      children: [
+        { name: "Safety & Alignment" }
+      ]
+    },
+    {
+      name: "📚 Research",
+      children: [
+        { name: "Papers & Blogs" },
+        { name: "Tutorials" },
+        { name: "Conferences" }
+      ]
     }
-  });
+  ]
+};
+
+// Slate theme colors
+const colors = ['#3b82f6', '#2dd4bf', '#a855f7', '#22c55e', '#f97316'];
+
+function createMindMap() {
+  const svg = d3.select('#mindmap');
+  const width = svg.node().getBoundingClientRect().width;
+  const height = 400;
+  
+  svg.attr('viewBox', [0, 0, width, height]);
+  
+  // Clear previous content
+  svg.selectAll('*').remove();
+  
+  // Create hierarchy
+  const root = d3.hierarchy(mindmapData);
+  
+  // Create tree layout
+  const treeLayout = d3.tree().size([height - 100, width - 200]);
+  treeLayout(root);
+  
+  // Create group for the mind map
+  const g = svg.append('g')
+    .attr('transform', 'translate(100, 50)');
+  
+  // Draw links
+  g.selectAll('.link')
+    .data(root.links())
+    .enter()
+    .append('path')
+    .attr('class', 'link')
+    .attr('d', d3.linkHorizontal()
+      .x(d => d.y)
+      .y(d => d.x))
+    .attr('fill', 'none')
+    .attr('stroke', '#334155')
+    .attr('stroke-width', 2)
+    .attr('stroke-opacity', 0.6);
+  
+  // Draw nodes
+  const nodes = g.selectAll('.node')
+    .data(root.descendants())
+    .enter()
+    .append('g')
+    .attr('class', 'node')
+    .attr('transform', d => `translate(${d.y},${d.x})`);
+  
+  // Add circles for nodes
+  nodes.append('circle')
+    .attr('r', 6)
+    .attr('fill', d => colors[d.depth % colors.length])
+    .attr('stroke', '#1e293b')
+    .attr('stroke-width', 2);
+  
+  // Add text labels
+  nodes.append('text')
+    .attr('dy', 4)
+    .attr('x', d => d.children ? -10 : 10)
+    .attr('text-anchor', d => d.children ? 'end' : 'start')
+    .attr('fill', '#e2e8f0')
+    .attr('font-size', '12px')
+    .attr('font-family', 'Inter, sans-serif')
+    .text(d => d.data.name);
+  
+  // Add zoom behavior
+  const zoom = d3.zoom()
+    .scaleExtent([0.5, 3])
+    .on('zoom', (event) => {
+      g.attr('transform', event.transform);
+    });
+  
+  svg.call(zoom);
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', createMindMap);
+} else {
+  createMindMap();
+}
+
+// Redraw on window resize
+window.addEventListener('resize', createMindMap);
 </script>
 
 <style>
