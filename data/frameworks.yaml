@@ -65,6 +65,20 @@ subsections:
     description: Google's open-source AI agent that brings Gemini directly into your terminal. MCP support built-in.
     raw_notes: 101k+ stars. Official Google agent.
     notes: 101k+ stars. Official Google agent.
+  - name: OpenAI Plugins for Codex
+    description: |-
+      Bundle skills, app integrations, and MCP servers into reusable workflows for Codex. Conceptually similar to Claude Skills.
+    notes: OpenAI's answer to Claude Skills for coding agent extensibility.
+  - name: Stripe Projects
+    description: Build and manage AI stack from command line. Set up accounts, billing, manage keys, and more.
+    notes: CLI-first approach to AI infrastructure management.
+  - name: Fyn
+    github: fyn-dev/fyn
+    description: Fork of Python package manager uv. Reaction to OpenAI's acquisition of Astral (uv developer).
+    notes: Community fork maintaining open-source independence.
+  - name: Google Workspace CLI
+    description: Single command line interface for Google Workspace apps (Docs, Sheets, Gmail, Gemini).
+    notes: Experimental and unsupported.
   - name: Hermes Agent
     github: NousResearch/hermes-agent
     description: The agent that grows with you. By Nous Research - multi-model AI agent with Claude, GPT, and open-source
@@ -157,6 +171,34 @@ subsections:
   - name: OpenAGI
     github: agiresearch/OpenAGI
     description: Open-source AGI research platform combining LLMs with domain expert models via RLTF.
+- title: Agent Infrastructure & Governance
+  type: infrastructure
+  level: 3
+  description: |-
+    Platforms and tools for managing, coordinating, and governing AI agents at scale. Critical as agents move from demos to production.
+  columns:
+  - Name
+  - Introduction
+  - Notes
+  items:
+  - name: OpenAI Frontier
+    description: Platform for managing agents from any vendor. Organize and coordinate AI efforts without siloing by vendor.
+    notes: Multi-vendor agent orchestration platform.
+  - name: Mistral Forge
+    description: System for building frontier-grade models based on proprietary data. Supports pretraining, posttraining, and reinforcement learning.
+    notes: Enterprise model customization platform.
+  - name: Plumb
+    description: Tool for keeping specifications, tests, and code in sync. Early stage but potentially important for spec-driven development.
+    notes: Spec-test-code synchronization.
+  - name: git-memento
+    description: Git extension that saves coding sessions as Markdown and commits them. Session-based commits for AI-generated code.
+    notes: Captures AI coding context in version control.
+  - name: sem
+    description: Tools for semantic versioning integrated with Git. Knows what functions changed, not just lines.
+    notes: Function-level diffing and versioning.
+  - name: 'Mikiko Bazeley: Filesystems vs Databases for Agent Memory'
+    description: Research arguing filesystems aren't optimal for agent memory due to lack of database indexes.
+    notes: Memory architecture research for agents.
 - title: Specialized & Utility Frameworks
   type: framework
   level: 3
@@ -190,12 +232,37 @@ subsections:
   - name: smol-ai/developer
     github: smol-ai/developer
     description: The first library to let you embed a developer agent in your own app!
-  - name: loopgpt
-    github: farizrahman4u/loopgpt
-    description: Modular Auto-GPT Framework. Improved GPT-3.5 support, lower API token cost.
   - name: LocalAGI
     github: EmbraceAGI/LocalAGI
     description: Locally run AGI powered by LLaMA, ChatGLM and more.
-  - name: DemoGPT
-    github: melih-unsal/DemoGPT
-    description: Create quick demos by just using prompts.
+- title: Alternative Architectures & OpenClaw Ecosystem
+  type: architecture
+  level: 3
+  description: |-
+    Alternative paths to AGI beyond standard transformers, and the OpenClaw ecosystem of distributions and tools.
+  columns:
+  - Name
+  - Introduction
+  - Notes
+  items:
+  - name: Vera
+    description: Programming language designed for AI to write. Everything is explicit, state changes declared, every function has a contract.
+    notes: AI-designed programming language.
+  - name: Manyana
+    description: Rethink version control based on CRDTs (conflict-free replicated data types).
+    notes: Alternative to Git for collaborative editing.
+  - name: NVIDIA NemoClaw
+    description: NVIDIA's OpenClaw distribution integrated into NVIDIA stack. Claims improved security, inference in NVIDIA cloud.
+    notes: Official NVIDIA OpenClaw distribution.
+  - name: NanoClaw
+    description: OpenClaw distribution that can be installed inside Docker sandboxes with single command. VM-in-container for security.
+    notes: Containerized OpenClaw for agent containment.
+  - name: Klaus
+    description: OpenClaw clone/distribution with claimed improvements.
+    notes: OpenClaw ecosystem variant.
+  - name: PiClaw
+    description: OpenClaw distribution focused on privacy and local deployment.
+    notes: Privacy-focused OpenClaw variant.
+  - name: Kimi Claw
+    description: OpenClaw distribution from Moonshot AI (Kimi). Cloud service running OpenClaw.
+    notes: Chinese OpenClaw cloud service.

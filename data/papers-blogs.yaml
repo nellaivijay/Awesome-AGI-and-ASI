@@ -128,6 +128,44 @@ subsections:
       url: https://ai.google.dev/gemma
     - label: GitHub
       url: https://github.com/google-deepmind/gemma
+  - name: 'GPT 5.4: Codex Integration and Computer Use'
+    author: OpenAI
+    year: 2026
+    description: |-
+      Merges Codex augmented coding model back into mainstream product. Features 1M token context window, computer use capabilities, and publish plan that can be altered midcourse before action.
+  - name: 'Claude Opus 4.6 and Sonnet 4.6: 1M Token Context'
+    author: Anthropic
+    year: 2026
+    description: |-
+      1-million token context windows reached general availability for both Opus 4.6 and Sonnet 4.6. No additional charge for large context windows.
+  - name: 'Mistral Small 4: Open-Source Frontier MoE'
+    author: Mistral AI
+    year: 2026
+    description: |-
+      119B mixture of experts model using 6B parameters per token. Fully open source with 256K context window. Optimized for minimal latency and maximum throughput.
+  - name: 'Nemotron 3 Super: Mamba+Transformer Hybrid'
+    author: NVIDIA
+    year: 2026
+    description: |-
+      120B parameter mixture of experts model with 12B active parameters. Novel architecture combining both Mamba and Transformer layers for efficient long-context reasoning.
+  - name: 'Gemini 3.1 Flash Live: Real-Time Speech'
+    author: Google DeepMind
+    year: 2026
+    description: |-
+      Speech model designed for real-time conversation. Avoids gaps during generation and uses human-like cadences for natural dialogue.
+  - name: 'Qwen3.5-9B: Laptop-Class Frontier Parity'
+    author: Qwen Team (Alibaba)
+    year: 2026
+    description: |-
+      9B parameter model that can run on a laptop with benchmark results comparable to December 2025's frontier models. Break-even point against cloud API costs measured in weeks.
+  - name: 'Phi-4-Reasoning-Vision-15B: Small Multimodal Reasoning'
+    author: Microsoft
+    year: 2026
+    description: |-
+      Small open-weight model combining reasoning capabilities with multimodal vision. Industry trend toward smaller, faster models that can run locally.
+    links:
+    - label: Blog
+      url: https://azure.microsoft.com/blog/phi-4-reasoning-vision
 - title: Reasoning, Scaling & Architecture Papers
   type: paper
   level: 3
@@ -194,6 +232,19 @@ subsections:
     links:
     - label: Paper
       url: https://arxiv.org/abs/2404.07143
+  - name: 'LeWorldModel: First Stable JEPA Model'
+    author: Yann LeCun et al. (Meta AI)
+    year: 2026
+    description: |-
+      First model using Joint Embedding Predictive Architecture (JEPA) that trains stably. Goal is to produce models that understand the world and how it works, not just predict tokens.
+  - name: 'Joint Embedding Predictive Architecture (JEPA)'
+    author: Yann LeCun et al. (Meta AI)
+    year: 2023
+    description: |-
+      Alternative to token prediction architectures. Predicts in representation space rather than pixel space, enabling non-generative, highly scalable world models.
+    links:
+    - label: Paper
+      url: https://arxiv.org/abs/2301.08243
 - title: World Models & Environment Simulation Papers
   type: paper
   level: 3
@@ -519,6 +570,38 @@ subsections:
     links:
     - label: Paper
       url: https://arxiv.org/abs/2311.02462
+- title: Workforce & Organizational Impact Research
+  type: research
+  level: 3
+  description: |-
+    Research on how AI is transforming the workforce, organizational dynamics, and human-AI collaboration patterns.
+  columns:
+  - Study
+  - Authors / Org
+  - Year
+  - Description
+  - Links
+  items:
+  - name: 'Job Market Report 2026'
+    author: Lenny Rachitsky
+    year: 2026
+    description: |-
+      Product management positions at highest level in years. Software engineering demand recovering after 2022 decline. AI jobs on fire, recruiters heavily in demand.
+  - name: 'Cognitive Overload in Human-AI Interaction'
+    author: Lepine, Kim, Mishkin, Beane
+    year: 2026
+    description: |-
+      Study of cognitive overload from interaction between models and users. Prompts are imprecise, LLM output reflects prompt but may not match intent, getting back on track is difficult.
+  - name: 'GitHub Copilot Collaboration Impact'
+    author: GitHub Research
+    year: 2026
+    description: |-
+      Study shows Copilot use correlated with less time on management activities, less collaboration, more individual coding. Unclear if generalizes to tools like Claude Code.
+  - name: 'War on Slop: AI-Generated Content Flood'
+    author: Various
+    year: 2026
+    description: |-
+      App stores, publications, and academic journals fighting deluges of AI-generated submissions that swamp their ability to review. Apple's app store and many others affected.
 - title: Blogs and News
   type: blog
   level: 3

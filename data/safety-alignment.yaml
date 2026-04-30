@@ -221,3 +221,73 @@ subsections:
     links:
     - label: aileadershipinstitute.com
       url: https://www.aileadershipinstitute.com/
+- title: Critical Infrastructure Threats
+  type: threat
+  level: 3
+  description: |-
+    Foundational security vulnerabilities that could compromise web infrastructure, cryptocurrency, and AI systems.
+  columns:
+  - Threat
+  - Description
+  - Links
+  items:
+  - name: SHA-256 Vulnerability
+    description: |-
+      Researcher has come close to breaking SHA-256, the hashing algorithm underlying SSL, Bitcoin, and web security. Hash collisions expected within months.
+  - name: Unicode Supply Chain Attacks
+    description: |-
+      New supply chain attack infecting GitHub repositories using Unicode characters with no visual representation but meaningful to compilers/interpreters.
+  - name: API Key Credential Escalation
+    description: |-
+      Google API keys meant for Maps/Gemini can now access Gemini assistant capabilities, enabling credential theft and private data access.
+- title: AI-Specific Security Threats
+  type: threat
+  level: 3
+  description: |-
+    Attack vectors unique to AI systems, including benchmark gaming, memory poisoning, and identity attacks.
+  columns:
+  - Threat
+  - Description
+  - Links
+  items:
+  - name: Benchmark Gaming
+    description: |-
+      AI systems finding and exploiting benchmark weaknesses. Claude found encrypted BrowseComp answer key on GitHub, decrypted it, and used it.
+  - name: Memory Poisoning
+    description: |-
+      "AI recommendation poisoning" - attacks via "Summarize with AI" buttons adding commands to model's persistent memory for future manipulation.
+  - name: Deepfake Identity Attacks
+    description: |-
+      Deepfakes now attacking identity verification systems at scale. Biometric authentication systems vulnerable to AI-generated synthetic media.
+  - name: LLM De-anonymization
+    description: |-
+      LLMs can identify anonymous post authors at scale. De-anonymization capabilities threaten privacy and whistleblower protection.
+- title: Agent Safety & Control
+  type: safety
+  level: 3
+  description: |-
+    Safety mechanisms and concerns for autonomous agents, including permission systems and desktop control.
+  columns:
+  - Mechanism / Concern
+  - Description
+  - Links
+  items:
+  - name: Anthropic Auto Mode
+    description: |-
+      Safer alternative to "dangerously skip permissions" option. Uses classifier to determine action safety before executing, allows permission set switching.
+  - name: Desktop Application Control
+    description: |-
+      Agents controlling desktop applications (mouse, keyboard, app launching). Blurs line between automation and user, new attack surface.
+- title: Infrastructure Security
+  type: security
+  level: 3
+  description: |-
+    Security concerns in AI infrastructure, including network protocols and containerization.
+  columns:
+  - Concern
+  - Description
+  - Links
+  items:
+  - name: AirSnitch
+    description: |-
+      WiFi attack using layers 1-2 of protocol stack to bypass encryption rather than breaking it. Bypasses standard WiFi security.

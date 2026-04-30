@@ -48,6 +48,15 @@ subsections:
     description: A natural language interface for computers. Lets LLMs run code (Python, JS, shell) locally with no restrictions.
     raw_notes: Full computer control via natural language. Like ChatGPT Code Interpreter but unrestricted.
     notes: Full computer control via natural language. Like ChatGPT Code Interpreter but unrestricted.
+  - name: Cursor Composer 2
+    description: Next-generation IDE incorporating Kimi K2.5 model. Beats Anthropic Opus 4.6 on major coding benchmarks at lower cost.
+    notes: AI-native IDE with frontier model integration.
+  - name: Opencode
+    description: Open source AI coding agent using most models including free and local. Terminal, desktop, IDE, or extension. Privacy-sensitive environments.
+    notes: Multi-model, privacy-first coding agent.
+  - name: Claude Review
+    description: Code review on every pull request that Claude Code makes. Research preview for Claude Teams and Enterprise.
+    notes: Automated PR review for AI-generated code.
 - title: Research & Knowledge Agents
   type: framework
   level: 3
@@ -84,6 +93,16 @@ subsections:
     description: Universal memory layer for AI agents. Persistent long-term, episodic, and semantic memory across agent sessions.
     raw_notes: 52k+ stars. Key missing component between current agents and AGI.
     notes: 52k+ stars. Key missing component between current agents and AGI.
+  - name: Autoresearch
+    description: |-
+      Automates the scientific method with AI agents. Runs hundreds of ML experiments per night - experiment, results, modify code, repeat.
+    notes: By Andrej Karpathy. ASI-threshold automation.
+  - name: Claude Code Channels
+    description: Experimental feature allowing communication with Claude using Telegram or Discord. Competes with OpenClaw.
+    notes: Multi-platform Claude integration.
+  - name: Claude Cowork Dispatch
+    description: Control Claude Cowork from your phone. Claude runs on computer, assign tasks from anywhere, get text notification when done.
+    notes: Remote Claude control via mobile.
 - title: Computer-Use & Desktop Agents
   type: framework
   level: 3
@@ -110,6 +129,25 @@ subsections:
       Run agents that work for you based on what you do. Continuously observes your screen, builds personal memory, and triggers AI actions.
     raw_notes: Always-on environmental awareness — a prototype AGI assistant.
     notes: Always-on environmental awareness — a prototype AGI assistant.
+- title: Local Agent Stacks
+  type: infrastructure
+  level: 3
+  description: |-
+    Local-first agent orchestration stacks that replace cloud-based model dependence with on-device deployment.
+  columns:
+  - Name
+  - Introduction
+  - Notes
+  items:
+  - name: Qwen-3-coder
+    description: Local agent stack for coding that can replace cloud-based orchestration tools.
+    notes: Local-first coding agent infrastructure.
+  - name: Ollama
+    description: Run Llama, Mistral, and other models locally. Simple CLI for local model deployment and inference.
+    notes: Local model serving for agents.
+  - name: goose
+    description: Already listed in coding agents - local agent framework supporting MCP and ACP protocols.
+    notes: Local agent framework (see Coding & Software Engineering Agents).
 - title: Embodied & Simulation Agents
   type: framework
   level: 3

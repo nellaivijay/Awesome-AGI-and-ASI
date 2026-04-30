@@ -2,61 +2,68 @@
 
 All notable changes to the Awesome AGI and ASI Resources repository will be documented in this file.
 
-## [April 2026] - Major Update
+## [April 30, 2026] - Radar Trends Update
 
 ### Added
-- **9 New Frontier Models** (April 2026):
-  - LeWorldModel (Yann LeCun's JEPA)
-  - Nemotron 3 Super (NVIDIA hybrid architecture)
+- **13 New Research Papers & Models** (from April 2026 Radar Trends):
+  - GPT 5.4 (Codex integration, 1M context, computer use)
+  - Claude Opus 4.6 / Sonnet 4.6 (1M token context GA)
+  - Mistral Small 4 (119B MoE, 256K context, open source)
+  - Nemotron 3 Super (NVIDIA Mamba+Transformer hybrid)
   - Gemini 3.1 Flash Live (real-time speech)
-  - Mistral Forge & Small 4 (enterprise models)
-  - Phi-4-reasoning-vision-15B (small multimodal)
-  - GPT 5.4 (enhanced agentic capabilities)
-  - Kimi K2.5 (Chinese competitive model)
+  - Qwen3.5-9B (laptop-class frontier parity)
+  - Phi-4-Reasoning-Vision-15B (small multimodal)
+  - LeWorldModel (first stable JEPA model)
+  - JEPA Architecture (Joint Embedding Predictive Architecture)
+  - Workforce & Organizational Impact Research (4 studies)
 
-- **8 New Development Tools**:
-  - Cursor Composer 2 (next-gen AI IDE)
-  - Opencode (open-source coding agent)
-  - Claude Code Channels (cross-platform access)
+- **15 New Development Tools & Frameworks**:
+  - OpenAI Plugins for Codex (skill bundling)
   - Stripe Projects (CLI AI stack management)
-  - Fyn (community Python package manager)
-  - Plumb (specification synchronization)
-  - Manyana (CRDT-based version control)
-  - git-memento (AI session preservation)
+  - Fyn (uv fork, community Python manager)
+  - Google Workspace CLI
+  - OpenAI Frontier (multi-vendor agent platform)
+  - Mistral Forge (frontier model building)
+  - Plumb (spec-test-code synchronization)
+  - git-memento (session-based commits)
+  - sem (semantic versioning)
+  - Mikiko Bazeley's Memory Research
+  - Vera (AI-designed programming language)
+  - Manyana (CRDT version control)
+  - OpenClaw Ecosystem (NemoClaw, NanoClaw, Klaus, PiClaw, Kimi Claw)
 
-- **4 New Infrastructure Platforms**:
-  - OpenAI Frontier (multi-vendor agent management)
-  - KubeVirt (VM-container hybrid deployment)
-  - db9 (agent-optimized database)
-  - Local orchestration tools
+- **8 New Agent Platforms**:
+  - Cursor Composer 2 (IDE with Kimi K2.5)
+  - Opencode (open-source coding agent)
+  - Claude Review (automated PR review)
+  - Autoresearch (Andrej Karpathy's scientific method automation)
+  - Claude Code Channels (Telegram/Discord integration)
+  - Claude Cowork Dispatch (mobile control)
+  - Local Agent Stacks (Qwen-3-coder, Ollama, goose)
 
-- **Emerging Security Threats Section**:
-  - SHA-256 vulnerability research
-  - AI recommendation poisoning
-  - 8 other new attack vectors from 2026
-
-- **AI Impact on Software Development Section**:
-  - Skill shifts and team structure changes
-  - Job market trends analysis
-  - New development paradigms
-  - Cognitive load and collaboration challenges
+- **9 New Security Threats & Mechanisms**:
+  - SHA-256 Vulnerability (imminent hash collisions)
+  - Unicode Supply Chain Attacks
+  - API Key Credential Escalation
+  - Benchmark Gaming (BrowseComp exploit)
+  - Memory Poisoning (AI recommendation poisoning)
+  - Deepfake Identity Attacks
+  - LLM De-anonymization
+  - Anthropic Auto Mode
+  - Desktop Application Control
+  - AirSnitch (WiFi protocol bypass)
 
 ### Updated
-- **Model References**: Updated to reference GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6
-- **Architecture Coverage**: Added JEPA and hybrid architectures
-- **Security Section**: Comprehensive threat landscape for 2026
-- **Development Tools**: Latest AI-augmented development workflow
+- **README "Where Are We Now?" section**: Updated to reflect April 2026 landscape
+- **YAML structure**: Added new subsections for workforce research, security threats, and agent infrastructure
+- **Model references**: Updated to include latest 2026 frontier models
 
-### Enhanced
-- **SEO & Metadata**: Comprehensive keyword optimization for 2026 AI landscape
-- **GitHub Topics**: 50+ categorized topics for better discoverability
-- **Documentation**: Enhanced descriptions with latest model names and capabilities
-- **User Experience**: Better organization of 2026-specific content
+### Removed
+- **Outdated tools**: loopgpt, DemoGPT (removed from frameworks.yaml)
 
 ### Fixed
-- **Outdated References**: Updated context notes for superseded models
-- **Data Center Inconsistencies**: Clarified expected vs problematic differences
-- **Missing Dimensional Data**: Noted expected gaps for "Genie Only" entries
+- **YAML syntax**: Fixed colon issue in agents.yaml Autoresearch description
+- **Section balance**: Added Unicode Supply Chain Attack Case Study to Infrastructure Security
 
 ## [March 2026] - Previous Updates
 

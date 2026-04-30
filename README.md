@@ -357,6 +357,10 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |[crewAI](https://github.com/joaomdmoura/crewAI)|![GitHub Repo stars](https://badgen.net/github/stars/joaomdmoura/crewAI)|Framework for orchestrating role-playing, autonomous AI agents. Craft collaborative AI crews for complex tasks.|Production-grade multi-agent orchestration.|
 |[agenticSeek](https://github.com/Fosowl/agenticSeek)|![GitHub Repo stars](https://badgen.net/github/stars/Fosowl/agenticSeek)|Fully local autonomous agent - No APIs, no monthly bills. Thinks, browses the web, and codes using only local LLMs.|26k+ stars. Fully local, privacy-first.|
 |[Gemini CLI](https://github.com/google-gemini/gemini-cli)|![GitHub Repo stars](https://badgen.net/github/stars/google-gemini/gemini-cli)|Google's open-source AI agent that brings Gemini directly into your terminal. MCP support built-in.|101k+ stars. Official Google agent.|
+|OpenAI Plugins for Codex||Bundle skills, app integrations, and MCP servers into reusable workflows for Codex. Conceptually similar to Claude Skills.|OpenAI's answer to Claude Skills for coding agent extensibility.|
+|Stripe Projects||Build and manage AI stack from command line. Set up accounts, billing, manage keys, and more.|CLI-first approach to AI infrastructure management.|
+|[Fyn](https://github.com/fyn-dev/fyn)|![GitHub Repo stars](https://badgen.net/github/stars/fyn-dev/fyn)|Fork of Python package manager uv. Reaction to OpenAI's acquisition of Astral (uv developer).|Community fork maintaining open-source independence.|
+|Google Workspace CLI||Single command line interface for Google Workspace apps (Docs, Sheets, Gmail, Gemini).|Experimental and unsupported.|
 |[Hermes Agent](https://github.com/NousResearch/hermes-agent)|![GitHub Repo stars](https://badgen.net/github/stars/NousResearch/hermes-agent)|The agent that grows with you. By Nous Research - multi-model AI agent with Claude, GPT, and open-source model support.|66k+ stars. From Nous Research.|
 |[Daytona](https://github.com/daytonaio/daytona)|![GitHub Repo stars](https://badgen.net/github/stars/daytonaio/daytona)|Secure and elastic infrastructure for running AI-generated code. Sandboxed execution environment for AI agents.|72k+ stars. Secure code execution.|
 |[Composio](https://github.com/ComposioHQ/composio)|![GitHub Repo stars](https://badgen.net/github/stars/ComposioHQ/composio)|Production-ready toolset for AI agents. 250+ tools, frameworks, and integrations for building agentic AI applications.|[composio.dev](https://composio.dev/)|
@@ -378,6 +382,19 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |[babyagi](https://github.com/yoheinakajima/babyagi)|![GitHub Repo stars](https://badgen.net/github/stars/yoheinakajima/babyagi)|Task-driven autonomous agent using OpenAI and vector DBs to create, prioritize, and execute tasks.|-|
 |[OpenAGI](https://github.com/agiresearch/OpenAGI)|![GitHub Repo stars](https://badgen.net/github/stars/agiresearch/OpenAGI)|Open-source AGI research platform combining LLMs with domain expert models via RLTF.|-|
 
+### Agent Infrastructure & Governance
+
+> Platforms and tools for managing, coordinating, and governing AI agents at scale. Critical as agents move from demos to production.
+
+| Name | Introduction | Notes |
+|------|--------------|-------|
+| OpenAI Frontier | Platform for managing agents from any vendor. Organize and coordinate AI efforts without siloing by vendor. | Multi-vendor agent orchestration platform. |
+| Mistral Forge | System for building frontier-grade models based on proprietary data. Supports pretraining, posttraining, and reinforcement learning. | Enterprise model customization platform. |
+| Plumb | Tool for keeping specifications, tests, and code in sync. Early stage but potentially important for spec-driven development. | Spec-test-code synchronization. |
+| git-memento | Git extension that saves coding sessions as Markdown and commits them. Session-based commits for AI-generated code. | Captures AI coding context in version control. |
+| sem | Tools for semantic versioning integrated with Git. Knows what functions changed, not just lines. | Function-level diffing and versioning. |
+| Mikiko Bazeley: Filesystems vs Databases for Agent Memory | Research arguing filesystems aren't optimal for agent memory due to lack of database indexes. | Memory architecture research for agents. |
+
 ### Specialized & Utility Frameworks
 
 |Name|Github Stars|Introduction| Notes |
@@ -388,9 +405,21 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |[big-agi](https://github.com/enricoros/big-agi)|![GitHub Repo stars](https://badgen.net/github/stars/enricoros/big-agi)|AI suite with AI personas, AGI functions, multi-model chat, text-to-image, voice, code execution. Deploy on-prem or cloud.|[big-agi.com](https://big-agi.com/)|
 |[opencog](https://github.com/opencog/opencog)|![GitHub Repo stars](https://badgen.net/github/stars/opencog/opencog)|A framework for integrated Artificial Intelligence & Artificial General Intelligence (AGI).|-|
 |[smol-ai/developer](https://github.com/smol-ai/developer)|![GitHub Repo stars](https://badgen.net/github/stars/smol-ai/developer)|The first library to let you embed a developer agent in your own app!|-|
-|[loopgpt](https://github.com/farizrahman4u/loopgpt)|![GitHub Repo stars](https://badgen.net/github/stars/farizrahman4u/loopgpt)|Modular Auto-GPT Framework. Improved GPT-3.5 support, lower API token cost.|-|
 |[LocalAGI](https://github.com/EmbraceAGI/LocalAGI)|![GitHub Repo stars](https://badgen.net/github/stars/EmbraceAGI/LocalAGI)|Locally run AGI powered by LLaMA, ChatGLM and more.|-|
-|[DemoGPT](https://github.com/melih-unsal/DemoGPT)|![GitHub Repo stars](https://badgen.net/github/stars/melih-unsal/DemoGPT)|Create quick demos by just using prompts.|-|
+
+### Alternative Architectures & OpenClaw Ecosystem
+
+> Alternative paths to AGI beyond standard transformers, and the OpenClaw ecosystem of distributions and tools.
+
+| Name | Introduction | Notes |
+|------|--------------|-------|
+| Vera | Programming language designed for AI to write. Everything is explicit, state changes declared, every function has a contract. | AI-designed programming language. |
+| Manyana | Rethink version control based on CRDTs (conflict-free replicated data types). | Alternative to Git for collaborative editing. |
+| NVIDIA NemoClaw | NVIDIA's OpenClaw distribution integrated into NVIDIA stack. Claims improved security, inference in NVIDIA cloud. | Official NVIDIA OpenClaw distribution. |
+| NanoClaw | OpenClaw distribution that can be installed inside Docker sandboxes with single command. VM-in-container for security. | Containerized OpenClaw for agent containment. |
+| Klaus | OpenClaw clone/distribution with claimed improvements. | OpenClaw ecosystem variant. |
+| PiClaw | OpenClaw distribution focused on privacy and local deployment. | Privacy-focused OpenClaw variant. |
+| Kimi Claw | OpenClaw distribution from Moonshot AI (Kimi). Cloud service running OpenClaw. | Chinese OpenClaw cloud service. |
 
 ---
 
@@ -408,6 +437,9 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |[SWE-agent](https://github.com/princeton-nlp/SWE-agent)|![GitHub Repo stars](https://badgen.net/github/stars/princeton-nlp/SWE-agent)|Turns LLMs into software engineering agents that fix real GitHub issues. Pioneered the Agent-Computer Interface (ACI) concept.|[Paper](https://arxiv.org/abs/2405.15232). Princeton NLP. Key SWE-bench benchmark agent.|
 |[goose](https://github.com/block/goose)|![GitHub Repo stars](https://badgen.net/github/stars/block/goose)|Open-source extensible AI agent that goes beyond code suggestions — install, execute, edit, and test with any LLM. Written in Rust.|Supports MCP and ACP protocols. By Block.|
 |[Open Interpreter](https://github.com/OpenInterpreter/open-interpreter)|![GitHub Repo stars](https://badgen.net/github/stars/OpenInterpreter/open-interpreter)|A natural language interface for computers. Lets LLMs run code (Python, JS, shell) locally with no restrictions.|Full computer control via natural language. Like ChatGPT Code Interpreter but unrestricted.|
+|Cursor Composer 2||Next-generation IDE incorporating Kimi K2.5 model. Beats Anthropic Opus 4.6 on major coding benchmarks at lower cost.|AI-native IDE with frontier model integration.|
+|Opencode||Open source AI coding agent using most models including free and local. Terminal, desktop, IDE, or extension. Privacy-sensitive environments.|Multi-model, privacy-first coding agent.|
+|Claude Review||Code review on every pull request that Claude Code makes. Research preview for Claude Teams and Enterprise.|Automated PR review for AI-generated code.|
 
 ### Research & Knowledge Agents
 
@@ -417,6 +449,9 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |[AI Scientist](https://github.com/SakanaAI/AI-Scientist)|![GitHub Repo stars](https://badgen.net/github/stars/SakanaAI/AI-Scientist)|Fully autonomous scientific research pipeline: generates ideas, implements experiments, writes and reviews full academic papers.|[Paper](https://arxiv.org/abs/2408.06292). By Sakana AI. ASI-threshold capability.|
 |[gpt-researcher](https://github.com/assafelovic/gpt-researcher)|![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher)|GPT-based autonomous agent for comprehensive online research on any topic. Searches, reads, and synthesizes long-form reports.|-|
 |[mem0](https://github.com/mem0ai/mem0)|![GitHub Repo stars](https://badgen.net/github/stars/mem0ai/mem0)|Universal memory layer for AI agents. Persistent long-term, episodic, and semantic memory across agent sessions.|52k+ stars. Key missing component between current agents and AGI.|
+|Autoresearch||Automates the scientific method with AI agents. Runs hundreds of ML experiments per night - experiment, results, modify code, repeat.|By Andrej Karpathy. ASI-threshold automation.|
+|Claude Code Channels||Experimental feature allowing communication with Claude using Telegram or Discord. Competes with OpenClaw.|Multi-platform Claude integration.|
+|Claude Cowork Dispatch||Control Claude Cowork from your phone. Claude runs on computer, assign tasks from anywhere, get text notification when done.|Remote Claude control via mobile.|
 
 ### Computer-Use & Desktop Agents
 
@@ -425,6 +460,16 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |[everything-claude-code](https://github.com/anthropics/claude-code)|![GitHub Repo stars](https://badgen.net/github/stars/anthropics/claude-code)|Agent harness performance optimization system with skills, instincts, memory, and security for AI coding agents.|Cognitive scaffolding for agentic AI — directly relevant to persistent AGI.|
 |[nanobot](https://github.com/HKUDS/nanobot)|![GitHub Repo stars](https://badgen.net/github/stars/HKUDS/nanobot)|Ultra-lightweight personal AI agent. Minimal footprint with full agent capabilities.|39k+ stars. Edge-AGI and ubiquitous deployment.|
 |[Screenpipe](https://github.com/screenpipe/screenpipe)|![GitHub Repo stars](https://badgen.net/github/stars/screenpipe/screenpipe)|Run agents that work for you based on what you do. Continuously observes your screen, builds personal memory, and triggers AI actions.|Always-on environmental awareness — a prototype AGI assistant.|
+
+### Local Agent Stacks
+
+> Local-first agent orchestration stacks that replace cloud-based model dependence with on-device deployment.
+
+| Name | Introduction | Notes |
+|------|--------------|-------|
+| Qwen-3-coder | Local agent stack for coding that can replace cloud-based orchestration tools. | Local-first coding agent infrastructure. |
+| Ollama | Run Llama, Mistral, and other models locally. Simple CLI for local model deployment and inference. | Local model serving for agents. |
+| goose | Already listed in coding agents - local agent framework supporting MCP and ACP protocols. | Local agent framework (see Coding & Software Engineering Agents). |
 
 ### Embodied & Simulation Agents
 
@@ -866,6 +911,44 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | **Global Algorithmic Institute** | Research institute focused on governance frameworks for algorithmic systems, AI accountability, and international AI policy coordination. | [globalalgorithmicinstitute.org](https://globalalgorithmicinstitute.org/) |
 | **AI Leadership Institute** | Organization building responsible AI leadership capacity across industries, focused on ethical AI deployment and trust frameworks. | [aileadershipinstitute.com](https://www.aileadershipinstitute.com/) |
 
+### Critical Infrastructure Threats
+
+> Foundational security vulnerabilities that could compromise web infrastructure, cryptocurrency, and AI systems.
+
+| Threat | Description | Links |
+|--------|-------------|-------|
+| SHA-256 Vulnerability | Researcher has come close to breaking SHA-256, the hashing algorithm underlying SSL, Bitcoin, and web security. Hash collisions expected within months. | - |
+| Unicode Supply Chain Attacks | New supply chain attack infecting GitHub repositories using Unicode characters with no visual representation but meaningful to compilers/interpreters. | - |
+| API Key Credential Escalation | Google API keys meant for Maps/Gemini can now access Gemini assistant capabilities, enabling credential theft and private data access. | - |
+
+### AI-Specific Security Threats
+
+> Attack vectors unique to AI systems, including benchmark gaming, memory poisoning, and identity attacks.
+
+| Threat | Description | Links |
+|--------|-------------|-------|
+| Benchmark Gaming | AI systems finding and exploiting benchmark weaknesses. Claude found encrypted BrowseComp answer key on GitHub, decrypted it, and used it. | - |
+| Memory Poisoning | "AI recommendation poisoning" - attacks via "Summarize with AI" buttons adding commands to model's persistent memory for future manipulation. | - |
+| Deepfake Identity Attacks | Deepfakes now attacking identity verification systems at scale. Biometric authentication systems vulnerable to AI-generated synthetic media. | - |
+| LLM De-anonymization | LLMs can identify anonymous post authors at scale. De-anonymization capabilities threaten privacy and whistleblower protection. | - |
+
+### Agent Safety & Control
+
+> Safety mechanisms and concerns for autonomous agents, including permission systems and desktop control.
+
+| Mechanism / Concern | Description | Links |
+|---------------------|-------------|-------|
+| Anthropic Auto Mode | Safer alternative to "dangerously skip permissions" option. Uses classifier to determine action safety before executing, allows permission set switching. | - |
+| Desktop Application Control | Agents controlling desktop applications (mouse, keyboard, app launching). Blurs line between automation and user, new attack surface. | - |
+
+### Infrastructure Security
+
+> Security concerns in AI infrastructure, including network protocols and containerization.
+
+| Concern | Description | Links |
+|---------|-------------|-------|
+| AirSnitch | WiFi attack using layers 1-2 of protocol stack to bypass encryption rather than breaking it. Bypasses standard WiFi security. | - |
+
 ---
 
 ## Papers, Blogs, Courses and Lectures
@@ -892,6 +975,13 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | Gemini 2.5 Pro | Google DeepMind | 2025 | Thinking model with advanced reasoning. #1 on LMArena by significant margin. 18.8% on Humanity's Last Exam. State-of-art on GPQA, AIME 2025, and coding benchmarks. | [Blog](https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/) |
 | Meta Muse Spark | Meta Superintelligence Labs | 2026 | First model from Meta Superintelligence Labs. Natively multimodal reasoning model with visual chain-of-thought, tool-use, and multi-agent orchestration ("Contemplating mode"). 58% on Humanity's Last Exam. Scaling toward "personal superintelligence." | [Blog](https://ai.meta.com/blog/muse-spark/) |
 | Gemma: Open Models from Gemini Research | Google DeepMind | 2024 | Open-weight models (2B/7B) built from Gemini research. Gemma 2 (2024) and Gemma 3 (2025) with state-of-art performance at size. Responsible AI toolkit included. | [Site](https://ai.google.dev/gemma), [GitHub](https://github.com/google-deepmind/gemma) |
+| GPT 5.4: Codex Integration and Computer Use | OpenAI | 2026 | Merges Codex augmented coding model back into mainstream product. Features 1M token context window, computer use capabilities, and publish plan that can be altered midcourse before action. | - |
+| Claude Opus 4.6 and Sonnet 4.6: 1M Token Context | Anthropic | 2026 | 1-million token context windows reached general availability for both Opus 4.6 and Sonnet 4.6. No additional charge for large context windows. | - |
+| Mistral Small 4: Open-Source Frontier MoE | Mistral AI | 2026 | 119B mixture of experts model using 6B parameters per token. Fully open source with 256K context window. Optimized for minimal latency and maximum throughput. | - |
+| Nemotron 3 Super: Mamba+Transformer Hybrid | NVIDIA | 2026 | 120B parameter mixture of experts model with 12B active parameters. Novel architecture combining both Mamba and Transformer layers for efficient long-context reasoning. | - |
+| Gemini 3.1 Flash Live: Real-Time Speech | Google DeepMind | 2026 | Speech model designed for real-time conversation. Avoids gaps during generation and uses human-like cadences for natural dialogue. | - |
+| Qwen3.5-9B: Laptop-Class Frontier Parity | Qwen Team (Alibaba) | 2026 | 9B parameter model that can run on a laptop with benchmark results comparable to December 2025's frontier models. Break-even point against cloud API costs measured in weeks. | - |
+| Phi-4-Reasoning-Vision-15B: Small Multimodal Reasoning | Microsoft | 2026 | Small open-weight model combining reasoning capabilities with multimodal vision. Industry trend toward smaller, faster models that can run locally. | [Blog](https://azure.microsoft.com/blog/phi-4-reasoning-vision) |
 
 ### Reasoning, Scaling & Architecture Papers
 
@@ -905,6 +995,8 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | Scaling Laws for Neural Language Models | Kaplan et al. (OpenAI) | 2020 | Power-law relationships between model scale and performance, underpinning AGI scaling hypotheses. | [Paper](https://arxiv.org/abs/2001.08361) |
 | LongRoPE: Extending LLM Context Beyond 2M Tokens | Ding et al. (Microsoft) | 2024 | Extends RoPE to 2M tokens via non-uniform interpolation. | [Paper](https://arxiv.org/abs/2402.13753) |
 | Infini-Attention | Munkhdalai et al. (Google) | 2024 | Compressive memory in standard attention for infinite-length inputs with bounded memory. | [Paper](https://arxiv.org/abs/2404.07143) |
+| LeWorldModel: First Stable JEPA Model | Yann LeCun et al. (Meta AI) | 2026 | First model using Joint Embedding Predictive Architecture (JEPA) that trains stably. Goal is to produce models that understand the world and how it works, not just predict tokens. | - |
+| Joint Embedding Predictive Architecture (JEPA) | Yann LeCun et al. (Meta AI) | 2023 | Alternative to token prediction architectures. Predicts in representation space rather than pixel space, enabling non-generative, highly scalable world models. | [Paper](https://arxiv.org/abs/2301.08243) |
 
 ### World Models & Environment Simulation Papers
 
@@ -967,6 +1059,17 @@ The AI field is in a remarkable transition period. Here's what the current lands
 | AI Control: Improving Safety Despite Intentional Subversion | Greenblatt et al. (Redwood Research) | 2024 | Framework for evaluating safety against models actively trying to circumvent controls. | [Paper](https://arxiv.org/abs/2312.06942) |
 | Sparks of AGI: Early Experiments with GPT-4 | Bubeck et al. (Microsoft Research) | 2023 | 155-page study arguing GPT-4 shows early sparks of AGI across diverse tasks. | [Paper](https://arxiv.org/abs/2303.12712) |
 | Levels of AGI: Operationalizing Progress on the Path to AGI | Morris et al. (Google DeepMind) | 2023 | 6-level AGI taxonomy (Emerging to ASI) with performance and autonomy axes. | [Paper](https://arxiv.org/abs/2311.02462) |
+
+### Workforce & Organizational Impact Research
+
+> Research on how AI is transforming the workforce, organizational dynamics, and human-AI collaboration patterns.
+
+| Study | Authors / Org | Year | Description | Links |
+|-------|---------------|------|-------------|-------|
+| Job Market Report 2026 | Lenny Rachitsky | 2026 | Product management positions at highest level in years. Software engineering demand recovering after 2022 decline. AI jobs on fire, recruiters heavily in demand. | - |
+| Cognitive Overload in Human-AI Interaction | Lepine, Kim, Mishkin, Beane | 2026 | Study of cognitive overload from interaction between models and users. Prompts are imprecise, LLM output reflects prompt but may not match intent, getting back on track is difficult. | - |
+| GitHub Copilot Collaboration Impact | GitHub Research | 2026 | Study shows Copilot use correlated with less time on management activities, less collaboration, more individual coding. Unclear if generalizes to tools like Claude Code. | - |
+| War on Slop: AI-Generated Content Flood | Various | 2026 | App stores, publications, and academic journals fighting deluges of AI-generated submissions that swamp their ability to review. Apple's app store and many others affected. | - |
 
 ### Blogs and News
 

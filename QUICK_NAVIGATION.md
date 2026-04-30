@@ -35,9 +35,10 @@ Visit: [LLM Deployment and Serving](infrastructure/deployment.md)
 - [Safety, Alignment and Governance](safety/safety-alignment.md)
 
 ### Security Professionals
-- [Emerging Security Threats (2026)](safety/safety-alignment.md#emerging-security-threats-2026)
+- [Critical Infrastructure Threats](safety/safety-alignment.md#critical-infrastructure-threats)
+- [AI-Specific Security Threats](safety/safety-alignment.md#ai-specific-security-threats)
+- [Agent Safety & Control](safety/safety-alignment.md#agent-safety--control)
 - [AI Safety, Alignment and Governance](safety/safety-alignment.md)
-- [Infrastructure Security](infrastructure/deployment.md)
 
 ### Robotics Engineers
 - [Physical AI & Embodied Intelligence](build/physical-ai.md)
@@ -64,10 +65,11 @@ Visit: [LLM Deployment and Serving](infrastructure/deployment.md)
 - See: [Development Workflow Tools](build/agents.md#development-workflow-tools)
 
 ### AI Safety & Security
-- **2026 Threats**: SHA-256 vulnerability, AI recommendation poisoning
+- **Critical Infrastructure**: SHA-256 vulnerability, Unicode supply chain attacks
+- **AI-Specific Threats**: Benchmark gaming, memory poisoning, deepfake identity attacks
+- **Agent Safety**: Auto mode, desktop application control
 - **Alignment Research**: Constitutional AI, scalable oversight
-- **Governance**: AI policy, regulation, international cooperation
-- See: [Emerging Security Threats](safety/safety-alignment.md#emerging-security-threats-2026)
+- See: [Safety, Alignment and Governance](safety/safety-alignment.md)
 
 ### Infrastructure
 - **Deployment**: vLLM, TGI, OpenAI Frontier, KubeVirt
@@ -89,12 +91,13 @@ AI agents that can directly control desktop applications and complete tasks.
 
 ### 3. AI Security Threats
 New attack vectors emerging as AI capabilities expand.
-- [SHA-256 Vulnerability Research](safety/safety-alignment.md#emerging-security-threats-2026)
-- [AI Recommendation Poisoning](safety/safety-alignment.md#emerging-security-threats-2026)
+- [Critical Infrastructure Threats](safety/safety-alignment.md#critical-infrastructure-threats)
+- [AI-Specific Security Threats](safety/safety-alignment.md#ai-specific-security-threats)
+- [Agent Safety & Control](safety/safety-alignment.md#agent-safety--control)
 
-### 4. Software Development Impact
-How AI is transforming the role of software developers.
-- [AI's Impact on Software Development (2026)](README.md#ais-impact-on-software-development-2026)
+### 4. Workforce & Organizational Impact
+How AI is transforming the workforce and organizational dynamics.
+- [Workforce & Organizational Impact Research](research/papers-blogs.md#workforce--organizational-impact-research)
 
 ### 5. Local AI & Privacy
 Trend toward smaller models that can run locally with privacy benefits.
@@ -152,14 +155,14 @@ Trend toward smaller models that can run locally with privacy benefits.
 4. Evaluate and iterate
 5. See: [LLM Fine-Tuning Techniques](infrastructure/fine-tuning.md)
 
-## 🆕 What's New (April 2026)
+## 🆕 What's New (April 30, 2026)
 
-### Added This Month
-- **9 New Frontier Models**: Including GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6
-- **8 New Development Tools**: Cursor Composer 2, OpenAI Frontier, Claude Code Channels
-- **4 New Infrastructure Platforms**: Including KubeVirt and db9
-- **10 New Security Threats**: Comprehensive threat landscape analysis
-- **AI Impact Section**: Software development transformation analysis
+### Added This Update
+- **13 New Research Papers & Models**: GPT 5.4, Claude Opus 4.6, Mistral Small 4, Nemotron 3 Super, LeWorldModel, JEPA Architecture
+- **15 New Development Tools & Frameworks**: OpenAI Plugins, Stripe Projects, Fyn, OpenAI Frontier, Mistral Forge, Vera, Manyana, OpenClaw Ecosystem
+- **8 New Agent Platforms**: Cursor Composer 2, Opencode, Claude Review, Autoresearch, Claude Code Channels, Local Agent Stacks
+- **9 New Security Threats & Mechanisms**: SHA-256 vulnerability, Unicode supply chain attacks, AI recommendation poisoning, deepfake identity attacks
+- **Workforce & Organizational Research**: Job market trends, cognitive overload studies, collaboration impact analysis
 
 ### See Also
 - [CHANGELOG.md](CHANGELOG.md) - Detailed change history
