@@ -1,24 +1,25 @@
 # Awesome-AGI-and-ASI
 
-**Educational curated collection of resources on Artificial General Intelligence and Artificial Superintelligence**
+**Educational curated collection of resources on Artificial General Intelligence, Artificial Superintelligence, and Collective Intelligence**
 
-This repository is an open source educational resource designed to help students and researchers explore the field of AGI (Artificial General Intelligence) and ASI (Artificial Superintelligence). It provides a structured collection of papers, frameworks, and resources for understanding advanced AI concepts.
+This repository is an open source educational resource designed to help students and researchers explore the field of AGI (Artificial General Intelligence), ASI (Artificial Superintelligence), and Collective Intelligence. It provides a structured collection of papers, frameworks, and resources for understanding advanced AI concepts.
 
 ## Educational Purpose
 
 This collection serves educational purposes by helping students and researchers:
-- Learn about AGI and ASI research directions
+- Learn about AGI, ASI, and Collective Intelligence research directions
 - Understand key papers and breakthroughs in the field
 - Explore frameworks and architectures for general intelligence
+- Study multi-agent systems and swarm intelligence
 - Study safety and alignment research
 - Discover implementation approaches and tools
-- Gain comprehensive knowledge of the AGI/ASI research landscape
+- Gain comprehensive knowledge of the AGI/ASI/CI research landscape
 
 ---
 
 ## 🚀 Quick Navigation
 
-**[📖 Understand](#understanding-ai-agi-and-asi)** - AI, AGI, ASI definitions, ASI research, benchmarks
+**[📖 Understand](#understanding-ai-agi-and-asi)** - AI, AGI, ASI, Collective Intelligence definitions, ASI research, benchmarks
 **[🔧 Build](#frameworks-and-platforms)** - Frameworks, agents, physical AI, paper-to-code
 **[🏗️ Infrastructure](#llm-application-frameworks)** - LLM frameworks, RAG, data infra, fine-tuning, deployment
 **[🛡️ Safety](#safety-alignment-and-governance)** - AI safety, alignment, governance
@@ -30,6 +31,7 @@ This collection serves educational purposes by helping students and researchers:
 
 ## 📈 Recent Updates (April 2026)
 
+- **New Section Added**: Collective Intelligence - multi-agent systems, swarm intelligence, human-AI collaboration
 - **New Papers Added**: Latest research on multi-agent systems, reasoning capabilities, and AI safety
 - **Updated Frameworks**: Added newest LLM application frameworks and agent platforms
 - **Enhanced Safety Section**: Expanded coverage of alignment research and governance
@@ -60,7 +62,7 @@ Evaluation metrics and benchmarks for AGI systems
 ### Resources
 Educational resources, courses, and learning materials
 
-## Understanding AI, AGI, and ASI
+## Understanding AI, AGI, ASI, and Collective Intelligence
 
 ### What is AI (Artificial Intelligence)?
 
@@ -73,6 +75,10 @@ Artificial General Intelligence (AGI) refers to AI systems that match or exceed 
 ### What is ASI (Artificial Superintelligence)?
 
 Artificial Superintelligence (ASI) is a hypothetical system whose intelligence surpasses the most gifted human minds in every domain -- scientific creativity, social skills, strategic reasoning, and general wisdom. ASI could emerge from recursive self-improvement cycles where an AI improves its own design and rapidly surpasses human-level capabilities.
+
+### What is Collective Intelligence?
+
+Collective Intelligence refers to systems where intelligence emerges from the interaction of multiple agents -- whether AI agents, humans, or human-AI hybrids. It encompasses multi-agent systems, swarm intelligence, human-AI collaboration, distributed AI, and emergent intelligence. While AGI focuses on single systems with general intelligence, collective intelligence explores how groups of simpler systems can coordinate, collaborate, and evolve sophisticated behaviors through interaction.
 
 ## Key Resources
 

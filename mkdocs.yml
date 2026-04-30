@@ -1,10 +1,10 @@
-site_name: Awesome AGI and ASI
+site_name: Awesome AGI, ASI, and Collective Intelligence
 site_url: https://nellaivijay.github.io/Awesome-AGI-and-ASI/
 site_description: >-
   The most comprehensive, curated collection of resources on Artificial General
-  Intelligence (AGI) and Artificial Superintelligence (ASI) -- updated April 2026.
+  Intelligence (AGI), Artificial Superintelligence (ASI), and Collective Intelligence -- updated April 2026.
   Covers GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, frontier models, JEPA architectures,
-  AI agents, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools,
+  AI agents, multi-agent systems, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools,
   and emerging security threats for builders and researchers shaping the future of intelligence.
 site_author: nellaivijay
 repo_url: https://github.com/nellaivijay/Awesome-AGI-and-ASI
@@ -104,6 +104,7 @@ nav:
   - Home: index.md
   - Understand:
     - Understanding AI, AGI, and ASI: understand/ai-agi-asi.md
+    - Collective Intelligence: understand/collective-intelligence.md
     - AGI Benchmarks & Evals: understand/benchmarks.md
     - ASI and Superintelligence Research: understand/asi-research.md
   - Build:
