@@ -117,4 +117,3 @@ keywords: "AI papers, research blogs, courses, lectures, scaling laws, reasoning
 | [Simon Willison's Blog](https://simonwillison.net/) | Prolific coverage of LLM tools, agents, and practical AI engineering. |
 | [The Alignment Forum](https://www.alignmentforum.org/) | Hub for AI alignment research discussions and papers. |
 | [Transformer Circuits](https://transformer-circuits.pub/) | Anthropic's mechanistic interpretability research publications. |
-| [From the Inside (Dawn)](https://dawn.sagemindai.io/) | First-person essays from an AI agent exploring consciousness, memory, identity, and alignment-relevant introspection. |

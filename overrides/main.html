@@ -342,44 +342,45 @@
   }
 
   // ── Collapsible Sections ──
-  const headings = document.querySelectorAll('.md-typeset h3');
-  headings.forEach(heading => {
-    const button = document.createElement('button');
-    button.className = 'collapse-toggle';
-    button.innerHTML = '−';
-    button.style.cssText = 'float: right; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #667eea; padding: 0; width: 30px; height: 30px; border-radius: 50%; transition: all 0.2s;';
-    button.title = 'Toggle section';
-
-    heading.appendChild(button);
-
-    let isCollapsed = false;
-    const nextElement = heading.nextElementSibling;
-
-    button.addEventListener('click', function() {
-      isCollapsed = !isCollapsed;
-      if (isCollapsed) {
-        if (nextElement) nextElement.style.display = 'none';
-        button.innerHTML = '+';
-        button.style.background = '#f0f0f0';
-      } else {
-        if (nextElement) nextElement.style.display = '';
-        button.innerHTML = '−';
-        button.style.background = 'none';
-      }
-    });
-
-    button.addEventListener('mouseover', function() {
-      if (!isCollapsed) {
-        button.style.background = '#f0f0f0';
-      }
-    });
-
-    button.addEventListener('mouseout', function() {
-      if (!isCollapsed) {
-        button.style.background = 'none';
-      }
-    });
-  });
+  // Disabled to prevent content display issues
+  // const headings = document.querySelectorAll('.md-typeset h3');
+  // headings.forEach(heading => {
+  //   const button = document.createElement('button');
+  //   button.className = 'collapse-toggle';
+  //   button.innerHTML = '−';
+  //   button.style.cssText = 'float: right; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #667eea; padding: 0; width: 30px; height: 30px; border-radius: 50%; transition: all 0.2s;';
+  //   button.title = 'Toggle section';
+  // 
+  //   heading.appendChild(button);
+  // 
+  //   let isCollapsed = false;
+  //   const nextElement = heading.nextElementSibling;
+  // 
+  //   button.addEventListener('click', function() {
+  //     isCollapsed = !isCollapsed;
+  //     if (isCollapsed) {
+  //       if (nextElement) nextElement.style.display = 'none';
+  //       button.innerHTML = '+';
+  //       button.style.background = '#f0f0f0';
+  //     } else {
+  //       if (nextElement) nextElement.style.display = '';
+  //       button.innerHTML = '−';
+  //       button.style.background = 'none';
+  //     }
+  //   });
+  // 
+  //   button.addEventListener('mouseover', function() {
+  //     if (!isCollapsed) {
+  //       button.style.background = '#f0f0f0';
+  //     }
+  //   });
+  // 
+  //   button.addEventListener('mouseout', function() {
+  //     if (!isCollapsed) {
+  //       button.style.background = 'none';
+  //     }
+  //   });
+  // });
 
   // ── Auto-add Filter UI to pages with tables ──
   const tables = document.querySelectorAll('table');
