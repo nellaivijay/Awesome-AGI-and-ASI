@@ -1,0 +1,113 @@
+name: "📚 Suggest a Resource"
+description: "Submit a new paper, framework, tool, or resource to be added to Awesome AGI, ASI, and Collective Intelligence"
+title: "[Resource Suggestion] "
+labels: ["enhancement", "resource-suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to Awesome AGI, ASI, and Collective Intelligence! 
+        Please fill out the form below to suggest a new resource.
+        
+        **Note:** This repository focuses on cutting-edge AGI, ASI, and Collective Intelligence research. Please ensure your submission is relevant and recent (preferably 2024-2026).
+
+  - type: input
+    id: resource-title
+    attributes:
+      label: Resource Title
+      description: The full title of the paper, framework, or resource
+      placeholder: "e.g., 'Attention Is All You Need' or 'AutoGen: Multi-Agent Conversations'"
+    validations:
+      required: true
+
+  - type: input
+    id: resource-url
+    attributes:
+      label: Resource URL
+      description: Link to the paper, framework repository, or resource
+      placeholder: "https://arxiv.org/abs/1706.03762 or https://github.com/microsoft/autogen"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: resource-type
+    attributes:
+      label: Resource Type
+      description: What type of resource are you suggesting?
+      options:
+        - Research Paper
+        - Framework/Library
+        - Tool/Platform
+        - Book/Publication
+        - Course/Lecture
+        - Dataset
+        - Organization/Research Lab
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Primary Category
+      description: Which section should this resource go in?
+      options:
+        - Understand (AI/AGI/ASI/CI concepts)
+        - Build (Frameworks, Agents, Physical AI)
+        - Infrastructure (LLM frameworks, RAG, deployment, etc.)
+        - Safety & Governance (Alignment, safety research)
+        - Research (Papers, courses, conferences)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Brief Description
+      description: A 1-2 sentence description of what this resource is about
+      placeholder: "This paper introduces the Transformer architecture, which has become foundational for modern LLMs..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: key-takeaways
+    attributes:
+      label: Key Takeaways (Optional)
+      description: What are the main contributions or insights? Why is this important?
+      placeholder: "Key contributions: 1) Self-attention mechanism 2) Parallelization 3) SOTA performance on translation tasks..."
+
+  - type: input
+    id: year
+    attributes:
+      label: Year Published
+      description: When was this resource published/released?
+      placeholder: "2024, 2025, 2026"
+    validations:
+      required: false
+
+  - type: input
+    id: authors
+    attributes:
+      label: Authors/Organization (Optional)
+      description: Who created this resource?
+      placeholder: "Google Brain, OpenAI, or specific author names"
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      description: Please confirm the following:
+      options:
+        - label: I have verified that the URL is accessible and working
+          required: true
+        - label: This resource is relevant to AGI, ASI, or Collective Intelligence
+          required: true
+        - label: This resource is not already in the repository (I checked)
+          required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context (Optional)
+      description: Any other information that would help us evaluate this resource?
+      placeholder: "This would be a great addition to the multi-agent systems section because..."
