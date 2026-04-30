@@ -7,6 +7,15 @@ html {
   scroll-padding-top: 80px;
 }
 
+/* ── MAIN CONTENT SPACING ── */
+.md-main {
+  padding-top: 1rem;
+}
+
+.md-content {
+  padding-top: 1rem;
+}
+
 /* ── COLOR PALETTE (Tailwind Slate Theme) ── */
 :root {
   /* Slate Background Colors */

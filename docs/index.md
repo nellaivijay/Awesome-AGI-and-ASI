@@ -8,6 +8,89 @@ keywords: "AGI, ASI, Collective Intelligence, artificial general intelligence, a
   <p>The frontier of artificial intelligence research — from AI to AGI to ASI and beyond. Curated resources for builders and researchers shaping the future of intelligence.</p>
 </div>
 
+<style>
+.hero-section {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(45, 212, 191, 0.1) 100%);
+  border: 1px solid var(--cyber-border);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  margin: 2rem 0 2rem 0;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--cyber-accent-blue), var(--cyber-accent-teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.hero-section p {
+  color: var(--cyber-text-secondary);
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Laptop screens */
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+  .hero-section {
+    padding: 2rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero-section p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet screens */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .hero-section {
+    padding: 1.75rem 1.25rem;
+    margin: 1.5rem 0;
+    max-width: 700px;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 1.5rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 1.25rem;
+  }
+
+  .hero-section p {
+    font-size: 0.85rem;
+  }
+}
+</style>
+
 <!-- Bento Box Hero Section -->
 <div class="bento-grid">
   <div class="bento-card bento-large" onclick="scrollToSection('understand')">
@@ -76,19 +159,20 @@ function scrollToSection(section) {
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 180px);
+  grid-template-rows: repeat(2, auto);
   gap: 16px;
   margin: 2rem 0;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  min-height: 400px;
 }
 
 .bento-card {
   background: var(--cyber-bg-secondary);
   border: 1px solid var(--cyber-border);
   border-radius: 16px;
-  padding: 24px;
+  padding: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -96,6 +180,7 @@ function scrollToSection(section) {
   display: flex;
   align-items: center;
   gap: 16px;
+  min-height: 140px;
 }
 
 .bento-card::before {
@@ -122,36 +207,40 @@ function scrollToSection(section) {
 }
 
 .bento-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   z-index: 1;
-  min-width: 60px;
+  min-width: 50px;
+  flex-shrink: 0;
 }
 
 .bento-content {
   z-index: 1;
   flex: 1;
+  min-width: 0;
 }
 
 .bento-content h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.25rem;
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--cyber-text-primary);
+  line-height: 1.3;
 }
 
 .bento-content p {
-  margin: 0 0 8px 0;
-  font-size: 0.875rem;
+  margin: 0 0 6px 0;
+  font-size: 0.85rem;
   color: var(--cyber-text-secondary);
+  line-height: 1.4;
 }
 
 .bento-badge {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 3px 10px;
   background: rgba(59, 130, 246, 0.2);
   color: var(--cyber-accent-blue);
   border-radius: 12px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
 }
 
@@ -167,6 +256,7 @@ function scrollToSection(section) {
   flex-direction: column;
   text-align: left;
   justify-content: center;
+  min-height: 300px;
 }
 
 .bento-medium {
@@ -186,47 +276,151 @@ function scrollToSection(section) {
 
 /* Large card specific styling */
 .bento-large .bento-icon {
-  font-size: 4rem;
-  margin-bottom: 16px;
+  font-size: 3rem;
+  margin-bottom: 12px;
 }
 
 .bento-large .bento-content h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .bento-large .bento-content p {
-  font-size: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Laptop screens (1024px - 1366px) */
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+  .bento-grid {
+    gap: 12px;
+    max-width: 1000px;
+  }
+  
+  .bento-card {
+    padding: 16px;
+    min-height: 120px;
+  }
+  
+  .bento-icon {
+    font-size: 1.8rem;
+    min-width: 45px;
+  }
+  
+  .bento-content h3 {
+    font-size: 1rem;
+  }
+  
+  .bento-content p {
+    font-size: 0.8rem;
+  }
+  
+  .bento-large {
+    min-height: 260px;
+  }
+  
+  .bento-large .bento-icon {
+    font-size: 2.5rem;
+  }
+  
+  .bento-large .bento-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .bento-large .bento-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet screens (768px - 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 12px;
+    max-width: 700px;
+  }
+  
+  .bento-card {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    min-height: 110px;
+    padding: 14px;
+  }
+  
+  .bento-large {
+    flex-direction: row;
+    text-align: left;
+    grid-column: span 2 !important;
+    min-height: 130px;
+  }
+  
+  .bento-large .bento-icon {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  
+  .bento-large .bento-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .bento-large .bento-content p {
+    font-size: 0.85rem;
+  }
+  
+  .bento-wide {
+    grid-column: span 2 !important;
+  }
 }
 
 /* Mobile responsive */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .bento-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    gap: 10px;
+    margin: 1.5rem 0;
   }
 
   .bento-card {
     grid-column: span 1 !important;
     grid-row: span 1 !important;
-    min-height: 120px;
+    min-height: 100px;
+    padding: 12px;
   }
 
   .bento-large {
     flex-direction: row;
     text-align: left;
+    min-height: 110px;
   }
 
   .bento-large .bento-icon {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin-bottom: 0;
   }
 
   .bento-large .bento-content h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
+  .bento-large .bento-content p {
+    font-size: 0.8rem;
+  }
+  
   .bento-wide {
     grid-column: span 1 !important;
+  }
+  
+  .bento-icon {
+    font-size: 1.5rem;
+    min-width: 40px;
+  }
+  
+  .bento-content h3 {
+    font-size: 0.95rem;
+  }
+  
+  .bento-content p {
+    font-size: 0.75rem;
   }
 }
 </style>
