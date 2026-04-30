@@ -19,6 +19,10 @@ keywords: "AI frameworks, ML platforms, PyTorch, TensorFlow, JAX, Hugging Face, 
 |[crewAI](https://github.com/joaomdmoura/crewAI)|![GitHub Repo stars](https://badgen.net/github/stars/joaomdmoura/crewAI)|Framework for orchestrating role-playing, autonomous AI agents. Craft collaborative AI crews for complex tasks.|Production-grade multi-agent orchestration.|
 |[agenticSeek](https://github.com/Fosowl/agenticSeek)|![GitHub Repo stars](https://badgen.net/github/stars/Fosowl/agenticSeek)|Fully local autonomous agent - No APIs, no monthly bills. Thinks, browses the web, and codes using only local LLMs.|26k+ stars. Fully local, privacy-first.|
 |[Gemini CLI](https://github.com/google-gemini/gemini-cli)|![GitHub Repo stars](https://badgen.net/github/stars/google-gemini/gemini-cli)|Google's open-source AI agent that brings Gemini directly into your terminal. MCP support built-in.|101k+ stars. Official Google agent.|
+|OpenAI Plugins for Codex||Bundle skills, app integrations, and MCP servers into reusable workflows for Codex. Conceptually similar to Claude Skills.|OpenAI's answer to Claude Skills for coding agent extensibility.|
+|Stripe Projects||Build and manage AI stack from command line. Set up accounts, billing, manage keys, and more.|CLI-first approach to AI infrastructure management.|
+|[Fyn](https://github.com/fyn-dev/fyn)|![GitHub Repo stars](https://badgen.net/github/stars/fyn-dev/fyn)|Fork of Python package manager uv. Reaction to OpenAI's acquisition of Astral (uv developer).|Community fork maintaining open-source independence.|
+|Google Workspace CLI||Single command line interface for Google Workspace apps (Docs, Sheets, Gmail, Gemini).|Experimental and unsupported.|
 |[Hermes Agent](https://github.com/NousResearch/hermes-agent)|![GitHub Repo stars](https://badgen.net/github/stars/NousResearch/hermes-agent)|The agent that grows with you. By Nous Research - multi-model AI agent with Claude, GPT, and open-source model support.|66k+ stars. From Nous Research.|
 |[Daytona](https://github.com/daytonaio/daytona)|![GitHub Repo stars](https://badgen.net/github/stars/daytonaio/daytona)|Secure and elastic infrastructure for running AI-generated code. Sandboxed execution environment for AI agents.|72k+ stars. Secure code execution.|
 |[Composio](https://github.com/ComposioHQ/composio)|![GitHub Repo stars](https://badgen.net/github/stars/ComposioHQ/composio)|Production-ready toolset for AI agents. 250+ tools, frameworks, and integrations for building agentic AI applications.|[composio.dev](https://composio.dev/)|
@@ -40,6 +44,19 @@ keywords: "AI frameworks, ML platforms, PyTorch, TensorFlow, JAX, Hugging Face, 
 |[babyagi](https://github.com/yoheinakajima/babyagi)|![GitHub Repo stars](https://badgen.net/github/stars/yoheinakajima/babyagi)|Task-driven autonomous agent using OpenAI and vector DBs to create, prioritize, and execute tasks.|-|
 |[OpenAGI](https://github.com/agiresearch/OpenAGI)|![GitHub Repo stars](https://badgen.net/github/stars/agiresearch/OpenAGI)|Open-source AGI research platform combining LLMs with domain expert models via RLTF.|-|
 
+### Agent Infrastructure & Governance
+
+> Platforms and tools for managing, coordinating, and governing AI agents at scale. Critical as agents move from demos to production.
+
+| Name | Introduction | Notes |
+|------|--------------|-------|
+| OpenAI Frontier | Platform for managing agents from any vendor. Organize and coordinate AI efforts without siloing by vendor. | Multi-vendor agent orchestration platform. |
+| Mistral Forge | System for building frontier-grade models based on proprietary data. Supports pretraining, posttraining, and reinforcement learning. | Enterprise model customization platform. |
+| Plumb | Tool for keeping specifications, tests, and code in sync. Early stage but potentially important for spec-driven development. | Spec-test-code synchronization. |
+| git-memento | Git extension that saves coding sessions as Markdown and commits them. Session-based commits for AI-generated code. | Captures AI coding context in version control. |
+| sem | Tools for semantic versioning integrated with Git. Knows what functions changed, not just lines. | Function-level diffing and versioning. |
+| Mikiko Bazeley: Filesystems vs Databases for Agent Memory | Research arguing filesystems aren't optimal for agent memory due to lack of database indexes. | Memory architecture research for agents. |
+
 ### Specialized & Utility Frameworks
 
 |Name|Github Stars|Introduction| Notes |
@@ -50,6 +67,18 @@ keywords: "AI frameworks, ML platforms, PyTorch, TensorFlow, JAX, Hugging Face, 
 |[big-agi](https://github.com/enricoros/big-agi)|![GitHub Repo stars](https://badgen.net/github/stars/enricoros/big-agi)|AI suite with AI personas, AGI functions, multi-model chat, text-to-image, voice, code execution. Deploy on-prem or cloud.|[big-agi.com](https://big-agi.com/)|
 |[opencog](https://github.com/opencog/opencog)|![GitHub Repo stars](https://badgen.net/github/stars/opencog/opencog)|A framework for integrated Artificial Intelligence & Artificial General Intelligence (AGI).|-|
 |[smol-ai/developer](https://github.com/smol-ai/developer)|![GitHub Repo stars](https://badgen.net/github/stars/smol-ai/developer)|The first library to let you embed a developer agent in your own app!|-|
-|[loopgpt](https://github.com/farizrahman4u/loopgpt)|![GitHub Repo stars](https://badgen.net/github/stars/farizrahman4u/loopgpt)|Modular Auto-GPT Framework. Improved GPT-3.5 support, lower API token cost.|-|
 |[LocalAGI](https://github.com/EmbraceAGI/LocalAGI)|![GitHub Repo stars](https://badgen.net/github/stars/EmbraceAGI/LocalAGI)|Locally run AGI powered by LLaMA, ChatGLM and more.|-|
-|[DemoGPT](https://github.com/melih-unsal/DemoGPT)|![GitHub Repo stars](https://badgen.net/github/stars/melih-unsal/DemoGPT)|Create quick demos by just using prompts.|-|
+
+### Alternative Architectures & OpenClaw Ecosystem
+
+> Alternative paths to AGI beyond standard transformers, and the OpenClaw ecosystem of distributions and tools.
+
+| Name | Introduction | Notes |
+|------|--------------|-------|
+| Vera | Programming language designed for AI to write. Everything is explicit, state changes declared, every function has a contract. | AI-designed programming language. |
+| Manyana | Rethink version control based on CRDTs (conflict-free replicated data types). | Alternative to Git for collaborative editing. |
+| NVIDIA NemoClaw | NVIDIA's OpenClaw distribution integrated into NVIDIA stack. Claims improved security, inference in NVIDIA cloud. | Official NVIDIA OpenClaw distribution. |
+| NanoClaw | OpenClaw distribution that can be installed inside Docker sandboxes with single command. VM-in-container for security. | Containerized OpenClaw for agent containment. |
+| Klaus | OpenClaw clone/distribution with claimed improvements. | OpenClaw ecosystem variant. |
+| PiClaw | OpenClaw distribution focused on privacy and local deployment. | Privacy-focused OpenClaw variant. |
+| Kimi Claw | OpenClaw distribution from Moonshot AI (Kimi). Cloud service running OpenClaw. | Chinese OpenClaw cloud service. |
