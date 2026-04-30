@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nellaivijay.github.io/Awesome-AGI-and-ASI/sitemap.xml
+Sitemap: https://nellaivijay.github.io/awesome-agi-aci-asi/sitemap.xml
