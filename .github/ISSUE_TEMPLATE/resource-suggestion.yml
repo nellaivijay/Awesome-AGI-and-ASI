@@ -1,31 +1,25 @@
-name: "📚 Suggest a Resource"
-description: "Submit a new paper, framework, tool, or resource to be added to Awesome AGI, ASI, and Collective Intelligence"
-title: "[Resource Suggestion] "
+name: "📚 Add/Update Resources"
+description: "Add or update papers, frameworks, tools, or resources in YAML-compliant format for Awesome AGI, ASI, and Collective Intelligence"
+title: "[Add/Update Resource] "
 labels: ["enhancement", "resource-suggestion"]
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for contributing to Awesome AGI, ASI, and Collective Intelligence! 
-        Please fill out the form below to suggest a new resource.
         
-        **Note:** This repository focuses on cutting-edge AGI, ASI, and Collective Intelligence research. Please ensure your submission is relevant and recent (preferably 2024-2026).
+        This form collects data for our YAML-based resource system. Please provide as much detail as possible to help us integrate your resource correctly.
+        
+        **Note:** This repository focuses on cutting-edge AGI, ASI, and Collective Intelligence research (preferably 2024-2026).
 
-  - type: input
-    id: resource-title
+  - type: dropdown
+    id: action-type
     attributes:
-      label: Resource Title
-      description: The full title of the paper, framework, or resource
-      placeholder: "e.g., 'Attention Is All You Need' or 'AutoGen: Multi-Agent Conversations'"
-    validations:
-      required: true
-
-  - type: input
-    id: resource-url
-    attributes:
-      label: Resource URL
-      description: Link to the paper, framework repository, or resource
-      placeholder: "https://arxiv.org/abs/1706.03762 or https://github.com/microsoft/autogen"
+      label: Action Type
+      description: Are you adding a new resource or updating an existing one?
+      options:
+        - Add new resource
+        - Update existing resource
     validations:
       required: true
 
@@ -35,62 +29,231 @@ body:
       label: Resource Type
       description: What type of resource are you suggesting?
       options:
-        - Research Paper
-        - Framework/Library
-        - Tool/Platform
-        - Book/Publication
-        - Course/Lecture
-        - Dataset
-        - Organization/Research Lab
-        - Other
+        - 📄 Research Paper/Blog
+        - ⚙️ Framework/Tool
+        - 📚 Book/Publication
+        - 🎓 Course/Lecture
+        - 💾 Dataset
     validations:
       required: true
 
   - type: dropdown
-    id: category
+    id: target-category
     attributes:
-      label: Primary Category
-      description: Which section should this resource go in?
+      label: Target Category
+      description: Which main section should this resource go in?
       options:
-        - Understand (AI/AGI/ASI/CI concepts)
-        - Build (Frameworks, Agents, Physical AI)
-        - Infrastructure (LLM frameworks, RAG, deployment, etc.)
-        - Safety & Governance (Alignment, safety research)
-        - Research (Papers, courses, conferences)
+        - 🧠 Understand (AI/AGI/ASI concepts)
+        - ⚙️ Build (Frameworks, Agents, Physical AI)
+        - 🏗️ Infrastructure (LLM frameworks, RAG, deployment)
+        - 🛡️ Safety & Governance (Alignment, safety research)
+        - 📚 Research (Papers, courses, conferences)
     validations:
       required: true
-
-  - type: textarea
-    id: description
-    attributes:
-      label: Brief Description
-      description: A 1-2 sentence description of what this resource is about
-      placeholder: "This paper introduces the Transformer architecture, which has become foundational for modern LLMs..."
-    validations:
-      required: true
-
-  - type: textarea
-    id: key-takeaways
-    attributes:
-      label: Key Takeaways (Optional)
-      description: What are the main contributions or insights? Why is this important?
-      placeholder: "Key contributions: 1) Self-attention mechanism 2) Parallelization 3) SOTA performance on translation tasks..."
 
   - type: input
-    id: year
+    id: target-file
     attributes:
-      label: Year Published
-      description: When was this resource published/released?
-      placeholder: "2024, 2025, 2026"
+      label: Target YAML File
+      description: The specific YAML file to update (e.g., frameworks.yaml, papers-blogs.yaml)
+      placeholder: "frameworks.yaml"
+    validations:
+      required: true
+
+  - type: input
+    id: resource-name
+    attributes:
+      label: Resource Name/Title
+      description: The full title of the paper, framework, or resource
+      placeholder: "e.g., 'Attention Is All You Need' or 'AutoGen'"
+    validations:
+      required: true
+
+  - type: textarea
+    id: resource-description
+    attributes:
+      label: Description
+      description: A clear description of what this resource is about
+      placeholder: "This paper introduces the Transformer architecture..."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        --- 
+        
+        ## 📄 Research Paper/Blog Specific Fields
+
+  - type: input
+    id: paper-author
+    attributes:
+      label: Author/Organization (Papers only)
+      description: Who authored this paper?
+      placeholder: "OpenAI, Google DeepMind"
     validations:
       required: false
 
   - type: input
-    id: authors
+    id: paper-year
     attributes:
-      label: Authors/Organization (Optional)
-      description: Who created this resource?
-      placeholder: "Google Brain, OpenAI, or specific author names"
+      label: Year (Papers only)
+      description: When was this published?
+      placeholder: "2024"
+    validations:
+      required: false
+
+  - type: textarea
+    id: paper-links
+    attributes:
+      label: Links (Papers only - one per line)
+      description: Add links in format: Label: URL (one per line)
+      placeholder: "Paper: https://arxiv.org/abs/1706.03762\nBlog: https://openai.com/blog/..."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## ⚙️ Framework/Tool Specific Fields
+
+  - type: input
+    id: framework-github
+    attributes:
+      label: GitHub Repository (Frameworks only)
+      description: Format: username/repository
+      placeholder: "openai/openai-cookbook"
+    validations:
+      required: false
+
+  - type: textarea
+    id: framework-notes
+    attributes:
+      label: Additional Notes (Frameworks only)
+      description: Stars, features, or other relevant info
+      placeholder: "50k+ stars. Built by OpenAI."
+    validations:
+      required: false
+
+  - type: textarea
+    id: framework-links
+    attributes:
+      label: Additional Links (Frameworks only - optional)
+      description: Add links in format: Label: URL (one per line)
+      placeholder: "Documentation: https://...\nWebsite: https://..."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## 📚 Book/Publication Specific Fields
+
+  - type: input
+    id: book-author
+    attributes:
+      label: Author(s) (Books only)
+      description: Who wrote this book?
+      placeholder: "Fei-Fei Li"
+    validations:
+      required: false
+
+  - type: input
+    id: book-year
+    attributes:
+      label: Year (Books only)
+      description: When was this published?
+      placeholder: "2023"
+    validations:
+      required: false
+
+  - type: input
+    id: book-url
+    attributes:
+      label: Purchase/Info URL (Books only)
+      description: Where can people find this book?
+      placeholder: "https://..."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## 🎓 Course/Lecture Specific Fields
+
+  - type: input
+    id: course-instructor
+    attributes:
+      label: Instructor/Organization (Courses only)
+      description: Who created this course?
+      placeholder: "Stanford, Andrew Ng"
+    validations:
+      required: false
+
+  - type: input
+    id: course-year
+    attributes:
+      label: Year (Courses only)
+      description: When was this course offered?
+      placeholder: "2024"
+    validations:
+      required: false
+
+  - type: textarea
+    id: course-links
+    attributes:
+      label: Links (Courses only - one per line)
+      description: Add links in format: Label: URL (one per line)
+      placeholder: "Course: https://...\nMaterials: https://..."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## 💾 Dataset Specific Fields
+
+  - type: input
+    id: dataset-organization
+    attributes:
+      label: Organization (Datasets only)
+      description: Who created this dataset?
+      placeholder: "HuggingFace, Google"
+    validations:
+      required: false
+
+  - type: input
+    id: dataset-year
+    attributes:
+      label: Year (Datasets only)
+      description: When was this dataset released?
+      placeholder: "2024"
+    validations:
+      required: false
+
+  - type: textarea
+    id: dataset-links
+    attributes:
+      label: Links (Datasets only - one per line)
+      description: Add links in format: Label: URL (one per line)
+      placeholder: "Dataset: https://...\nPaper: https://..."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## Verification
 
   - type: checkboxes
     id: verification
@@ -98,16 +261,18 @@ body:
       label: Verification
       description: Please confirm the following:
       options:
-        - label: I have verified that the URL is accessible and working
+        - label: I have verified that the URLs are accessible and working
           required: true
         - label: This resource is relevant to AGI, ASI, or Collective Intelligence
           required: true
         - label: This resource is not already in the repository (I checked)
+          required: true
+        - label: The information provided matches the YAML structure requirements
           required: true
 
   - type: textarea
     id: additional-context
     attributes:
       label: Additional Context (Optional)
-      description: Any other information that would help us evaluate this resource?
+      description: Any other information that would help us integrate this resource?
       placeholder: "This would be a great addition to the multi-agent systems section because..."

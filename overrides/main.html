@@ -1127,12 +1127,32 @@ function submitToGitHub() {
     const description = document.getElementById('resourceDescription').value;
     const actionType = document.querySelector('input[name="actionType"]:checked').value;
     
-    title = `[${actionType === 'update' ? 'Update' : 'Add'} ${resourceType}] ${name}`;
+    // Map resource types to GitHub template format
+    const resourceTypeMap = {
+      'paper': '📄 Research Paper/Blog',
+      'framework': '⚙️ Framework/Tool',
+      'book': '📚 Book/Publication',
+      'course': '🎓 Course/Lecture',
+      'dataset': '💾 Dataset'
+    };
     
-    body = `**Action Type:** ${actionType === 'update' ? 'Update existing' : 'Add new'}\n`;
-    body += `**Resource Type:** ${resourceType}\n`;
-    body += `**Target File:** data/${subsection}.yaml\n`;
-    body += `**Resource Name:** ${name}\n`;
+    // Map categories to GitHub template format
+    const categoryMap = {
+      'understand': '🧠 Understand (AI/AGI/ASI concepts)',
+      'build': '⚙️ Build (Frameworks, Agents, Physical AI)',
+      'infrastructure': '🏗️ Infrastructure (LLM frameworks, RAG, deployment)',
+      'safety': '🛡️ Safety & Governance (Alignment, safety research)',
+      'research': '📚 Research (Papers, courses, conferences)'
+    };
+    
+    title = `[${actionType === 'update' ? 'Update' : 'Add'} ${resourceTypeMap[resourceType]}] ${name}`;
+    
+    // Build body to match new GitHub template structure
+    body = `**Action Type:** ${actionType === 'update' ? 'Update existing resource' : 'Add new resource'}\n`;
+    body += `**Resource Type:** ${resourceTypeMap[resourceType]}\n`;
+    body += `**Target Category:** ${categoryMap[category]}\n`;
+    body += `**Target YAML File:** ${subsection}.yaml\n`;
+    body += `**Resource Name/Title:** ${name}\n`;
     body += `**Description:** ${description}\n`;
     
     if (resourceType === 'paper') {
@@ -1140,23 +1160,23 @@ function submitToGitHub() {
       const year = document.getElementById('paperYear').value;
       const links = collectLinks('linksContainer', 'link-label', 'link-url');
       
-      body += `**Author:** ${author}\n`;
-      body += `**Year:** ${year}\n`;
-      body += `**Links:**\n`;
+      body += `**Author/Organization (Papers only):** ${author}\n`;
+      body += `**Year (Papers only):** ${year}\n`;
+      body += `**Links (Papers only - one per line):**\n`;
       links.forEach(link => {
-        body += `- ${link.label}: ${link.url}\n`;
+        body += `${link.label}: ${link.url}\n`;
       });
     } else if (resourceType === 'framework') {
       const github = document.getElementById('frameworkGithub').value;
       const notes = document.getElementById('frameworkNotes').value;
       const links = collectLinks('frameworkLinksContainer', 'framework-link-label', 'framework-link-url');
       
-      body += `**GitHub:** ${github}\n`;
-      if (notes) body += `**Notes:** ${notes}\n`;
+      body += `**GitHub Repository (Frameworks only):** ${github}\n`;
+      body += `**Additional Notes (Frameworks only):** ${notes}\n`;
       if (links.length > 0) {
-        body += `**Additional Links:**\n`;
+        body += `**Additional Links (Frameworks only - optional):**\n`;
         links.forEach(link => {
-          body += `- ${link.label}: ${link.url}\n`;
+          body += `${link.label}: ${link.url}\n`;
         });
       }
     } else if (resourceType === 'book') {
@@ -1164,30 +1184,30 @@ function submitToGitHub() {
       const year = document.getElementById('bookYear').value;
       const url = document.getElementById('bookUrl').value;
       
-      body += `**Author:** ${author}\n`;
-      body += `**Year:** ${year}\n`;
-      body += `**URL:** ${url}\n`;
+      body += `**Author(s) (Books only):** ${author}\n`;
+      body += `**Year (Books only):** ${year}\n`;
+      body += `**Purchase/Info URL (Books only):** ${url}\n`;
     } else if (resourceType === 'course') {
       const instructor = document.getElementById('courseInstructor').value;
       const year = document.getElementById('courseYear').value;
       const links = collectLinks('courseLinksContainer', 'course-link-label', 'course-link-url');
       
-      body += `**Instructor:** ${instructor}\n`;
-      body += `**Year:** ${year}\n`;
-      body += `**Links:**\n`;
+      body += `**Instructor/Organization (Courses only):** ${instructor}\n`;
+      body += `**Year (Courses only):** ${year}\n`;
+      body += `**Links (Courses only - one per line):**\n`;
       links.forEach(link => {
-        body += `- ${link.label}: ${link.url}\n`;
+        body += `${link.label}: ${link.url}\n`;
       });
     } else if (resourceType === 'dataset') {
       const organization = document.getElementById('datasetOrganization').value;
       const year = document.getElementById('datasetYear').value;
       const links = collectLinks('datasetLinksContainer', 'dataset-link-label', 'dataset-link-url');
       
-      body += `**Organization:** ${organization}\n`;
-      body += `**Year:** ${year}\n`;
-      body += `**Links:**\n`;
+      body += `**Organization (Datasets only):** ${organization}\n`;
+      body += `**Year (Datasets only):** ${year}\n`;
+      body += `**Links (Datasets only - one per line):**\n`;
       links.forEach(link => {
-        body += `- ${link.label}: ${link.url}\n`;
+        body += `${link.label}: ${link.url}\n`;
       });
     }
     
