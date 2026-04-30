@@ -8,45 +8,7 @@ keywords: "AI papers, research blogs, courses, lectures, scaling laws, reasoning
 
 ![arXiv](https://img.shields.io/badge/arXiv-Papers-B31B1B?style=flat-square&logo=arxiv&logoColor=white) ![Frontier Models](https://img.shields.io/badge/Frontier_Models-GPT--4_Gemini_Claude_Llama-blue?style=flat-square) ![Reasoning](https://img.shields.io/badge/Reasoning-o1_R1_CoT-green?style=flat-square) ![Agents](https://img.shields.io/badge/Agents-ReAct_SWE--bench-orange?style=flat-square) ![Safety](https://img.shields.io/badge/Safety-Alignment_&_Interpretability-red?style=flat-square)
 
-??? tip "📖 How to Use This Resource"
-
-    This collection is organized by research theme to help you navigate the rapidly evolving AI landscape. Here's how to get the most out of it:
-
-    **For Researchers:**
-    - Start with **Frontier Model Papers** to understand current SOTA capabilities
-    - Deep dive into **Reasoning & Architecture** for technical foundations
-    - Explore **World Models** for the next paradigm beyond transformers
-
-    **For Builders:**
-    - Focus on **Agent & Multi-Agent** papers for practical agentic systems
-    - Study **Alignment & Safety** for responsible deployment
-    - Reference **Infrastructure** papers for scaling and optimization
-
-    **For Students:**
-    - Begin with **Scaling Laws** to understand the field's trajectory
-    - Use **Courses & Lectures** section for structured learning
-    - Follow citation chains from foundational papers to current research
-
-    **Pro Tip:** Use the 🔍 search filter above to quickly find papers by name, author, year, or topic. Click the 📚 "Suggest a Resource" button (top right) to submit new papers.
-
 ### Frontier Model Papers
-
-??? info "🎯 Why These Papers Matter"
-
-    Frontier model papers represent the cutting edge of AI capabilities. These are the models that define state-of-the-art performance and often introduce breakthrough architectures or training methods that ripple through the entire field.
-
-    **What to look for:**
-    - **Architecture innovations** (e.g., MoE in Mixtral, native multimodal in Gemini)
-    - **Training breakthroughs** (e.g., RL reasoning in o1, massive scale in Llama 4)
-    - **Capability jumps** (e.g., 1M+ token context, PhD-level reasoning)
-    - **Open vs closed** trade-offs in deployment and research access
-
-    **Current Trends (2025-2026):**
-    - Test-time compute scaling (o1, R1, Gemini 2.5)
-    - Native multimodal architectures (Llama 4, Gemini)
-    - Massive MoE models (Llama 4 Behemoth, DeepSeek-V3)
-    - Personal superintelligence vision (Meta Muse Spark)
-
 
 | Paper | Authors / Org | Year | Description | Links |
 |-------|---------------|------|-------------|-------|
@@ -66,20 +28,6 @@ keywords: "AI papers, research blogs, courses, lectures, scaling laws, reasoning
 | Gemma: Open Models from Gemini Research | Google DeepMind | 2024 | Open-weight models (2B/7B) built from Gemini research. Gemma 2 (2024) and Gemma 3 (2025) with state-of-art performance at size. Responsible AI toolkit included. | [Site](https://ai.google.dev/gemma), [GitHub](https://github.com/google-deepmind/gemma) |
 
 ### Reasoning, Scaling & Architecture Papers
-
-??? success "🧠 Foundation of AGI Research"
-
-    These papers form the theoretical and architectural foundation of modern AI systems. They answer fundamental questions about how to scale intelligence, improve reasoning, and build more efficient architectures.
-
-    **Key Themes:**
-    - **Reasoning methods** (CoT, ToT, verification) that enable complex problem-solving
-    - **Scaling laws** that predict performance based on compute, data, and parameters
-    - **Architectural innovations** (attention, memory, context) that push model capabilities
-    - **Training paradigms** (test-time compute, optimal scaling) that change how we think about AI development
-
-    **Why This Matters:**
-    Understanding these foundations is crucial for both predicting future AI capabilities and designing next-generation systems. The scaling laws papers, in particular, underpin the entire AGI timeline debate.
-
 
 | Paper | Authors | Year | Description | Links |
 |-------|---------|------|-------------|-------|
