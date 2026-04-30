@@ -657,3 +657,41 @@ The most comprehensive, curated collection of resources on the journey from **AI
 || **Research** <a id="research"></a> | [Papers & Blogs](research/papers-blogs.md) | 60+ papers on frontier models, reasoning, agents |
 || | [Tutorials](research/tutorials.md) | Courses and hands-on learning resources |
 || | [Conferences](research/conferences.md) | 28 academic, AGI, safety, and industry events |
+
+---
+
+## Contributing
+
+We're building the most comprehensive AGI/ASI resource on the internet -- and we need your help. Contributions are welcome!
+
+### How to Submit Resources
+
+**Quick Submit:** Use the [📚 Suggest a Resource](https://github.com/nellaivijay/Awesome-AGI-and-ASI/issues/new?template=resource-suggestion.yml) form to submit new papers, frameworks, tools, or resources.
+
+**Pull Request:** For direct contributions, follow these steps:
+1. **Fork** this repository
+2. **Add** your resource to the appropriate YAML file in the `data/` directory
+3. **Run** `python3 scripts/yaml_to_docs.py` to regenerate the documentation
+4. **Open a Pull Request** with your changes
+
+### Contribution Guidelines
+
+- **Relevance:** Focus on cutting-edge AGI, ASI, and Collective Intelligence research (preferably 2024-2026)
+- **Quality:** Use official links (DOI, arXiv, publisher, GitHub)
+- **Accuracy:** Ensure title, author(s), year are correct
+- **Descriptions:** Keep descriptions concise and informative
+- **No Duplicates:** Search the repository first to avoid duplicates
+- **GitHub Stars:** Include star counts for repositories when available
+
+### Resource Categories
+
+When submitting, choose the appropriate category:
+- **Understand:** AI/AGI/ASI concepts, benchmarks, collective intelligence
+- **Build:** Frameworks, agents, physical AI, paper-to-code tools
+- **Infrastructure:** LLM frameworks, RAG, deployment, training, hardware
+- **Safety & Governance:** Alignment research, safety techniques, governance
+- **Research:** Papers, courses, tutorials, conferences
+
+---
+
+> **If you find this resource useful, please give it a ⭐ on [GitHub](https://github.com/nellaivijay/Awesome-AGI-and-ASI)!** It helps others discover it and motivates us to keep it updated as the field evolves at breakneck speed.
