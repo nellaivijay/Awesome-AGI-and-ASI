@@ -31,8 +31,6 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.indexes
-    - navigation.instant
-    - navigation.instant.progress
     - navigation.expand
     - navigation.trail
     - search.suggest
@@ -44,7 +42,6 @@ theme:
     - content.action.view
   icon:
     repo: fontawesome/brands/github
-  custom_dir: overrides
 
 plugins:
   - search:
