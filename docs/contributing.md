@@ -257,6 +257,6 @@ Contributing to Awesome AGI and ASI helps:
 
 **Ready to contribute?** Fork the repository and make your first PR today!
 
-**🌐 Live Site**: [https://nellaivijay.github.io/Awesome-AGI-and-ASI/](https://nellaivijay.github.io/Awesome-AGI-and-ASI/)
+**🌐 Live Site**: [https://nellaivijay.github.io/awesome-agi-aci-asi/](https://nellaivijay.github.io/awesome-agi-aci-asi/)
 
 **⭐ Star this repo** if you find it helpful!

@@ -136,7 +136,7 @@ keywords: "AGI, ASI, Collective Intelligence, artificial general intelligence, a
     </div>
   </div>
 
-  <div class="bento-card bento-wide" onclick="window.open('https://github.com/nellaivijay/Awesome-AGI-and-ASI/issues/new?template=resource-suggestion.yml', '_blank')">
+  <div class="bento-card bento-wide" onclick="window.open('https://github.com/nellaivijay/awesome-agi-aci-asi/issues/new?template=resource-suggestion.yml', '_blank')">
     <div class="bento-icon">📚</div>
     <div class="bento-content">
       <h3>Suggest a Resource</h3>
@@ -666,7 +666,7 @@ We're building the most comprehensive AGI/ASI resource on the internet -- and we
 
 ### How to Submit Resources
 
-**Quick Submit:** Use the [📚 Suggest a Resource](https://github.com/nellaivijay/Awesome-AGI-and-ASI/issues/new?template=resource-suggestion.yml) form to submit new papers, frameworks, tools, or resources.
+**Quick Submit:** Use the [📚 Suggest a Resource](https://github.com/nellaivijay/awesome-agi-aci-asi/issues/new?template=resource-suggestion.yml) form to submit new papers, frameworks, tools, or resources.
 
 **Pull Request:** For direct contributions, follow these steps:
 1. **Fork** this repository
@@ -694,4 +694,4 @@ When submitting, choose the appropriate category:
 
 ---
 
-> **If you find this resource useful, please give it a ⭐ on [GitHub](https://github.com/nellaivijay/Awesome-AGI-and-ASI)!** It helps others discover it and motivates us to keep it updated as the field evolves at breakneck speed.
+> **If you find this resource useful, please give it a ⭐ on [GitHub](https://github.com/nellaivijay/awesome-agi-aci-asi)!** It helps others discover it and motivates us to keep it updated as the field evolves at breakneck speed.

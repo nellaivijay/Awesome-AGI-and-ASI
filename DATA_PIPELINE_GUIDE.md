@@ -1,6 +1,6 @@
 # Data Pipeline Contribution Guide
 
-This guide explains how the Awesome-AGI-and-ASI DataPipeline integrates with the main repository and how you can contribute to improving the automated resource discovery and enrichment system.
+This guide explains how the awesome-agi-aci-asi DataPipeline integrates with the main repository and how you can contribute to improving the automated resource discovery and enrichment system.
 
 ## Overview
 
@@ -13,7 +13,7 @@ The DataPipeline is a self-hosted control plane that:
 ## Architecture Integration
 
 ```
-DataPipeline (Private) → PR Submissions → Awesome-AGI-and-ASI (Public)
+DataPipeline (Private) → PR Submissions → awesome-agi-aci-asi (Public)
      ↓                                          ↓
 Local LLM Enrichment                      data/*.yaml files
      ↓                                          ↓
@@ -155,7 +155,7 @@ deduplication:
     - url
 
 submission:
-  target_repo: nellaivijay/Awesome-AGI-and-ASI
+  target_repo: nellaivijay/awesome-agi-aci-asi
   branch_prefix: data-pipeline/
   auto_merge: false
 ```
@@ -398,4 +398,4 @@ For issues or questions about the DataPipeline:
 3. Open new issue with detailed description
 4. Include logs and configuration if applicable
 
-The DataPipeline is critical for keeping the Awesome-AGI-and-ASI repository current with the latest developments in the rapidly evolving AGI/ASI landscape.
+The DataPipeline is critical for keeping the awesome-agi-aci-asi repository current with the latest developments in the rapidly evolving AGI/ASI landscape.

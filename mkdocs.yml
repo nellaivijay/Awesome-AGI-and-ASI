@@ -1,5 +1,5 @@
 site_name: Awesome AGI, ASI, and Collective Intelligence
-site_url: https://nellaivijay.github.io/Awesome-AGI-and-ASI/
+site_url: https://nellaivijay.github.io/awesome-agi-aci-asi/
 site_description: >-
   The most comprehensive, curated collection of resources on Artificial General
   Intelligence (AGI), Artificial Superintelligence (ASI), and Collective Intelligence -- updated April 2026.
@@ -7,8 +7,8 @@ site_description: >-
   AI agents, multi-agent systems, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools,
   and emerging security threats for builders and researchers shaping the future of intelligence.
 site_author: nellaivijay
-repo_url: https://github.com/nellaivijay/Awesome-AGI-and-ASI
-repo_name: nellaivijay/Awesome-AGI-and-ASI
+repo_url: https://github.com/nellaivijay/awesome-agi-aci-asi
+repo_name: nellaivijay/awesome-agi-aci-asi
 copyright: Copyright &copy; 2024-2026 nellaivijay
 
 theme:
@@ -61,7 +61,7 @@ plugins:
   #     categories:
   #       - tags
   #     comments_path: "#__comments"
-  #     image: https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/logo.png
+  #     image: https://nellaivijay.github.io/awesome-agi-aci-asi/assets/logo.png
   #     pretty_print: true
   #     length: 250
   - meta
@@ -72,7 +72,7 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/nellaivijay/Awesome-AGI-and-ASI
+      link: https://github.com/nellaivijay/awesome-agi-aci-asi
   generator: false
 
 markdown_extensions:

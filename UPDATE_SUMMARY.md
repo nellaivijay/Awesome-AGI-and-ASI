@@ -1,7 +1,7 @@
-# Repository Update Summary - Awesome-AGI-and-ASI
+# Repository Update Summary - awesome-agi-aci-asi
 
 ## Overview
-Updated the Awesome-AGI-and-ASI repository based on the O'Reilly Tech Trends document (March 2026) to reflect the latest developments in AI models, development tools, infrastructure, security threats, and software development trends.
+Updated the awesome-agi-aci-asi repository based on the O'Reilly Tech Trends document (March 2026) to reflect the latest developments in AI models, development tools, infrastructure, security threats, and software development trends.
 
 ## Changes Made
 

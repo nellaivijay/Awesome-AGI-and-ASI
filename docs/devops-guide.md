@@ -29,14 +29,14 @@ This document explains how the Awesome AGI and ASI website is built, deployed, a
                       └──────────────┘  └────────────┘  └────────────┘
 ```
 
-**Live site:** [https://nellaivijay.github.io/Awesome-AGI-and-ASI/](https://nellaivijay.github.io/Awesome-AGI-and-ASI/)
+**Live site:** [https://nellaivijay.github.io/awesome-agi-aci-asi/](https://nellaivijay.github.io/awesome-agi-aci-asi/)
 
 ---
 
 ## Project Structure
 
 ```
-Awesome-AGI-and-ASI/
+awesome-agi-aci-asi/
 ├── .github/workflows/
 │   ├── deploy-site.yml          # Builds + deploys MkDocs to GitHub Pages
 │   └── ingest-new-urls.yml      # Extracts new URLs from markdown diffs
@@ -238,8 +238,8 @@ If building locally without full git history, the plugin falls back to the build
 
 ```bash
 # Clone the repository
-git clone https://github.com/nellaivijay/Awesome-AGI-and-ASI.git
-cd Awesome-AGI-and-ASI
+git clone https://github.com/nellaivijay/awesome-agi-aci-asi.git
+cd awesome-agi-aci-asi
 
 # Install system dependencies (Ubuntu/Debian)
 sudo apt-get install -y libcairo2-dev libffi-dev
