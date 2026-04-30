@@ -805,10 +805,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#agent-infrastructure-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent Infrastructure &amp; Governance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#specialized-utility-frameworks" class="md-nav__link">
     <span class="md-ellipsis">
       
         Specialized &amp; Utility Frameworks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternative-architectures-openclaw-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternative Architectures &amp; OpenClaw Ecosystem
       
     </span>
   </a>
@@ -1737,6 +1759,30 @@
 <td>101k+ stars. Official Google agent.</td>
 </tr>
 <tr>
+<td>OpenAI Plugins for Codex</td>
+<td></td>
+<td>Bundle skills, app integrations, and MCP servers into reusable workflows for Codex. Conceptually similar to Claude Skills.</td>
+<td>OpenAI's answer to Claude Skills for coding agent extensibility.</td>
+</tr>
+<tr>
+<td>Stripe Projects</td>
+<td></td>
+<td>Build and manage AI stack from command line. Set up accounts, billing, manage keys, and more.</td>
+<td>CLI-first approach to AI infrastructure management.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/fyn-dev/fyn">Fyn</a></td>
+<td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/fyn-dev/fyn" /></td>
+<td>Fork of Python package manager uv. Reaction to OpenAI's acquisition of Astral (uv developer).</td>
+<td>Community fork maintaining open-source independence.</td>
+</tr>
+<tr>
+<td>Google Workspace CLI</td>
+<td></td>
+<td>Single command line interface for Google Workspace apps (Docs, Sheets, Gmail, Gemini).</td>
+<td>Experimental and unsupported.</td>
+</tr>
+<tr>
 <td><a href="https://github.com/NousResearch/hermes-agent">Hermes Agent</a></td>
 <td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/NousResearch/hermes-agent" /></td>
 <td>The agent that grows with you. By Nous Research - multi-model AI agent with Claude, GPT, and open-source model support.</td>
@@ -1841,6 +1887,51 @@
 </tr>
 </tbody>
 </table>
+<h3 id="agent-infrastructure-governance">Agent Infrastructure &amp; Governance<a class="headerlink" href="#agent-infrastructure-governance" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Platforms and tools for managing, coordinating, and governing AI agents at scale. Critical as agents move from demos to production.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Introduction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenAI Frontier</td>
+<td>Platform for managing agents from any vendor. Organize and coordinate AI efforts without siloing by vendor.</td>
+<td>Multi-vendor agent orchestration platform.</td>
+</tr>
+<tr>
+<td>Mistral Forge</td>
+<td>System for building frontier-grade models based on proprietary data. Supports pretraining, posttraining, and reinforcement learning.</td>
+<td>Enterprise model customization platform.</td>
+</tr>
+<tr>
+<td>Plumb</td>
+<td>Tool for keeping specifications, tests, and code in sync. Early stage but potentially important for spec-driven development.</td>
+<td>Spec-test-code synchronization.</td>
+</tr>
+<tr>
+<td>git-memento</td>
+<td>Git extension that saves coding sessions as Markdown and commits them. Session-based commits for AI-generated code.</td>
+<td>Captures AI coding context in version control.</td>
+</tr>
+<tr>
+<td>sem</td>
+<td>Tools for semantic versioning integrated with Git. Knows what functions changed, not just lines.</td>
+<td>Function-level diffing and versioning.</td>
+</tr>
+<tr>
+<td>Mikiko Bazeley: Filesystems vs Databases for Agent Memory</td>
+<td>Research arguing filesystems aren't optimal for agent memory due to lack of database indexes.</td>
+<td>Memory architecture research for agents.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="specialized-utility-frameworks">Specialized &amp; Utility Frameworks<a class="headerlink" href="#specialized-utility-frameworks" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1889,22 +1980,60 @@
 <td>-</td>
 </tr>
 <tr>
-<td><a href="https://github.com/farizrahman4u/loopgpt">loopgpt</a></td>
-<td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/farizrahman4u/loopgpt" /></td>
-<td>Modular Auto-GPT Framework. Improved GPT-3.5 support, lower API token cost.</td>
-<td>-</td>
-</tr>
-<tr>
 <td><a href="https://github.com/EmbraceAGI/LocalAGI">LocalAGI</a></td>
 <td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/EmbraceAGI/LocalAGI" /></td>
 <td>Locally run AGI powered by LLaMA, ChatGLM and more.</td>
 <td>-</td>
 </tr>
+</tbody>
+</table>
+<h3 id="alternative-architectures-openclaw-ecosystem">Alternative Architectures &amp; OpenClaw Ecosystem<a class="headerlink" href="#alternative-architectures-openclaw-ecosystem" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Alternative paths to AGI beyond standard transformers, and the OpenClaw ecosystem of distributions and tools.</p>
+</blockquote>
+<table>
+<thead>
 <tr>
-<td><a href="https://github.com/melih-unsal/DemoGPT">DemoGPT</a></td>
-<td><img alt="GitHub Repo stars" src="https://badgen.net/github/stars/melih-unsal/DemoGPT" /></td>
-<td>Create quick demos by just using prompts.</td>
-<td>-</td>
+<th>Name</th>
+<th>Introduction</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vera</td>
+<td>Programming language designed for AI to write. Everything is explicit, state changes declared, every function has a contract.</td>
+<td>AI-designed programming language.</td>
+</tr>
+<tr>
+<td>Manyana</td>
+<td>Rethink version control based on CRDTs (conflict-free replicated data types).</td>
+<td>Alternative to Git for collaborative editing.</td>
+</tr>
+<tr>
+<td>NVIDIA NemoClaw</td>
+<td>NVIDIA's OpenClaw distribution integrated into NVIDIA stack. Claims improved security, inference in NVIDIA cloud.</td>
+<td>Official NVIDIA OpenClaw distribution.</td>
+</tr>
+<tr>
+<td>NanoClaw</td>
+<td>OpenClaw distribution that can be installed inside Docker sandboxes with single command. VM-in-container for security.</td>
+<td>Containerized OpenClaw for agent containment.</td>
+</tr>
+<tr>
+<td>Klaus</td>
+<td>OpenClaw clone/distribution with claimed improvements.</td>
+<td>OpenClaw ecosystem variant.</td>
+</tr>
+<tr>
+<td>PiClaw</td>
+<td>OpenClaw distribution focused on privacy and local deployment.</td>
+<td>Privacy-focused OpenClaw variant.</td>
+</tr>
+<tr>
+<td>Kimi Claw</td>
+<td>OpenClaw distribution from Moonshot AI (Kimi). Cloud service running OpenClaw.</td>
+<td>Chinese OpenClaw cloud service.</td>
 </tr>
 </tbody>
 </table>
