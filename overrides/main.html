@@ -117,10 +117,9 @@
 {{ super() }}
 
 <!-- Suggest a Resource Button -->
-<a href="https://github.com/{{ config.repo_name }}/issues/new?template=resource-suggestion.yml" 
+<a href="#" 
    class="suggest-resource-btn" 
-   target="_blank" 
-   rel="noopener"
+   onclick="openSubmissionModal(event)"
    title="Suggest a new resource to add to the collection">
   📚 Suggest a Resource
 </a>
@@ -169,13 +168,522 @@
     font-size: 0.8rem;
   }
 }
+
+/* Submission Modal Styles */
+.submission-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.submission-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submission-modal-content {
+  background: var(--cyber-bg-secondary);
+  border: 1px solid var(--cyber-border);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.submission-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--cyber-text-secondary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.submission-modal-close:hover {
+  color: var(--cyber-text-primary);
+}
+
+.submission-modal h2 {
+  color: var(--cyber-text-primary);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.submission-step {
+  display: none;
+}
+
+.submission-step.active {
+  display: block;
+}
+
+.template-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.template-option {
+  background: var(--cyber-bg-tertiary);
+  border: 2px solid var(--cyber-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.template-option:hover {
+  border-color: var(--cyber-accent-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.template-option.selected {
+  border-color: var(--cyber-accent-blue);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.template-option h3 {
+  color: var(--cyber-text-primary);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.template-option p {
+  color: var(--cyber-text-secondary);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--cyber-text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--cyber-bg-tertiary);
+  border: 1px solid var(--cyber-border);
+  border-radius: 8px;
+  color: var(--cyber-text-primary);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--cyber-accent-blue);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--cyber-border);
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--cyber-accent-blue), var(--cyber-accent-purple));
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary {
+  background: var(--cyber-bg-tertiary);
+  color: var(--cyber-text-primary);
+  border: 1px solid var(--cyber-border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--cyber-accent-blue);
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.step-indicator-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--cyber-border);
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.step-indicator-dot.active {
+  background: var(--cyber-accent-blue);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.step-indicator-dot.completed {
+  background: var(--cyber-accent-green);
+}
 {% endblock %}
 
 {% block scripts %}
 {{ super() }}
 
+<!-- Submission Modal -->
+<div class="submission-modal" id="submissionModal">
+  <div class="submission-modal-content">
+    <button class="submission-modal-close" onclick="closeSubmissionModal()">&times;</button>
+    
+    <div class="step-indicator">
+      <div class="step-indicator-dot active" id="step1-dot"></div>
+      <div class="step-indicator-dot" id="step2-dot"></div>
+      <div class="step-indicator-dot" id="step3-dot"></div>
+    </div>
+    
+    <!-- Step 1: Template Selection -->
+    <div class="submission-step active" id="step1">
+      <h2>📝 What would you like to submit?</h2>
+      <div class="template-options">
+        <div class="template-option" onclick="selectTemplate('resource')">
+          <h3>📚 Resource</h3>
+          <p>Suggest a paper, framework, tool, or resource</p>
+        </div>
+        <div class="template-option" onclick="selectTemplate('bug')">
+          <h3>🐛 Bug Report</h3>
+          <p>Report a technical issue or problem</p>
+        </div>
+        <div class="template-option" onclick="selectTemplate('suggestion')">
+          <h3>💡 Suggestion</h3>
+          <p>Share ideas for improvements</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Step 2: Form Based on Template -->
+    <div class="submission-step" id="step2">
+      <h2 id="formTitle">Submit Resource</h2>
+      <form id="submissionForm">
+        <!-- Resource Form -->
+        <div id="resourceForm" class="template-form">
+          <div class="form-group">
+            <label for="resourceTitle">Resource Title *</label>
+            <input type="text" id="resourceTitle" required placeholder="e.g., Attention Is All You Need">
+          </div>
+          <div class="form-group">
+            <label for="resourceUrl">Resource URL *</label>
+            <input type="url" id="resourceUrl" required placeholder="https://arxiv.org/abs/1706.03762">
+          </div>
+          <div class="form-group">
+            <label for="resourceType">Resource Type *</label>
+            <select id="resourceType" required>
+              <option value="">Select type...</option>
+              <option value="Research Paper">Research Paper</option>
+              <option value="Framework/Library">Framework/Library</option>
+              <option value="Tool/Platform">Tool/Platform</option>
+              <option value="Book/Publication">Book/Publication</option>
+              <option value="Course/Lecture">Course/Lecture</option>
+              <option value="Dataset">Dataset</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="resourceCategory">Primary Category *</label>
+            <select id="resourceCategory" required>
+              <option value="">Select category...</option>
+              <option value="Understand">Understand (AI/AGI/ASI concepts)</option>
+              <option value="Build">Build (Frameworks, Agents, Physical AI)</option>
+              <option value="Infrastructure">Infrastructure (LLM frameworks, RAG, deployment)</option>
+              <option value="Safety">Safety & Governance (Alignment, safety research)</option>
+              <option value="Research">Research (Papers, courses, conferences)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="resourceDescription">Brief Description *</label>
+            <textarea id="resourceDescription" required placeholder="A 1-2 sentence description of what this resource is about..."></textarea>
+          </div>
+        </div>
+        
+        <!-- Bug Report Form -->
+        <div id="bugForm" class="template-form" style="display: none;">
+          <div class="form-group">
+            <label for="bugTitle">Issue Title *</label>
+            <input type="text" id="bugTitle" required placeholder="Brief description of the issue">
+          </div>
+          <div class="form-group">
+            <label for="bugDescription">Issue Description *</label>
+            <textarea id="bugDescription" required placeholder="Detailed description of the problem..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="bugSteps">Steps to Reproduce</label>
+            <textarea id="bugSteps" placeholder="1. Go to... 2. Click on... 3. See error..."></textarea>
+          </div>
+        </div>
+        
+        <!-- Suggestion Form -->
+        <div id="suggestionForm" class="template-form" style="display: none;">
+          <div class="form-group">
+            <label for="suggestionTitle">Suggestion Title *</label>
+            <input type="text" id="suggestionTitle" required placeholder="Brief summary of your suggestion">
+          </div>
+          <div class="form-group">
+            <label for="suggestionDescription">Detailed Description *</label>
+            <textarea id="suggestionDescription" required placeholder="Explain your suggestion in detail..."></textarea>
+          </div>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" onclick="goToStep(1)">Back</button>
+          <button type="button" class="btn btn-primary" onclick="goToStep(3)">Next</button>
+        </div>
+      </form>
+    </div>
+    
+    <!-- Step 3: Review & Submit -->
+    <div class="submission-step" id="step3">
+      <h2>🚀 Ready to Submit</h2>
+      <div id="reviewContent" style="margin: 1.5rem 0; padding: 1rem; background: var(--cyber-bg-tertiary); border-radius: 8px;">
+        <!-- Review content will be inserted here -->
+      </div>
+      <div class="form-actions">
+        <button type="button" class="btn btn-secondary" onclick="goToStep(2)">Back</button>
+        <button type="button" class="btn btn-primary" onclick="submitToGitHub()">Submit to GitHub</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ── Reading Progress Bar ── -->
 <div class="reading-progress" id="reading-progress"></div>
+
+<!-- ── Submission Wizard JavaScript ── -->
+<script>
+// Submission Wizard State
+let selectedTemplate = null;
+let currentStep = 1;
+
+// Open submission modal
+function openSubmissionModal(event) {
+  event.preventDefault();
+  document.getElementById('submissionModal').classList.add('active');
+  resetWizard();
+}
+
+// Close submission modal
+function closeSubmissionModal() {
+  document.getElementById('submissionModal').classList.remove('active');
+  resetWizard();
+}
+
+// Reset wizard to initial state
+function resetWizard() {
+  selectedTemplate = null;
+  currentStep = 1;
+  goToStep(1);
+  
+  // Clear form fields
+  document.getElementById('submissionForm').reset();
+  
+  // Reset template selection
+  document.querySelectorAll('.template-option').forEach(opt => {
+    opt.classList.remove('selected');
+  });
+  
+  // Reset form display
+  document.querySelectorAll('.template-form').forEach(form => {
+    form.style.display = 'none';
+  });
+}
+
+// Select template type
+function selectTemplate(template) {
+  selectedTemplate = template;
+  
+  // Update visual selection
+  document.querySelectorAll('.template-option').forEach(opt => {
+    opt.classList.remove('selected');
+  });
+  event.currentTarget.classList.add('selected');
+  
+  // Show appropriate form
+  document.querySelectorAll('.template-form').forEach(form => {
+    form.style.display = 'none';
+  });
+  
+  if (template === 'resource') {
+    document.getElementById('resourceForm').style.display = 'block';
+    document.getElementById('formTitle').textContent = '📚 Submit Resource';
+  } else if (template === 'bug') {
+    document.getElementById('bugForm').style.display = 'block';
+    document.getElementById('formTitle').textContent = '🐛 Report Bug';
+  } else if (template === 'suggestion') {
+    document.getElementById('suggestionForm').style.display = 'block';
+    document.getElementById('formTitle').textContent = '💡 Submit Suggestion';
+  }
+  
+  // Move to next step
+  goToStep(2);
+}
+
+// Navigate to specific step
+function goToStep(step) {
+  currentStep = step;
+  
+  // Hide all steps
+  document.querySelectorAll('.submission-step').forEach(s => {
+    s.classList.remove('active');
+  });
+  
+  // Show current step
+  document.getElementById(`step${step}`).classList.add('active');
+  
+  // Update step indicators
+  for (let i = 1; i <= 3; i++) {
+    const dot = document.getElementById(`step${i}-dot`);
+    dot.classList.remove('active', 'completed');
+    
+    if (i === step) {
+      dot.classList.add('active');
+    } else if (i < step) {
+      dot.classList.add('completed');
+    }
+  }
+  
+  // If going to step 3, generate review content
+  if (step === 3) {
+    generateReview();
+  }
+}
+
+// Generate review content
+function generateReview() {
+  const reviewContent = document.getElementById('reviewContent');
+  let html = '';
+  
+  if (selectedTemplate === 'resource') {
+    html = `
+      <h3>📚 Resource Submission</h3>
+      <p><strong>Title:</strong> ${document.getElementById('resourceTitle').value}</p>
+      <p><strong>URL:</strong> ${document.getElementById('resourceUrl').value}</p>
+      <p><strong>Type:</strong> ${document.getElementById('resourceType').value}</p>
+      <p><strong>Category:</strong> ${document.getElementById('resourceCategory').value}</p>
+      <p><strong>Description:</strong> ${document.getElementById('resourceDescription').value}</p>
+    `;
+  } else if (selectedTemplate === 'bug') {
+    html = `
+      <h3>🐛 Bug Report</h3>
+      <p><strong>Title:</strong> ${document.getElementById('bugTitle').value}</p>
+      <p><strong>Description:</strong> ${document.getElementById('bugDescription').value}</p>
+      <p><strong>Steps to Reproduce:</strong> ${document.getElementById('bugSteps').value}</p>
+    `;
+  } else if (selectedTemplate === 'suggestion') {
+    html = `
+      <h3>💡 Suggestion</h3>
+      <p><strong>Title:</strong> ${document.getElementById('suggestionTitle').value}</p>
+      <p><strong>Description:</strong> ${document.getElementById('suggestionDescription').value}</p>
+    `;
+  }
+  
+  reviewContent.innerHTML = html;
+}
+
+// Submit to GitHub
+function submitToGitHub() {
+  let url = '';
+  let title = '';
+  let body = '';
+  
+  if (selectedTemplate === 'resource') {
+    title = `[Resource Suggestion] ${document.getElementById('resourceTitle').value}`;
+    body = `**Resource Title:** ${document.getElementById('resourceTitle').value}
+**Resource URL:** ${document.getElementById('resourceUrl').value}
+**Resource Type:** ${document.getElementById('resourceType').value}
+**Primary Category:** ${document.getElementById('resourceCategory').value}
+**Brief Description:** ${document.getElementById('resourceDescription').value}`;
+    
+    url = `https://github.com/${document.querySelector('.md-header__title').textContent.trim()}/issues/new?template=resource-suggestion.yml`;
+  } else if (selectedTemplate === 'bug') {
+    title = `[Bug] ${document.getElementById('bugTitle').value}`;
+    body = `**Issue Title:** ${document.getElementById('bugTitle').value}
+**Issue Description:** ${document.getElementById('bugDescription').value}
+**Steps to Reproduce:** ${document.getElementById('bugSteps').value}`;
+    
+    url = `https://github.com/${document.querySelector('.md-header__title').textContent.trim()}/issues/new?template=bug-report.md`;
+  } else if (selectedTemplate === 'suggestion') {
+    title = `[Suggestion] ${document.getElementById('suggestionTitle').value}`;
+    body = `**Suggestion Title:** ${document.getElementById('suggestionTitle').value}
+**Detailed Description:** ${document.getElementById('suggestionDescription').value}`;
+    
+    url = `https://github.com/${document.querySelector('.md-header__title').textContent.trim()}/issues/new?template=general-suggestion.md`;
+  }
+  
+  // Encode parameters and open GitHub
+  const encodedTitle = encodeURIComponent(title);
+  const encodedBody = encodeURIComponent(body);
+  const fullUrl = `${url}&title=${encodedTitle}&body=${encodedBody}`;
+  
+  window.open(fullUrl, '_blank');
+  closeSubmissionModal();
+}
+
+// Close modal on outside click
+document.getElementById('submissionModal').addEventListener('click', function(event) {
+  if (event.target === this) {
+    closeSubmissionModal();
+  }
+});
+
+// Close modal on escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeSubmissionModal();
+  }
+});
+</script>
 
 <!-- ── Back to Top Button ── -->
 <button id="back-to-top" class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
