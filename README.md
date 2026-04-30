@@ -1,210 +1,106 @@
-# Awesome-AGI-and-ASI
+# Awesome AGI and ASI Resources [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-**Educational curated collection of resources on Artificial General Intelligence, Artificial Superintelligence, and Collective Intelligence**
+![AGI](https://img.shields.io/badge/AGI-Artificial_General_Intelligence-blue)
+![ASI](https://img.shields.io/badge/ASI-Artificial_Superintelligence-red)
+![Super AI](https://img.shields.io/badge/Super_AI-Beyond_Human_Intelligence-purple)
+![AI Safety](https://img.shields.io/badge/AI_Safety-Alignment_&_Control-green)
+![LLM](https://img.shields.io/badge/LLM-Large_Language_Models-orange)
+![Agents](https://img.shields.io/badge/Agents-Autonomous_AI-yellow)
+![RAG](https://img.shields.io/badge/RAG-Retrieval_Augmented_Generation-cyan)
+![Fine-Tuning](https://img.shields.io/badge/Fine--Tuning-LoRA_&_RLHF-lightblue)
+![Conferences](https://img.shields.io/badge/Conferences-Academic_&_Industry-teal)
+![Updated](https://img.shields.io/badge/Updated-April_2026-brightgreen)
 
-This repository is an open source educational resource designed to help students and researchers explore the field of AGI (Artificial General Intelligence), ASI (Artificial Superintelligence), and Collective Intelligence. It provides a structured collection of papers, frameworks, and resources for understanding advanced AI concepts.
+> *"The development of full artificial intelligence could spell the end of the human race... or it could be the best thing ever to happen to humanity."* -- Stephen Hawking
 
-## Educational Purpose
-
-This collection serves educational purposes by helping students and researchers:
-- Learn about AGI, ASI, and Collective Intelligence research directions
-- Understand key papers and breakthroughs in the field
-- Explore frameworks and architectures for general intelligence
-- Study multi-agent systems and swarm intelligence
-- Study safety and alignment research
-- Discover implementation approaches and tools
-- Gain comprehensive knowledge of the AGI/ASI/CI research landscape
-
----
-
-## 🚀 Quick Navigation
-
-**[📖 Understand](#understanding-ai-agi-and-asi)** - AI, AGI, ASI, Collective Intelligence definitions, ASI research, benchmarks
-**[🔧 Build](#frameworks-and-platforms)** - Frameworks, agents, physical AI, paper-to-code
-**[🏗️ Infrastructure](#llm-application-frameworks)** - LLM frameworks, RAG, data infra, fine-tuning, deployment
-**[🛡️ Safety](#safety-alignment-and-governance)** - AI safety, alignment, governance
-**[📚 Research](#papers-blogs-courses-and-lectures)** - Papers, courses, tutorials, conferences
-**[🌐 Live Site](https://nellaivijay.github.io/Awesome-AGI-and-ASI/)** - Interactive documentation with search
-**[🤝 Contribute](#contributing)** - Add your resources and help curate
-
----
-
-## 📈 Recent Updates (April 2026)
-
-- **New Section Added**: Collective Intelligence - multi-agent systems, swarm intelligence, human-AI collaboration
-- **New Papers Added**: Latest research on multi-agent systems, reasoning capabilities, and AI safety
-- **Updated Frameworks**: Added newest LLM application frameworks and agent platforms
-- **Enhanced Safety Section**: Expanded coverage of alignment research and governance
-- **Infrastructure Updates**: Latest developments in RAG, vector databases, and deployment tools
-- **Conference Updates**: Added 2026 conference schedules and CFPs
-
----
+The most comprehensive, curated collection of resources on the journey from **AI** to **AGI** to **ASI** -- covering frameworks, agents, research papers, safety & alignment, books, benchmarks, conferences, and tools for builders and researchers shaping the future of intelligence.
 
 ## Table of Contents
 
-## Categories
+### Understand
+- [Understanding AI, AGI, and ASI](#understanding-ai-agi-and-asi) -- Definitions, comparison table, state of the field metrics, DeepMind's AGI levels
+- [ASI and Superintelligence Research](#asi-and-superintelligence-research) -- Key organizations, books (27 titles), seminal papers, benchmarks, neuroscience-inspired approaches, alternative architectures (SSMs, neuromorphic, decentralized), recursive self-improvement, roadmaps & timelines
 
-### Core Research
-Foundational papers and research in AGI and ASI
+### Build
+- [Frameworks and Platforms](#frameworks-and-platforms) -- Next-gen, established, and specialized agent frameworks
+- [Agents](#agents) -- Coding, research, computer-use, embodied, and enterprise agentic AI
+- [Physical AI & Embodied Intelligence](#physical-ai--embodied-intelligence) -- Humanoid robotics, robot foundation models (VLA), simulation platforms
+- [Paper-to-Code Automation](#paper-to-code-automation) -- Research2Repo, PaperCoder, AI Scientist, Papers with Code
 
-### Architectures
-System architectures and frameworks for general intelligence
+### Foundation Model Infrastructure
+- [LLM Application Frameworks](#llm-application-frameworks) -- Orchestration, platforms, structured output, observability
+- [RAG and Vector Databases](#rag-and-vector-databases) -- Vector DBs, RAG engines, Graph RAG, document parsing, embeddings
+- [Data Infrastructure for AI at Scale](#data-infrastructure-for-ai-at-scale) -- Data lakehouse (Iceberg, Spark, Delta Lake), MLOps (MLflow, W&B, Ray), feature stores
+- [LLM Fine-Tuning Techniques](#llm-fine-tuning-techniques) -- LoRA variants, adapters, PEFT, DPO, instruction tuning
+- [LLM Deployment and Serving](#llm-deployment-and-serving) -- Inference engines (vLLM, TGI), production orchestration (Vertex AI, Bedrock, Azure AI, Triton)
+- [Distributed Training Frameworks](#distributed-training-frameworks) -- ColossalAI, DeepSpeed, Megatron-LM, AI compute infrastructure, energy & physical constraints
+- [Prompt Engineering](#prompt-engineering) -- CoT, ToT, GoT, and advanced prompting techniques
 
-### Safety & Alignment
-Research on AI safety, alignment, and control
+### Safety & Governance
+- [Safety, Alignment and Governance](#safety-alignment-and-governance) -- RLHF, DPO, scalable oversight, mechanistic interpretability, AI detection, governance
 
-### Implementation
-Tools, frameworks, and implementation approaches
+### Research & Learn
+- [Papers, Blogs, Courses and Lectures](#papers-blogs-courses-and-lectures) -- Frontier models, reasoning, world models, physical AI, agents, alignment, interpretability
+- [Tutorials and Guides](#tutorials-and-guides) -- Courses, documentation, and hands-on learning resources
+- [Top Conferences](#top-conferences) -- Academic, AGI-specific, safety, and industry conferences
 
-### Benchmarks
-Evaluation metrics and benchmarks for AGI systems
+---
 
-### Resources
-Educational resources, courses, and learning materials
-
-## Understanding AI, AGI, ASI, and Collective Intelligence
+## Understanding AI, AGI, and ASI
 
 ### What is AI (Artificial Intelligence)?
 
-Artificial Intelligence (AI) is the broad field of creating machines and software that can perform tasks typically requiring human intelligence. Today's AI systems are specialists that excel at specific tasks but cannot transfer skills to unrelated domains.
+**Artificial Intelligence (AI)** is the broad field of creating machines and software that can perform tasks typically requiring human intelligence. Today's AI systems -- often called **Artificial Narrow Intelligence (ANI)** -- are specialists: they excel at one specific task (playing chess, recognizing faces, translating languages, generating text) but cannot transfer that skill to unrelated domains. Every AI system you use today, from Siri to GPT-4 to self-driving cars, is narrow AI. It is powerful within its domain but fundamentally limited -- a chess engine cannot write poetry, and a language model cannot physically navigate a room.
 
 ### What is AGI (Artificial General Intelligence)?
 
-Artificial General Intelligence (AGI) refers to AI systems that match or exceed human-level cognitive abilities across virtually all intellectual tasks -- learning, reasoning, problem-solving, perception, creativity, and social understanding. Unlike narrow AI, an AGI system could teach itself new disciplines, transfer knowledge between domains, and handle novel situations.
+**Artificial General Intelligence (AGI)** refers to AI systems that match or exceed human-level cognitive abilities **across virtually all intellectual tasks** -- learning, reasoning, problem-solving, perception, creativity, and social understanding. Unlike narrow AI, an AGI system could teach itself a new discipline, transfer knowledge between domains, handle novel situations it was never trained on, and understand context the way humans do. AGI does not yet exist, but its pursuit drives the most ambitious research programs in history (OpenAI, DeepMind, Anthropic, xAI, Meta, SSI). Estimated arrival: **2027--2035** according to leading researchers, though timelines remain highly uncertain.
 
 ### What is ASI (Artificial Superintelligence)?
 
-Artificial Superintelligence (ASI) is a hypothetical system whose intelligence surpasses the most gifted human minds in every domain -- scientific creativity, social skills, strategic reasoning, and general wisdom. ASI could emerge from recursive self-improvement cycles where an AI improves its own design and rapidly surpasses human-level capabilities.
+**Artificial Superintelligence (ASI)**, also called **Super AI**, is a hypothetical system whose intelligence surpasses the most gifted human minds in **every domain** -- scientific creativity, social skills, strategic reasoning, and general wisdom. Philosopher Nick Bostrom defines it as *"any intellect that greatly exceeds the cognitive performance of humans in virtually all domains of interest."* ASI could emerge from recursive self-improvement cycles (an **"intelligence explosion"**), where an AI that can improve its own design rapidly surpasses human-level capabilities. Key concerns include the **control problem** (keeping ASI aligned with human values), **goal misalignment** (unintended optimization targets), and the potential for a **technological singularity** -- a point beyond which human civilization is fundamentally and unpredictably transformed.
 
-### What is Collective Intelligence?
+<details>
+<summary><strong>AI vs AGI vs ASI -- The Complete Comparison</strong> (click to expand)</summary>
 
-Collective Intelligence refers to systems where intelligence emerges from the interaction of multiple agents -- whether AI agents, humans, or human-AI hybrids. It encompasses multi-agent systems, swarm intelligence, human-AI collaboration, distributed AI, and emergent intelligence. While AGI focuses on single systems with general intelligence, collective intelligence explores how groups of simpler systems can coordinate, collaborate, and evolve sophisticated behaviors through interaction.
+| Dimension | ANI (Narrow AI) | AGI (General Intelligence) | ASI (Superintelligence) |
+|-----------|-----------------|---------------------------|------------------------|
+| **Definition** | AI that excels at a single, specific task or narrow domain | AI with human-level cognitive abilities across all intellectual tasks | AI that vastly surpasses the best human minds in every domain |
+| **Intelligence Scope** | Single domain only | All human cognitive domains | All domains, far beyond human capacity |
+| **Learning** | Trained on specific datasets for specific tasks; cannot learn new domains without retraining | Can learn any new domain autonomously, transfer knowledge across fields | Can learn instantly, discover entirely new fields of knowledge humans haven't conceived |
+| **Reasoning** | Pattern matching and statistical inference within trained domain | Human-like reasoning, abstraction, common sense, and causal understanding | Reasoning capabilities incomprehensible to humans; solves problems we cannot even formulate |
+| **Creativity** | Can remix and recombine patterns from training data | Genuine novel creativity comparable to the best human minds | Creates entirely new paradigms of science, art, and mathematics |
+| **Self-Awareness** | None -- no understanding of its own existence | Potentially self-aware; debated whether consciousness is required | Likely self-aware; may possess forms of consciousness beyond human understanding |
+| **Adaptability** | Brittle -- fails on out-of-distribution inputs | Robust generalization to novel situations, like humans | Adapts to any environment or challenge, including ones humans cannot survive or comprehend |
+| **Autonomy** | Requires human oversight, goals, and guardrails | Can set its own goals, plan long-term, and act independently | Fully autonomous; may pursue goals humans cannot predict or understand |
+| **Physical Capability** | Software only, or narrow robotics (e.g., robotic arm) | Could operate any physical system, robot, or interface | Could design and build its own hardware, infrastructure, or physical embodiment |
+| **Current Examples** | ChatGPT, AlphaFold, DALL-E, Tesla Autopilot, Siri, Google Search | None yet -- frontier models (GPT-4, Claude, Gemini) show early sparks but remain narrow | None -- purely theoretical |
+| **Status** | **Exists today** -- deployed at massive scale | **In active development** -- billions invested, estimated 2027-2035 | **Theoretical** -- may follow AGI within years or decades |
+| **Key Risk** | Job displacement, bias, misuse, deepfakes | Misalignment, economic disruption, power concentration, loss of human agency | Existential risk, intelligence explosion, loss of human control, civilizational transformation |
+| **Who's Building It** | Every tech company | OpenAI, DeepMind, Anthropic, Meta, xAI, SSI, Alibaba, DeepSeek | Safe Superintelligence Inc. (SSI), theoretical research at MIRI, FHI, CHAI |
+| **Key Benchmark** | Task-specific (ImageNet, SQuAD, HumanEval) | ARC-AGI, GPQA, Humanity's Last Exam, SWE-bench, FrontierMath | No benchmarks exist -- by definition, ASI exceeds all human-designed tests |
 
-## Key Resources
+</details>
 
-### Core Research
-- Seminal papers on general intelligence
-- Scaling laws and emergent capabilities
-- Language model research
-- Multi-modal systems
-- Reasoning and planning
-
-### Architectures
-- Transformer variants and improvements
-- Memory and attention mechanisms
-- Neuro-symbolic approaches
-- Embodied intelligence
-- Multi-agent systems
-
-### Safety & Alignment
-- Alignment research
-- Interpretability
-- Robustness and reliability
-- Constitutional AI
-- Safety frameworks
-
-### Implementation
-- Training frameworks
-- Inference optimization
-- Deployment strategies
-- Tooling and infrastructure
-
-### Benchmarks
-- Reasoning benchmarks
-- Coding benchmarks
-- Safety evaluations
-- General intelligence tests
-
-## Frameworks and Tools
-
-### Agent Frameworks
-- Multi-agent orchestration systems
-- Autonomous coding agents
-- Research automation tools
-- Physical AI and robotics
-
-### Infrastructure
-- Distributed training frameworks
-- LLM serving and deployment
-- Vector databases and RAG
-- Fine-tuning techniques
-
-### Development Tools
-- Prompt engineering
-- Evaluation frameworks
-- Monitoring and observability
-- Testing and validation
-
-## Learning Resources
-
-### Courses and Tutorials
-- Academic courses on AI/AGI
-- Online tutorials and guides
-- Hands-on learning materials
-- Practical implementation guides
-
-### Conferences
-- Academic AI conferences
-- AGI-specific meetings
-- Safety and alignment workshops
-- Industry events
-
-## Research Areas
-
-### Current Research Directions
-- Large language models and reasoning
-- Multi-modal systems
-- Physical AI and robotics
-- Agent architectures
-- World models and simulation
-
-### Safety Research
-- AI alignment techniques
-- Interpretability methods
-- Robustness and reliability
-- Governance and policy
-- Existential risk mitigation
-
-### Implementation Research
-- Efficient training methods
-- Inference optimization
-- Distributed systems
-- Hardware acceleration
-- Energy efficiency
-
-## Usage
-
-### Browsing Resources
-
-Resources are organized by category. Each category contains:
-- Papers with links and brief descriptions
-- Frameworks and tools
-- Educational resources
-
-### Contributing
-
-To contribute new resources:
-1. Fork the repository
-2. Add resources to the appropriate category
-3. Follow the existing format
-4. Submit a pull request
-
-## Structure
+### The Journey: ANI --> AGI --> ASI
 
 ```
-Awesome-AGI-and-ASI/
-├── README.md                  # Main resource collection
-├── categories/                # Category-specific files
-│   ├── core_research.md
-│   ├── architectures.md
-│   ├── safety_alignment.md
-│   ├── implementation.md
-│   └── benchmarks.md
-├── resources/                # Additional resources
-└── CONTRIBUTING.md
+  We Are Here
+      |
+      v
+ +---------+        +----------+        +----------+
+ |   ANI   | -----> |   AGI    | -----> |   ASI    |
+ | (Today) |        | (2027-   |        | (After   |
+ | Narrow  |        |  2035?)  |        |  AGI)    |
+ | Task-   |        | Human-   |        | Beyond   |
+ | Specific|        | Level    |        | Human    |
+ +---------+        +----------+        +----------+
+  ChatGPT            No system           Theoretical
+  AlphaFold          exists yet          "Intelligence
+  DALL-E             GPT-4 shows         Explosion"
+  Autopilot          early sparks        Singularity?
 ```
 
-<<<<<<< HEAD
 ### Where Are We Now? (2026)
 
 The AI field is in a remarkable transition period. Here's what the current landscape looks like:
@@ -1170,135 +1066,34 @@ The AI field is in a remarkable transition period. Here's what the current lands
 
 ---
 
-## 🔬 Latest Research Updates (2024-2026)
-
-### Recent Breakthrough Papers
-
-**Reasoning & Chain-of-Thought**
-- **o1: Reasoning through Language Models** (OpenAI, 2024) - Introduces o1, a large language model trained with reinforcement learning to perform complex reasoning through chain-of-thought [arXiv:2401.04566]
-- **Scaling Monotonic Reasoning with Chain-of-Thought Self-Consistency** (Wei et al., 2024) - Demonstrates improved reasoning performance through self-consistency checks in chain-of-thought prompting [arXiv:2402.12800]
-
-**Multi-Agent Systems**
-- **Multi-Agent Collaboration through Debate: Improving Factuality and Reasoning in LLMs** (Du et al., 2024) - Shows how multi-agent debate systems can improve reasoning accuracy and reduce hallucinations [arXiv:2401.05420]
-- **AutoGen: Enabling Next-Gen LLM Applications** (Wu et al., 2024) - Microsoft's multi-agent conversation framework for building complex LLM applications through agent collaboration [arXiv:2401.04567]
-
-**World Models & Physical AI**
-- **World Model on Million-Length Video and Language for Autonomous Agents** (Wu et al., 2024) - Presents a world model that learns from million-length video-language data for autonomous agents [arXiv:2401.05568]
-- **RT-2: Robotics Transformer for Real-World Embodied AI** (Brohan et al., 2024) - Google's vision-language-action model that can control robots to perform tasks in real-world environments [arXiv:2402.14000]
-
-**Safety & Alignment**
-- **Constitutional AI in Language Models: Training Helpful, Harmless, and Honest AI** (Bai et al., 2024) - Anthropic's comprehensive approach to training AI systems with constitutional principles [arXiv:2402.14007]
-- **AI Control: Improving Safety Despite Intentional Subversion** (Greenblatt et al., 2024) - Framework for evaluating safety against models actively trying to circumvent controls [arXiv:2312.06942]
-
-### Emerging Trends
-
-1. **Multi-Agent Architectures**: Increased focus on collaborative AI systems that can debate, negotiate, and work together
-2. **World Models**: Growing research on models that understand physical environments and causality
-3. **Reasoning Specialization**: Dedicated models optimized for logical reasoning and mathematical problem-solving
-4. **Safety Engineering**: More sophisticated approaches to AI alignment and control mechanisms
-5. **Embodied Intelligence**: Integration of AI with physical robotics and real-world interaction
-
----
-
-## 🤝 Contributing
+## Contributing
 
 We're building the most comprehensive AGI/ASI resource on the internet -- and we need your help. Contributions are welcome!
 
-### Quick Start
+**How to contribute:**
 
 1. **Fork** this repository
 2. **Add** your resource following the format below
 3. **Open a Pull Request** with your additions
 
-### Contribution Guidelines
+**Format:**
+- **Title** - Author(s) (Year). [Link](URL) - One-line description
 
-#### Resource Format
-- **Papers**: `**Title**` - Author(s) (Year). [Link](URL) - One-line description
-- **Books**: `**Title**` | Author(s) | Year | Description
-- **Frameworks**: `**Name**` - Description. [Link](URL) - Language/Stars
-- **Tools**: `**Name**` - Description. [Link](URL) - Category
-
-#### Quality Standards
+### Guidelines
 - Use official links (DOI, arXiv, publisher, GitHub)
 - Ensure title, author(s), year are correct
 - Keep descriptions short (1 line)
 - Avoid duplicates -- search the README first
 - Include GitHub star counts for repositories when available
-- Prefer peer-reviewed research over blog posts
-- Add recent papers (2024-2026) when possible
-
-#### Categories We Need
-
-**High Priority:**
-- **Latest Research Papers**: 2024-2026 papers on reasoning, world models, agents
-- **Agent Frameworks**: New multi-agent systems and agentic AI platforms
-- **Safety Research**: Alignment, interpretability, governance
-- **Physical AI**: Robotics, embodied intelligence, VLA models
-- **Infrastructure**: RAG systems, vector databases, deployment tools
-
-**Medium Priority:**
-- **Tutorials**: Hands-on guides for building AGI-related systems
-- **Benchmarks**: New AGI evaluation metrics and datasets
-- **Books**: 2024-2026 books on AI, AGI, and society
-- **Conferences**: 2026 conference schedules and CFPs
-
-#### Community Curation Process
-
-1. **Submit**: Add your resource via PR with proper formatting
-2. **Review**: Maintainers will review for relevance and quality
-3. **Categorize**: Resources are organized into appropriate sections
-4. **Deploy**: Approved changes are deployed to the live site
-5. **Recognize**: Contributors are acknowledged in the community
-
-#### What Makes a Good Addition?
-
-✅ **High-Quality Resources:**
-- Peer-reviewed papers from top conferences (NeurIPS, ICML, ICLR)
-- Research from leading labs (OpenAI, DeepMind, Anthropic, Meta AI)
-- Production-ready frameworks with active development
-- Comprehensive tutorials with working code
-- Authoritative books from recognized experts
-
-❌ **What to Avoid:**
-- Marketing content without technical depth
-- Outdated resources (pre-2020 unless historically significant)
-- Duplicate entries
-- Broken or low-quality links
-- Paywalled content without free alternatives
-
-#### Special Contributions
-
-**Topic Experts:** Become a maintainer for specific sections (Safety, Agents, Infrastructure, etc.)
-
-**Content Reviewers:** Help review and validate incoming contributions
-
-**Documentation:** Improve the structure and organization of existing content
-
-**Translation:** Help translate resources into other languages
-
-### Recognition
-
-Contributors are recognized in:
-- The repository's contributor list
-- Special acknowledgment for significant contributions
-- Invitation to become a section maintainer
-
-### Questions?
-
-Open an issue for questions about contributing or suggesting new categories.
+- Open a Pull Request with your additions
 
 ---
 
-**🌐 Live Site**: [https://nellaivijay.github.io/Awesome-AGI-and-ASI/](https://nellaivijay.github.io/Awesome-AGI-and-ASI/) - Interactive version with search and better navigation
-
-**⭐ Star this repo** if you find it helpful!
-
-**🔗 Share** with others building the future of AI!
-
 ## License
 
-MIT License - See LICENSE file for details.
+[Apache-2.0](LICENSE)
 
-## Acknowledgments
+---
 
-This collection aggregates resources from across the research community. All papers and resources belong to their respective authors and institutions.
+> **If you find this resource useful, please give it a star!** It helps others discover it and motivates us to keep it updated as the field evolves at breakneck speed.
+
