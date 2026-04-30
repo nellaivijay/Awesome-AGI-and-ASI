@@ -14,32 +14,23 @@ copyright: Copyright &copy; 2024-2026 nellaivijay
 theme:
   name: material
   language: en
-  palette:
-    - scheme: slate
-      primary: black
-      accent: blue
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-  font:
-    text: Inter
-    code: JetBrains Mono
-  custom_dir: overrides
+  # palette:
+  #   - scheme: slate
+  #     primary: black
+  #     accent: blue
+  #     toggle:
+  #       icon: material/brightness-4
+  #       name: Switch to light mode
+  # font:
+  #   text: Inter
+  #   code: JetBrains Mono
+  # custom_dir: overrides
   features:
     - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
-    - navigation.indexes
-    - navigation.expand
-    - navigation.trail
     - search.suggest
     - search.highlight
-    - content.tabs.link
-    - toc.integrate
-    - content.code.copy
-    - content.action.edit
-    - content.action.view
   icon:
     repo: fontawesome/brands/github
 
@@ -47,35 +38,35 @@ plugins:
   - search:
       lang: en
       separator: '[\s\-\.\_]+'
-  - blog:
-      blog_dir: blog
-      post_date_format: long
+  # - blog:
+  #     blog_dir: blog
+  #     post_date_format: long
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
       fallback_to_build_date: true
-  - social:
-      cards_layout: default
-  - rss:
-      match_path: ".*"
-      date_from_meta:
-        as_creation: date.created
-        as_update: date.updated
-      categories:
-        - tags
-      comments_path: "#__comments"
-      image: https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/logo.png
-      pretty_print: true
-      length: 250
+  # - social:
+  #     cards_layout: default
+  # - rss:
+  #     match_path: ".*"
+  #     date_from_meta:
+  #       as_creation: date.created
+  #       as_update: date.updated
+  #     categories:
+  #       - tags
+  #     comments_path: "#__comments"
+  #     image: https://nellaivijay.github.io/Awesome-AGI-and-ASI/assets/logo.png
+  #     pretty_print: true
+  #     length: 250
   - meta
 
 extra_css:
-  - stylesheets/custom.css
+  # - stylesheets/custom.css
 
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/nellaivijay/Awesome-AGI-and-ASI
+  # social:
+  #   - icon: fontawesome/brands/github
+  #     link: https://github.com/nellaivijay/Awesome-AGI-and-ASI
   generator: false
 
 markdown_extensions:
