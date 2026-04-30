@@ -1,21 +1,6 @@
 /* ── CYBERNETIC RESEARCH THEME ── */
 /* Modern Dark-First Design for AGI/ASI Documentation */
 
-/* ── GLOBAL SMOOTH SCROLL ── */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
-
-/* ── MAIN CONTENT SPACING ── */
-.md-main {
-  padding-top: 1rem;
-}
-
-.md-content {
-  padding-top: 1rem;
-}
-
 /* ── COLOR PALETTE (Tailwind Slate Theme) ── */
 :root {
   /* Slate Background Colors */
@@ -58,6 +43,7 @@ html {
 /* ── GLOBAL STYLES ── */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -66,6 +52,34 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 16px;
   line-height: 1.6;
+}
+
+/* Ensure theme is applied to all MkDocs elements */
+.md-container {
+  background-color: var(--cyber-bg);
+}
+
+.md-main {
+  background-color: var(--cyber-bg);
+}
+
+.md-content {
+  background-color: var(--cyber-bg);
+}
+
+/* Ensure content is visible */
+article {
+  display: block;
+  visibility: visible;
+}
+
+/* ── MAIN CONTENT SPACING ── */
+.md-main {
+  padding-top: 1rem;
+}
+
+.md-content {
+  padding-top: 1rem;
 }
 
 /* ── TYPOGRAPHY (Tailwind Specifications) ── */
