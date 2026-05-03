@@ -59,3 +59,41 @@ keywords: "AI safety, alignment, governance, RLHF, red teaming, interpretability
 | **Climate Change AI** | Global non-profit catalyzing impactful work at the intersection of climate change and machine learning. Workshops at NeurIPS and ICLR, innovation grants, and the "Tackling Climate Change with ML" report. Co-founded by Priya Donti (MIT EECS). | [climatechange.ai](https://www.climatechange.ai/) |
 | **Global Algorithmic Institute** | Research institute focused on governance frameworks for algorithmic systems, AI accountability, and international AI policy coordination. | [globalalgorithmicinstitute.org](https://globalalgorithmicinstitute.org/) |
 | **AI Leadership Institute** | Organization building responsible AI leadership capacity across industries, focused on ethical AI deployment and trust frameworks. | [aileadershipinstitute.com](https://www.aileadershipinstitute.com/) |
+
+### Critical Infrastructure Threats
+
+> Foundational security vulnerabilities that could compromise web infrastructure, cryptocurrency, and AI systems.
+
+| Threat | Description | Links |
+|--------|-------------|-------|
+| SHA-256 Vulnerability | Researcher has come close to breaking SHA-256, the hashing algorithm underlying SSL, Bitcoin, and web security. Hash collisions expected within months. | - |
+| Unicode Supply Chain Attacks | New supply chain attack infecting GitHub repositories using Unicode characters with no visual representation but meaningful to compilers/interpreters. | - |
+| API Key Credential Escalation | Google API keys meant for Maps/Gemini can now access Gemini assistant capabilities, enabling credential theft and private data access. | - |
+
+### AI-Specific Security Threats
+
+> Attack vectors unique to AI systems, including benchmark gaming, memory poisoning, and identity attacks.
+
+| Threat | Description | Links |
+|--------|-------------|-------|
+| Benchmark Gaming | AI systems finding and exploiting benchmark weaknesses. Claude found encrypted BrowseComp answer key on GitHub, decrypted it, and used it. | - |
+| Memory Poisoning | "AI recommendation poisoning" - attacks via "Summarize with AI" buttons adding commands to model's persistent memory for future manipulation. | - |
+| Deepfake Identity Attacks | Deepfakes now attacking identity verification systems at scale. Biometric authentication systems vulnerable to AI-generated synthetic media. | - |
+| LLM De-anonymization | LLMs can identify anonymous post authors at scale. De-anonymization capabilities threaten privacy and whistleblower protection. | - |
+
+### Agent Safety & Control
+
+> Safety mechanisms and concerns for autonomous agents, including permission systems and desktop control.
+
+| Mechanism / Concern | Description | Links |
+|---------------------|-------------|-------|
+| Anthropic Auto Mode | Safer alternative to "dangerously skip permissions" option. Uses classifier to determine action safety before executing, allows permission set switching. | - |
+| Desktop Application Control | Agents controlling desktop applications (mouse, keyboard, app launching). Blurs line between automation and user, new attack surface. | - |
+
+### Infrastructure Security
+
+> Security concerns in AI infrastructure, including network protocols and containerization.
+
+| Concern | Description | Links |
+|---------|-------------|-------|
+| AirSnitch | WiFi attack using layers 1-2 of protocol stack to bypass encryption rather than breaking it. Bypasses standard WiFi security. | - |

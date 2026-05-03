@@ -26,6 +26,13 @@ keywords: "AI papers, research blogs, courses, lectures, scaling laws, reasoning
 | Gemini 2.5 Pro | Google DeepMind | 2025 | Thinking model with advanced reasoning. #1 on LMArena by significant margin. 18.8% on Humanity's Last Exam. State-of-art on GPQA, AIME 2025, and coding benchmarks. | [Blog](https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/) |
 | Meta Muse Spark | Meta Superintelligence Labs | 2026 | First model from Meta Superintelligence Labs. Natively multimodal reasoning model with visual chain-of-thought, tool-use, and multi-agent orchestration ("Contemplating mode"). 58% on Humanity's Last Exam. Scaling toward "personal superintelligence." | [Blog](https://ai.meta.com/blog/muse-spark/) |
 | Gemma: Open Models from Gemini Research | Google DeepMind | 2024 | Open-weight models (2B/7B) built from Gemini research. Gemma 2 (2024) and Gemma 3 (2025) with state-of-art performance at size. Responsible AI toolkit included. | [Site](https://ai.google.dev/gemma), [GitHub](https://github.com/google-deepmind/gemma) |
+| GPT 5.4: Codex Integration and Computer Use | OpenAI | 2026 | Merges Codex augmented coding model back into mainstream product. Features 1M token context window, computer use capabilities, and publish plan that can be altered midcourse before action. | - |
+| Claude Opus 4.6 and Sonnet 4.6: 1M Token Context | Anthropic | 2026 | 1-million token context windows reached general availability for both Opus 4.6 and Sonnet 4.6. No additional charge for large context windows. | - |
+| Mistral Small 4: Open-Source Frontier MoE | Mistral AI | 2026 | 119B mixture of experts model using 6B parameters per token. Fully open source with 256K context window. Optimized for minimal latency and maximum throughput. | - |
+| Nemotron 3 Super: Mamba+Transformer Hybrid | NVIDIA | 2026 | 120B parameter mixture of experts model with 12B active parameters. Novel architecture combining both Mamba and Transformer layers for efficient long-context reasoning. | - |
+| Gemini 3.1 Flash Live: Real-Time Speech | Google DeepMind | 2026 | Speech model designed for real-time conversation. Avoids gaps during generation and uses human-like cadences for natural dialogue. | - |
+| Qwen3.5-9B: Laptop-Class Frontier Parity | Qwen Team (Alibaba) | 2026 | 9B parameter model that can run on a laptop with benchmark results comparable to December 2025's frontier models. Break-even point against cloud API costs measured in weeks. | - |
+| Phi-4-Reasoning-Vision-15B: Small Multimodal Reasoning | Microsoft | 2026 | Small open-weight model combining reasoning capabilities with multimodal vision. Industry trend toward smaller, faster models that can run locally. | [Blog](https://azure.microsoft.com/blog/phi-4-reasoning-vision) |
 
 ### Reasoning, Scaling & Architecture Papers
 
@@ -39,6 +46,8 @@ keywords: "AI papers, research blogs, courses, lectures, scaling laws, reasoning
 | Scaling Laws for Neural Language Models | Kaplan et al. (OpenAI) | 2020 | Power-law relationships between model scale and performance, underpinning AGI scaling hypotheses. | [Paper](https://arxiv.org/abs/2001.08361) |
 | LongRoPE: Extending LLM Context Beyond 2M Tokens | Ding et al. (Microsoft) | 2024 | Extends RoPE to 2M tokens via non-uniform interpolation. | [Paper](https://arxiv.org/abs/2402.13753) |
 | Infini-Attention | Munkhdalai et al. (Google) | 2024 | Compressive memory in standard attention for infinite-length inputs with bounded memory. | [Paper](https://arxiv.org/abs/2404.07143) |
+| LeWorldModel: First Stable JEPA Model | Yann LeCun et al. (Meta AI) | 2026 | First model using Joint Embedding Predictive Architecture (JEPA) that trains stably. Goal is to produce models that understand the world and how it works, not just predict tokens. | - |
+| Joint Embedding Predictive Architecture (JEPA) | Yann LeCun et al. (Meta AI) | 2023 | Alternative to token prediction architectures. Predicts in representation space rather than pixel space, enabling non-generative, highly scalable world models. | [Paper](https://arxiv.org/abs/2301.08243) |
 
 ### World Models & Environment Simulation Papers
 
@@ -101,6 +110,17 @@ keywords: "AI papers, research blogs, courses, lectures, scaling laws, reasoning
 | AI Control: Improving Safety Despite Intentional Subversion | Greenblatt et al. (Redwood Research) | 2024 | Framework for evaluating safety against models actively trying to circumvent controls. | [Paper](https://arxiv.org/abs/2312.06942) |
 | Sparks of AGI: Early Experiments with GPT-4 | Bubeck et al. (Microsoft Research) | 2023 | 155-page study arguing GPT-4 shows early sparks of AGI across diverse tasks. | [Paper](https://arxiv.org/abs/2303.12712) |
 | Levels of AGI: Operationalizing Progress on the Path to AGI | Morris et al. (Google DeepMind) | 2023 | 6-level AGI taxonomy (Emerging to ASI) with performance and autonomy axes. | [Paper](https://arxiv.org/abs/2311.02462) |
+
+### Workforce & Organizational Impact Research
+
+> Research on how AI is transforming the workforce, organizational dynamics, and human-AI collaboration patterns.
+
+| Study | Authors / Org | Year | Description | Links |
+|-------|---------------|------|-------------|-------|
+| Job Market Report 2026 | Lenny Rachitsky | 2026 | Product management positions at highest level in years. Software engineering demand recovering after 2022 decline. AI jobs on fire, recruiters heavily in demand. | - |
+| Cognitive Overload in Human-AI Interaction | Lepine, Kim, Mishkin, Beane | 2026 | Study of cognitive overload from interaction between models and users. Prompts are imprecise, LLM output reflects prompt but may not match intent, getting back on track is difficult. | - |
+| GitHub Copilot Collaboration Impact | GitHub Research | 2026 | Study shows Copilot use correlated with less time on management activities, less collaboration, more individual coding. Unclear if generalizes to tools like Claude Code. | - |
+| War on Slop: AI-Generated Content Flood | Various | 2026 | App stores, publications, and academic journals fighting deluges of AI-generated submissions that swamp their ability to review. Apple's app store and many others affected. | - |
 
 ### Blogs and News
 
