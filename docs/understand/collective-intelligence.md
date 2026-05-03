@@ -55,13 +55,13 @@ While AGI research pursues single systems with general intelligence, collective 
 
 **Swarm Intelligence** is inspired by natural systems where simple individuals following simple rules produce sophisticated collective behavior:
 
-|| Natural Example | AI Application | Key Principle |
-||-----------------|----------------|---------------|
-|| **Ant colonies** | Optimization algorithms, pathfinding | Pheromone-like communication, stigmergy |
-|| **Bee swarms** | Distributed task allocation | Decentralized decision-making |
-|| **Bird flocks** | Drone coordination, autonomous vehicles | Local alignment, separation, cohesion |
-|| **Fish schools** | Multi-robot exploration | Collision avoidance, group movement |
-|| **Immune systems** | Cybersecurity, anomaly detection | Distributed pattern recognition |
+| Natural Example | AI Application | Key Principle |
+|-----------------|----------------|---------------|
+| **Ant colonies** | Optimization algorithms, pathfinding | Pheromone-like communication, stigmergy |
+| **Bee swarms** | Distributed task allocation | Decentralized decision-making |
+| **Bird flocks** | Drone coordination, autonomous vehicles | Local alignment, separation, cohesion |
+| **Fish schools** | Multi-robot exploration | Collision avoidance, group movement |
+| **Immune systems** | Cybersecurity, anomaly detection | Distributed pattern recognition |
 
 **Key swarm intelligence concepts:**
 - **Stigmergy** -- Indirect communication through environment modification
@@ -73,13 +73,13 @@ While AGI research pursues single systems with general intelligence, collective 
 
 **Human-AI Collective Intelligence** focuses on systems where humans and AI collaborate to achieve more than either could alone:
 
-|| Model | Description | Example |
-||-------|-------------|---------|
-|| **AI as Tool** | AI augments human capabilities | GitHub Copilot, research assistants |
-|| **AI as Teammate** | AI acts as collaborative partner | AutoGen human-in-the-loop agents |
-|| **AI as Orchestrator** | AI coordinates human experts | Project management, research coordination |
-|| **Human Swarm** | AI enables human collective intelligence | Prediction markets, crowdsourcing platforms |
-|| **Hybrid Intelligence** | Tight integration of human and AI reasoning | Centaur chess, scientific discovery systems |
+| Model | Description | Example |
+|-------|-------------|---------|
+| **AI as Tool** | AI augments human capabilities | GitHub Copilot, research assistants |
+| **AI as Teammate** | AI acts as collaborative partner | AutoGen human-in-the-loop agents |
+| **AI as Orchestrator** | AI coordinates human experts | Project management, research coordination |
+| **Human Swarm** | AI enables human collective intelligence | Prediction markets, crowdsourcing platforms |
+| **Hybrid Intelligence** | Tight integration of human and AI reasoning | Centaur chess, scientific discovery systems |
 
 **Key research areas:**
 - **Augmented intelligence** -- Enhancing human cognitive abilities
@@ -126,28 +126,28 @@ While AGI research pursues single systems with general intelligence, collective 
 
 ### Current State of Collective Intelligence (2026)
 
-|| Signal | What It Means |
-||--------|---------------|
-|| **AutoGen** (Microsoft) enables multi-agent conversations | Framework for agents to collaborate, debate, and solve tasks together |
-|| **MetaGPT** assigns roles (PM, engineer, architect) to agents | Multi-agent systems can replicate software development teams |
-|| **Swarm robotics** in logistics and agriculture | Physical swarms of robots coordinate without central control |
-|| **Federated learning** deployed at scale (Google, Apple) | Privacy-preserving distributed training across billions of devices |
-|| **AlphaDev** discovered faster algorithms | AI systems can make fundamental discoveries beyond human knowledge |
-|| **Multi-agent RL** advances (StarCraft II, diplomacy) | Agents learning to cooperate and compete in complex environments |
-|| **Human-AI teams** outperform solo humans or AI | Chess centaur models, medical diagnosis, scientific research |
-|| **Agent frameworks** proliferate (LangChain, CrewAI, Phidata) | Developer tools for building multi-agent systems |
+| Signal | What It Means |
+|--------|---------------|
+| **AutoGen** (Microsoft) enables multi-agent conversations | Framework for agents to collaborate, debate, and solve tasks together |
+| **MetaGPT** assigns roles (PM, engineer, architect) to agents | Multi-agent systems can replicate software development teams |
+| **Swarm robotics** in logistics and agriculture | Physical swarms of robots coordinate without central control |
+| **Federated learning** deployed at scale (Google, Apple) | Privacy-preserving distributed training across billions of devices |
+| **AlphaDev** discovered faster algorithms | AI systems can make fundamental discoveries beyond human knowledge |
+| **Multi-agent RL** advances (StarCraft II, diplomacy) | Agents learning to cooperate and compete in complex environments |
+| **Human-AI teams** outperform solo humans or AI | Chess centaur models, medical diagnosis, scientific research |
+| **Agent frameworks** proliferate (LangChain, CrewAI, Phidata) | Developer tools for building multi-agent systems |
 
 ### Key Frameworks and Tools
 
-|| Framework | Focus | Use Cases |
-||-----------|-------|-----------|
-|| **AutoGen** | Multi-agent conversations | Complex task decomposition, debate, collaboration |
-|| **MetaGPT** | Role-playing agents | Software development, project simulation |
-|| **CrewAI** | Agent teams with roles | Business automation, research teams |
-|| **LangGraph** | Agent orchestration | Multi-step workflows, stateful agents |
-|| **SwarmIR** | Swarm intelligence algorithms | Optimization, pathfinding, coordination |
-|| **PettingZoo** | Multi-agent RL environments | Research, algorithm development |
-|| **Ray** | Distributed computing | Scalable multi-agent systems |
+| Framework | Focus | Use Cases |
+|-----------|-------|-----------|
+| **AutoGen** | Multi-agent conversations | Complex task decomposition, debate, collaboration |
+| **MetaGPT** | Role-playing agents | Software development, project simulation |
+| **CrewAI** | Agent teams with roles | Business automation, research teams |
+| **LangGraph** | Agent orchestration | Multi-step workflows, stateful agents |
+| **SwarmIR** | Swarm intelligence algorithms | Optimization, pathfinding, coordination |
+| **PettingZoo** | Multi-agent RL environments | Research, algorithm development |
+| **Ray** | Distributed computing | Scalable multi-agent systems |
 
 ### Collective Intelligence vs AGI
 
