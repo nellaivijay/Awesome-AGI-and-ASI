@@ -357,10 +357,10 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |[crewAI](https://github.com/joaomdmoura/crewAI)|![GitHub Repo stars](https://badgen.net/github/stars/joaomdmoura/crewAI)|Framework for orchestrating role-playing, autonomous AI agents. Craft collaborative AI crews for complex tasks.|Production-grade multi-agent orchestration.|
 |[agenticSeek](https://github.com/Fosowl/agenticSeek)|![GitHub Repo stars](https://badgen.net/github/stars/Fosowl/agenticSeek)|Fully local autonomous agent - No APIs, no monthly bills. Thinks, browses the web, and codes using only local LLMs.|26k+ stars. Fully local, privacy-first.|
 |[Gemini CLI](https://github.com/google-gemini/gemini-cli)|![GitHub Repo stars](https://badgen.net/github/stars/google-gemini/gemini-cli)|Google's open-source AI agent that brings Gemini directly into your terminal. MCP support built-in.|101k+ stars. Official Google agent.|
-|OpenAI Plugins for Codex||Bundle skills, app integrations, and MCP servers into reusable workflows for Codex. Conceptually similar to Claude Skills.|OpenAI's answer to Claude Skills for coding agent extensibility.|
-|Stripe Projects||Build and manage AI stack from command line. Set up accounts, billing, manage keys, and more.|CLI-first approach to AI infrastructure management.|
+|OpenAI Plugins for Codex|N/A|Bundle skills, app integrations, and MCP servers into reusable workflows for Codex. Conceptually similar to Claude Skills.|OpenAI's answer to Claude Skills for coding agent extensibility.
+|Stripe Projects|N/A|Build and manage AI stack from command line. Set up accounts, billing, manage keys, and more.|CLI-first approach to AI infrastructure management.
 |[Fyn](https://github.com/fyn-dev/fyn)|![GitHub Repo stars](https://badgen.net/github/stars/fyn-dev/fyn)|Fork of Python package manager uv. Reaction to OpenAI's acquisition of Astral (uv developer).|Community fork maintaining open-source independence.|
-|Google Workspace CLI||Single command line interface for Google Workspace apps (Docs, Sheets, Gmail, Gemini).|Experimental and unsupported.|
+|Google Workspace CLI|N/A|Single command line interface for Google Workspace apps (Docs, Sheets, Gmail, Gemini).|Experimental and unsupported.
 |[Hermes Agent](https://github.com/NousResearch/hermes-agent)|![GitHub Repo stars](https://badgen.net/github/stars/NousResearch/hermes-agent)|The agent that grows with you. By Nous Research - multi-model AI agent with Claude, GPT, and open-source model support.|66k+ stars. From Nous Research.|
 |[Daytona](https://github.com/daytonaio/daytona)|![GitHub Repo stars](https://badgen.net/github/stars/daytonaio/daytona)|Secure and elastic infrastructure for running AI-generated code. Sandboxed execution environment for AI agents.|72k+ stars. Secure code execution.|
 |[Composio](https://github.com/ComposioHQ/composio)|![GitHub Repo stars](https://badgen.net/github/stars/ComposioHQ/composio)|Production-ready toolset for AI agents. 250+ tools, frameworks, and integrations for building agentic AI applications.|[composio.dev](https://composio.dev/)|
@@ -437,9 +437,9 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |[SWE-agent](https://github.com/princeton-nlp/SWE-agent)|![GitHub Repo stars](https://badgen.net/github/stars/princeton-nlp/SWE-agent)|Turns LLMs into software engineering agents that fix real GitHub issues. Pioneered the Agent-Computer Interface (ACI) concept.|[Paper](https://arxiv.org/abs/2405.15232). Princeton NLP. Key SWE-bench benchmark agent.|
 |[goose](https://github.com/block/goose)|![GitHub Repo stars](https://badgen.net/github/stars/block/goose)|Open-source extensible AI agent that goes beyond code suggestions — install, execute, edit, and test with any LLM. Written in Rust.|Supports MCP and ACP protocols. By Block.|
 |[Open Interpreter](https://github.com/OpenInterpreter/open-interpreter)|![GitHub Repo stars](https://badgen.net/github/stars/OpenInterpreter/open-interpreter)|A natural language interface for computers. Lets LLMs run code (Python, JS, shell) locally with no restrictions.|Full computer control via natural language. Like ChatGPT Code Interpreter but unrestricted.|
-|Cursor Composer 2||Next-generation IDE incorporating Kimi K2.5 model. Beats Anthropic Opus 4.6 on major coding benchmarks at lower cost.|AI-native IDE with frontier model integration.|
-|Opencode||Open source AI coding agent using most models including free and local. Terminal, desktop, IDE, or extension. Privacy-sensitive environments.|Multi-model, privacy-first coding agent.|
-|Claude Review||Code review on every pull request that Claude Code makes. Research preview for Claude Teams and Enterprise.|Automated PR review for AI-generated code.|
+|Cursor Composer 2|N/A|Next-generation IDE incorporating Kimi K2.5 model. Beats Anthropic Opus 4.6 on major coding benchmarks at lower cost.|AI-native IDE with frontier model integration.
+|Opencode|N/A|Open source AI coding agent using most models including free and local. Terminal, desktop, IDE, or extension. Privacy-sensitive environments.|Multi-model, privacy-first coding agent.
+|Claude Review|N/A|Code review on every pull request that Claude Code makes. Research preview for Claude Teams and Enterprise.|Automated PR review for AI-generated code.
 
 ### Research & Knowledge Agents
 
@@ -449,9 +449,9 @@ The AI field is in a remarkable transition period. Here's what the current lands
 |[AI Scientist](https://github.com/SakanaAI/AI-Scientist)|![GitHub Repo stars](https://badgen.net/github/stars/SakanaAI/AI-Scientist)|Fully autonomous scientific research pipeline: generates ideas, implements experiments, writes and reviews full academic papers.|[Paper](https://arxiv.org/abs/2408.06292). By Sakana AI. ASI-threshold capability.|
 |[gpt-researcher](https://github.com/assafelovic/gpt-researcher)|![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher)|GPT-based autonomous agent for comprehensive online research on any topic. Searches, reads, and synthesizes long-form reports.|-|
 |[mem0](https://github.com/mem0ai/mem0)|![GitHub Repo stars](https://badgen.net/github/stars/mem0ai/mem0)|Universal memory layer for AI agents. Persistent long-term, episodic, and semantic memory across agent sessions.|52k+ stars. Key missing component between current agents and AGI.|
-|Autoresearch||Automates the scientific method with AI agents. Runs hundreds of ML experiments per night - experiment, results, modify code, repeat.|By Andrej Karpathy. ASI-threshold automation.|
-|Claude Code Channels||Experimental feature allowing communication with Claude using Telegram or Discord. Competes with OpenClaw.|Multi-platform Claude integration.|
-|Claude Cowork Dispatch||Control Claude Cowork from your phone. Claude runs on computer, assign tasks from anywhere, get text notification when done.|Remote Claude control via mobile.|
+|Autoresearch|N/A|Automates the scientific method with AI agents. Runs hundreds of ML experiments per night - experiment, results, modify code, repeat.|By Andrej Karpathy. ASI-threshold automation.
+|Claude Code Channels|N/A|Experimental feature allowing communication with Claude using Telegram or Discord. Competes with OpenClaw.|Multi-platform Claude integration.
+|Claude Cowork Dispatch|N/A|Control Claude Cowork from your phone. Claude runs on computer, assign tasks from anywhere, get text notification when done.|Remote Claude control via mobile.
 
 ### Computer-Use & Desktop Agents
 

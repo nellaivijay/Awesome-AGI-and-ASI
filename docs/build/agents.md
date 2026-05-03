@@ -16,9 +16,9 @@ keywords: "AI agents, coding agents, research agents, computer use agents, embod
 |[SWE-agent](https://github.com/princeton-nlp/SWE-agent)|![GitHub Repo stars](https://badgen.net/github/stars/princeton-nlp/SWE-agent)|Turns LLMs into software engineering agents that fix real GitHub issues. Pioneered the Agent-Computer Interface (ACI) concept.|[Paper](https://arxiv.org/abs/2405.15232). Princeton NLP. Key SWE-bench benchmark agent.|
 |[goose](https://github.com/block/goose)|![GitHub Repo stars](https://badgen.net/github/stars/block/goose)|Open-source extensible AI agent that goes beyond code suggestions — install, execute, edit, and test with any LLM. Written in Rust.|Supports MCP and ACP protocols. By Block.|
 |[Open Interpreter](https://github.com/OpenInterpreter/open-interpreter)|![GitHub Repo stars](https://badgen.net/github/stars/OpenInterpreter/open-interpreter)|A natural language interface for computers. Lets LLMs run code (Python, JS, shell) locally with no restrictions.|Full computer control via natural language. Like ChatGPT Code Interpreter but unrestricted.|
-|Cursor Composer 2||Next-generation IDE incorporating Kimi K2.5 model. Beats Anthropic Opus 4.6 on major coding benchmarks at lower cost.|AI-native IDE with frontier model integration.|
-|Opencode||Open source AI coding agent using most models including free and local. Terminal, desktop, IDE, or extension. Privacy-sensitive environments.|Multi-model, privacy-first coding agent.|
-|Claude Review||Code review on every pull request that Claude Code makes. Research preview for Claude Teams and Enterprise.|Automated PR review for AI-generated code.|
+|Cursor Composer 2|N/A|Next-generation IDE incorporating Kimi K2.5 model. Beats Anthropic Opus 4.6 on major coding benchmarks at lower cost.|AI-native IDE with frontier model integration.
+|Opencode|N/A|Open source AI coding agent using most models including free and local. Terminal, desktop, IDE, or extension. Privacy-sensitive environments.|Multi-model, privacy-first coding agent.
+|Claude Review|N/A|Code review on every pull request that Claude Code makes. Research preview for Claude Teams and Enterprise.|Automated PR review for AI-generated code.
 
 ### Research & Knowledge Agents
 
@@ -28,9 +28,9 @@ keywords: "AI agents, coding agents, research agents, computer use agents, embod
 |[AI Scientist](https://github.com/SakanaAI/AI-Scientist)|![GitHub Repo stars](https://badgen.net/github/stars/SakanaAI/AI-Scientist)|Fully autonomous scientific research pipeline: generates ideas, implements experiments, writes and reviews full academic papers.|[Paper](https://arxiv.org/abs/2408.06292). By Sakana AI. ASI-threshold capability.|
 |[gpt-researcher](https://github.com/assafelovic/gpt-researcher)|![GitHub Repo stars](https://badgen.net/github/stars/assafelovic/gpt-researcher)|GPT-based autonomous agent for comprehensive online research on any topic. Searches, reads, and synthesizes long-form reports.|-|
 |[mem0](https://github.com/mem0ai/mem0)|![GitHub Repo stars](https://badgen.net/github/stars/mem0ai/mem0)|Universal memory layer for AI agents. Persistent long-term, episodic, and semantic memory across agent sessions.|52k+ stars. Key missing component between current agents and AGI.|
-|Autoresearch||Automates the scientific method with AI agents. Runs hundreds of ML experiments per night - experiment, results, modify code, repeat.|By Andrej Karpathy. ASI-threshold automation.|
-|Claude Code Channels||Experimental feature allowing communication with Claude using Telegram or Discord. Competes with OpenClaw.|Multi-platform Claude integration.|
-|Claude Cowork Dispatch||Control Claude Cowork from your phone. Claude runs on computer, assign tasks from anywhere, get text notification when done.|Remote Claude control via mobile.|
+|Autoresearch|N/A|Automates the scientific method with AI agents. Runs hundreds of ML experiments per night - experiment, results, modify code, repeat.|By Andrej Karpathy. ASI-threshold automation.
+|Claude Code Channels|N/A|Experimental feature allowing communication with Claude using Telegram or Discord. Competes with OpenClaw.|Multi-platform Claude integration.
+|Claude Cowork Dispatch|N/A|Control Claude Cowork from your phone. Claude runs on computer, assign tasks from anywhere, get text notification when done.|Remote Claude control via mobile.
 
 ### Computer-Use & Desktop Agents
 
