@@ -44,6 +44,8 @@ plugins:
   - search:
       lang: en
       separator: '[\s\-\.\_]+'
+      min_search_length: 2
+      prebuild_index: true
   # - blog:
   #     blog_dir: blog
   #     post_date_format: long
@@ -65,6 +67,13 @@ plugins:
   #     pretty_print: true
   #     length: 250
   - meta
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+        remove_optional_attribute_quotes: false
 
 extra_css:
   - stylesheets/custom.css
@@ -74,6 +83,18 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/nellaivijay/awesome-agi-aci-asi
   generator: false
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: Thanks for your feedback!
 
 markdown_extensions:
   - tables

@@ -694,6 +694,298 @@ article {
   }
 }
 
+/* ── TABLE OF CONTENTS ENHANCEMENTS ── */
+.md-sidebar--secondary {
+  position: sticky;
+  top: 4rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cyber-border) var(--cyber-bg-secondary);
+}
+
+.md-sidebar--secondary::-webkit-scrollbar {
+  width: 6px;
+}
+
+.md-sidebar--secondary::-webkit-scrollbar-track {
+  background: var(--cyber-bg-secondary);
+}
+
+.md-sidebar--secondary::-webkit-scrollbar-thumb {
+  background: var(--cyber-border);
+  border-radius: 3px;
+}
+
+.md-nav--secondary .md-nav__link {
+  color: var(--cyber-text-secondary);
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.md-nav--secondary .md-nav__link:hover,
+.md-nav--secondary .md-nav__link--active {
+  color: var(--cyber-accent-blue);
+}
+
+/* ── ACCESSIBILITY IMPROVEMENTS ── */
+/* Focus indicators for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--cyber-accent-blue);
+  outline-offset: 2px;
+}
+
+/* Skip to content link for accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--cyber-accent-blue);
+  color: white;
+  padding: 8px;
+  z-index: 10000;
+  transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Improved color contrast for interactive elements */
+.md-typeset a:hover,
+.md-typeset a:focus {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+/* ARIA labels for screen readers */
+[aria-hidden="true"] {
+  display: none;
+}
+
+/* ── PRINT-FRIENDLY STYLES ── */
+@media print {
+  .md-header,
+  .md-sidebar,
+  .md-footer,
+  .md-tabs,
+  .back-to-top,
+  #table-filter,
+  .filter-btn,
+  .resource-feedback {
+    display: none !important;
+  }
+
+  .md-content {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .md-main {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .md-typeset {
+    color: black;
+  }
+
+  .md-typeset h1,
+  .md-typeset h2,
+  .md-typeset h3,
+  .md-typeset h4 {
+    color: black;
+    page-break-after: avoid;
+  }
+
+  .md-typeset a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  .md-typeset table {
+    page-break-inside: avoid;
+  }
+
+  .resource-card,
+  .md-typeset ul li,
+  .md-typeset ol li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Show URLs in print */
+  .md-typeset a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8rem;
+    color: #666;
+  }
+}
+
+/* ── PERFORMANCE OPTIMIZATIONS ── */
+/* Reduce paint complexity */
+.md-typeset img {
+  will-change: transform;
+}
+
+/* Smooth scrolling with hardware acceleration */
+html {
+  scroll-behavior: smooth;
+}
+
+/* GPU acceleration for animations */
+.resource-card,
+.cyber-badge,
+.filter-btn {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ── READING TIME INDICATOR ── */
+.reading-time {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid var(--cyber-accent-blue);
+  border-radius: 20px;
+  color: var(--cyber-accent-blue);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+/* ── EXTERNAL LINK SECURITY ── */
+/* All external links open in new tab with security */
+.md-typeset a[href^="http"] {
+  position: relative;
+}
+
+/* ── IMPROVED SEARCH STYLING ── */
+.md-search__form {
+  background: var(--cyber-bg-tertiary);
+  border: 1px solid var(--cyber-border);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.md-search__form:hover,
+.md-search__form:focus-within {
+  border-color: var(--cyber-accent-blue);
+  box-shadow: 0 0 15px var(--cyber-glow-blue);
+}
+
+.md-search__input {
+  background: transparent;
+  color: var(--cyber-text-primary);
+}
+
+.md-search__input::placeholder {
+  color: var(--cyber-text-muted);
+}
+
+/* ── BREADCRUMB ENHANCEMENTS ── */
+.md-nav__title {
+  font-weight: 600;
+  color: var(--cyber-text-primary);
+}
+
+.md-nav__item--active > .md-nav__link {
+  color: var(--cyber-accent-blue);
+  font-weight: 600;
+}
+
+/* ── LAST UPDATED INDICATOR ── */
+.last-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 6px 12px;
+  background: rgba(45, 212, 191, 0.1);
+  border: 1px solid var(--cyber-accent-teal);
+  border-radius: 20px;
+  color: var(--cyber-accent-teal);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+/* ── CONTENT VISIBILITY & LOADING ── */
+/* Ensure content is visible immediately */
+.md-content {
+  opacity: 1;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── IMPROVED CODE BLOCK STYLING ── */
+.md-typeset pre {
+  background: var(--cyber-bg-tertiary);
+  border: 1px solid var(--cyber-border);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.md-typeset code {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--cyber-accent-blue);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* ── IMPROVED ADMONITION STYLING ── */
+.md-typeset .admonition {
+  background: var(--cyber-bg-secondary);
+  border: 1px solid var(--cyber-border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.md-typeset .admonition-title {
+  font-weight: 600;
+  color: var(--cyber-text-primary);
+}
+
+/* ── RESPONSIVE IMPROVEMENTS ── */
+@media (max-width: 480px) {
+  .md-content {
+    padding: 0 16px;
+  }
+
+  .hero-section {
+    padding: 2rem 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .md-typeset h1 {
+    font-size: 1.75rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.25rem;
+  }
+}
+
 /* ── BADGES ── */
 .cyber-badge {
   display: inline-block;

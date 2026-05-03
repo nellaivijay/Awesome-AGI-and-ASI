@@ -1565,6 +1565,249 @@ document.addEventListener('keydown', function(event) {
       link.parentNode.appendChild(copyIcon);
     }
   });
+
+  // ── Reading Time Calculator ──
+  function calculateReadingTime() {
+    const content = document.querySelector('.md-content');
+    if (!content) return;
+    
+    const text = content.innerText || '';
+    const words = text.split(/\s+/).length;
+    const readingTime = Math.ceil(words / 200); // Average reading speed: 200 words/minute
+    
+    // Create reading time indicator
+    const readingTimeElement = document.createElement('div');
+    readingTimeElement.className = 'reading-time';
+    readingTimeElement.innerHTML = `📖 ${readingTime} min read`;
+    
+    // Insert after the first heading
+    const firstHeading = content.querySelector('h1, h2');
+    if (firstHeading && firstHeading.nextSibling) {
+      firstHeading.parentNode.insertBefore(readingTimeElement, firstHeading.nextSibling);
+    }
+  }
+  
+  // Execute reading time calculation
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadingTime);
+  } else {
+    calculateReadingTime();
+  }
+
+  // ── External Link Security ──
+  function secureExternalLinks() {
+    const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="' + window.location.hostname + '"])');
+    externalLinks.forEach(link => {
+      // Add security attributes
+      link.setAttribute('rel', 'noopener noreferrer');
+      link.setAttribute('target', '_blank');
+      
+      // Add external link indicator if not already present
+      if (!link.querySelector('.external-link-indicator')) {
+        const indicator = document.createElement('span');
+        indicator.className = 'external-link-indicator';
+        indicator.innerHTML = ' ↗';
+        indicator.style.cssText = 'font-size: 0.8em; margin-left: 2px;';
+        link.appendChild(indicator);
+      }
+    });
+  }
+  
+  // Execute external link security
+  secureExternalLinks();
+
+  // ── Accessibility Improvements ──
+  function improveAccessibility() {
+    // Add skip to content link
+    if (!document.querySelector('.skip-to-content')) {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.className = 'skip-to-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.setAttribute('aria-label', 'Skip to main content');
+      document.body.insertBefore(skipLink, document.body.firstChild);
+      
+      // Add main content id if not present
+      const mainContent = document.querySelector('.md-content');
+      if (mainContent && !mainContent.id) {
+        mainContent.id = 'main-content';
+      }
+    }
+
+    // Improve ARIA labels on interactive elements
+    const buttons = document.querySelectorAll('button:not([aria-label])');
+    buttons.forEach(button => {
+      if (button.textContent.trim()) {
+        button.setAttribute('aria-label', button.textContent.trim());
+      }
+    });
+
+    // Ensure all images have alt text
+    const images = document.querySelectorAll('img:not([alt])');
+    images.forEach(img => {
+      img.setAttribute('alt', 'Image');
+      img.setAttribute('role', 'presentation');
+    });
+  }
+  
+  // Execute accessibility improvements
+  improveAccessibility();
+
+  // ── Performance: Lazy Load Images ──
+  function lazyLoadImages() {
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach(img => imageObserver.observe(img));
+    }
+  }
+  
+  // Execute lazy loading
+  lazyLoadImages();
+
+  // ── Smooth Scroll for Anchor Links ──
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+
+  // ── Table of Contents Enhancement ──
+  function enhanceTableOfContents() {
+    const toc = document.querySelector('.md-sidebar--secondary');
+    if (toc) {
+      // Add current section highlighting
+      const headings = document.querySelectorAll('.md-content h1, .md-content h2, .md-content h3');
+      const tocLinks = toc.querySelectorAll('a');
+      
+      if (headings.length > 0 && tocLinks.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = entry.target.id;
+              tocLinks.forEach(link => {
+                link.classList.remove('md-nav__link--active');
+                if (link.getAttribute('href') === '#' + id) {
+                  link.classList.add('md-nav__link--active');
+                }
+              });
+            }
+          });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+        
+        headings.forEach(heading => {
+          if (heading.id) {
+            observer.observe(heading);
+          }
+        });
+      }
+    }
+  }
+  
+  // Execute TOC enhancement
+  setTimeout(enhanceTableOfContents, 100);
+
+  // ── Search Enhancement ──
+  function enhanceSearch() {
+    const searchInput = document.querySelector('.md-search__input');
+    if (searchInput) {
+      searchInput.setAttribute('placeholder', 'Search resources, papers, frameworks...');
+      searchInput.setAttribute('aria-label', 'Search documentation');
+    }
+  }
+  
+  // Execute search enhancement
+  enhanceSearch();
+
+  // ── Keyboard Shortcuts Enhancement ──
+  document.addEventListener('keydown', function(e) {
+    // Ctrl/Cmd + K for search
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      const searchInput = document.querySelector('.md-search__input');
+      if (searchInput) {
+        searchInput.focus();
+      }
+    }
+    
+    // Escape to close search/modals
+    if (e.key === 'Escape') {
+      const searchOverlay = document.querySelector('.md-search__overlay');
+      if (searchOverlay) {
+        searchOverlay.click();
+      }
+      closeSubmissionModal();
+    }
+  });
+
+  // ── Last Updated Display Enhancement ──
+  function enhanceLastUpdated() {
+    const lastUpdatedElement = document.querySelector('.md-source-file');
+    if (lastUpdatedElement) {
+      const dateMatch = lastUpdatedElement.textContent.match(/(\d{4}-\d{2}-\d{2})/);
+      if (dateMatch) {
+        const date = new Date(dateMatch[1]);
+        const now = new Date();
+        const diffTime = Math.abs(now - date);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        
+        let timeAgo;
+        if (diffDays === 1) {
+          timeAgo = 'Updated today';
+        } else if (diffDays < 7) {
+          timeAgo = `Updated ${diffDays} days ago`;
+        } else if (diffDays < 30) {
+          timeAgo = `Updated ${Math.floor(diffDays / 7)} weeks ago`;
+        } else {
+          timeAgo = `Updated ${Math.floor(diffDays / 30)} months ago`;
+        }
+        
+        const indicator = document.createElement('div');
+        indicator.className = 'last-updated';
+        indicator.innerHTML = `🕒 ${timeAgo}`;
+        
+        const content = document.querySelector('.md-content');
+        if (content && content.firstChild) {
+          content.insertBefore(indicator, content.firstChild);
+        }
+      }
+    }
+  }
+  
+  // Execute last updated enhancement
+  setTimeout(enhanceLastUpdated, 500);
+
+  // ── Print Enhancement ──
+  window.addEventListener('beforeprint', function() {
+    // Ensure all content is visible before printing
+    document.body.classList.add('printing');
+  });
+
+  window.addEventListener('afterprint', function() {
+    document.body.classList.remove('printing');
+  });
 </script>
 
 {% endblock %}
