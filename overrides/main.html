@@ -2127,6 +2127,147 @@ document.addEventListener('keydown', function(event) {
 
   // Execute social sharing optimization (for debugging)
   setTimeout(optimizeSocialSharing, 1000);
+
+  // ── Reading Time Calculator ──
+  function calculateReadingTime() {
+    const content = document.querySelector('.md-content');
+    if (!content) return;
+
+    const text = content.innerText || content.textContent;
+    const words = text.trim().split(/\s+/).length;
+    const wordsPerMinute = 200; // Average reading speed
+    const readingTime = Math.ceil(words / wordsPerMinute);
+
+    // Create reading time element
+    let readingTimeElement = document.querySelector('.reading-time');
+    if (!readingTimeElement) {
+      readingTimeElement = document.createElement('div');
+      readingTimeElement.className = 'reading-time';
+      
+      // Insert after the first heading
+      const firstHeading = content.querySelector('h1');
+      if (firstHeading) {
+        firstHeading.insertAdjacentElement('afterend', readingTimeElement);
+      } else {
+        content.insertBefore(readingTimeElement, content.firstChild);
+      }
+    }
+
+    // Display reading time
+    if (readingTime < 1) {
+      readingTimeElement.innerHTML = '<span class="reading-icon">⏱️</span> Less than 1 min read';
+    } else if (readingTime === 1) {
+      readingTimeElement.innerHTML = '<span class="reading-icon">⏱️</span> 1 min read';
+    } else {
+      readingTimeElement.innerHTML = `<span class="reading-icon">⏱️</span> ${readingTime} min read`;
+    }
+
+    // Add word count for longer articles
+    if (words > 500) {
+      readingTimeElement.innerHTML += ` <span class="word-count">(${words.toLocaleString()} words)</span>`;
+    }
+  }
+
+  // Execute reading time calculation
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', calculateReadingTime);
+  } else {
+    calculateReadingTime();
+  }
+
+  // ── Enhanced Table of Contents ──
+  function enhanceTableOfContents() {
+    const toc = document.querySelector('.md-nav--secondary');
+    if (!toc) return;
+
+    // Add TOC progress indicator
+    const progressContainer = document.createElement('div');
+    progressContainer.className = 'toc-progress-container';
+    progressContainer.innerHTML = `
+      <div class="toc-progress-bar">
+        <div class="toc-progress-fill"></div>
+      </div>
+      <div class="toc-progress-text">0%</div>
+    `;
+    toc.insertBefore(progressContainer, toc.firstChild);
+
+    const progressFill = progressContainer.querySelector('.toc-progress-fill');
+    const progressText = progressContainer.querySelector('.toc-progress-text');
+
+    // Update progress on scroll
+    function updateTOCProgress() {
+      const content = document.querySelector('.md-content');
+      if (!content) return;
+
+      const contentHeight = content.offsetHeight;
+      const windowHeight = window.innerHeight;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const contentTop = content.offsetTop;
+      const contentBottom = contentTop + contentHeight;
+      
+      let progress = 0;
+      if (scrollTop >= contentBottom - windowHeight) {
+        progress = 100;
+      } else if (scrollTop > contentTop) {
+        progress = ((scrollTop - contentTop) / (contentBottom - windowHeight - contentTop)) * 100;
+      }
+      
+      progress = Math.min(100, Math.max(0, progress));
+      progressFill.style.width = `${progress}%`;
+      progressText.textContent = `${Math.round(progress)}%`;
+    }
+
+    // Add active section highlighting
+    function highlightActiveSection() {
+      const headings = document.querySelectorAll('.md-content h1, .md-content h2, .md-content h3');
+      const tocLinks = document.querySelectorAll('.md-nav--secondary a');
+      
+      let currentHeading = null;
+      const scrollPosition = window.pageYOffset + 100;
+
+      headings.forEach(heading => {
+        if (heading.offsetTop <= scrollPosition) {
+          currentHeading = heading;
+        }
+      });
+
+      tocLinks.forEach(link => {
+        link.classList.remove('active-section');
+        if (currentHeading && link.getAttribute('href') === `#${currentHeading.id}`) {
+          link.classList.add('active-section');
+        }
+      });
+    }
+
+    // Smooth scroll for TOC links
+    toc.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Event listeners
+    window.addEventListener('scroll', () => {
+      updateTOCProgress();
+      highlightActiveSection();
+    });
+
+    // Initial calls
+    updateTOCProgress();
+    highlightActiveSection();
+  }
+
+  // Execute TOC enhancements
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', enhanceTableOfContents);
+  } else {
+    enhanceTableOfContents();
+  }
 </script>
 
 {% endblock %}
