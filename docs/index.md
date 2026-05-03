@@ -635,28 +635,33 @@ The most comprehensive, curated collection of resources on the journey from **AI
 
 ## Explore
 
-| | Topic | What's Inside |
-|---|---|---|
-| **Understand** <a id="understand"></a> | [AI, AGI, and ASI](understand/ai-agi-asi.md) | Definitions, comparison table, DeepMind's AGI levels, state of the field |
-| | [Collective Intelligence](understand/collective-intelligence.md) | Multi-agent systems, swarm intelligence, human-AI collaboration, distributed AI |
-| | [AGI Benchmarks & Evals](understand/benchmarks.md) | ARC-AGI, SWE-bench, GAIA, GPQA, FrontierMath, saturated benchmarks |
-| | [ASI Research](understand/asi-research.md) | Organizations, 27 books, seminal papers, benchmarks, roadmaps |
-| **Build** <a id="build"></a> | [Frameworks](build/frameworks.md) | LAMs, MCP/A2A protocols, 30+ agent frameworks |
-| | [Agents](build/agents.md) | Coding, research, computer-use, embodied, and enterprise agents |
-| | [Physical AI](build/physical-ai.md) | Humanoid robotics, VLA models, simulation, RL environments |
-| | [Paper-to-Code](build/paper-to-code.md) | Research2Repo, PaperCoder, AI Scientist |
-| **Infrastructure** <a id="infrastructure"></a> | [LLM Frameworks](infrastructure/llm-frameworks.md) | Orchestration, platforms, structured output, observability |
-| | [RAG & Vector DBs](infrastructure/rag-vector-db.md) | Vector databases, RAG engines, Graph RAG, embeddings |
-| | [Data Infra](infrastructure/data-infra.md) | Iceberg, Spark, Delta Lake, MLflow, Ray |
-| | [Fine-Tuning](infrastructure/fine-tuning.md) | LoRA variants, PEFT, DPO, instruction tuning |
-| | [Deployment](infrastructure/deployment.md) | vLLM, TGI, Vertex AI, Bedrock, Triton |
-| | [Distributed Training](infrastructure/distributed-training.md) | ColossalAI, DeepSpeed, Megatron-LM, FSDP, Accelerate |
-| | [Compute & Hardware](infrastructure/compute-hardware.md) | GPUs, TPUs, LPUs, quantization (GPTQ/AWQ), neuromorphic, decentralized |
-| | [Prompt Engineering](infrastructure/prompt-engineering.md) | CoT, ToT, GoT, advanced techniques |
-| **Safety** <a id="safety"></a> | [Safety & Alignment](safety/safety-alignment.md) | Superalignment, RLHF, DPO, interpretability, AI governance |
-| **Research** <a id="research"></a> | [Papers & Blogs](research/papers-blogs.md) | 60+ papers on frontier models, reasoning, agents |
-| | [Tutorials](research/tutorials.md) | Courses and hands-on learning resources |
-| | [Conferences](research/conferences.md) | 28 academic, AGI, safety, and industry events |
+| Topic | What's Inside |
+|-------|--------------|
+| **Understand** <a id="understand"></a> | |
+| ↳ [AI, AGI, and ASI](understand/ai-agi-asi.md) | Definitions, comparison table, DeepMind's AGI levels, state of the field |
+| ↳ [Collective Intelligence](understand/collective-intelligence.md) | Multi-agent systems, swarm intelligence, human-AI collaboration, distributed AI |
+| ↳ [AGI Benchmarks & Evals](understand/benchmarks.md) | ARC-AGI, SWE-bench, GAIA, GPQA, FrontierMath, saturated benchmarks |
+| ↳ [ASI Research](understand/asi-research.md) | Organizations, 27 books, seminal papers, benchmarks, roadmaps |
+| **Build** <a id="build"></a> | |
+| ↳ [Frameworks](build/frameworks.md) | LAMs, MCP/A2A protocols, 30+ agent frameworks |
+| ↳ [Agents](build/agents.md) | Coding, research, computer-use, embodied, and enterprise agents |
+| ↳ [Physical AI](build/physical-ai.md) | Humanoid robotics, VLA models, simulation, RL environments |
+| ↳ [Paper-to-Code](build/paper-to-code.md) | Research2Repo, PaperCoder, AI Scientist |
+| **Infrastructure** <a id="infrastructure"></a> | |
+| ↳ [LLM Frameworks](infrastructure/llm-frameworks.md) | Orchestration, platforms, structured output, observability |
+| ↳ [RAG & Vector DBs](infrastructure/rag-vector-db.md) | Vector databases, RAG engines, Graph RAG, embeddings |
+| ↳ [Data Infra](infrastructure/data-infra.md) | Iceberg, Spark, Delta Lake, MLflow, Ray |
+| ↳ [Fine-Tuning](infrastructure/fine-tuning.md) | LoRA variants, PEFT, DPO, instruction tuning |
+| ↳ [Deployment](infrastructure/deployment.md) | vLLM, TGI, Vertex AI, Bedrock, Triton |
+| ↳ [Distributed Training](infrastructure/distributed-training.md) | ColossalAI, DeepSpeed, Megatron-LM, FSDP, Accelerate |
+| ↳ [Compute & Hardware](infrastructure/compute-hardware.md) | GPUs, TPUs, LPUs, quantization (GPTQ/AWQ), neuromorphic, decentralized |
+| ↳ [Prompt Engineering](infrastructure/prompt-engineering.md) | CoT, ToT, GoT, advanced techniques |
+| **Safety** <a id="safety"></a> | |
+| ↳ [Safety & Alignment](safety/safety-alignment.md) | Superalignment, RLHF, DPO, interpretability, AI governance |
+| **Research** <a id="research"></a> | |
+| ↳ [Papers & Blogs](research/papers-blogs.md) | 60+ papers on frontier models, reasoning, agents |
+| ↳ [Tutorials](research/tutorials.md) | Courses and hands-on learning resources |
+| ↳ [Conferences](research/conferences.md) | 28 academic, AGI, safety, and industry events |
 
 ---
 
