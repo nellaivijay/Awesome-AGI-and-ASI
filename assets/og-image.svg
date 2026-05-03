@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="og-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2dd4bf;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#og-gradient)"/>
+  
+  <!-- Neural network pattern -->
+  <g opacity="0.1">
+    <circle cx="100" cy="100" r="30" fill="#3b82f6"/>
+    <circle cx="200" cy="200" r="25" fill="#2dd4bf"/>
+    <circle cx="150" cy="300" r="20" fill="#3b82f6"/>
+    <circle cx="300" cy="150" r="35" fill="#2dd4bf"/>
+    <circle cx="400" cy="250" r="28" fill="#3b82f6"/>
+    <circle cx="500" cy="180" r="32" fill="#2dd4bf"/>
+    <circle cx="600" cy="220" r="25" fill="#3b82f6"/>
+    <circle cx="700" cy="160" r="30" fill="#2dd4bf"/>
+    <circle cx="800" cy="280" r="22" fill="#3b82f6"/>
+    <circle cx="900" cy="200" r="35" fill="#2dd4bf"/>
+    <circle cx="1000" cy="170" r="28" fill="#3b82f6"/>
+    <circle cx="1100" cy="230" r="25" fill="#2dd4bf"/>
+    <circle cx="1050" cy="350" r="20" fill="#3b82f6"/>
+    <circle cx="950" cy="400" r="30" fill="#2dd4bf"/>
+    <circle cx="850" cy="380" r="25" fill="#3b82f6"/>
+    <circle cx="750" cy="450" r="28" fill="#2dd4bf"/>
+    <circle cx="650" cy="420" r="32" fill="#3b82f6"/>
+    <circle cx="550" cy="480" r="22" fill="#3b82f6"/>
+    <circle cx="450" cy="450" r="35" fill="#2dd4bf"/>
+    <circle cx="350" cy="500" r="25" fill="#3b82f6"/>
+    <circle cx="250" cy="480" r="30" fill="#2dd4bf"/>
+    <circle cx="150" cy="420" r="28" fill="#3b82f6"/>
+  </g>
+  
+  <!-- Main content -->
+  <text x="600" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="url(#text-gradient)">Awesome AGI, ASI &amp; Collective Intelligence</text>
+  <text x="600" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#94a3b8">The comprehensive resource for AI builders and researchers</text>
+  
+  <!-- URL -->
+  <text x="600" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#60a5fa">nellaivijay.github.io/awesome-agi-aci-asi</text>
+  
+  <!-- Social proof -->
+  <text x="600" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#64748b">🤖 500+ Resources • 📚 Updated April 2026 • 🌟 Community Curated</text>
+</svg>

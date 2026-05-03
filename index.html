@@ -22,7 +22,7 @@
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
@@ -60,6 +60,8 @@
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
 
     
     
@@ -1711,19 +1713,17 @@
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(45, 212, 191, 0.1) 100%);
   border: 1px solid var(--cyber-border);
   border-radius: 16px;
-  padding: 2.5rem 2rem;
-  margin: 2rem 0 2rem 0;
+  padding: 3rem 2.5rem;
+  margin: 3rem auto;
   text-align: center;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hero-section h1 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background: linear-gradient(90deg, var(--cyber-accent-blue), var(--cyber-accent-teal));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1735,15 +1735,15 @@
   color: var(--cyber-text-secondary);
   font-size: 1rem;
   max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
+  margin: 1.5rem auto 0;
+  line-height: 1.7;
 }
 
 /* Laptop screens */
 @media screen and (max-width: 1366px) and (min-width: 1024px) {
   .hero-section {
-    padding: 2rem 1.5rem;
-    margin: 1.5rem 0;
+    padding: 2.5rem 2rem;
+    margin: 2.5rem auto;
   }
 
   .hero-section h1 {
@@ -2332,131 +2332,109 @@ window.addEventListener('resize', createMindMap);
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
 <th>Topic</th>
 <th>What's Inside</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
 <td><strong>Understand</strong> <a id="understand"></a></td>
-<td><a href="understand/ai-agi-asi/">AI, AGI, and ASI</a></td>
+<td></td>
+</tr>
+<tr>
+<td>↳ <a href="understand/ai-agi-asi/">AI, AGI, and ASI</a></td>
 <td>Definitions, comparison table, DeepMind's AGI levels, state of the field</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="understand/collective-intelligence/">Collective Intelligence</a></td>
+<td>↳ <a href="understand/collective-intelligence/">Collective Intelligence</a></td>
 <td>Multi-agent systems, swarm intelligence, human-AI collaboration, distributed AI</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="understand/benchmarks/">AGI Benchmarks &amp; Evals</a></td>
+<td>↳ <a href="understand/benchmarks/">AGI Benchmarks &amp; Evals</a></td>
 <td>ARC-AGI, SWE-bench, GAIA, GPQA, FrontierMath, saturated benchmarks</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="understand/asi-research/">ASI Research</a></td>
+<td>↳ <a href="understand/asi-research/">ASI Research</a></td>
 <td>Organizations, 27 books, seminal papers, benchmarks, roadmaps</td>
 </tr>
 <tr>
-<td></td>
 <td><strong>Build</strong> <a id="build"></a></td>
-<td><a href="build/frameworks/">Frameworks</a></td>
+<td></td>
+</tr>
+<tr>
+<td>↳ <a href="build/frameworks/">Frameworks</a></td>
 <td>LAMs, MCP/A2A protocols, 30+ agent frameworks</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="build/agents/">Agents</a></td>
+<td>↳ <a href="build/agents/">Agents</a></td>
 <td>Coding, research, computer-use, embodied, and enterprise agents</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="build/physical-ai/">Physical AI</a></td>
+<td>↳ <a href="build/physical-ai/">Physical AI</a></td>
 <td>Humanoid robotics, VLA models, simulation, RL environments</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="build/paper-to-code/">Paper-to-Code</a></td>
+<td>↳ <a href="build/paper-to-code/">Paper-to-Code</a></td>
 <td>Research2Repo, PaperCoder, AI Scientist</td>
 </tr>
 <tr>
-<td></td>
 <td><strong>Infrastructure</strong> <a id="infrastructure"></a></td>
-<td><a href="infrastructure/llm-frameworks/">LLM Frameworks</a></td>
+<td></td>
+</tr>
+<tr>
+<td>↳ <a href="infrastructure/llm-frameworks/">LLM Frameworks</a></td>
 <td>Orchestration, platforms, structured output, observability</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="infrastructure/rag-vector-db/">RAG &amp; Vector DBs</a></td>
+<td>↳ <a href="infrastructure/rag-vector-db/">RAG &amp; Vector DBs</a></td>
 <td>Vector databases, RAG engines, Graph RAG, embeddings</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="infrastructure/data-infra/">Data Infra</a></td>
+<td>↳ <a href="infrastructure/data-infra/">Data Infra</a></td>
 <td>Iceberg, Spark, Delta Lake, MLflow, Ray</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="infrastructure/fine-tuning/">Fine-Tuning</a></td>
+<td>↳ <a href="infrastructure/fine-tuning/">Fine-Tuning</a></td>
 <td>LoRA variants, PEFT, DPO, instruction tuning</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="infrastructure/deployment/">Deployment</a></td>
+<td>↳ <a href="infrastructure/deployment/">Deployment</a></td>
 <td>vLLM, TGI, Vertex AI, Bedrock, Triton</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="infrastructure/distributed-training/">Distributed Training</a></td>
+<td>↳ <a href="infrastructure/distributed-training/">Distributed Training</a></td>
 <td>ColossalAI, DeepSpeed, Megatron-LM, FSDP, Accelerate</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="infrastructure/compute-hardware/">Compute &amp; Hardware</a></td>
+<td>↳ <a href="infrastructure/compute-hardware/">Compute &amp; Hardware</a></td>
 <td>GPUs, TPUs, LPUs, quantization (GPTQ/AWQ), neuromorphic, decentralized</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="infrastructure/prompt-engineering/">Prompt Engineering</a></td>
+<td>↳ <a href="infrastructure/prompt-engineering/">Prompt Engineering</a></td>
 <td>CoT, ToT, GoT, advanced techniques</td>
 </tr>
 <tr>
-<td></td>
 <td><strong>Safety</strong> <a id="safety"></a></td>
-<td><a href="safety/safety-alignment/">Safety &amp; Alignment</a></td>
+<td></td>
+</tr>
+<tr>
+<td>↳ <a href="safety/safety-alignment/">Safety &amp; Alignment</a></td>
 <td>Superalignment, RLHF, DPO, interpretability, AI governance</td>
 </tr>
 <tr>
-<td></td>
 <td><strong>Research</strong> <a id="research"></a></td>
-<td><a href="research/papers-blogs/">Papers &amp; Blogs</a></td>
+<td></td>
+</tr>
+<tr>
+<td>↳ <a href="research/papers-blogs/">Papers &amp; Blogs</a></td>
 <td>60+ papers on frontier models, reasoning, agents</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="research/tutorials/">Tutorials</a></td>
+<td>↳ <a href="research/tutorials/">Tutorials</a></td>
 <td>Courses and hands-on learning resources</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td><a href="research/conferences/">Conferences</a></td>
+<td>↳ <a href="research/conferences/">Conferences</a></td>
 <td>28 academic, AGI, safety, and industry events</td>
 </tr>
 </tbody>
@@ -2513,7 +2491,7 @@ window.addEventListener('resize', createMindMap);
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 30, 2026 19:29:01 UTC"><span class="timeago" datetime="2026-04-30T19:29:01+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 30, 2026 19:29:01 UTC">2026-04-30</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="May 3, 2026 20:01:27 UTC"><span class="timeago" datetime="2026-05-03T20:01:27+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="May 3, 2026 20:01:27 UTC">2026-05-03</span>
   </span>
 
     
@@ -2532,7 +2510,59 @@ window.addEventListener('resize', createMindMap);
   </aside>
 
 
+  
 
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12zM15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3zm0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
 
 
                 

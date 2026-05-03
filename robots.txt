@@ -1,4 +1,14 @@
+# Robots.txt for Awesome AGI, ASI, and Collective Intelligence
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
 
+# Disallow specific paths if needed
+# Disallow: /private/
+# Disallow: /admin/
+
+# Sitemap location
 Sitemap: https://nellaivijay.github.io/awesome-agi-aci-asi/sitemap.xml
+
+# Crawl-delay to be respectful (optional)
+# Crawl-delay: 1
