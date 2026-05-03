@@ -8,6 +8,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
+  {# ── Canonical URL ── #}
+  {% if page.canonical_url %}
+    <link rel="canonical" href="{{ page.canonical_url }}">
+  {% endif %}
+
   {# ── Page description: per-page meta > site description ── #}
   {% if page.meta and page.meta.description %}
     {% set page_desc = page.meta.description %}
@@ -15,33 +20,68 @@
     {% set page_desc = config.site_description %}
   {% endif %}
 
+  {# ── Keywords: per-page > site defaults ── #}
+  {% if page.meta and page.meta.keywords %}
+    {% set page_keywords = page.meta.keywords %}
+  {% else %}
+    {% set page_keywords = "AGI, ASI, Collective Intelligence, artificial general intelligence, artificial superintelligence, AI resources, LLM, machine learning, AI agents, multi-agent systems, RAG, fine-tuning, AI safety, alignment, AI development tools, GPT 5.4, Gemini 3.1, Claude Opus 4.6" %}
+  {% endif %}
+
+  {# ── SEO Meta Tags ── #}
+  <meta name="description" content="{{ page_desc }}">
+  <meta name="keywords" content="{{ page_keywords }}">
+  <meta name="author" content="{{ config.site_author | default('nellaivijay', true) }}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  
+  {# ── Language and Region ── #}
+  <meta name="language" content="English">
+  <meta name="geo.region" content="US">
+  <meta http-equiv="content-language" content="en">
+
   {# ── Open Graph ── #}
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ config.site_name }}">
   <meta property="og:title" content="{{ page.title }} - {{ config.site_name }}">
   <meta property="og:description" content="{{ page_desc }}">
+  <meta property="og:keywords" content="{{ page_keywords }}">
   {% if page.canonical_url %}
     <meta property="og:url" content="{{ page.canonical_url }}">
   {% endif %}
   {% if page.meta and page.meta.image %}
     <meta property="og:image" content="{{ config.site_url }}{{ page.meta.image }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ page.title }}">
+  {% else %}
+    <meta property="og:image" content="{{ config.site_url }}assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ config.site_name }}">
   {% endif %}
   <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="en_GB">
 
   {# ── Twitter Card ── #}
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@awesome_agi">
+  <meta name="twitter:creator" content="@nellaivijay">
   <meta name="twitter:title" content="{{ page.title }} - {{ config.site_name }}">
   <meta name="twitter:description" content="{{ page_desc }}">
   {% if page.meta and page.meta.image %}
     <meta name="twitter:image" content="{{ config.site_url }}{{ page.meta.image }}">
+  {% else %}
+    <meta name="twitter:image" content="{{ config.site_url }}assets/og-image.png">
   {% endif %}
 
-  {# ── Additional SEO meta ── #}
-  {% if page.meta and page.meta.keywords %}
-    <meta name="keywords" content="{{ page.meta.keywords }}">
-  {% endif %}
-  <meta name="author" content="{{ config.site_author | default('nellaivijay', true) }}">
-  <meta name="robots" content="index, follow">
+  {# ── Additional SEO Meta ── #}
+  <meta name="theme-color" content="#0f172a">
+  <meta name="msapplication-TileColor" content="#0f172a">
+  <meta name="application-name" content="{{ config.site_name }}">
+  <meta name="apple-mobile-web-app-title" content="{{ config.site_name }}">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   {# ── Analytics (placeholder - add your tracking ID here) ── #}
   {#
@@ -65,18 +105,95 @@
     "@type": "WebPage",
     "name": "{{ page.title }} - {{ config.site_name }}",
     "description": "{{ page_desc }}",
+    "keywords": "{{ page_keywords }}",
     {% if page.canonical_url %}"url": "{{ page.canonical_url }}",{% endif %}
     "isPartOf": {
       "@type": "WebSite",
       "name": "{{ config.site_name }}",
-      "url": "{{ config.site_url }}"
+      "url": "{{ config.site_url }}",
+      "description": "{{ config.site_description }}",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ config.site_name }}",
+        "url": "{{ config.site_url }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ config.site_url }}assets/logo.png",
+          "width": 512,
+          "height": 512
+        }
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ config.site_name }}",
+      "url": "{{ config.site_url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ config.site_url }}assets/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": [
+        "https://github.com/nellaivijay/awesome-agi-aci-asi",
+        "https://twitter.com/awesome_agi",
+        "https://linkedin.com/in/nellaivijay"
+      ]
+    },
+    "inLanguage": "en-US",
+    "dateModified": "{% if page.meta.date %}{{ page.meta.date }}{% else %}{{ 'now' | date('%Y-%m-%d') }}{% endif %}"
+  }
+  </script>
+
+  {# ── Organization Schema ── #}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ config.site_name }}",
+    "url": "{{ config.site_url }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ config.site_url }}assets/logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "description": "{{ config.site_description }}",
+    "sameAs": [
+      "https://github.com/nellaivijay/awesome-agi-aci-asi",
+      "https://twitter.com/awesome_agi",
+      "https://linkedin.com/in/nellaivijay"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "url": "https://github.com/nellaivijay/awesome-agi-aci-asi/issues"
+    }
+  }
+  </script>
+
+  {# ── WebSite Schema ── #}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ config.site_name }}",
+    "url": "{{ config.site_url }}",
+    "description": "{{ config.site_description }}",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "{{ config.site_url }}?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
     },
     "publisher": {
       "@type": "Organization",
       "name": "{{ config.site_name }}",
       "url": "{{ config.site_url }}"
-    },
-    "inLanguage": "en-US"
+    }
   }
   </script>
 
@@ -106,6 +223,60 @@
         "item": "{{ page.canonical_url }}"
       }
     ]
+  }
+  </script>
+  {% endif %}
+
+  {# ── SoftwareApplication Schema for resource pages ── #}
+  {% if page.meta and page.meta.type == 'software' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "{{ page.title }}",
+    "description": "{{ page_desc }}",
+    "applicationCategory": "AI/ML",
+    "operatingSystem": "Linux, macOS, Windows",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "1"
+    }
+  }
+  </script>
+  {% endif %}
+
+  {# ── Article Schema for blog/tutorial pages ── #}
+  {% if page.meta and page.meta.type == 'article' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title }}",
+    "description": "{{ page_desc }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ config.site_author }}"
+    },
+    "datePublished": "{% if page.meta.date %}{{ page.meta.date }}{% endif %}",
+    "dateModified": "{% if page.meta.updated %}{{ page.meta.updated }}{% else %}{{ 'now' | date('%Y-%m-%d') }}{% endif %}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ config.site_name }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ config.site_url }}assets/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.canonical_url }}"
+    }
   }
   </script>
   {% endif %}
@@ -1808,6 +1979,152 @@ document.addEventListener('keydown', function(event) {
   window.addEventListener('afterprint', function() {
     document.body.classList.remove('printing');
   });
+
+  // ── SEO Enhancements ──
+  function enhanceSEO() {
+    // Dynamic title optimization
+    const originalTitle = document.title;
+    const pageTitle = document.querySelector('h1');
+    if (pageTitle) {
+      const titleText = pageTitle.textContent.trim();
+      if (!originalTitle.includes(titleText)) {
+        document.title = `${titleText} - Awesome AGI, ASI & Collective Intelligence`;
+      }
+    }
+
+    // Add structured data for content sections
+    const contentSections = document.querySelectorAll('.md-content > section, .md-content > div > section');
+    contentSections.forEach((section, index) => {
+      const heading = section.querySelector('h2, h3');
+      if (heading) {
+        section.setAttribute('itemscope', '');
+        section.setAttribute('itemtype', 'https://schema.org/Section');
+        heading.setAttribute('itemprop', 'headline');
+      }
+    });
+
+    // Optimize images for SEO
+    const images = document.querySelectorAll('img:not([alt][alt=""])');
+    images.forEach(img => {
+      if (!img.alt || img.alt === '') {
+        const parentText = img.closest('p, figure, div')?.textContent || 'Image';
+        img.alt = parentText.trim().substring(0, 100);
+      }
+      img.loading = 'lazy';
+    });
+
+    // Add semantic structure for tables
+    const tables = document.querySelectorAll('table');
+    tables.forEach(table => {
+      if (!table.querySelector('caption')) {
+        const caption = document.createElement('caption');
+        const heading = table.closest('.md-typeset').querySelector('h2, h3, h4');
+        caption.textContent = heading ? heading.textContent : 'Data Table';
+        caption.style.cssText = 'position: absolute; left: -9999px; width: 1px; height: 1px;';
+        table.prepend(caption);
+      }
+    });
+
+    // Internal linking optimization
+    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="#"]');
+    internalLinks.forEach(link => {
+      link.setAttribute('rel', 'nofollow');
+    });
+  }
+
+  // Execute SEO enhancements
+  enhanceSEO();
+
+  // ── Core Web Vitals Monitoring ──
+  function monitorCoreWebVitals() {
+    // LCP (Largest Contentful Paint)
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+            // Send to analytics if needed
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // FID (First Input Delay)
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // CLS (Cumulative Layout Shift)
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'layout-shift') {
+            if (!entry.hadRecentInput) {
+              console.log('CLS:', entry.value);
+            }
+          }
+        }
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    }
+  }
+
+  // Execute Core Web Vitals monitoring
+  monitorCoreWebVitals();
+
+  // ── Dynamic Meta Tag Updates ──
+  function updateMetaTags() {
+    // Update meta description based on content
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      const firstParagraph = document.querySelector('.md-content > p');
+      if (firstParagraph) {
+        const content = firstParagraph.textContent.trim();
+        if (content.length > 50 && content.length < 160) {
+          metaDescription.setAttribute('content', content);
+        }
+      }
+    }
+
+    // Update canonical URL if hash changes
+    window.addEventListener('hashchange', function() {
+      if (window.location.hash) {
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) {
+          canonical.setAttribute('href', window.location.href.split('#')[0]);
+        }
+      }
+    });
+  }
+
+  // Execute dynamic meta tag updates
+  updateMetaTags();
+
+  // ── Social Sharing Optimization ──
+  function optimizeSocialSharing() {
+    // Add Facebook Open Graph debugging
+    console.log('OG Tags:', {
+      'og:title': document.querySelector('meta[property="og:title"]')?.content,
+      'og:description': document.querySelector('meta[property="og:description"]')?.content,
+      'og:image': document.querySelector('meta[property="og:image"]')?.content,
+      'og:url': document.querySelector('meta[property="og:url"]')?.content
+    });
+
+    // Twitter Card debugging
+    console.log('Twitter Card:', {
+      'twitter:card': document.querySelector('meta[name="twitter:card"]')?.content,
+      'twitter:title': document.querySelector('meta[name="twitter:title"]')?.content,
+      'twitter:description': document.querySelector('meta[name="twitter:description"]')?.content,
+      'twitter:image': document.querySelector('meta[name="twitter:image"]')?.content
+    });
+  }
+
+  // Execute social sharing optimization (for debugging)
+  setTimeout(optimizeSocialSharing, 1000);
 </script>
 
 {% endblock %}

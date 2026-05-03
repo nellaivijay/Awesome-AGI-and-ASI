@@ -1,6 +1,8 @@
 ---
 description: "The most comprehensive curated collection of AGI, ASI, and Collective Intelligence resources updated April 2026 -- frameworks, agents, multi-agent systems, GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, JEPA models, frontier AI, LLMs, RAG, fine-tuning, safety, alignment, research papers, development tools, and emerging security threats for AI builders."
 keywords: "AGI, ASI, Collective Intelligence, artificial general intelligence, artificial superintelligence, multi-agent systems, swarm intelligence, AI resources, GPT 5.4, Gemini 3.1 Flash Live, Claude Opus 4.6, JEPA, frontier models, AI agents, LLM, machine learning, AI safety, alignment, AI development tools, 2026 AI trends, AI security threats, software development AI impact"
+type: website
+image: assets/og-image.png
 ---
 
 <div class="hero-section">

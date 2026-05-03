@@ -986,6 +986,94 @@ html {
   }
 }
 
+/* ── SEO ENHANCEMENTS ── */
+/* Core Web Vitals optimization */
+.md-content {
+  /* LCP (Largest Contentful Paint) optimization */
+  contain: layout style paint;
+}
+
+/* CLS (Cumulative Layout Shift) prevention */
+.md-typeset img,
+.md-typeset iframe {
+  contain: layout;
+}
+
+/* FID (First Input Delay) optimization */
+.md-header__title,
+.md-nav__link {
+  will-change: transform;
+}
+
+/* Image SEO optimization */
+.md-typeset img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Heading SEO optimization */
+.md-typeset h1 {
+  font-size: 2.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.md-typeset h2 {
+  font-size: 2rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Link SEO optimization */
+.md-typeset a {
+  text-decoration: none;
+  color: var(--cyber-accent-blue);
+}
+
+.md-typeset a:hover {
+  text-decoration: underline;
+}
+
+/* Content SEO optimization */
+.md-typeset p {
+  max-width: 80ch; /* Optimal reading width */
+  margin-bottom: 1.5rem;
+}
+
+/* Table SEO optimization */
+.md-typeset table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* List SEO optimization */
+.md-typeset ul,
+.md-typeset ol {
+  padding-left: 2rem;
+}
+
+/* Code SEO optimization */
+.md-typeset code {
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* Schema.org hidden elements for SEO */
+[itemscope] {
+  display: inline;
+}
+
+/* Performance optimization for SEO */
+.md-main {
+  content-visibility: auto;
+}
+
+.md-content > * {
+  contain: layout style paint;
+}
+
 /* ── BADGES ── */
 .cyber-badge {
   display: inline-block;

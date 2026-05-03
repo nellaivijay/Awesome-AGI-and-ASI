@@ -11,6 +11,34 @@ repo_url: https://github.com/nellaivijay/awesome-agi-aci-asi
 repo_name: nellaivijay/awesome-agi-aci-asi
 copyright: Copyright &copy; 2024-2026 nellaivijay
 
+# SEO Configuration
+site_favicon: assets/favicon.png
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nellaivijay/awesome-agi-aci-asi
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/awesome_agi
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/nellaivijay
+  generator: false
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: Thanks for your feedback!
+  # SEO-specific extras
+  seo:
+    image: assets/og-image.png
+    type: website
+
 theme:
   name: material
   language: en
