@@ -12,7 +12,7 @@ repo_name: nellaivijay/awesome-agi-aci-asi
 copyright: Copyright &copy; 2024-2026 nellaivijay
 
 # SEO Configuration
-site_favicon: assets/favicon.png
+site_favicon: assets/favicon.svg
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -36,7 +36,7 @@ extra:
           note: Thanks for your feedback!
   # SEO-specific extras
   seo:
-    image: assets/og-image.png
+    image: assets/og-image.svg
     type: website
 
 theme:
@@ -102,6 +102,8 @@ plugins:
       htmlmin_opts:
         remove_comments: true
         remove_optional_attribute_quotes: false
+  - sitemap:
+      filename: sitemap.xml
 
 extra_css:
   - stylesheets/custom.css

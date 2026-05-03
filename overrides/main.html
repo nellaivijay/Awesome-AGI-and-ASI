@@ -55,7 +55,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="{{ page.title }}">
   {% else %}
-    <meta property="og:image" content="{{ config.site_url }}assets/og-image.png">
+    <meta property="og:image" content="{{ config.site_url }}assets/og-image.svg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="{{ config.site_name }}">
@@ -72,7 +72,7 @@
   {% if page.meta and page.meta.image %}
     <meta name="twitter:image" content="{{ config.site_url }}{{ page.meta.image }}">
   {% else %}
-    <meta name="twitter:image" content="{{ config.site_url }}assets/og-image.png">
+    <meta name="twitter:image" content="{{ config.site_url }}assets/og-image.svg">
   {% endif %}
 
   {# ── Additional SEO Meta ── #}
@@ -83,12 +83,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  {# ── Analytics (placeholder - add your tracking ID here) ── #}
-  {#
-  <script async defer data-website-id="YOUR-WEBSITE-ID"
-          src="https://analytics.umami.is/script.js"></script>
-
-  <!-- Google Analytics (alternative) -->
+  {# ── Google Analytics ── #}
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -96,7 +92,13 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
-  #}
+
+  {# ── SEO Validation Tools (comment out in production) ── #}
+  <!--
+  <meta name="google-site-verification" content="YOUR-VERIFICATION-CODE">
+  <meta name="yandex-verification" content="YOUR-YANDEX-CODE">
+  <meta name="pinterest" content="nopin" description="Sorry Pinterest, no pins allowed">
+  -->
 
   {# ── JSON-LD Structured Data ── #}
   <script type="application/ld+json">
