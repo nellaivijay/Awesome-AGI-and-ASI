@@ -13,7 +13,7 @@
   /* Slate Text Colors */
   --cyber-text-primary: #e2e8f0;    /* slate-200 */
   --cyber-text-secondary: #94a3b8;  /* slate-400 */
-  --cyber-text-muted: #64748b;      /* slate-500 */
+  --cyber-text-muted: #94a3b8;      /* slate-400 (improved contrast from slate-500) */
   
   /* Slate Border Colors */
   --cyber-border: #334155;          /* slate-700 */
