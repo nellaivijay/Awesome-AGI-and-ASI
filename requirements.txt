@@ -8,3 +8,4 @@ pymdown-extensions>=10.0
 # cairosvg>=2.7
 pyyaml>=6.0
 # mkdocs-minify-plugin>=0.8
+mkdocs-glightbox>=0.4.1

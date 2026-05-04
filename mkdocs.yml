@@ -96,6 +96,9 @@ plugins:
   #     pretty_print: true
   #     length: 250
   - meta
+  - glightbox
+  - tags:
+      tags_file: tags.md
   # - sitemap:
   #     filename: sitemap.xml
 
@@ -168,6 +171,7 @@ nav:
     - Top Conferences: research/conferences.md
   - Blog:
     - blog/index.md
+  - Tags: tags.md
   - Contributing:
     - Contributing: contributing.md
     - DevOps Guide: devops-guide.md
