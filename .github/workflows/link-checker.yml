@@ -1,0 +1,21 @@
+name: Link Checker
+
+on:
+  schedule:
+    - cron: "0 0 * * 1" # Run weekly on Mondays
+  pull_request:
+    paths:
+      - '**.md'
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Check Links with Lychee
+        uses: lycheeverse/lychee-action@v1.9.3
+        with:
+          args: --accept=200,204,429 --timeout=15 --max-retries=3 "README.md" "docs/**/*.md"
+          fail: true
